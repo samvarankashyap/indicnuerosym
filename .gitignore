@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Model checkpoints & logs
+checkpoints/
+logs/
+
+# Credentials & secrets
+service_account.json
+config.yaml
+
+# Generated / intermediate data
+data/
+datasets/intermediate/
+datasets/dwipada_master_deduplicated.jsonl
+datasets/ift_alpaca.jsonl
+datasets/ift_trl_data.jsonl
+synthetic_data/
+training_data/
+output/
+gemini_responses.txt
+
+# Claude
+.claude/
+
+# Misc
+=2.2.0
+.pytest_cache/
