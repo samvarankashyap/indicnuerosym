@@ -1,1 +1,2 @@
+datasets/*.json filter=lfs diff=lfs merge=lfs -text
 datasets/dwipada_augmented_dataset.json filter=lfs diff=lfs merge=lfs -text
