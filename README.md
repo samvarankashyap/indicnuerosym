@@ -222,10 +222,153 @@ dwipada generate --interactive
 # Generate with a specific prompt
 dwipada generate "ద్విపదలో ఒక పద్యం వ్రాయండి."
 
-# Batch operations
+# Batch operations (Gemini Batch API)
 dwipada batch --prepare 100
 dwipada batch --submit output/batch_requests_100.jsonl
+dwipada batch --status "batches/abc123"
+dwipada batch --results "batches/abc123"
+
+# Batch operations (Vertex AI) — independent tool with its own CLI
+python -m dwipada.batch.vertex --upload output/batch_requests_100.jsonl
+python -m dwipada.batch.vertex --status "projects/123/locations/us-central1/batchPredictionJobs/456"
+python -m dwipada.batch.vertex --results "projects/123/locations/us-central1/batchPredictionJobs/456"
 ```
+
+---
+
+## Batch Processing
+
+Two **independent tools** for sending dwipada couplets to Google's LLM APIs for meaning extraction (bhavam and prathipadartham). These are standalone utilities for enriching the dataset with LLM-generated annotations — they are not part of the main training pipeline.
+
+### Input Data Format
+
+Both tools consume JSONL files where each line is a request in Vertex AI format with metadata:
+
+```jsonl
+{"request": {"contents": [{"role": "user", "parts": [{"text": "Assume role of a telugu and sanskrit scholar and give me bhavam and prathipadartham of the following dwipada poem...\nPoem:\nసౌధాగ్రముల యందు సదనంబు లందు\nవీధుల యందును వెఱవొప్ప నిలిచి"}]}]}, "metadata": {"source_file": "data/ranganatha_ramayanam/chapter1.txt", "work": "ranganatha_ramayanam", "couplet_number": 1}}
+```
+
+Each line has two top-level keys:
+
+| Key | Description |
+|-----|-------------|
+| `request` | Vertex AI content format — `contents` array with `role` and `parts` |
+| `metadata` | Source tracking — `source_file`, `work` name, and `couplet_number` |
+
+To generate this file from raw text files in `data/`:
+
+```bash
+python -m dwipada.batch.generate_requests
+# Output: output/batch_requests.jsonl
+```
+
+---
+
+### 1. Gemini Batch API (`dwipada batch`)
+
+An **independent tool** accessible via the unified CLI. Uses the Gemini Batch API directly with an API key.
+
+#### Authentication
+
+1. Get a Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey) (this is the AI Studio API key, not a GCP service account — it authenticates directly with the Gemini API)
+2. Add it to `config.yaml` in the project root:
+
+```yaml
+api_key: "your-gemini-api-key"
+```
+
+> **Note:** Never commit `config.yaml` to version control. It is included in `.gitignore`.
+
+#### Subcommands
+
+| Subcommand | Description |
+|------------|-------------|
+| `dwipada batch --submit FILE` | Upload a JSONL file and submit a batch job |
+| `dwipada batch --status JOB` | Check job status and completion stats |
+| `dwipada batch --results JOB` | Download results from a completed job |
+
+#### Usage
+
+```bash
+# Generate requests from raw text
+python -m dwipada.batch.generate_requests
+
+# Submit a batch job
+dwipada batch --submit output/batch_requests.jsonl
+
+# Check status (use the job name returned by submit)
+dwipada batch --status "batches/abc123"
+
+# Download results
+dwipada batch --results "batches/abc123"
+# Output: output/batch_responses.jsonl
+```
+
+---
+
+### 2. Vertex AI Batch Prediction (`python -m dwipada.batch.vertex`)
+
+An **independent tool** that works with the Vertex AI Batch Prediction API. It handles uploading input to GCS, submitting the batch job, and downloading results back to local disk.
+
+#### Authentication
+
+Vertex AI requires a GCP project with the Vertex AI API enabled and a GCS bucket for file staging. Authentication can be done via a service account key or Application Default Credentials (ADC).
+
+**Option A: Service account key (recommended for automation)**
+
+1. In the GCP Console, go to **IAM & Admin > Service Accounts**
+2. Create a service account with the following roles:
+   - `Vertex AI User`
+   - `Storage Object Admin` (for GCS read/write)
+3. Generate a JSON key and save it as `serviceaccount.json` in the project root
+4. Add the Vertex AI config to `config.yaml`:
+
+```yaml
+vertex:
+  project_id: "your-gcp-project-id"
+  location: "us-central1"
+  gcs_bucket: "your-gcs-bucket-name"
+  service_account_key: "serviceaccount.json"
+  model: "publishers/google/models/gemini-3-flash-preview"  # optional
+```
+
+**Option B: Application Default Credentials (ADC)**
+
+1. Run `gcloud auth application-default login`
+2. Omit `service_account_key` from `config.yaml`:
+
+```yaml
+vertex:
+  project_id: "your-gcp-project-id"
+  location: "us-central1"
+  gcs_bucket: "your-gcs-bucket-name"
+```
+
+> **Note:** Never commit `config.yaml` or `serviceaccount.json` to version control. Both are included in `.gitignore`.
+
+#### Subcommands
+
+| Subcommand | Description |
+|------------|-------------|
+| `--upload FILE` | Upload JSONL to GCS and submit a Vertex AI batch prediction job |
+| `--status JOB_NAME` | Check job status with completion stats |
+| `--results JOB_NAME` | Download results from GCS to local disk |
+
+#### Usage
+
+```bash
+# Upload and submit
+python -m dwipada.batch.vertex --upload output/batch_requests.jsonl
+
+# Check status
+python -m dwipada.batch.vertex --status "projects/123/locations/us-central1/batchPredictionJobs/456"
+
+# Download results
+python -m dwipada.batch.vertex --results "projects/123/locations/us-central1/batchPredictionJobs/456"
+python -m dwipada.batch.vertex --results "projects/123/..." -o output/my_results.jsonl
+```
+
+The Vertex AI tool automatically strips the `metadata` field before uploading (Vertex AI only accepts the `request` field) and saves a sidecar `_metadata.jsonl` file for correlating results back to source couplets.
 
 ---
 
