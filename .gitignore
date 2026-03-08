@@ -28,7 +28,6 @@ datasets/intermediate/
 datasets/dwipada_master_deduplicated.jsonl
 datasets/ift_alpaca.jsonl
 datasets/ift_trl_data.jsonl
-synthetic_data/
 training_data/
 output/
 gemini_responses.txt
