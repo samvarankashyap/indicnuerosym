@@ -105,7 +105,7 @@ independent_vowels = {
 independent_long_vowels = {"ఆ", "ఈ", "ఊ", "ౠ", "ఏ", "ఓ"}
 diacritics = {"ం", "ః"}
 dependent_vowels = set(dependent_to_independent.keys())
-ignorable_chars = {' ', '\n', 'ఁ', '​'}  # space, newline, arasunna, zero-width space
+ignorable_chars = {' ', '\n', 'ఁ', '​', '\u200C', ',', '-', ')', '1', '4'}  # space, newline, arasunna, zero-width space, ZWNJ, punctuation, stray digits
 
 # Yati Maitri Groups (Vargas)
 # These groups define which letters can substitute for each other in Yati (యతి) matching
@@ -1658,7 +1658,7 @@ def analyze_pada(line: str) -> Dict:
         "second_consonant": get_base_consonant(second_aksharam) if second_aksharam else None,
         "third_gana_first_letter": third_gana_first_letter,
         "third_gana_first_aksharam": third_gana_first_aksharam,
-        "is_valid_gana_sequence": partition is not None
+        "is_valid_gana_sequence": partition is not None and partition.get("is_fully_valid", False)
     }
 
 
