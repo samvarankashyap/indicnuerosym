@@ -1,0 +1,153 @@
+======================================================================
+CROSS-VALIDATION: NFA vs Analyzer on full dataset
+======================================================================
+Total lines analyzed: 53820
+Both valid & agree:   53267 (99.0%)
+Both valid, MISMATCH: 0
+NFA valid, REF invalid: 450
+REF valid, NFA invalid: 1
+Both invalid:         102
+
+======================================================================
+OUTLIERS (up to 20):
+======================================================================
+
+  1. [NFA_ONLY] Poem #44, Line 1
+     Text: జెలువార గృహములు సిత్రించువారు,
+     NFA markers: IIUIIIIIUUIUI
+     REF markers: IIUIIIIIUUIUII
+     Markers match: False
+     NFA ganas: ('Sala', 'Nala', 'Ta', 'Ha_Gala')
+
+  2. [NFA_ONLY] Poem #44, Line 2
+     Text: నలిమీఱ మణితోరణము లెత్తువారు,
+     NFA markers: IIUIIIUIIIUIUI
+     REF markers: IIUIIIUIIIUIUII
+     Markers match: False
+     NFA ganas: ('Sala', 'Sala', 'Sala', 'Ha_Gala')
+
+  3. [NFA_ONLY] Poem #57, Line 2
+     Text: విమలసత్కీర్తిచే వెలసినవాడు,
+     NFA markers: IIIUUIUIIIIUI
+     REF markers: IIIUUIUIIIIUII
+     Markers match: False
+     NFA ganas: ('Naga', 'Ra', 'Nala', 'Ha_Gala')
+
+  4. [NFA_ONLY] Poem #107, Line 2
+     Text: నలవడబూజింప నమరినదాని,
+     NFA markers: IIIIUUIIIIIUI
+     REF markers: IIIIUUIIIIIUII
+     Markers match: False
+     NFA ganas: ('Nala', 'Ta', 'Nala', 'Ha_Gala')
+
+  5. [NFA_ONLY] Poem #171, Line 2
+     Text: వెలిగెడు నుగ్రంపువేడిమి దాని,
+     NFA markers: IIIIUUIUIIUI
+     REF markers: IIIIUUIUIIUII
+     Markers match: False
+     NFA ganas: ('Nala', 'Ta', 'Bha', 'Ha_Gala')
+
+  6. [NFA_ONLY] Poem #188, Line 2
+     Text: వరగర్వమునగడువాలినవాడు,
+     NFA markers: IIUIIIIIUIIUI
+     REF markers: IIUIIIIIUIIUII
+     Markers match: False
+     NFA ganas: ('Sala', 'Nala', 'Bha', 'Ha_Gala')
+
+  7. [NFA_ONLY] Poem #213, Line 2
+     Text: ఘనవస్తువులు గూర్పగాబంచిరంత,
+     NFA markers: IIUIIIUIUUIUI
+     REF markers: IIUIIIUIUUIUII
+     Markers match: False
+     NFA ganas: ('Sala', 'Sala', 'Ta', 'Ha_Gala')
+
+  8. [NFA_ONLY] Poem #218, Line 2
+     Text: జయశీలుడై వాని సారథిజంపి,
+     NFA markers: IIUIUUIUIIUI
+     REF markers: IIUIUUIUIIUII
+     Markers match: False
+     NFA ganas: ('Sala', 'Ta', 'Bha', 'Ha_Gala')
+
+  9. [NFA_ONLY] Poem #231, Line 2
+     Text: వదలుచు మేఖలావలివీడుచుండ,
+     NFA markers: IIIIUIUIIUIUI
+     REF markers: IIIIUIUIIUIUII
+     Markers match: False
+     NFA ganas: ('Nala', 'Ra', 'Sala', 'Ha_Gala')
+
+  10. [NFA_ONLY] Poem #284, Line 1
+     Text: లోకంబులెల్లబెల్లుగ గెల్చినాడు,
+     NFA markers: UUIUIUIIUIUI
+     REF markers: UUIUIUIIUIUII
+     Markers match: False
+     NFA ganas: ('Ta', 'Ra', 'Sala', 'Ha_Gala')
+
+  11. [NFA_ONLY] Poem #284, Line 2
+     Text: బాకశాసను ననిబఱపిన వాడు,
+     NFA markers: UIUIIIIIIIIUI
+     REF markers: UIUIIIIIIIIUII
+     Markers match: False
+     NFA ganas: ('Ra', 'Nala', 'Nala', 'Ha_Gala')
+
+  12. [NFA_ONLY] Poem #381, Line 2
+     Text: గనుగొని నాకథల్‌ గలుగునందాక
+     NFA markers: IIIIUIUIIIUUI
+     REF markers: IIIIUIUIIIIUUI
+     Markers match: False
+     NFA ganas: ('Nala', 'Ra', 'Naga', 'Ha_Gala')
+
+  13. [NFA_ONLY] Poem #395, Line 2
+     Text: నెలవునుబోలె వర్ణితమైనదాని,
+     NFA markers: IIIIUIUIIUIUI
+     REF markers: IIIIUIUIIUIUII
+     Markers match: False
+     NFA ganas: ('Nala', 'Ra', 'Sala', 'Ha_Gala')
+
+  14. [NFA_ONLY] Poem #417, Line 2
+     Text: చంద్రకాంతోపలచ్ఛాయలదాని,
+     NFA markers: UIUUIUUIIUI
+     REF markers: UIUUIUUIIUII
+     Markers match: False
+     NFA ganas: ('Ra', 'Ra', 'Bha', 'Ha_Gala')
+
+  15. [NFA_ONLY] Poem #473, Line 2
+     Text: శిఖినివాసముబోలె జెలువైనదాని,
+     NFA markers: IIIUIIUIIIUIUI
+     REF markers: IIIUIIUIIIUIUII
+     Markers match: False
+     NFA ganas: ('Naga', 'Sala', 'Sala', 'Ha_Gala')
+
+  16. [NFA_ONLY] Poem #495, Line 2
+     Text: నట త్రికూటాద్రిపై నమరెడుదాని,
+     NFA markers: IIIUUIUIIIIUI
+     REF markers: IIIUUIUIIIIUII
+     Markers match: False
+     NFA ganas: ('Naga', 'Ra', 'Nala', 'Ha_Gala')
+
+  17. [NFA_ONLY] Poem #576, Line 2
+     Text: లనుపమస్థితితోడ నధిప, సిద్ధించు
+     NFA markers: IIIUIIUIIIIUUI
+     REF markers: IIIUIIUIIIIIUUI
+     Markers match: False
+     NFA ganas: ('Naga', 'Sala', 'Naga', 'Ha_Gala')
+
+  18. [NFA_ONLY] Poem #637, Line 1
+     Text: వచ్చి లంకాపురవరము వేష్టించి,
+     NFA markers: UIUUIIIIIUUI
+     REF markers: UIUUIIIIIUUII
+     Markers match: False
+     NFA ganas: ('Ra', 'Bha', 'Naga', 'Ha_Gala')
+
+  19. [NFA_ONLY] Poem #737, Line 2
+     Text: బాతాళమునుబోలె బరగెడుదాని,
+     NFA markers: UUIIIUIIIIIUI
+     REF markers: UUIIIUIIIIIUII
+     Markers match: False
+     NFA ganas: ('Ta', 'Sala', 'Nala', 'Ha_Gala')
+
+  20. [NFA_ONLY] Poem #760, Line 2
+     Text: లారంగబాడుచు నాడెడువారు,
+     NFA markers: UUIUIIUIIUI
+     REF markers: UUIUIIUIIUII
+     Markers match: False
+     NFA ganas: ('Ta', 'Bha', 'Bha', 'Ha_Gala')
