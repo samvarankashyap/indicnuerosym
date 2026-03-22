@@ -40,6 +40,21 @@ from gana_nfa import (
 )
 
 
+def is_valid_telugu_token(token_text):
+    """Check if a token contains only Telugu characters and minimal formatting.
+
+    Allows: Telugu script, spaces, newlines, colon (model outputs "ద్విపద:").
+    Rejects: Arabic, Latin, CJK, Devanagari, digits, other scripts.
+    """
+    for ch in token_text:
+        cp = ord(ch)
+        if (0x0C00 <= cp <= 0x0C7F   # Telugu block
+            or ch in " \n:"):         # space, newline, colon
+            continue
+        return False
+    return True
+
+
 ###############################################################################
 # 1) STATELESS PREFIX CHECK
 ###############################################################################
@@ -229,11 +244,31 @@ def validate_poem(text):
     return results
 
 
+def strip_poem_prefix(text):
+    """Strip 'ద్విపద:' or 'పూర్తి ద్విపద:' prefix from generated text.
+
+    The model outputs 'ద్విపద: <line1>\\n<line2>' — the prefix must be
+    removed before NFA analysis, otherwise its syllables (ద్వి, ప, ద)
+    corrupt the gana count for line 1.
+    """
+    for prefix in ["పూర్తి ద్విపద:", "ద్విపద:"]:
+        if text.startswith(prefix):
+            return text[len(prefix):].lstrip()
+        # Also handle with space before colon
+        prefix_no_colon = prefix[:-1]
+        if text.startswith(prefix_no_colon):
+            idx = text.index(":") + 1 if ":" in text else len(prefix_no_colon)
+            return text[idx:].lstrip()
+    return text
+
+
 ###############################################################################
 # 2) CONSTRAINED GENERATION
 ###############################################################################
 
+# IFT training prompt — the fine-tuned model expects this exact format
 SYSTEM_PROMPT = "You are a Telugu and Sanskrit scholar specialising in Dwipada poetry."
+
 TOP_K = 50
 
 
@@ -254,7 +289,7 @@ def build_prompt(topic, tokenizer):
 
 def generate_poem(
     model, tokenizer, topic,
-    max_new_tokens=100, temperature=0.7, top_p=0.9,
+    max_new_tokens=150, temperature=0.7, top_p=0.9,
     seed=42, constrained=True, top_k=TOP_K,
 ):
     """Generate a dwipada poem with stateless constrained decoding."""
@@ -304,7 +339,7 @@ def generate_poem(
             else:
                 # ── Check current state before picking next token ────────
                 current_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
-                current_state = analyze_text(current_text) if generated_ids else {
+                current_state = analyze_text(strip_poem_prefix(current_text)) if generated_ids else {
                     "alive": True, "lines_complete": 0, "has_accept": False,
                     "syllable_count": 0, "markers": [], "branches": 6,
                 }
@@ -324,7 +359,7 @@ def generate_poem(
                         test_ids = generated_ids + newline_ids
                         test_text = tokenizer.decode(test_ids, skip_special_tokens=True)
                         checks += 1
-                        test_result = analyze_text(test_text)
+                        test_result = analyze_text(strip_poem_prefix(test_text))
 
                         if test_result["lines_complete"] > lines_done:
                             # Line completed successfully
@@ -385,15 +420,27 @@ def generate_poem(
                             break
                         continue
 
+                    # Reject non-Telugu tokens (Arabic, Latin, etc.)
+                    candidate_text = tokenizer.decode([candidate_id])
+                    if not is_valid_telugu_token(candidate_text):
+                        continue
+
                     test_ids = generated_ids + [candidate_id]
                     test_text = tokenizer.decode(test_ids, skip_special_tokens=True)
                     checks += 1
-                    result = analyze_text(test_text)
+                    result = analyze_text(strip_poem_prefix(test_text))
 
                     if not result["alive"]:
                         continue
 
                     syl = result["syllable_count"]
+
+                    # Check if this candidate TOKEN itself introduces a newline.
+                    # If so, the line before it must have reached ACCEPT.
+                    candidate_text = tokenizer.decode([candidate_id])
+                    if "\n" in candidate_text:
+                        if result["lines_complete"] <= lines_done:
+                            continue  # token has newline but line isn't complete — reject
 
                     # Past max line length without accept — dead end
                     if syl > MAX_LINE_LENGTH and not result["has_accept"]:
@@ -437,19 +484,35 @@ def generate_poem(
                     chosen_id = use_candidates[choice_idx][0]
 
                     if accept_candidates and use_candidates == accept_candidates:
-                        backtracks += 0  # accept candidate found naturally
+                        backtracks += 0
                     elif choice_idx > 0:
                         backtracks += 1
                 else:
-                    # No valid candidate — fallback (shouldn't happen)
-                    for k in range(min(top_k, len(sorted_indices))):
+                    # No valid candidate in top-K — exhaustive search over ALL vocab
+                    # This is the safety net that prevents invalid poems.
+                    backtracks += 1
+                    for k in range(min(len(sorted_indices), 500)):
                         fb_id = sorted_indices[k].item()
-                        if fb_id != tokenizer.eos_token_id:
-                            chosen_id = fb_id
-                            backtracks += 1
-                            break
+                        if fb_id == tokenizer.eos_token_id:
+                            continue
+                        fb_text = tokenizer.decode([fb_id])
+                        if not is_valid_telugu_token(fb_text):
+                            continue
+                        test_ids = generated_ids + [fb_id]
+                        test_text = tokenizer.decode(test_ids, skip_special_tokens=True)
+                        checks += 1
+                        fb_result = analyze_text(strip_poem_prefix(test_text))
+                        if fb_result["alive"]:
+                            syl = fb_result["syllable_count"]
+                            # Reject newlines that don't complete a line
+                            if "\n" in fb_text and fb_result["lines_complete"] <= lines_done:
+                                continue
+                            if syl <= MAX_LINE_LENGTH or fb_result["has_accept"]:
+                                chosen_id = fb_id
+                                break
 
                 if chosen_id is None or chosen_id == tokenizer.eos_token_id:
+                    # Truly exhausted — should be extremely rare
                     break
 
                 generated_ids.append(chosen_id)
@@ -469,11 +532,20 @@ def generate_poem(
     elapsed = time.time() - start_time
     generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
 
-    # Extract and validate
-    lines = [l.strip() for l in generated_text.split("\n") if l.strip()]
-    poem_lines = [l for l in lines if not l.endswith(":") and not l.startswith("ద్విపద")]
-    if not poem_lines and lines:
-        poem_lines = lines[1:] if len(lines) > 1 else lines
+    # Extract poem lines — handle "ద్విపద: <line1>" format
+    raw_lines = [l.strip() for l in generated_text.split("\n") if l.strip()]
+    poem_lines = []
+    for l in raw_lines:
+        # Strip "ద్విపద:" or "పూర్తి ద్విపద:" prefix if on same line as poem text
+        if l.startswith("ద్విపద:") or l.startswith("పూర్తి ద్విపద:"):
+            after_colon = l.split(":", 1)[1].strip()
+            if after_colon:
+                poem_lines.append(after_colon)
+            continue
+        # Skip standalone labels
+        if l.endswith(":") or l == "ద్విపద" or l == "పూర్తి ద్విపద":
+            continue
+        poem_lines.append(l)
     poem_lines = poem_lines[:2]
 
     valid_lines = validate_poem("\n".join(poem_lines))
@@ -485,7 +557,7 @@ def generate_poem(
         "generated_text": generated_text,
         "poem_lines": poem_lines,
         "valid_lines": valid_lines,
-        "all_valid": all(v["valid"] for v in valid_lines) if valid_lines else False,
+        "all_valid": len(valid_lines) == 2 and all(v["valid"] for v in valid_lines),
         "elapsed": elapsed,
         "tokens_generated": len(generated_ids),
         "backtracks": backtracks,
@@ -529,7 +601,7 @@ def run_experiment(model, tokenizer, topic, num_seeds=10, constrained=True, labe
         result = generate_poem(
             model, tokenizer, topic,
             seed=seed, constrained=constrained,
-            temperature=0.7, top_p=0.9, max_new_tokens=100,
+            temperature=0.7, top_p=0.9, max_new_tokens=150,
         )
         results.append(result)
 
@@ -565,7 +637,148 @@ def run_experiment(model, tokenizer, topic, num_seeds=10, constrained=True, labe
 
 
 ###############################################################################
-# 4) MAIN
+# 4) BENCHMARK — 10 PROMPTS × MULTIPLE SEEDS
+###############################################################################
+
+BENCHMARK_PROMPTS = [
+    "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+    "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+    "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+    "గురువు శిష్యునకు విద్యను బోధించెను",
+    "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+    "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+    "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+    "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+    "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+    "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+]
+
+
+def run_benchmark(model, tokenizer, prompts, seeds_per_prompt=5,
+                  constrained=True, label=""):
+    """Run multiple prompts × multiple seeds and produce aggregate stats."""
+    import json as json_mod
+
+    print(f"\n{'='*72}")
+    print(f"  BENCHMARK: {label}")
+    print(f"  Prompts: {len(prompts)}, Seeds per prompt: {seeds_per_prompt}")
+    print(f"  Total poems: {len(prompts) * seeds_per_prompt}")
+    print(f"  Mode: {'CONSTRAINED' if constrained else 'UNCONSTRAINED'}")
+    print(f"{'='*72}")
+
+    all_results = []
+    per_prompt_stats = []
+    total_valid = 0
+    total_poems = 0
+    total_lines = 0
+    valid_lines = 0
+    start_time = time.time()
+
+    for pi, topic in enumerate(prompts):
+        prompt_valid = 0
+        prompt_results = []
+
+        print(f"\n  [{pi+1}/{len(prompts)}] {topic[:50]}...")
+
+        for si in range(seeds_per_prompt):
+            seed = 42 + si * 7
+            result = generate_poem(
+                model, tokenizer, topic,
+                seed=seed, constrained=constrained,
+                temperature=0.7, top_p=0.9, max_new_tokens=150,
+            )
+            prompt_results.append(result)
+            all_results.append(result)
+            total_poems += 1
+
+            if result["all_valid"]:
+                prompt_valid += 1
+                total_valid += 1
+
+            for vl in result["valid_lines"]:
+                total_lines += 1
+                if vl["valid"]:
+                    valid_lines += 1
+
+            # Print compact result
+            status = "✓" if result["all_valid"] else "✗"
+            bt = result.get("backtracks", 0)
+            print(f"    Seed {seed}: {status} ({result['elapsed']:.1f}s, {bt} bt)", end="")
+            if result["all_valid"]:
+                print(f" — {result['poem_lines'][0][:40]}...")
+            else:
+                print()
+
+        prompt_rate = prompt_valid / seeds_per_prompt * 100
+        per_prompt_stats.append({
+            "topic": topic,
+            "valid": prompt_valid,
+            "total": seeds_per_prompt,
+            "rate": prompt_rate,
+        })
+        print(f"    → {prompt_valid}/{seeds_per_prompt} valid ({prompt_rate:.0f}%)")
+
+    total_elapsed = time.time() - start_time
+
+    # ── Aggregate Report ─────────────────────────────────────────────
+    print(f"\n{'='*72}")
+    print(f"  BENCHMARK RESULTS: {label}")
+    print(f"{'='*72}")
+    print(f"\n  Per-prompt accuracy:")
+    for ps in per_prompt_stats:
+        bar = "█" * int(ps["rate"] / 10) + "░" * (10 - int(ps["rate"] / 10))
+        print(f"    {bar} {ps['rate']:5.1f}%  {ps['topic'][:45]}")
+
+    print(f"\n  {'─'*60}")
+    print(f"  POEM-LEVEL ACCURACY:  {total_valid}/{total_poems} ({total_valid/total_poems*100:.1f}%)")
+    print(f"  LINE-LEVEL ACCURACY:  {valid_lines}/{total_lines} ({valid_lines/total_lines*100:.1f}%)")
+    print(f"  Total time:           {total_elapsed:.1f}s")
+    print(f"  Avg time per poem:    {total_elapsed/total_poems:.1f}s")
+
+    if constrained and all_results:
+        avg_bt = sum(r.get("backtracks", 0) for r in all_results) / len(all_results)
+        avg_chk = sum(r.get("nfa_checks", 0) for r in all_results) / len(all_results)
+        print(f"  Avg backtracks:       {avg_bt:.1f}")
+        print(f"  Avg NFA checks:       {avg_chk:.0f}")
+
+    # Save results to JSON (separate file per mode)
+    mode_tag = "constrained" if constrained else "unconstrained"
+    output_path = os.path.join(SCRIPT_DIR, f"benchmark_{mode_tag}.json")
+    save_data = {
+        "label": label,
+        "constrained": constrained,
+        "total_poems": total_poems,
+        "total_valid": total_valid,
+        "poem_accuracy": total_valid / total_poems * 100,
+        "total_lines": total_lines,
+        "valid_lines": valid_lines,
+        "line_accuracy": valid_lines / total_lines * 100,
+        "total_time": total_elapsed,
+        "per_prompt": per_prompt_stats,
+        "poems": [
+            {
+                "topic": r["topic"],
+                "seed": r["seed"],
+                "all_valid": r["all_valid"],
+                "lines": [
+                    {"text": vl["line"], "valid": vl["valid"],
+                     "markers": vl["markers"], "partition": vl["partition"]}
+                    for vl in r["valid_lines"]
+                ],
+                "elapsed": r["elapsed"],
+            }
+            for r in all_results
+        ],
+    }
+    with open(output_path, "w") as f:
+        json_mod.dump(save_data, f, ensure_ascii=False, indent=2)
+    print(f"\n  Results saved: {output_path}")
+
+    return all_results
+
+
+###############################################################################
+# 5) MAIN
 ###############################################################################
 
 
@@ -577,9 +790,11 @@ def main():
     p.add_argument("--finetuned", action="store_true", help="Use fine-tuned model")
     p.add_argument("--both", action="store_true", help="Run both models")
     p.add_argument("--unconstrained", action="store_true", help="Also run unconstrained")
+    p.add_argument("--benchmark", action="store_true",
+                   help="Run benchmark: 10 prompts × 5 seeds = 50 poems")
     p.add_argument("--topic", type=str,
                    default="తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
-                   help="Telugu topic for generation")
+                   help="Telugu topic for generation (single-topic mode)")
     p.add_argument("--seeds", type=int, default=10)
     p.add_argument("--top-k", type=int, default=50)
     args = p.parse_args()
@@ -593,44 +808,84 @@ def main():
     print("Constrained Dwipada Generation")
     print("  Stateless re-syllabification + line-length aware + backtracking")
     print(f"  Top-K: {TOP_K}, Valid line lengths: {sorted(VALID_LINE_LENGTHS)}")
+    if args.benchmark:
+        print(f"  Mode: BENCHMARK ({len(BENCHMARK_PROMPTS)} prompts × {args.seeds} seeds)")
     print("=" * 72)
 
-    topic = args.topic
-
-    if args.base or args.both:
-        model, tokenizer = load_model("google/gemma-3-1b-it")
-
-        run_experiment(model, tokenizer, topic,
-                      num_seeds=args.seeds, constrained=True,
-                      label="BASE MODEL — CONSTRAINED")
-
-        if args.unconstrained:
-            run_experiment(model, tokenizer, topic,
-                          num_seeds=args.seeds, constrained=False,
-                          label="BASE MODEL — UNCONSTRAINED")
-
-        del model
-        torch.cuda.empty_cache()
-
-    if args.finetuned or args.both:
-        merged_path = os.path.join(PROJECT_DIR, "train_models", "dwipada_merged_model")
-        if os.path.exists(merged_path):
-            model, tokenizer = load_model(merged_path)
-        else:
-            from peft import PeftModel
+    if args.benchmark:
+        # ── Benchmark mode: 10 prompts × N seeds ────────────────────
+        if args.base or args.both:
             model, tokenizer = load_model("google/gemma-3-1b-it")
-            adapter_path = os.path.join(PROJECT_DIR, "train_models", "dwipada_lora_adapter")
-            model = PeftModel.from_pretrained(model, adapter_path)
-            model.eval()
 
-        run_experiment(model, tokenizer, topic,
-                      num_seeds=args.seeds, constrained=True,
-                      label="FINE-TUNED MODEL — CONSTRAINED")
+            run_benchmark(model, tokenizer, BENCHMARK_PROMPTS,
+                         seeds_per_prompt=args.seeds, constrained=True,
+                         label="BASE — CONSTRAINED")
 
-        if args.unconstrained:
+            if args.unconstrained:
+                run_benchmark(model, tokenizer, BENCHMARK_PROMPTS,
+                             seeds_per_prompt=args.seeds, constrained=False,
+                             label="BASE — UNCONSTRAINED")
+
+            del model
+            torch.cuda.empty_cache()
+
+        if args.finetuned or args.both:
+            merged_path = os.path.join(PROJECT_DIR, "train_models", "dwipada_merged_model")
+            if os.path.exists(merged_path):
+                model, tokenizer = load_model(merged_path)
+            else:
+                from peft import PeftModel
+                model, tokenizer = load_model("google/gemma-3-1b-it")
+                adapter_path = os.path.join(PROJECT_DIR, "train_models", "dwipada_lora_adapter")
+                model = PeftModel.from_pretrained(model, adapter_path)
+                model.eval()
+
+            run_benchmark(model, tokenizer, BENCHMARK_PROMPTS,
+                         seeds_per_prompt=args.seeds, constrained=True,
+                         label="FINE-TUNED — CONSTRAINED")
+
+            if args.unconstrained:
+                run_benchmark(model, tokenizer, BENCHMARK_PROMPTS,
+                             seeds_per_prompt=args.seeds, constrained=False,
+                             label="FINE-TUNED — UNCONSTRAINED")
+    else:
+        # ── Single-topic mode ────────────────────────────────────────
+        topic = args.topic
+
+        if args.base or args.both:
+            model, tokenizer = load_model("google/gemma-3-1b-it")
+
             run_experiment(model, tokenizer, topic,
-                          num_seeds=args.seeds, constrained=False,
-                          label="FINE-TUNED MODEL — UNCONSTRAINED")
+                          num_seeds=args.seeds, constrained=True,
+                          label="BASE MODEL — CONSTRAINED")
+
+            if args.unconstrained:
+                run_experiment(model, tokenizer, topic,
+                              num_seeds=args.seeds, constrained=False,
+                              label="BASE MODEL — UNCONSTRAINED")
+
+            del model
+            torch.cuda.empty_cache()
+
+        if args.finetuned or args.both:
+            merged_path = os.path.join(PROJECT_DIR, "train_models", "dwipada_merged_model")
+            if os.path.exists(merged_path):
+                model, tokenizer = load_model(merged_path)
+            else:
+                from peft import PeftModel
+                model, tokenizer = load_model("google/gemma-3-1b-it")
+                adapter_path = os.path.join(PROJECT_DIR, "train_models", "dwipada_lora_adapter")
+                model = PeftModel.from_pretrained(model, adapter_path)
+                model.eval()
+
+            run_experiment(model, tokenizer, topic,
+                          num_seeds=args.seeds, constrained=True,
+                          label="FINE-TUNED MODEL — CONSTRAINED")
+
+            if args.unconstrained:
+                run_experiment(model, tokenizer, topic,
+                              num_seeds=args.seeds, constrained=False,
+                              label="FINE-TUNED MODEL — UNCONSTRAINED")
 
     print("\n" + "=" * 72)
     print("Done.")
