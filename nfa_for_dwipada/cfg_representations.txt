@@ -1,0 +1,1083 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║        CONTEXT-FREE GRAMMAR (CFG) REPRESENTATIONS                          ║
+║        Dwipada Constrained Decoding Pipeline                               ║
+║                                                                            ║
+║        Auto-generated from implementation source code                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Generated: 2026-03-22
+Source: nfa_for_dwipada/ (3 FSTs + 3 NFAs)
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 0: WHAT IS A CONTEXT-FREE GRAMMAR (CFG)?
+════════════════════════════════════════════════════════════════════════════════
+
+A Context-Free Grammar (CFG) is a formal system for describing languages.
+It consists of four components:
+
+    G = (V, Σ, R, S)
+
+where:
+
+    V   = Set of NON-TERMINAL symbols (variables)
+          These are placeholders that get replaced during derivation.
+          Written in angle brackets: <IDLE>, <Line>, <Indra>, etc.
+
+    Σ   = Set of TERMINAL symbols (alphabet)
+          These are the actual symbols that appear in the final string.
+          Examples: U, I, క, ా, SPACE, NEWLINE, etc.
+
+    R   = Set of PRODUCTION RULES
+          Each rule has the form:  <NonTerminal> → body
+          The body can contain terminals, non-terminals, or both.
+          Multiple alternatives are separated by |
+          Example:  <Indra> → I I I I | U I I | U I U
+
+    S   = START SYMBOL (a distinguished non-terminal)
+          Derivation always begins from S.
+
+── Special Symbols ──
+
+    ε   = The empty string (epsilon). A production A → ε means the
+          non-terminal A can be replaced by nothing.
+
+    →   = "produces" or "rewrites to". Left side rewrites to right side.
+
+    |   = "or". Separates alternative productions for the same non-terminal.
+
+
+── WHY CAN WE CONVERT NFAs AND FSTs TO CFGs? ──
+
+Both NFAs (Non-deterministic Finite Automata) and FSTs (Finite State
+Transducers) recognize/define REGULAR LANGUAGES. Regular languages are a
+strict subset of context-free languages. Therefore, every NFA/FST can be
+expressed as a CFG — specifically, a RIGHT-LINEAR grammar where every
+production has one of these forms:
+
+    A → a B     (terminal followed by one non-terminal)
+    A → ε       (empty production for accepting states)
+
+The conversion is mechanical:
+    1. Each STATE of the automaton becomes a NON-TERMINAL in the grammar
+    2. The START STATE becomes the START SYMBOL
+    3. Each TRANSITION δ(q, a) → r becomes the production  <q> → a <r>
+    4. Each ACCEPTING STATE q gets the production  <q> → ε
+
+For FSTs (which produce output), we convert the INPUT LANGUAGE (the set
+of valid inputs the FST accepts). The output transformation is noted
+separately in each section.
+
+For NFAs with cross-referencing constraints (like Prasa and Yati, which
+store a value from one position and compare it at another), we use
+PARAMETERIZED NON-TERMINALS — one version per possible stored value.
+This "unrolls" the memory into the grammar, keeping it context-free.
+
+
+── RIGHT-LINEAR vs GENERAL CFG ──
+
+A right-linear grammar is a CFG where every production is of the form:
+    A → w B   or   A → w     (w is a string of terminals)
+
+Right-linear grammars are exactly as powerful as regular expressions and
+finite automata. They cannot express nested structures like balanced
+parentheses, but they suffice for all constraints in the Dwipada pipeline
+because Telugu metrical rules involve bounded, position-based checks —
+no unbounded nesting or recursion.
+
+In some sections below (especially GanaNFA), we use a more readable
+CONCATENATION form like:
+    <Line> → <Indra> <Indra> <Indra> <Surya>
+
+This is still a regular language (finite concatenation of regular
+sub-languages), but written in the more intuitive CFG notation.
+
+
+════════════════════════════════════════════════════════════════════════════════
+NOTATION GUIDE (used throughout this document)
+════════════════════════════════════════════════════════════════════════════════
+
+Symbol          Meaning
+──────          ───────
+<NAME>          Non-terminal (variable) — will be expanded by a rule
+lowercase/      Terminal (actual symbol in the language)
+  Telugu chars
+→               "produces" / "rewrites to"
+|               "or" (alternative productions)
+ε               Empty string (epsilon)
+·               Concatenation (when explicit clarity is needed)
+CONSONANT       Any character from the Telugu consonant set (35 chars)
+VOWEL           Any independent Telugu vowel (14 chars)
+MATRA           Any dependent vowel sign (13 chars)
+DIACRITIC       Anusvara (ం) or Visarga (ః)
+SPACE           Word boundary (single space character)
+NEWLINE         Line boundary (newline character)
+syl             Any complete Telugu syllable
+syl_U           A syllable classified as Guru (heavy)
+syl_I           A syllable classified as Laghu (light)
+syl_conj        A syllable starting with a conjunct (C+్+C pattern)
+syl_simple      A syllable NOT starting with a conjunct
+U               Guru marker (heavy syllable)
+I               Laghu marker (light syllable)
+c               Any single Telugu consonant character
+
+For parameterized non-terminals:
+<STATE_c>       State parameterized by stored consonant c
+<STATE_g>       State parameterized by stored group index g
+
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 1: SYLLABLE ASSEMBLER FST → CFG
+════════════════════════════════════════════════════════════════════════════════
+
+Source: syllable_assembler.py
+Purpose: Converts raw Unicode characters into complete Telugu syllables
+         (aksharalu), emitting spaces and newlines as boundary markers.
+Type: Finite State Transducer (FST) — transforms character stream to
+      syllable stream.
+
+── ORIGINAL AUTOMATON SUMMARY ──
+
+States (4):
+    IDLE               — No syllable buffer active
+    CONSONANT_CLUSTER  — Building a consonant-based syllable
+    PENDING_VIRAMA     — Buffer ends with C+్, awaiting conjunct or pollu
+    VOWEL              — Building an independent-vowel syllable
+
+Start state:     IDLE
+Accept states:   IDLE (after flush — all buffered content emitted)
+
+Input alphabet (Σ):  Unicode characters classified into 9 categories:
+    CONSONANT          — క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ఱ ల ళ వ శ ష స హ
+                         (35 characters)
+    INDEPENDENT_VOWEL  — అ ఆ ఇ ఈ ఉ ఊ ఋ ఎ ఏ ఐ ఒ ఓ ఔ ౠ
+                         (14 characters)
+    MATRA              — ా ి ీ ు ూ ృ ె ే ై ొ ో ౌ ౖ
+                         (13 characters)
+    VIRAMA             — ్
+    DIACRITIC          — ం ః
+    SPACE              — ' '
+    NEWLINE            — '\n'
+    SKIP               — {ZWNJ, ZWSP, candrabindu} (transparent, ignored)
+    OTHER              — anything else (ignored)
+
+Output: Complete syllable strings + SPACE + NEWLINE boundary markers
+
+── CFG REPRESENTATION ──
+
+This CFG describes the set of valid Telugu character sequences that the
+SyllableAssembler FST accepts and segments into syllables. The grammar
+captures when the FST transitions between states based on character
+categories.
+
+G = (V, Σ, R, S)
+
+V = { <IDLE>, <CC>, <PV>, <VOW> }
+
+Σ = { CONSONANT, VOWEL, MATRA, VIRAMA, DIACRITIC, SPACE, NEWLINE, SKIP }
+    (Each terminal represents a CHARACTER CATEGORY, not a single character.
+     CONSONANT stands for any of the 35 Telugu consonants, etc.)
+
+S = <IDLE>
+
+R = {
+    ── From IDLE ──
+    (1)  <IDLE>  →  CONSONANT <CC>          ;; consonant starts a syllable cluster
+    (2)  <IDLE>  →  VOWEL <VOW>             ;; independent vowel starts vowel syllable
+    (3)  <IDLE>  →  SPACE <IDLE>            ;; space is a boundary, stay idle
+    (4)  <IDLE>  →  NEWLINE <IDLE>          ;; newline is a boundary, stay idle
+    (5)  <IDLE>  →  DIACRITIC <IDLE>        ;; diacritic attaches to prev syllable
+    (6)  <IDLE>  →  SKIP <IDLE>             ;; transparent characters ignored
+    (7)  <IDLE>  →  ε                       ;; accept (end of input)
+
+    ── From CONSONANT_CLUSTER ──
+    (8)  <CC>    →  VIRAMA <PV>             ;; virama after consonant → pending
+    (9)  <CC>    →  MATRA <IDLE>            ;; matra completes syllable, emit
+    (10) <CC>    →  DIACRITIC <IDLE>        ;; diacritic completes syllable, emit
+    (11) <CC>    →  CONSONANT <CC>          ;; new consonant → emit current, start new
+    (12) <CC>    →  VOWEL <VOW>             ;; vowel → emit current, start vowel
+    (13) <CC>    →  SPACE <IDLE>            ;; boundary → emit current, idle
+    (14) <CC>    →  NEWLINE <IDLE>          ;; boundary → emit current, idle
+    (15) <CC>    →  SKIP <CC>               ;; transparent, stay in cluster
+    (16) <CC>    →  ε                       ;; accept (flush emits buffer)
+
+    ── From PENDING_VIRAMA ──
+    (17) <PV>    →  CONSONANT <CC>          ;; conjunct confirmed: C+్+C
+    (18) <PV>    →  MATRA <IDLE>            ;; unusual: virama+matra, emit
+    (19) <PV>    →  DIACRITIC <IDLE>        ;; unusual: virama+diacritic, emit
+    (20) <PV>    →  SPACE <IDLE>            ;; pollu merge: C+్ merges to prev syl
+    (21) <PV>    →  NEWLINE <IDLE>          ;; pollu merge at line end
+    (22) <PV>    →  VOWEL <VOW>             ;; pollu merge, then start vowel
+    (23) <PV>    →  SKIP <PV>               ;; transparent, stay pending
+    (24) <PV>    →  ε                       ;; accept (flush: pollu merge)
+
+    ── From VOWEL ──
+    (25) <VOW>   →  DIACRITIC <IDLE>        ;; diacritic completes vowel syllable
+    (26) <VOW>   →  CONSONANT <CC>          ;; emit vowel, start consonant cluster
+    (27) <VOW>   →  VOWEL <VOW>             ;; emit current vowel, start new vowel
+    (28) <VOW>   →  SPACE <IDLE>            ;; emit vowel, boundary
+    (29) <VOW>   →  NEWLINE <IDLE>          ;; emit vowel, boundary
+    (30) <VOW>   →  SKIP <VOW>              ;; transparent, stay in vowel
+    (31) <VOW>   →  ε                       ;; accept (flush emits buffer)
+}
+
+Total: 31 production rules
+
+── OUTPUT SEMANTICS (not captured by the CFG) ──
+
+The CFG above describes the INPUT language — which character sequences the
+FST can process. The FST's OUTPUT (syllable segmentation) involves:
+  • Buffering characters and emitting complete syllables at transitions
+  • Pollu merge: when PENDING_VIRAMA sees a boundary, the C+్ merges
+    backward onto the previous syllable
+  • Conjunct formation: C+్+C continues building the same syllable
+
+These output actions are side-effects of the transducer, not expressible
+in a pure CFG.
+
+── WORKED EXAMPLE ──
+
+Input: "నమస్కారం" (namaskārāṁ)
+Characters: న(C) మ(C) స(C) ్(V) క(C) ా(M) ర(C) ం(D)
+
+Derivation:
+    <IDLE>
+    → C <CC>                                    [rule 1: న]
+    → C C <CC>                                  [rule 11: మ, emits "న"]
+    → C C C <CC>                                [rule 11: స, emits "మ"]
+    → C C C VIRAMA <PV>                         [rule 8: ్]
+    → C C C VIRAMA C <CC>                       [rule 17: క, conjunct స్క]
+    → C C C VIRAMA C MATRA <IDLE>               [rule 9: ా, emits "స్కా"]
+    → C C C VIRAMA C MATRA C <CC>               [rule 1 from IDLE: ర starts new cluster]
+    → C C C VIRAMA C MATRA C DIAC <IDLE>        [rule 10: ం, emits "రం"]
+    → C C C VIRAMA C MATRA C DIAC ε             [rule 7: end]
+
+Result: ["న", "మ", "స్కా", "రం"] ✓
+
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 2: GURU/LAGHU CLASSIFIER FST → CFG
+════════════════════════════════════════════════════════════════════════════════
+
+Source: guru_laghu_classifier.py
+Purpose: Classifies each syllable as Guru (U/heavy) or Laghu (I/light)
+         using 5 classification rules. Emits (syllable, label) pairs.
+Type: Finite State Transducer (FST) — transforms syllable stream to
+      labeled syllable stream.
+
+── ORIGINAL AUTOMATON SUMMARY ──
+
+States (2):
+    EMPTY      — Nothing buffered, ready for next syllable
+    PENDING_I  — One intrinsically Laghu syllable in buffer, waiting
+                 for next syllable to check Rule 5 (conjunct lookahead)
+
+Start state:     EMPTY
+Accept states:   EMPTY (after flush — buffered syllable emitted as Laghu)
+
+Input alphabet (Σ):
+    syl_U       — A syllable intrinsically classified as Guru by Rules 1-4:
+                   Rule 1: Contains long matra { ా ీ ూ ౄ ే ో ౌ }
+                           or is long indep. vowel { ఆ ఈ ఊ ఏ ఓ ౠ }
+                   Rule 2: Contains diphthong (ఐ, ఔ, ై, ౌ)
+                   Rule 3: Contains anusvara (ం) or visarga (ః)
+                   Rule 4: Ends with virama (్)
+    syl_I_conj  — Intrinsically Laghu AND contains a conjunct (C+్+C)
+                   ANYWHERE in the syllable. Triggers Rule 5 on preceding.
+                   Example: "త్య" (conjunct at start).
+    syl_I_simple— Intrinsically Laghu, no conjunct pattern anywhere.
+                   Example: "మ" (bare consonant with inherent short vowel).
+    syl_U_conj  — Intrinsically Guru AND contains a conjunct (C+్+C).
+                   Also triggers Rule 5 on the preceding buffered syllable.
+                   Example: "స్కా" (conjunct + long matra).
+    syl_U_simple— Intrinsically Guru, no conjunct pattern.
+                   Example: "రా" (long matra, no conjunct).
+    BOUNDARY    — Space or newline (blocks Rule 5, flushes buffer)
+
+IMPORTANT — CONJUNCT DETECTION PREDICATE:
+
+This FST uses is_conjunct_trigger(syl) which checks for C+్+C pattern
+at ANY position in the syllable (not just the start). This differs from
+GanaMarker's is_conjunct_start() which only checks indices 0,1,2.
+
+Example of divergence: syllable "రాత్య"
+  • is_conjunct_trigger("రాత్య") → True  (finds త్య at indices 2,3,4)
+  • is_conjunct_start("రాత్య")  → False (indices 0,1,2 are ర,ా,త — not C+్+C)
+
+IMPORTANT — NEWLINE HANDLING:
+
+In this FST, BOTH space and newline block Rule 5 (unified as BOUNDARY).
+This differs from GanaMarker where ONLY space blocks Rule 5 and newline
+is transparent. See Section 3 for details.
+
+Output: (syllable_text, "U"|"I") pairs
+
+── CFG REPRESENTATION ──
+
+This CFG describes valid sequences of classified syllables and boundaries.
+The key insight is that Rule 5 creates a 1-syllable lookahead dependency:
+a Laghu syllable might become Guru if the NEXT syllable contains a
+conjunct — and this check applies to ALL incoming syllables, including
+those that are intrinsically Guru.
+
+The conjunct-trigger property only matters at the PENDING_I state (where
+a buffered Laghu syllable awaits its fate). At the EMPTY state, the
+conjunct property of an incoming syllable is irrelevant — there is no
+buffered syllable to promote. Therefore, at EMPTY we use the simpler
+classification (syl_U vs syl_I_conj/syl_I_simple).
+
+G = (V, Σ, R, S)
+
+V = { <EMPTY>, <PENDING_I> }
+
+Σ = { syl_U, syl_I_conj, syl_I_simple, syl_U_conj, syl_U_simple, BOUNDARY }
+    (Note: syl_U_conj and syl_U_simple are subsets of syl_U.
+     The split is only needed at PENDING_I where the distinction matters.)
+
+S = <EMPTY>
+
+R = {
+    ── From EMPTY ──
+    At EMPTY, no syllable is buffered, so the conjunct property of the
+    incoming syllable is irrelevant (nothing to promote via Rule 5).
+    (1)  <EMPTY>     →  syl_U <EMPTY>               ;; Guru: emit as U, stay EMPTY
+    (2)  <EMPTY>     →  syl_I_conj <PENDING_I>      ;; Laghu: buffer it (might be promoted)
+    (3)  <EMPTY>     →  syl_I_simple <PENDING_I>    ;; Laghu: buffer it
+    (4)  <EMPTY>     →  BOUNDARY <EMPTY>             ;; boundary with nothing buffered
+    (5)  <EMPTY>     →  ε                            ;; accept
+
+    ── From PENDING_I (one Laghu syllable buffered) ──
+    Here the conjunct property of the incoming syllable determines whether
+    the BUFFERED syllable gets promoted to Guru via Rule 5.
+    (6)  <PENDING_I> →  syl_U_conj <EMPTY>          ;; RULE 5: emit buffered as U (promoted!),
+                                                     ;;         then emit new Guru as U
+    (7)  <PENDING_I> →  syl_U_simple <EMPTY>        ;; No Rule 5: emit buffered as I,
+                                                     ;;            then emit new Guru as U
+    (8)  <PENDING_I> →  syl_I_conj <PENDING_I>      ;; RULE 5: emit buffered as U (promoted!),
+                                                     ;;         buffer new Laghu syllable
+    (9)  <PENDING_I> →  syl_I_simple <PENDING_I>    ;; No Rule 5: emit buffered as I,
+                                                     ;;            buffer new Laghu
+    (10) <PENDING_I> →  BOUNDARY <EMPTY>             ;; emit buffered as I (boundary blocks Rule 5)
+    (11) <PENDING_I> →  ε                            ;; accept (flush: emit buffered as I)
+}
+
+Total: 11 production rules
+
+── RULE 5 FIRING LOGIC (from implementation) ──
+
+In the code (_on_syllable), is_conjunct_trigger(syl) is computed for
+EVERY incoming syllable before its intrinsic label is examined:
+
+  • At EMPTY: is_conjunct_trigger is computed but UNUSED — _flush_buffer()
+    does nothing when no syllable is buffered. The Guru/Laghu label alone
+    determines the transition. (Rules 1-3)
+
+  • At PENDING_I: is_conjunct_trigger determines Rule 5:
+    - Rule 6 (syl_U_conj):  is_conjunct_trigger = True → flush_buffer(rule5=True)
+      → buffered Laghu promoted to U. Then the Guru itself is emitted as U.
+    - Rule 7 (syl_U_simple): is_conjunct_trigger = False → flush_buffer(rule5=False)
+      → buffered Laghu stays I. Then the Guru is emitted as U.
+    - Rule 8 (syl_I_conj):  is_conjunct_trigger = True → flush_buffer(rule5=True)
+      → buffered Laghu promoted to U. Then new Laghu is buffered.
+    - Rule 9 (syl_I_simple): is_conjunct_trigger = False → flush_buffer(rule5=False)
+      → buffered Laghu stays I. Then new Laghu is buffered.
+
+BOUNDARY (space/newline) always flushes with rule5=False (rule 10).
+
+── WORKED EXAMPLE ──
+
+Input syllables: ["స", "త్య", "ము"]  (from "సత్యము")
+Classification:
+    "స"    → intrinsic I, no conjunct → syl_I_simple
+    "త్య" → intrinsic I, has conjunct (త+్+య) → syl_I_conj
+    "ము"   → intrinsic I, no conjunct → syl_I_simple
+
+Derivation:
+    <EMPTY>
+    → syl_I_simple <PENDING_I>                  [rule 3: buffer "స"]
+    → syl_I_simple syl_I_conj <PENDING_I>       [rule 8: emit "స" as U (Rule 5!),
+                                                          buffer "త్య"]
+    → syl_I_simple syl_I_conj syl_I_simple <PENDING_I>  [rule 9: emit "త్య" as I,
+                                                                   buffer "ము"]
+    → syl_I_simple syl_I_conj syl_I_simple ε    [rule 11: emit "ము" as I]
+
+Result: [("స", U), ("త్య", I), ("ము", I)] ✓
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 3: GANA MARKER FST → CFG
+════════════════════════════════════════════════════════════════════════════════
+
+Source: ganana_marker.py
+Purpose: Alternative to GuruLaghuClassifier. Takes syllable stream and
+         emits U/I markers (strings, not tuples), passing spaces and
+         newlines through unchanged. Same 5 classification rules.
+Type: Finite State Transducer (FST) — transforms syllable stream to
+      U/I marker stream.
+
+── ORIGINAL AUTOMATON SUMMARY ──
+
+States (3):
+    IDLE              — No syllable buffered
+    PENDING_CLEAR     — One syllable buffered, no boundary seen since
+    PENDING_BOUNDARY  — One syllable buffered, boundary seen → Rule 5 blocked
+
+Start state:     IDLE
+Accept states:   IDLE (after flush)
+
+Input alphabet (Σ):
+    syl_conj     — Any syllable (Guru or Laghu) that starts with a conjunct
+                   (C+్+C pattern). Triggers Rule 5 on the preceding syllable.
+                   Examples: "త్య" (Laghu+conjunct), "స్కా" (Guru+conjunct)
+    syl_simple   — Any syllable that does NOT start with a conjunct.
+                   Examples: "మ" (Laghu), "రా" (Guru), "సం" (Guru)
+    SPACE        — Word boundary (blocks Rule 5)
+    NEWLINE      — Line boundary (does NOT block Rule 5 — see note below)
+
+IMPORTANT — CONJUNCT DETECTION PREDICATE:
+
+This FST uses is_conjunct_start(syl) which checks for C+్+C pattern
+ONLY at the START of the syllable (indices 0,1,2). This differs from
+GuruLaghuClassifier's is_conjunct_trigger() which scans the ENTIRE
+syllable. See Section 2 for the divergence example.
+
+Like GuruLaghuClassifier, the conjunct check is applied to ALL incoming
+syllables regardless of Guru/Laghu classification. A Guru syllable
+starting with a conjunct ALSO triggers Rule 5 on the buffered syllable.
+
+IMPORTANT — NEWLINE HANDLING (differs from GuruLaghuClassifier!):
+
+In this FST, ONLY space blocks Rule 5. NEWLINE is transparent — it stays
+in PENDING_CLEAR and Rule 5 can still fire across line boundaries. This
+matches the reference analyser behavior. Compare with GuruLaghuClassifier
+(Section 2) where BOTH space and newline block Rule 5.
+
+Output: U, I, SPACE, NEWLINE markers
+
+── CFG REPRESENTATION ──
+
+The GanaMarker has the same Rule 5 lookahead logic as GuruLaghuClassifier,
+but with an additional PENDING_BOUNDARY state that explicitly tracks when
+a SPACE boundary has intervened (blocking Rule 5).
+
+CRITICAL DESIGN DETAIL: Only SPACE transitions to PENDING_BOUNDARY.
+NEWLINE does NOT block Rule 5 — it stays in PENDING_CLEAR. This matches
+the reference analyser (akshara_ganavibhajana) which skips newlines when
+searching for the next syllable's conjunct status. A conjunct at the start
+of the next LINE can still upgrade the last syllable of the current line.
+
+G = (V, Σ, R, S)
+
+V = {{ <IDLE>, <PC>, <PB> }}
+    where PC = PENDING_CLEAR, PB = PENDING_BOUNDARY
+
+Σ = {{ syl_conj, syl_simple, SPACE, NEWLINE }}
+
+S = <IDLE>
+
+R = {{
+    ── From IDLE ──
+    (1)  <IDLE>  →  syl_conj <PC>             ;; buffer conjunct-start syllable
+    (2)  <IDLE>  →  syl_simple <PC>            ;; buffer non-conjunct syllable
+    (3)  <IDLE>  →  SPACE <IDLE>               ;; emit space, stay idle
+    (4)  <IDLE>  →  NEWLINE <IDLE>             ;; emit newline, stay idle
+    (5)  <IDLE>  →  ε                          ;; accept
+
+    ── From PENDING_CLEAR (syllable buffered, no SPACE boundary since) ──
+    (6)  <PC>    →  syl_conj <PC>              ;; RULE 5 FIRES: emit buffered as U,
+                                                ;;   emit any buffered newlines,
+                                                ;;   buffer new syllable
+    (7)  <PC>    →  syl_simple <PC>            ;; No Rule 5: emit buffered as self_class,
+                                                ;;   emit any buffered newlines,
+                                                ;;   buffer new syllable
+    (8)  <PC>    →  SPACE <PB>                 ;; buffer space, block Rule 5
+    (9)  <PC>    →  NEWLINE <PC>               ;; buffer newline, Rule 5 STILL POSSIBLE
+                                                ;; (stays PENDING_CLEAR, NOT PENDING_BOUNDARY)
+    (10) <PC>    →  ε                          ;; accept (flush: emit self_class of buffered)
+
+    ── From PENDING_BOUNDARY (syllable buffered + SPACE seen) ──
+    (11) <PB>    →  syl_conj <PC>              ;; Rule 5 BLOCKED by space!
+                                                ;; emit self_class of buffered,
+                                                ;; emit all buffered boundaries, buffer new
+    (12) <PB>    →  syl_simple <PC>            ;; same: emit buffered+boundaries, buffer new
+    (13) <PB>    →  SPACE <PB>                 ;; accumulate another boundary
+    (14) <PB>    →  NEWLINE <PB>               ;; accumulate another boundary
+    (15) <PB>    →  ε                          ;; accept (flush all)
+}}
+
+Total: 15 production rules
+
+── KEY DIFFERENCES FROM GURU/LAGHU CLASSIFIER ──
+
+1. NEWLINE handling (rule 9 vs rule 8):
+   • Rule 9: NEWLINE at PENDING_CLEAR → stays PENDING_CLEAR (not PB!)
+   • Rule 8: SPACE at PENDING_CLEAR → transitions to PENDING_BOUNDARY
+   • Only SPACE blocks Rule 5. NEWLINE is transparent to Rule 5.
+
+2. Rule 5 trigger (rules 6 & 11):
+   • Rule 6 [PENDING_CLEAR + conjunct-start]: Rule 5 fires → buffered becomes U
+   • Rule 11 [PENDING_BOUNDARY + conjunct-start]: Rule 5 is BLOCKED by the
+     intervening space → buffered stays at its intrinsic class
+
+This three-state design makes the boundary suppression of Rule 5 explicit,
+which is important for the streaming constrained-decoding use case where
+syllables arrive one at a time.
+
+── WORKED EXAMPLE ──
+
+Input syllables: ["మ", " ", "ళ్ళ"]  (word boundary between మ and ళ్ళ)
+Classification:
+    "మ"    → syl_simple (Laghu, no conjunct start)
+    " "    → SPACE
+    "ళ్ళ" → syl_conj (starts with ళ+్+ళ conjunct)
+
+Derivation:
+    <IDLE>
+    → syl_simple <PC>                           [rule 2: buffer "మ"]
+    → syl_simple SPACE <PB>                     [rule 8: space blocks Rule 5]
+    → syl_simple SPACE syl_conj <PC>            [rule 11: Rule 5 BLOCKED!
+                                                          emit "మ" as I (self_class),
+                                                          emit " ",
+                                                          buffer "ళ్ళ"]
+    → syl_simple SPACE syl_conj ε               [rule 10: emit "ళ్ళ" as I]
+
+Result: I, " ", I  (మ stays I because space blocked Rule 5) ✓
+
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 4: GANA NFA → CFG
+════════════════════════════════════════════════════════════════════════════════
+
+Source: gana_nfa.py
+Purpose: Partitions each Dwipada line into exactly 3 Indra ganas + 1 Surya
+         gana. Validates that the U/I marker stream matches a valid metrical
+         pattern.
+Type: Non-deterministic Finite Automaton (NFA) — multiple gana assignments
+      are explored in parallel; dead branches are pruned.
+
+── ORIGINAL AUTOMATON SUMMARY ──
+
+The NFA processes U/I markers and non-deterministically guesses which gana
+pattern is being read at each position. The state is a SET of active
+branches, where each branch is:
+
+    (slot, gana_name, sub_position, matched_ganas_so_far)
+
+    slot:     0, 1, 2 (Indra positions) or 3 (Surya position)
+    sub_pos:  position within the current gana pattern
+
+Start: All 6 Indra gana branches spawned for slot 0
+Accept: Any branch reaches (ACCEPT, _, _, (g1, g2, g3, g4))
+
+Input alphabet (Σ): {{ U, I, NEWLINE }}
+
+── GANA PATTERNS (from source code) ──
+    Indra Ganas (ఇంద్ర గణములు) — used in slots 0, 1, 2:
+        Bha (భ)               U I I         (3 syllables)
+        Naga (నగ)             I I I U       (4 syllables)
+        Nala (నల)             I I I I       (4 syllables)
+        Ra (ర)                U I U         (3 syllables)
+        Sala (సల)             I I U I       (4 syllables)
+        Ta (త)                U U I         (3 syllables)
+
+    Surya Ganas (సూర్య గణములు) — used in slot 3:
+        Ha/Gala (హ/గల)        U I           (2 syllables)
+        Na (న)                I I I         (3 syllables)
+
+── FORMAL LANGUAGE ──
+
+Each valid Dwipada line belongs to:
+
+    L_line = (Indra)³ · (Surya)
+
+where Indra and Surya are defined by the gana patterns above.
+Valid line length: 11 to 15 syllables.
+
+── CFG REPRESENTATION ──
+
+This is the most elegant conversion. Because the GanaNFA partitions a line
+into a fixed sequence of 4 slots (3 Indra + 1 Surya), the CFG is simply
+a concatenation of sub-grammars — one for each slot.
+
+G = (V, Σ, R, S)
+
+V = { <Dwipada>, <Line>, <Indra>, <Surya> }
+
+Σ = { U, I, NEWLINE }
+
+S = <Dwipada>
+
+R = {
+    ── Top-level: a Dwipada is 1 or 2 lines ──
+    (1)  <Dwipada>  →  <Line>
+    (2)  <Dwipada>  →  <Line> NEWLINE <Line>
+
+    ── Each line is 3 Indra ganas + 1 Surya gana ──
+    (3)  <Line>     →  <Indra> <Indra> <Indra> <Surya>
+
+    ── Indra gana alternatives (from INDRA_GANAS) ──
+        (4)  <Indra>   →  U I I         ;; Bha (భ)
+        (5)  <Indra>   →  I I I U       ;; Naga (నగ)
+        (6)  <Indra>   →  I I I I       ;; Nala (నల)
+        (7)  <Indra>   →  U I U         ;; Ra (ర)
+        (8)  <Indra>   →  I I U I       ;; Sala (సల)
+        (9)  <Indra>   →  U U I         ;; Ta (త)
+
+        ── Surya gana alternatives (from SURYA_GANAS) ──
+        (10)  <Surya>   →  U I           ;; Ha/Gala (హ/గల)
+        (11)  <Surya>   →  I I I         ;; Na (న)
+    }
+
+    Total: 11 production rules
+
+── COMPACT FORM ──
+
+<Dwipada>  →  <Line> | <Line> NEWLINE <Line>
+<Line>     →  <Indra> <Indra> <Indra> <Surya>
+<Indra>    →  U I I | I I I U | I I I I | U I U | I I U I | U U I
+<Surya>    →  U I | I I I
+
+── NOTE ON NON-DETERMINISM ──
+
+In the original NFA, the non-determinism arises because after seeing the
+first few symbols, multiple gana types remain possible. For example, after
+seeing "I", the NFA has branches for Nala(IIII), Naga(IIIU), and Sala(IIUI).
+The CFG captures this naturally through the alternative productions for
+<Indra> — the parser (or derivation) simply picks the correct alternative
+that matches the full input.
+
+── WORKED EXAMPLE ──
+
+Input: I I I U  I I I I  U I U  U I
+
+Derivation:
+    <Dwipada>
+    → <Line>                                              [rule 1]
+    → <Indra> <Indra> <Indra> <Surya>                    [rule 3]
+    → I I I U  <Indra> <Indra> <Surya>                   [Naga]
+    → I I I U  I I I I  <Indra> <Surya>                  [Nala]
+    → I I I U  I I I I  U I U  <Surya>                   [Ra]
+    → I I I U  I I I I  U I U  U I                       [Ha/Gala]
+
+Partition: Naga(నగ) | Nala(నల) | Ra(ర) | Ha/Gala(హ/గల) ✓
+
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 5: PRASA NFA → CFG
+════════════════════════════════════════════════════════════════════════════════
+
+Source: prasa_nfa.py
+Purpose: Validates the prasa (ప్రాస) rhyme constraint — the 2nd syllable
+         of line 1 and line 2 must share the same base consonant.
+Type: Deterministic Finite Automaton (named NFA for pipeline consistency)
+
+── ORIGINAL AUTOMATON SUMMARY ──
+
+States (7):
+    LINE1_SYL0  — Waiting for 1st syllable of line 1
+    LINE1_SYL1  — Waiting for 2nd syllable of line 1 (prasa position)
+    LINE1_REST  — Consuming remaining syllables of line 1
+    LINE2_SYL0  — Waiting for 1st syllable of line 2
+    LINE2_SYL1  — Waiting for 2nd syllable of line 2 (check position)
+    ACCEPT      — Prasa matched
+    REJECT      — Prasa did not match
+
+Start state:     LINE1_SYL0
+Accept states:   { ACCEPT }
+
+Input alphabet (Σ):
+    syl   — Any Telugu syllable
+    SPACE — Word boundary (skipped, not counted as syllable)
+    NEWLINE — Line separator
+
+Prasa equivalence groups (from PRASA_EQUIVALENTS):
+            ల ↔ ళ  (lateral)
+            శ ↔ స  (sibilant)
+            ర ↔ ఱ  (rhotic)
+
+All other consonants must match exactly.
+
+── THE CHALLENGE: CROSS-REFERENCING CONSTRAINT ──
+
+The Prasa NFA STORES the consonant from line 1's 2nd syllable and COMPARES
+it against line 2's 2nd syllable. A pure CFG cannot "remember" a value and
+compare it later — that requires context-sensitivity.
+
+SOLUTION: We use PARAMETERIZED NON-TERMINALS. Instead of one <LINE1_REST>
+state, we create one version for EACH possible stored consonant:
+    <LINE1_REST_క>, <LINE1_REST_ఖ>, <LINE1_REST_గ>, ...
+
+This "unrolls" the finite memory into the grammar. Since the set of
+possible consonants is finite (35 consonants collapsed into
+32 equivalence classes), this remains a finite (though larger) CFG.
+
+    ── CFG REPRESENTATION ──
+
+    G = (V, Σ, R, S)
+
+    V = { <L1S0>, <L1S1>,
+          <L1R_[class]> for each consonant class,
+          <L2S0_[class]> for each consonant class,
+          <L2S1_[class]> for each consonant class,
+          <ACCEPT> }
+
+    Consonant classes (each [] is one of these):
+        [lateral] = { ల, ళ }  (equivalent for prasa)
+        [rhotic] = { ర, ఱ }  (equivalent for prasa)
+        [sibilant] = { శ, స }  (equivalent for prasa)
+        [క] = { క }  (singleton)
+        [ఖ] = { ఖ }  (singleton)
+        [గ] = { గ }  (singleton)
+        [ఘ] = { ఘ }  (singleton)
+        [ఙ] = { ఙ }  (singleton)
+        [చ] = { చ }  (singleton)
+        [ఛ] = { ఛ }  (singleton)
+        [జ] = { జ }  (singleton)
+        [ఝ] = { ఝ }  (singleton)
+        [ఞ] = { ఞ }  (singleton)
+        [ట] = { ట }  (singleton)
+        [ఠ] = { ఠ }  (singleton)
+        [డ] = { డ }  (singleton)
+        [ఢ] = { ఢ }  (singleton)
+        [ణ] = { ణ }  (singleton)
+        [త] = { త }  (singleton)
+        [థ] = { థ }  (singleton)
+        [ద] = { ద }  (singleton)
+        [ధ] = { ధ }  (singleton)
+        [న] = { న }  (singleton)
+        [ప] = { ప }  (singleton)
+        [ఫ] = { ఫ }  (singleton)
+        [బ] = { బ }  (singleton)
+        [భ] = { భ }  (singleton)
+        [మ] = { మ }  (singleton)
+        [య] = { య }  (singleton)
+        [వ] = { వ }  (singleton)
+        [ష] = { ష }  (singleton)
+        [హ] = { హ }  (singleton)
+
+    Total classes: 32
+
+    Σ = { syl, syl_with_base_c (for each consonant c), SPACE, NEWLINE }
+
+    S = <L1S0>
+
+    R = {
+        ── Phase 1: Line 1, counting to 2nd syllable ──
+        (1)  <L1S0>        →  syl <L1S1>             ;; 1st syl of line 1
+        (2)  <L1S0>        →  SPACE <L1S0>           ;; skip spaces
+
+        ── Phase 2: Store consonant from 2nd syllable ──
+             For each consonant class [c]:
+        (3c) <L1S1>        →  syl_with_base_[c] <L1R_[c]>  ;; store class
+        (3') <L1S1>        →  SPACE <L1S1>           ;; skip spaces
+
+        ── Phase 3: Consume rest of line 1 ──
+             For each consonant class [c]:
+        (4c) <L1R_[c]>     →  syl <L1R_[c]>         ;; consume syllable
+        (5c) <L1R_[c]>     →  SPACE <L1R_[c]>       ;; skip space
+        (6c) <L1R_[c]>     →  NEWLINE <L2S0_[c]>    ;; line break → line 2
+
+        ── Phase 4: Line 2, counting to 2nd syllable ──
+             For each consonant class [c]:
+        (7c) <L2S0_[c]>    →  syl <L2S1_[c]>        ;; 1st syl of line 2
+        (8c) <L2S0_[c]>    →  SPACE <L2S0_[c]>      ;; skip spaces
+
+        ── Phase 5: Check consonant of 2nd syllable ──
+             For each consonant class [c]:
+        (9c) <L2S1_[c]>    →  syl_with_base_[c] <ACCEPT>   ;; MATCH! ✓
+             (Any syl with base NOT in class [c] → no production → REJECT)
+        (9') <L2S1_[c]>    →  SPACE <L2S1_[c]>      ;; skip spaces
+
+        ── Phase 6: Accept (consume remaining input) ──
+        (10) <ACCEPT>       →  syl <ACCEPT>          ;; consume rest
+        (11) <ACCEPT>       →  SPACE <ACCEPT>        ;; consume rest
+        (12) <ACCEPT>       →  NEWLINE <ACCEPT>      ;; consume rest
+        (13) <ACCEPT>       →  ε                     ;; done
+    }
+
+    Total production rules: 3 + (8 × 32 classes) + 4 = 263
+
+── EQUIVALENCE CLASS DETAIL ──
+
+The parameterization uses equivalence classes, NOT individual consonants.
+Consonants in the same Prasa equivalence group share a single non-terminal:
+
+        <L1R_lateral> accepts base consonant ∈ { ల, ళ }
+        <L1R_rhotic> accepts base consonant ∈ { ర, ఱ }
+        <L1R_sibilant> accepts base consonant ∈ { శ, స }
+
+All other consonants are their own class (singleton).
+
+── WORKED EXAMPLE ──
+
+Input: "సౌ ధా గ్ర ము ల NEWLINE వీ ధు ల"
+(Line 1 prasa position = "ధా", Line 2 prasa position = "ధు")
+
+Base consonant of "ధా" = ధ
+Base consonant of "ధు" = ధ
+ధ is a singleton class (not in any equivalence group)
+
+Derivation:
+    <L1S0>
+    → syl <L1S1>                           [rule 1: "సౌ"]
+    → syl syl_with_base_ధ <L1R_ధ>          [rule 3ధ: "ధా", store ధ]
+    → syl syl syl <L1R_ధ>                  [rule 4ధ×3: "గ్ర","ము","ల"]
+    → ... NEWLINE <L2S0_ధ>                  [rule 6ధ: line break]
+    → ... syl <L2S1_ధ>                     [rule 7ధ: "వీ"]
+    → ... syl_with_base_ధ <ACCEPT>          [rule 9ధ: "ధు" matches! ✓]
+    → ... ε                                 [rule 13: done]
+
+Result: ACCEPT (exact match on ధ) ✓
+
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 6: YATI NFA → CFG
+════════════════════════════════════════════════════════════════════════════════
+
+Source: yati_nfa.py
+Purpose: Validates the Yati (యతి) alliteration constraint — the 1st syllable
+         of gana 1 must phonetically match the 1st syllable of gana 3 within
+         each line, under Yati Maitri group equivalence.
+Type: NFA with cascading match checks (5 yati types in priority order).
+
+── ORIGINAL AUTOMATON SUMMARY ──
+
+Phases (per line):
+    IDLE       — Waiting for gana 1's first syllable
+    RECORDED   — Gana 1's info stored, waiting for gana 3's first syllable
+    ACCEPTED   — Yati check passed
+    REJECTED   — Yati check failed
+
+The NFA receives PAIRS: (gana1_first_syllable, gana3_first_syllable)
+per line. The Position Tracker in the pipeline extracts these from the
+syllable stream based on the GanaNFA's partition.
+
+Input: Pairs of aksharalu (syllables) — one pair per line.
+
+── YATI MAITRI GROUPS (from source code) ──
+
+11 phonetic equivalence classes. Letters in the same group satisfy
+Vyanjana Yati (వ్యంజన యతి):
+
+        Group  0: Open vowels + Glides                { అ, అం, అః, ఆ, ఐ, ఔ, య, హ }
+        Group  1: Front vowels                        { ఇ, ఈ, ఋ, ఎ, ఏ }
+        Group  2: Back vowels                         { ఉ, ఊ, ఒ, ఓ }
+        Group  3: Velars (కంఠ్యము)                    { క, క్ష, ఖ, గ, ఘ }
+        Group  4: Palatals + Sibilants (తాలవ్యము)     { చ, ఛ, జ, ఝ, శ, ష, స }
+        Group  5: Retroflexes (మూర్ధన్యము)            { ట, ఠ, డ, ఢ }
+        Group  6: Dentals (దంత్యము)                   { త, థ, ద, ధ }
+        Group  7: Labials (ఓష్ఠ్యము)                  { ప, ఫ, బ, భ, వ }
+        Group  8: Liquids                             { ర, ఱ, ల, ళ }
+        Group  9: Nasals                              { ణ, న }
+        Group 10: Labial nasals                       { పు, ఫు, బు, భు, మ, ము }
+
+── SVARA YATI GROUPS (vowel family harmony) ──
+
+        Group 0: అ-family (open)           { అ, ఆ, ఐ, ఔ }
+        Group 1: ఇ-family (front)          { ఇ, ఈ, ఋ, ఎ, ఏ, ౠ }
+        Group 2: ఉ-family (back)           { ఉ, ఊ, ఒ, ఓ }
+
+── BINDU YATI MAPPING (anusvara → varga nasal) ──
+
+        కం → ఙ
+        ఖం → ఙ
+        గం → ఙ
+        ఘం → ఙ
+        చం → ఞ
+        ఛం → ఞ
+        జం → ఞ
+        ఝం → ఞ
+        టం → ణ
+        ఠం → ణ
+        డం → ణ
+        ఢం → ణ
+        తం → న
+        థం → న
+        దం → న
+        ధం → న
+        పం → మ
+        ఫం → మ
+        బం → మ
+        భం → మ
+
+── CASCADE CHECK ORDER ──
+
+The 5 yati checks are tried in priority order. First match wins:
+
+    Priority 1: EXACT MATCH       — Same first letter (e.g., క ↔ క)
+    Priority 2: VYANJANA YATI     — Same Maitri group (e.g., క ↔ గ, both Velars)
+    Priority 3: SVARA YATI        — Same vowel family (e.g., కా ↔ అ, both అ-family)
+    Priority 4: SAMYUKTA YATI     — Any consonant in a conjunct matches via maitri
+                                    (e.g., ప్ర ↔ ర, because ర is in the conjunct)
+    Priority 5: BINDU YATI        — Anusvara maps to varga nasal
+                                    (e.g., కం ↔ ఙ, because కం → velar nasal ఙ)
+
+── THE CHALLENGE: MULTI-DIMENSIONAL MATCHING ──
+
+Unlike Prasa (which compares one dimension — base consonant), Yati has
+FIVE different matching criteria across multiple phonetic features. A full
+CFG unrolling would need parameterized non-terminals for every combination
+of features that could be stored from gana 1.
+
+However, since the NFA receives pre-extracted PAIRS (not a raw stream),
+the CFG is simpler: it describes which pairs are accepted.
+
+── CFG REPRESENTATION ──
+
+Since the YatiNFA receives (gana1_syl, gana3_syl) pairs per line, the
+CFG defines the LANGUAGE OF VALID PAIRS.
+
+G = (V, Σ, R, S)
+
+V = { <Yati>, <LinePair>, <ValidPair> }
+
+Σ = { (a, b) for all aksharalu a, b — represented as pair terminals }
+
+S = <Yati>
+
+R = {
+    ── Top level ──
+    (1)  <Yati>       →  <LinePair>
+    (2)  <Yati>       →  <LinePair> <LinePair>
+
+    ── Each line has one pair to validate ──
+    (3)  <LinePair>   →  <ValidPair>
+
+    ── A pair is valid if ANY of the 5 yati checks pass ──
+    (4)  <ValidPair>  →  <ExactMatch>
+    (5)  <ValidPair>  →  <VyanjanaMaitri>
+    (6)  <ValidPair>  →  <SvaraYati>
+    (7)  <ValidPair>  →  <SamyuktaYati>
+    (8)  <ValidPair>  →  <BinduYati>
+
+        ── Exact Match: same first letter ──
+        (9)  <ExactMatch>  →  (x, x)  for any x ∈ Σ_letters
+             where Σ_letters = all 49 Telugu consonants + vowels
+
+        ── Vyanjana Maitri: same Yati Maitri group ──
+        (10)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 0 (Open vowels + Glides)
+              Group 0 = { అ, అం, అః, ఆ, ఐ, ఔ, య, హ }
+        (11)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 1 (Front vowels)
+              Group 1 = { ఇ, ఈ, ఋ, ఎ, ఏ }
+        (12)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 2 (Back vowels)
+              Group 2 = { ఉ, ఊ, ఒ, ఓ }
+        (13)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 3 (Velars (కంఠ్యము))
+              Group 3 = { క, క్ష, ఖ, గ, ఘ }
+        (14)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 4 (Palatals + Sibilants (తాలవ్యము))
+              Group 4 = { చ, ఛ, జ, ఝ, శ, ష, స }
+        (15)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 5 (Retroflexes (మూర్ధన్యము))
+              Group 5 = { ట, ఠ, డ, ఢ }
+        (16)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 6 (Dentals (దంత్యము))
+              Group 6 = { త, థ, ద, ధ }
+        (17)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 7 (Labials (ఓష్ఠ్యము))
+              Group 7 = { ప, ఫ, బ, భ, వ }
+        (18)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 8 (Liquids)
+              Group 8 = { ర, ఱ, ల, ళ }
+        (19)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 9 (Nasals)
+              Group 9 = { ణ, న }
+        (20)  <VyanjanaMaitri>  →  (a, b)  where a, b ∈ Group 10 (Labial nasals)
+              Group 10 = { పు, ఫు, బు, భు, మ, ము }
+
+        ── Svara Yati: same vowel family ──
+        (21)  <SvaraYati>  →  (a, b)  where vowel(a), vowel(b) ∈ అ-family (open)
+              Vowels: { అ, ఆ, ఐ, ఔ }
+        (22)  <SvaraYati>  →  (a, b)  where vowel(a), vowel(b) ∈ ఇ-family (front)
+              Vowels: { ఇ, ఈ, ఋ, ఎ, ఏ, ౠ }
+        (23)  <SvaraYati>  →  (a, b)  where vowel(a), vowel(b) ∈ ఉ-family (back)
+              Vowels: { ఉ, ఊ, ఒ, ఓ }
+
+        ── Samyukta Yati: conjunct consonant matching ──
+        (24)  <SamyuktaYati>  →  (a, b)  where there EXISTS some
+              consonant c1 in a's conjunct cluster and some consonant c2
+              in b's conjunct cluster such that c1 and c2 are in the same
+              Maitri group (or c1 == c2).
+              (Existential match: the code returns True on the FIRST
+              matching pair found. E.g., ప్ర ↔ ర matches because ర
+              appears in the conjunct ప్ర and equals ర directly.)
+
+        ── Bindu Yati: anusvara → varga nasal mapping ──
+        (25)  <BinduYati>  →  (a, b)  where:
+              a contains anusvara (ం) AND base consonant of a maps
+              to a varga nasal that matches b's consonant, or vice versa.
+              Varga nasal mapping:
+                కం → ఙ  (matches ఙ or any in its varga)
+                ఖం → ఙ  (matches ఙ or any in its varga)
+                గం → ఙ  (matches ఙ or any in its varga)
+                ఘం → ఙ  (matches ఙ or any in its varga)
+                చం → ఞ  (matches ఞ or any in its varga)
+                ఛం → ఞ  (matches ఞ or any in its varga)
+                జం → ఞ  (matches ఞ or any in its varga)
+                ఝం → ఞ  (matches ఞ or any in its varga)
+                టం → ణ  (matches ణ or any in its varga)
+                ఠం → ణ  (matches ణ or any in its varga)
+                డం → ణ  (matches ణ or any in its varga)
+                ఢం → ణ  (matches ణ or any in its varga)
+                తం → న  (matches న or any in its varga)
+                థం → న  (matches న or any in its varga)
+                దం → న  (matches న or any in its varga)
+                ధం → న  (matches న or any in its varga)
+                పం → మ  (matches మ or any in its varga)
+                ఫం → మ  (matches మ or any in its varga)
+                బం → మ  (matches మ or any in its varga)
+                భం → మ  (matches మ or any in its varga)
+
+    }
+
+    Total: 25 production rule groups
+
+── NOTE ON EXPRESSIVENESS ──
+
+The Yati CFG is best understood as a CONSTRAINT GRAMMAR rather than a
+generative grammar. Each <ValidPair> production defines a PREDICATE on
+the pair (gana1_syl, gana3_syl). The cascade priority (exact > vyanjana >
+svara > samyukta > bindu) determines which match_type is reported, but
+for acceptance/rejection, any single match suffices.
+
+Because the set of Telugu aksharalu is finite (bounded by the Unicode
+block), the complete expansion of all valid pairs is finite, making
+this a regular (and therefore context-free) language.
+
+── WORKED EXAMPLE ──
+
+Input pairs: [(("కా", "గు")), (("సా", "సి"))]
+
+Line 1: gana1_syl = "కా", gana3_syl = "గు"
+  • First letters: క, గ
+  • Exact match? క ≠ గ → No
+  • Vyanjana Maitri? క ∈ Group 3 (Velars), గ ∈ Group 3 (Velars) → Yes! ✓
+  • Result: ACCEPTED (vyanjana_maitri)
+
+Line 2: gana1_syl = "సా", gana3_syl = "సి"
+  • First letters: స, స
+  • Exact match? స = స → Yes! ✓
+  • Result: ACCEPTED (exact)
+
+Both lines pass → Yati constraint satisfied ✓
+
+
+════════════════════════════════════════════════════════════════════════════════
+SUMMARY TABLE
+════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────┬──────────┬────────┬────────────────┬──────────────┐
+│ Component               │ Type     │ States │ CFG Rules      │ CFG Type     │
+├─────────────────────────┼──────────┼────────┼────────────────┼──────────────┤
+│ SyllableAssembler       │ FST      │ 4      │ 31             │ Right-linear │
+│ GuruLaghuClassifier     │ FST      │ 2      │ 11             │ Right-linear │
+│ GanaMarker              │ FST      │ 3      │ 15             │ Right-linear │
+│ GanaNFA                 │ NFA      │ ~60    │ 11            │ Concatenation│
+│ PrasaNFA                │ DFA/NFA  │ 7      │ ~263          │ Parameterized│
+│ YatiNFA                 │ NFA      │ 4      │ ~25           │ Constraint   │
+└─────────────────────────┴──────────┴────────┴────────────────┴──────────────┘
+
+Key:
+  Right-linear    — Standard NFA→grammar conversion (A → a B | ε)
+  Concatenation   — Regular sub-grammars composed by concatenation
+  Parameterized   — Non-terminals parameterized by stored values
+  Constraint      — Predicate-based: defines valid input pairs
+
+All grammars are CONTEXT-FREE and describe REGULAR LANGUAGES.
+The Dwipada metrical system requires no context-sensitive or
+Turing-complete power — finite automata suffice for all constraints.
+
+════════════════════════════════════════════════════════════════════════════════
+END OF DOCUMENT
+════════════════════════════════════════════════════════════════════════════════

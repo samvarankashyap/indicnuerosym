@@ -31,7 +31,14 @@ import time
 from collections import Counter
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from peft import PeftModel
+from transformers import (
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    BitsAndBytesConfig,
+    Gemma3ForCausalLM,
+    Gemma3ForConditionalGeneration,
+)
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -561,9 +568,143 @@ def save_results(all_results, stats, per_prompt, output_path):
 # 4) MAIN
 ###############################################################################
 
+###############################################################################
+# MODEL LOADING
+###############################################################################
+
+# Available model choices:
+#   gemma3-1b-merged  — Gemma 3 1B IT, merged (text-only, in dwipada_merged_model/)
+#   gemma3-1b-lora    — Gemma 3 1B IT + LoRA adapter (dwipada_lora_adapter/)
+#   gemma3-4b-lora    — Gemma 3 4B IT + LoRA adapter (best-checkpoint-2450)
+#   gemma3-1b-base    — Gemma 3 1B IT, no fine-tuning
+#   gemma3-4b-base    — Gemma 3 4B IT, no fine-tuning
+
+MODEL_CHOICES = [
+    "gemma3-1b-merged",
+    "gemma3-1b-lora",
+    "gemma3-4b-lora",
+    "gemma3-1b-base",
+    "gemma3-4b-base",
+]
+
+
+def _get_bnb_config():
+    return BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.bfloat16,
+        bnb_4bit_use_double_quant=True,
+    )
+
+
+def _extract_gemma3_4b_text_weights():
+    """Extract and cache text-only weights from the multimodal Gemma 3 4B IT.
+
+    The 4B model bundles a vision tower; we strip it out and save the text-only
+    weights so subsequent loads go straight to the lean checkpoint.
+    """
+    import gc
+    from safetensors.torch import save_file as safetensors_save
+
+    text_model_dir = os.path.join(PROJECT_DIR, "train_models", "_text_only_gemma3_4b")
+    if os.path.exists(os.path.join(text_model_dir, "model.safetensors")):
+        print(f"  Using cached text-only weights from {text_model_dir}")
+        return text_model_dir
+
+    print("  Extracting text-only weights from gemma-3-4b-it (one-time)...")
+    full_model = Gemma3ForConditionalGeneration.from_pretrained(
+        "google/gemma-3-4b-it",
+        torch_dtype=torch.bfloat16,
+        device_map="cpu",
+    )
+    text_state = {}
+    for k, v in full_model.state_dict().items():
+        if k.startswith("model.language_model."):
+            text_state[k.replace("model.language_model.", "model.")] = v
+        elif k.startswith("lm_head."):
+            text_state[k] = v
+
+    text_config = full_model.config.text_config
+    del full_model
+    gc.collect()
+
+    os.makedirs(text_model_dir, exist_ok=True)
+    text_state.pop("lm_head.weight", None)  # tied with embed_tokens
+    safetensors_save(text_state, os.path.join(text_model_dir, "model.safetensors"))
+    text_config.tie_word_embeddings = True
+    text_config.save_pretrained(text_model_dir)
+    del text_state
+    gc.collect()
+    print(f"  Text-only weights saved to {text_model_dir}")
+    return text_model_dir
+
+
+def load_model(choice):
+    """Load a model+tokenizer pair based on the --model CLI choice."""
+    import gc
+
+    print(f"\n  Loading model: {choice}")
+
+    if choice == "gemma3-1b-merged":
+        path = os.path.join(PROJECT_DIR, "train_models", "dwipada_merged_model")
+        tokenizer = AutoTokenizer.from_pretrained(path)
+        model = AutoModelForCausalLM.from_pretrained(
+            path, torch_dtype=torch.bfloat16, device_map="auto", attn_implementation="sdpa",
+        )
+
+    elif choice == "gemma3-1b-lora":
+        base_id = "google/gemma-3-1b-it"
+        adapter_path = os.path.join(PROJECT_DIR, "train_models", "dwipada_lora_adapter")
+        tokenizer = AutoTokenizer.from_pretrained(base_id)
+        model = AutoModelForCausalLM.from_pretrained(
+            base_id, quantization_config=_get_bnb_config(), device_map="auto", attn_implementation="sdpa",
+        )
+        model = PeftModel.from_pretrained(model, adapter_path)
+        print(f"  LoRA adapter: {adapter_path}")
+
+    elif choice == "gemma3-4b-lora":
+        adapter_path = os.path.join(PROJECT_DIR, "train_models", "checkpoints_gemma4b", "best-checkpoint-2450")
+        text_model_dir = _extract_gemma3_4b_text_weights()
+        tokenizer = AutoTokenizer.from_pretrained("google/gemma-3-4b-it")
+        model = Gemma3ForCausalLM.from_pretrained(
+            text_model_dir, quantization_config=_get_bnb_config(), device_map="auto", attn_implementation="sdpa",
+        )
+        gc.collect()
+        torch.cuda.empty_cache()
+        model = PeftModel.from_pretrained(model, adapter_path)
+        print(f"  LoRA adapter: {adapter_path}")
+
+    elif choice == "gemma3-1b-base":
+        base_id = "google/gemma-3-1b-it"
+        tokenizer = AutoTokenizer.from_pretrained(base_id)
+        model = AutoModelForCausalLM.from_pretrained(
+            base_id, quantization_config=_get_bnb_config(), device_map="auto", attn_implementation="sdpa",
+        )
+
+    elif choice == "gemma3-4b-base":
+        text_model_dir = _extract_gemma3_4b_text_weights()
+        tokenizer = AutoTokenizer.from_pretrained("google/gemma-3-4b-it")
+        model = Gemma3ForCausalLM.from_pretrained(
+            text_model_dir, quantization_config=_get_bnb_config(), device_map="auto", attn_implementation="sdpa",
+        )
+        gc.collect()
+        torch.cuda.empty_cache()
+
+    else:
+        raise ValueError(f"Unknown model choice: {choice}")
+
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    model.eval()
+    print(f"  Model ready: {choice}")
+    return model, tokenizer
+
+
 def main():
     import constrained_generate
     p = argparse.ArgumentParser(description="Large-scale Dwipada Benchmark")
+    p.add_argument("--model", type=str, default="gemma3-4b-lora", choices=MODEL_CHOICES,
+                   help="Model to use (default: gemma3-4b-lora)")
     p.add_argument("--num-poems", type=int, default=1000,
                    help="Total poems to generate (default 1000)")
     p.add_argument("--seeds-per-prompt", type=int, default=5,
@@ -583,6 +724,7 @@ def main():
 
     print("=" * 72)
     print("Large-scale Constrained Dwipada Generation Benchmark")
+    print(f"  Model:             {args.model}")
     print(f"  Target poems:      {num_prompts * args.seeds_per_prompt}")
     print(f"  Prompts:           {num_prompts}")
     print(f"  Seeds per prompt:  {args.seeds_per_prompt}")
@@ -597,17 +739,7 @@ def main():
     for cat, count in sorted(categories.items()):
         print(f"    {cat:15s}: {count}")
 
-    # Load model
-    merged_path = os.path.join(PROJECT_DIR, "train_models", "dwipada_merged_model")
-    print(f"\n  Loading model: {merged_path}")
-    tokenizer = AutoTokenizer.from_pretrained(merged_path)
-    model = AutoModelForCausalLM.from_pretrained(
-        merged_path,
-        torch_dtype=torch.bfloat16,
-        device_map="auto",
-        attn_implementation="sdpa",
-    )
-    model.eval()
+    model, tokenizer = load_model(args.model)
 
     prompts_texts = [p for p, _ in prompts_with_cats]
 

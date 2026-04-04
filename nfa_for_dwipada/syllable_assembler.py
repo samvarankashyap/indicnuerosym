@@ -244,6 +244,15 @@ class SyllableAssembler:
         elif self.state == STATE_VOWEL:
             self._from_vowel(ch, cat)
 
+    def snapshot(self):
+        """Return a lightweight snapshot of the FST state (no output)."""
+        return (self.state, list(self.buffer), self.prev_syllable)
+
+    def restore(self, snap):
+        """Restore FST state from a snapshot. Clears output."""
+        self.state, self.buffer, self.prev_syllable = snap[0], list(snap[1]), snap[2]
+        self.output = []
+
     def flush(self):
         """Signal end of input and flush any remaining buffer."""
         if self.state == STATE_CONSONANT_CLUSTER:

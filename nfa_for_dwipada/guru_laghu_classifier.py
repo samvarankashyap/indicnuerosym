@@ -137,6 +137,15 @@ class GuruLaghuClassifier:
         self.buffer_syl:  str | None = None
         self.output: list[tuple[str, str]] = []
 
+    def snapshot(self):
+        """Return a lightweight snapshot of the FST state (no output)."""
+        return (self.state, self.buffer_syl)
+
+    def restore(self, snap):
+        """Restore FST state from a snapshot. Clears output."""
+        self.state, self.buffer_syl = snap
+        self.output = []
+
     # ------------------------------------------------------------------
     # Internal helpers
     # ------------------------------------------------------------------

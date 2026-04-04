@@ -1,0 +1,2075 @@
+{
+  "label": "FINE-TUNED — UNCONSTRAINED",
+  "constrained": false,
+  "total_poems": 100,
+  "total_valid": 25,
+  "poem_accuracy": 25.0,
+  "total_lines": 200,
+  "valid_lines": 93,
+  "line_accuracy": 46.5,
+  "total_time": 311.34691190719604,
+  "per_prompt": [
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "valid": 5,
+      "total": 10,
+      "rate": 50.0
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "valid": 3,
+      "total": 10,
+      "rate": 30.0
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "valid": 3,
+      "total": 10,
+      "rate": 30.0
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "valid": 0,
+      "total": 10,
+      "rate": 0.0
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "valid": 3,
+      "total": 10,
+      "rate": 30.0
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "valid": 3,
+      "total": 10,
+      "rate": 30.0
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "valid": 2,
+      "total": 10,
+      "rate": 20.0
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "valid": 2,
+      "total": 10,
+      "rate": 20.0
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "valid": 0,
+      "total": 10,
+      "rate": 0.0
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "valid": 4,
+      "total": 10,
+      "rate": 40.0
+    }
+  ],
+  "poems": [
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 42,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "తల్లియే ప్రేమయు తరగని దిశలు",
+          "valid": true,
+          "markers": "U I U U I I I I I I I I I",
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "text": "అల్లాడు కొందరిలోనిది తల్లి",
+          "valid": true,
+          "markers": "U U I U I I U I I U I",
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.0685243606567383
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 49,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "తల్లియే ప్రేమయే తల్లియే జగము",
+          "valid": true,
+          "markers": "U I U U I U U I U I I I",
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "text": "కల్లియే ప్రేమయే కమ్మని బాపు",
+          "valid": true,
+          "markers": "U I U U I U U I I U I",
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.0317468643188477
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 56,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "అమ్మయే ప్రేమయందలికి దనర",
+          "valid": false,
+          "markers": "U I U U I U I I I I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "ఇమ్మన్న పతిలోన నిలిచిన తేనె",
+          "valid": true,
+          "markers": "U U I I I U I I I I I U I",
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.029489278793335
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 63,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "తల్లియెంతయును దలపైన జాల",
+          "valid": false,
+          "markers": "U I U I I I I I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "మెల్లిగ జేరును మేలిమి గొంత",
+          "valid": true,
+          "markers": "U I I U I I U I I U I",
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.021240472793579
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 70,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "అమ్మయే ప్రేమను అందరి కీర్తి",
+          "valid": true,
+          "markers": "U I U U I I U I I U I",
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "text": "చెమ్మంత మనువైన చిత్రమౌ యెంత",
+          "valid": true,
+          "markers": "U U I I I U I U I U U I",
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.0352113246917725
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 77,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "అమ్మయే నిలయమై అందరి కీర్తి",
+          "valid": true,
+          "markers": "U I U I I I U U I I U I",
+          "partition": "INDRA - U I U\tINDRA - I I I U\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "text": "తల్లి ప్రేమను దెచ్చు తరుణులకెల్ల",
+          "valid": true,
+          "markers": "U I U I I U I I I I I U I",
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.034808397293091
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 84,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "తల్లియు ప్రేమయే తల్లియే లోకమున",
+          "valid": false,
+          "markers": "U I I U I U U I U U I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నెల్లియు గారవ మింతయు లేని",
+          "valid": true,
+          "markers": "U I I U I I U I I U I",
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.0334441661834717
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 91,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "అమ్మయే ప్రేమయే అన్నింటి కంటె",
+          "valid": true,
+          "markers": "U I U U I U U U I U I",
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "text": "చెమ్మిని చింతించె చెంతను దెల్పు",
+          "valid": true,
+          "markers": "U I I U U I U I I U I",
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.0277910232543945
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 98,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "తల్లియే అందరి తలపున మేలు",
+          "valid": true,
+          "markers": "U I U U I I I I I I U I",
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "text": "పల్లివి యెల్లయందు భావము సాధించు",
+          "valid": false,
+          "markers": "U I I U I U I U I I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0334877967834473
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 105,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "తల్లియే ప్రేమ యందెలకన్నెంత",
+          "valid": false,
+          "markers": "U I U U I U I I U U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "అల్లనబుద్ధియే ప్రేమయే తల్లి",
+          "valid": true,
+          "markers": "U I I U I U U I U U I",
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.0299339294433594
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 42,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "హనుమంతుడప్పు డాహల్యంబు దాటి",
+          "valid": true,
+          "markers": "I I U I U I U U U I U I",
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "text": "చనుదెంచె లంకకు సకలంబు దెలిసి",
+          "valid": true,
+          "markers": "I I U I U I I I I U I I I I",
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.1527912616729736
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 49,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "హనుమంతుడప్పుడే యబ్ధి దాటి లంక",
+          "valid": false,
+          "markers": "I I U I U I U U I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "జని యొప్పెద నేలజని మదమెల్ల",
+          "valid": false,
+          "markers": "I I U I I U I I I I I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1480212211608887
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 56,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "ననిమిషపగిది నెంతయు నెఱిగింప",
+          "valid": true,
+          "markers": "I I I I I I I U I I I I U I",
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "text": "హనుమంతుడెంతయు నఖిలభూతంబు",
+          "valid": true,
+          "markers": "I I U I U I I I I I U U I",
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.1527278423309326
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 63,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "బడబాసి యంత నా పంక్తికంధరుడు",
+          "valid": true,
+          "markers": "I I U I U I U U I U I I I",
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "text": "జడలు దాటి లంక సొచ్చి యొండొండ",
+          "valid": false,
+          "markers": "I I I U I U I U I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.147630214691162
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 70,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "నంత నంబుధి దాటి యంజనాతనూజ",
+          "valid": false,
+          "markers": "U I U I I U I U I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నంత నాతనిపై నతిఘోరవృత్తి",
+          "valid": false,
+          "markers": "U I U I I U I I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1494481563568115
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 77,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "ననిమిషంబులు దాటి యంతరంగమున",
+          "valid": true,
+          "markers": "I I I U I I U I U I U I I I",
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "text": "జని హనుమంతుండు శరధి దాటి చొచ్చె",
+          "valid": false,
+          "markers": "I I I I U U I I I I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.144651174545288
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 84,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "హనుమంతు డలిగి లంకకేగుదెంచు",
+          "valid": false,
+          "markers": "I I U I I I I U I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "మునిచరసేనపై ముట్టక నిలిచె",
+          "valid": true,
+          "markers": "I I I I U I U U I I I I I",
+          "partition": "INDRA - I I I I\tINDRA - U I U\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.150286912918091
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 91,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "నలవడ బద్మాద్రి నరిగె ననిలుండు",
+          "valid": false,
+          "markers": "I I I I U U I I I I I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "జలరాశి దాటి లంక జవమేది గెల్చె",
+          "valid": false,
+          "markers": "I I U I U I U I I I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1358463764190674
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 98,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "హనుమంతుడెంతయు నఖిలవానరుల",
+          "valid": true,
+          "markers": "I I U I U I I I I I U I I I",
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - I I I U\tSURYA - I I I"
+        },
+        {
+          "text": "బనిపూని లంకకు బవరంబు సేయ",
+          "valid": true,
+          "markers": "I I U I U I I I I U I U I",
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.1459546089172363
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 105,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "హనుమంతుడంతక హల్యంబు దాటి",
+          "valid": true,
+          "markers": "I I U I U I I U U I U I",
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "text": "యనిమిషపశువుల నడరి లంక చేసె",
+          "valid": false,
+          "markers": "I I I I I I I I I I I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.13728928565979
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 42,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రాముడు సీత రక్ష రాముడై పలికె",
+          "valid": false,
+          "markers": "U I I U I U I U I U I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "రాముడు లంకకు రాగె జానకిని",
+          "valid": true,
+          "markers": "U I I U I I U I U I I I",
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.180849313735962
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 49,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రాముడు సీత రక్షింప లంకకేగె",
+          "valid": false,
+          "markers": "U I I U I U U I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "బ్రామర సుతుతోడ బరవసంబునను",
+          "valid": true,
+          "markers": "U I I I I U I I I I U I I I",
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.179096221923828
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 56,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "సీత రక్షింప నాసీత యిచ్చటికి",
+          "valid": true,
+          "markers": "U I U U I U U I U I I I",
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "text": "జూత రాఘవుడు లంకాస్థలి కేగి",
+          "valid": true,
+          "markers": "U I U I I I U U I I U I",
+          "partition": "INDRA - U I U\tINDRA - I I I U\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.17128324508667
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 63,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "శ్రీరాము లంకకు జెచ్చెరబోయి",
+          "valid": true,
+          "markers": "U U I U I I U I I U I",
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "text": "నా రావణుడు సీత నవకీలజూచి",
+          "valid": true,
+          "markers": "U U I I I U I I I U I U I",
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.1610677242279053
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 70,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సీతాదేవి రక్షింపజికొనుచుండ",
+          "valid": false,
+          "markers": "U U U I U U I I I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "రాతి లంకకుబోయి రాముడు వనట",
+          "valid": true,
+          "markers": "U I U I I U I U I I I I I",
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.162353277206421
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 77,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "సీత రక్షించుట సేయ రాఘవుడు",
+          "valid": true,
+          "markers": "U I U U I I U I U I I I",
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "text": "భాతిమై లంకకుబవరంబు సేయ",
+          "valid": true,
+          "markers": "U I U U I I I I U I U I",
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.161252498626709
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 84,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రాముడు సీతని రక్షింప లంక",
+          "valid": true,
+          "markers": "U I I U I I U U I U I",
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "text": "నా మహోదరంబున కరిగె నపుడు",
+          "valid": false,
+          "markers": "U I U I U I I I I I I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.180325746536255
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 91,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సీతాదేవిని రక్షింప వచ్చె రాము",
+          "valid": false,
+          "markers": "U U U I I U U I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "డాత్మరాముడు లంక కరిగె రాఘవుడు",
+          "valid": true,
+          "markers": "U I U I I U I I I I U I I I",
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.1795122623443604
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 98,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రాముడు సీత రక్షింప లంకజొచ్చి",
+          "valid": false,
+          "markers": "U I I U I U U I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "రాముడు పర్ణశాల రాముడు సీత",
+          "valid": false,
+          "markers": "U I I U I U I U I I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1772704124450684
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 105,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రాముడు సీత రక్ష రనుటకు లంక",
+          "valid": false,
+          "markers": "U I I U I U I I I I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "భూమిజకినిబోయి పుత్త్రసంభవ",
+          "valid": false,
+          "markers": "U I I I I U I U I U I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1723597049713135
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "seed": 42,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గురువు శిష్యునకు విద్యలు నేర్పె",
+          "valid": false,
+          "markers": "I I I U I I I U I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "ధర్మంబు దెలుపును దగజేసె సుఖము",
+          "valid": true,
+          "markers": "U U I I I I I I I U I I I I",
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.090416193008423
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "seed": 49,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గురువు శిష్యునకు విద్య సేయించి",
+          "valid": false,
+          "markers": "I I I U I I I U I U U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "మగుడెఱుగవు నేర్పడ బ్రాహ్మ్యుడైన",
+          "valid": false,
+          "markers": "I I I I I I U I I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.099303722381592
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "seed": 56,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గురువు శిష్యునకు విద్యోపాయంబు",
+          "valid": false,
+          "markers": "I I I U I I I U U U U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "మురువురు నేర్పడ ముదమొప్పబలికె",
+          "valid": true,
+          "markers": "I I I I U I I I I U I I I I",
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.0816807746887207
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "seed": 63,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గురువు శిష్యునకు విద్య సేయుచుండె",
+          "valid": false,
+          "markers": "I I I U I I I U I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "ర్రియమై శిష్యుడు నేర్పడ జేసె",
+          "valid": false,
+          "markers": "I I U U I I U I I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0950493812561035
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "seed": 70,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "శిష్యునకు విద్యజెన్నొంది గురువు",
+          "valid": false,
+          "markers": "U I I I U I U U I I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "విష్యర బుద్ధియెల్ల విన్నపముగ",
+          "valid": false,
+          "markers": "U I I U I U I U I I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1355514526367188
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "seed": 77,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గురువు శిష్యునకు విద్య జెప్పెదను",
+          "valid": false,
+          "markers": "I I I U I I I U I U I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "వరుసతో శిష్యుని వశంబుజేసె",
+          "valid": false,
+          "markers": "I I I U U I I I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0989394187927246
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "seed": 84,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గురువుకు శిష్యునకు గూర్చెడి విద్య",
+          "valid": false,
+          "markers": "I I I I U I I I U I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "దగ దప్పదు నేర్పదగ నేర్పెదను",
+          "valid": false,
+          "markers": "I I U I I U I I I U I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.081899404525757
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "seed": 91,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "శిష్యుని శిష్యుని జేయ శిష్యుని",
+          "valid": false,
+          "markers": "U I I U I I U I U I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "బూషణంబున నేర్పడ జేసె నాత",
+          "valid": false,
+          "markers": "U I U I I U I I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0986695289611816
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "seed": 98,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గురువు శిష్యునకు విద్య గావించి",
+          "valid": false,
+          "markers": "I I I U I I I U I U U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "సరిగొన్న యట్టిద సద్గుణమౌ మనిషి",
+          "valid": false,
+          "markers": "I I U I U I I U I I U I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0964763164520264
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "seed": 105,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గురువు శిష్యునకు విద్యనిచ్చె నేర్ప",
+          "valid": false,
+          "markers": "I I I U I I I U I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నగుచుగా నిచ్చె నంతరిక్షమున",
+          "valid": false,
+          "markers": "I I I U U I U I U I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0984764099121094
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "seed": 42,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జగతీశుచంద్రులు శతతంబగుచు",
+          "valid": false,
+          "markers": "I I U I U I I I I U I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "గమలాక్షు జూచి యక్కడ నిల్చునపుడు",
+          "valid": true,
+          "markers": "I I U I U I U I I U I I I I",
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.0808935165405273
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "seed": 49,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జగతీశుండ్రు కాంతిసన్నుతి సేయ",
+          "valid": false,
+          "markers": "I I U U I U I U I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నగమారవిచిత్రమై యాద్రి నేల",
+          "valid": false,
+          "markers": "I I U I I U I U U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.09551739692688
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "seed": 56,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సూర్యవహ్నినచేత జలజాక్షు లీల",
+          "valid": true,
+          "markers": "U I U I I U I I I U I U I",
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "text": "పాయని యబ్జము లభించునంత లేక",
+          "valid": false,
+          "markers": "U I I U I I I U I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.09285569190979
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "seed": 63,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "నారంగ దొలకంగ నమరంగ వెలుగ",
+          "valid": true,
+          "markers": "U U I I I U I I I U I I I I",
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "text": "నారయ దివ్యాస్త్రంబగు వృక్షములు",
+          "valid": false,
+          "markers": "U I I U U U I I U I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0892415046691895
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "seed": 70,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "సూర్యబింబములచేజనుదెంచుచుండ",
+          "valid": true,
+          "markers": "U I U I I I U I I U I U I",
+          "partition": "INDRA - U I U\tINDRA - I I I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "text": "సూర్యోదయమున సన్నుతిగల్గుచుండ",
+          "valid": true,
+          "markers": "U U I I I I U I I U I U I",
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.0799856185913086
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "seed": 77,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సూర్యుని నిండగ జలజాతమేలి",
+          "valid": true,
+          "markers": "U I I U I I I I U I U I",
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "text": "పౌరుల కందమూలము గావించు",
+          "valid": false,
+          "markers": "U I I U I U I I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0795507431030273
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "seed": 84,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జగదీశోజమున సకలభూజములు",
+          "valid": false,
+          "markers": "I I U U I I I I I I U I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "గూడి యిరుదెంచు నా కోర్కెనై నపుడు",
+          "valid": false,
+          "markers": "U I I I U I U U I U I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0966105461120605
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "seed": 91,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "సూర్యోదయంబున సకలంబు గాగ",
+          "valid": true,
+          "markers": "U U I U I I I I U I U I",
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "text": "ప్రౌఢిగ పయనంబు పర్వతంబెల్ల",
+          "valid": true,
+          "markers": "U I I I I U I U I U U I",
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.0877678394317627
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "seed": 98,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "జలజాతమృగములు సచ్చెరు వీక్ష",
+          "valid": true,
+          "markers": "I I U I I I I I U I I U I",
+          "partition": "INDRA - I I U I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "text": "నలర నౌగాకల నమరంగ వెలుగ",
+          "valid": true,
+          "markers": "I I I U U I I I I U I I I I",
+          "partition": "INDRA - I I I U\tINDRA - U I I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.101247787475586
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "seed": 105,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జలజాక్షుడనగ విష్ణుసమయానందు",
+          "valid": true,
+          "markers": "I I U I I I I U I I I U U I",
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "text": "గలయంగ నారంగగమనీయగతి",
+          "valid": false,
+          "markers": "I I U I U U I I I U I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0816330909729004
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "seed": 42,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గృష్ణుడు దెచ్చెను గీతోపదేశ",
+          "valid": true,
+          "markers": "U I I U I I U U I U I",
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "text": "మహిమతో నద్దశైలమధ్యమునను",
+          "valid": false,
+          "markers": "I I I U U I U I U I I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1153199672698975
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "seed": 49,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "కృష్ణుడు గెలిచిన గీతోపదేశ",
+          "valid": true,
+          "markers": "U I I I I I I U U I U I",
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "text": "మహి నృపతికేశుతో ననునతి మఱియు",
+          "valid": false,
+          "markers": "I I I I I U I U I I I I I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1056690216064453
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "seed": 56,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "గృష్ణుడు గొనిపోయె గీతోపదేశ",
+          "valid": true,
+          "markers": "U I I I I U I U U I U I",
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "text": "మహిమ నారాజున కడగింప నేగ",
+          "valid": true,
+          "markers": "I I I U U I I I I U I U I",
+          "partition": "INDRA - I I I U\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.115417718887329
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "seed": 63,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "అరుదార కృష్ణుడు నరుదేరజొచ్చి",
+          "valid": true,
+          "markers": "I I U I U I I I I U I U I",
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "text": "కరమొప్పగౌశికుం డర్ధరావతము",
+          "valid": true,
+          "markers": "I I U I U I U U I U I I I",
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.120605707168579
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "seed": 70,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గృష్ణుడు కౌశికుడు గీతోపదేశ",
+          "valid": false,
+          "markers": "U I I U I I I U U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "మృన్నుని కిదియును మీఱెనో యనిన",
+          "valid": true,
+          "markers": "U I I I I I I U I U I I I",
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.1049790382385254
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "seed": 77,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గృష్ణుడు శౌరియుగణముచే నేతెంచి",
+          "valid": false,
+          "markers": "U I I U I I I I I U U U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "యెందుండి యాలోన నే తేరుకొనగ",
+          "valid": true,
+          "markers": "U U I U U I U U I I I I",
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - U U I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.103304624557495
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "seed": 84,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సదమలబొడగాంచి శతబలి ననుచు",
+          "valid": true,
+          "markers": "I I I I I I U I I I I I I I I",
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "text": "గదిసి కృష్ణుడు గీతోపదేశమునకు",
+          "valid": false,
+          "markers": "I I I U I I U U I U I I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1058716773986816
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "seed": 91,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "గృష్ణుడు తరుణుడు గీతోపదేశ",
+          "valid": true,
+          "markers": "U I I I I I I U U I U I",
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "text": "ముంచి రక్కసునకు మొగము సేసె",
+          "valid": false,
+          "markers": "U I U I I I I I I I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1167218685150146
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "seed": 98,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "కృష్ణుడు యాత్మేశు కడ కేగె రాము",
+          "valid": true,
+          "markers": "U I I U U I I I U I U I",
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "text": "గృష్ణుడు గీతోపదేశము చేసె",
+          "valid": true,
+          "markers": "U I I U U I U I I U I",
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.1194446086883545
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "seed": 105,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "కృష్ణుడు గంధమాదనుడు దశరథుడు",
+          "valid": false,
+          "markers": "U I I U I U I I I I I I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "గృష్ణుడు గీతోపదేశము జేసె",
+          "valid": true,
+          "markers": "U I I U U I U I I U I",
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.104235887527466
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "seed": 42,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జలములు పర్వతస్థలముల నుండి",
+          "valid": true,
+          "markers": "I I I I U I U I I I I U I",
+          "partition": "INDRA - I I I I\tINDRA - U I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "text": "జలములు దనజలంబున నార్చుచును",
+          "valid": false,
+          "markers": "I I I I I I I U I I U I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1625635623931885
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "seed": 49,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "జలములు పర్వతశైలముల్ నుండి",
+          "valid": true,
+          "markers": "I I I I U I I U I U U I",
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "text": "జలములు జలములును సముద్రమునకు",
+          "valid": true,
+          "markers": "I I I I I I I I I I U I I I I",
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.1505658626556396
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "seed": 56,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "నదులు పర్వతముల నబ్ధిజొచ్చుచును",
+          "valid": true,
+          "markers": "I I I U I I I I U I U I I I",
+          "partition": "INDRA - I I I U\tINDRA - I I I I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "text": "జదురుచు నాకరి చలమున నుండు",
+          "valid": true,
+          "markers": "I I I I U I I I I I I U I",
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.1505868434906006
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "seed": 63,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జలములు నదులు పర్వతముల నుండి",
+          "valid": true,
+          "markers": "I I I I I I I U I I I I U I",
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "text": "జలములు సురలును సముద్రమునకు",
+          "valid": false,
+          "markers": "I I I I I I I I I U I I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.148538112640381
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "seed": 70,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "నదులు సముద్రమున కరిగెను నదియు",
+          "valid": false,
+          "markers": "I I I I U I I I I I I I I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "పొదలైన యొండొంటి పోవును చదియు",
+          "valid": true,
+          "markers": "I I U I U U I U I I I I I",
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.149371385574341
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "seed": 77,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "నదులు దివినుండి యబ్ధికి నంగముల",
+          "valid": false,
+          "markers": "I I I I I U I U I I U I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నదువులు పర్వతముల నుండి వాఱు",
+          "valid": true,
+          "markers": "I I I I U I I I I U I U I",
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.1495137214660645
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "seed": 84,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జలములు పర్వతశైలముల నుండి",
+          "valid": false,
+          "markers": "I I I I U I I U I I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "జలములు జలములును సకలంబులందు",
+          "valid": false,
+          "markers": "I I I I I I I I I I I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.160172462463379
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "seed": 91,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "నదియు దూలుచు లంక కరణి జొచ్చె",
+          "valid": false,
+          "markers": "I I I U I I U I I I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నదియెడుచును నదియు నాకాత్యువు",
+          "valid": false,
+          "markers": "I I I I I I I I I U U I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1749820709228516
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "seed": 98,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జలములు యెల్లెడ సముద్రమునకు",
+          "valid": false,
+          "markers": "I I I I U I I I U I I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "జలములు నెక్కిరి జలములు పర్వతములు",
+          "valid": false,
+          "markers": "I I I I U I I I I I I U I I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.165496826171875
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "seed": 105,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జలములు పర్వతశైలమున నుండి",
+          "valid": false,
+          "markers": "I I I I U I I U I I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "జలములు జలములును సముద్రమునకు",
+          "valid": true,
+          "markers": "I I I I I I I I I I U I I I I",
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.1605653762817383
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "seed": 42,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జయార్థంబున లగ్గౌనైన దగును",
+          "valid": false,
+          "markers": "I U U I I U U U I I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "జయమునకును బలసి సాధనసేయ",
+          "valid": false,
+          "markers": "I I I I I I I I I U I I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0780272483825684
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "seed": 49,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "విజయకై కఠోరవిధమున గావలె",
+          "valid": false,
+          "markers": "I I I U I U I I I I I U I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నజయమునందును నశ్రయము లేల",
+          "valid": false,
+          "markers": "I I I I U I I U I I I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0918781757354736
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "seed": 56,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "జయమునకు గలుగంగ జలము దెపుడు",
+          "valid": true,
+          "markers": "I I I I I I I U I I I I I I I",
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "text": "జయమునకు గలుగంగ జయము దెపుడు",
+          "valid": true,
+          "markers": "I I I I I I I U I I I I I I I",
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.0696983337402344
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "seed": 63,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "విజయకారణంబు విహితమై యొప్పు",
+          "valid": false,
+          "markers": "I I I U I U I I I I U U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "కజయకారణంబు గలుగ నా యొప్పు",
+          "valid": false,
+          "markers": "I I I U I U I I I I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0765366554260254
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "seed": 70,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జయగతి నర్థంబు సమ్మదంబుగాగ",
+          "valid": false,
+          "markers": "I I I I U U I U I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "జయగతి కార్యమును సలుపుటవలయు",
+          "valid": false,
+          "markers": "I I I I U I I I I I I I I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0680911540985107
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "seed": 77,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జయమునకు సాధనసాధన మొసగు",
+          "valid": false,
+          "markers": "I I I I I U I I U I I I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "దజయంబుచేత మేలు దలపోయుటయు",
+          "valid": true,
+          "markers": "I I U I U I U I I I U I I I",
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.0695319175720215
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "seed": 84,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "విజయకై తలపు విన్నపము సేయు",
+          "valid": false,
+          "markers": "I I I U I I I U I I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "సజయకు మఱియు నెసగ శ్రమయే నేర్పు",
+          "valid": false,
+          "markers": "I I I I I I I I I I I I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.067265748977661
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "seed": 91,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "జయార్థంబున కఠినతరంబైన",
+          "valid": false,
+          "markers": "I U U I I I I I I U U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "యజయవంబునకు నిల్పి యర్థంబు",
+          "valid": false,
+          "markers": "I I I U I I I U I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0680248737335205
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "seed": 98,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "విజయంబుకై కఠోరతరంబు గాగ",
+          "valid": true,
+          "markers": "I I U I U I U I I U I U I",
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "text": "విజయంబుగా రాదు వెరవున నుండు",
+          "valid": true,
+          "markers": "I I U I U U I I I I I U I",
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.0861425399780273
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "seed": 105,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "వినుతముగా జూడ వేడుక కలుగు",
+          "valid": true,
+          "markers": "I I I I U U I U I I I I I",
+          "partition": "INDRA - I I I I\tINDRA - U U I\tINDRA - U I I\tSURYA - I I I"
+        },
+        {
+          "text": "ఘనమైన విజయము కఠోరమైనట్టి",
+          "valid": false,
+          "markers": "I I U I I I I I I U I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.068269968032837
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "seed": 42,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రావణుడపుడు సీత రాదిగిచి",
+          "valid": false,
+          "markers": "U I I I I I U I U I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నా వసిష్ఠునిపై నడరినచోట",
+          "valid": false,
+          "markers": "U I U I I U I I I I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1403651237487793
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "seed": 49,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రావణుడంత సీత రాదెచ్చి లంక",
+          "valid": false,
+          "markers": "U I I U I U I U U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నేవించి చనుదెంచి యిచ్చలో జనిచె",
+          "valid": true,
+          "markers": "U U I I I U I U I U I I I",
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.156656265258789
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "seed": 56,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రావణుడంత సీత రామునిదాల్చి",
+          "valid": false,
+          "markers": "U I I U I U I U I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "యా వీడు కదలి యంకకి కేతేర",
+          "valid": false,
+          "markers": "U U I I I I U I I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1378395557403564
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "seed": 63,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రావణుండు సీత రప్పించి లంక",
+          "valid": false,
+          "markers": "U I U I U I U U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "మావుర నొగి గొనిపోయె నమ్మహీశు",
+          "valid": false,
+          "markers": "U I I I I I I U I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.1370062828063965
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "seed": 70,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సీతదెచ్చి లంకజొచ్చె రావణుడు",
+          "valid": false,
+          "markers": "U I U I U I U I U I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నా తెఱంగదెసగ నవనీశుజూచి",
+          "valid": true,
+          "markers": "U I U I I I I I I U I U I",
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.15551495552063
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "seed": 77,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రావణుడతడు సీత రప్పించి లంక",
+          "valid": false,
+          "markers": "U I I I I I U I U U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "లోవకపోయిన లోకేశుమీద",
+          "valid": true,
+          "markers": "U I I U I I U U I U I",
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.149404525756836
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "seed": 84,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రావణుడచ్చె నరయ నతివ సీత",
+          "valid": false,
+          "markers": "U I I U I I I I I I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "చేవకు లంకకు సేయంగదొడరె",
+          "valid": true,
+          "markers": "U I I U I I U U I I I I",
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U U I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.1500651836395264
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "seed": 91,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సీత యాయెగించి సేతువు గొనుచు",
+          "valid": false,
+          "markers": "U I U I U I U I I I I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "నా త్రిశిరుండు రాక్షసాధీశు డా సీత",
+          "valid": false,
+          "markers": "U I I U I U I U U I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.140526533126831
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "seed": 98,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రావణుం డతని నరసి లంకజొచ్చి",
+          "valid": true,
+          "markers": "U I U I I I I I I U I U I",
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "text": "యావిప్రతివాకుడై యట నేతెంచె",
+          "valid": false,
+          "markers": "U U I I U I U I I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.139930486679077
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "seed": 105,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "రావణుడొకసంధ్యాత్మయై సీత",
+          "valid": false,
+          "markers": "U I I I I U U I U U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "యావనమునకు దెచ్చి యొగి నేగుదెంచి",
+          "valid": false,
+          "markers": "U I I I I I U I I I U I U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.157109498977661
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "seed": 42,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సర్వలోకారాధ్య స్వర్గలోకములు",
+          "valid": true,
+          "markers": "U I U U U I U I U I I I",
+          "partition": "INDRA - U I U\tINDRA - U U I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "text": "సర్వసంపదల సర్వసౌఖ్యములు",
+          "valid": false,
+          "markers": "U I U I I I U I U I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.094417095184326
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "seed": 49,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "సర్వంబు రక్షింప సర్వలోకముల",
+          "valid": true,
+          "markers": "U U I U U I U I U I I I",
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "text": "సర్వంబు దేలింప సర్వనాథుండు",
+          "valid": true,
+          "markers": "U U I U U I U I U U I",
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.1030004024505615
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "seed": 56,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సర్వప్రజల భరతుండు సర్వసౌఖ్య",
+          "valid": false,
+          "markers": "U U I I I I I U I U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "సర్వప్రాణులగు సర్వకృత్యుండు",
+          "valid": false,
+          "markers": "U U U I I I U I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0908358097076416
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "seed": 63,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సర్వభూతముల దయజాలు భగవంతు",
+          "valid": false,
+          "markers": "U I U I I I I I U I I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "సర్వముల్ దానెడి సర్వకృత్యుండు",
+          "valid": true,
+          "markers": "U I U U I I U I U U I",
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.09320068359375
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "seed": 70,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సర్వపురుషుల దెల్లించు భగవంతు",
+          "valid": false,
+          "markers": "U I I I I I U U I I I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "డుర్వికి బ్రతికిన రుద్రపరంపరలు",
+          "valid": false,
+          "markers": "U I I I I I I U I I U I I I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0942039489746094
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "seed": 77,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సర్వభూతముల కింపారజేయు",
+          "valid": false,
+          "markers": "U I U I I I U U I U I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "సర్వసౌఖ్యమున నిశ్శబ్దముగాను",
+          "valid": true,
+          "markers": "U I U I I I U U I I U I",
+          "partition": "INDRA - U I U\tINDRA - I I I U\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.0953924655914307
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "seed": 84,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "సర్వంబు రక్షించు సర్వలోకములు",
+          "valid": true,
+          "markers": "U U I U U I U I U I I I",
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "text": "సర్వమై యొప్పును సర్వకృత్యములు",
+          "valid": true,
+          "markers": "U I U U I I U I U I I I",
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.101428985595703
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "seed": 91,
+      "all_valid": false,
+      "lines": [
+        {
+          "text": "సర్వదివాసమున సకలజీవుల",
+          "valid": false,
+          "markers": "U I I U I I I I I I U I I",
+          "partition": "INVALID"
+        },
+        {
+          "text": "సర్వజ్ఞుడై పరమేశుండు రక్షింప",
+          "valid": false,
+          "markers": "U U I U I I U U I U U I",
+          "partition": "INVALID"
+        }
+      ],
+      "elapsed": 3.0952703952789307
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "seed": 98,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "సర్వజనంబులజాలును సర్వ",
+          "valid": true,
+          "markers": "U I I U I I U I I U I",
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "text": "సర్వమై జీవనంబును గాచుచుండు",
+          "valid": true,
+          "markers": "U I U U I U I I U I U I",
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "elapsed": 3.1021971702575684
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "seed": 105,
+      "all_valid": true,
+      "lines": [
+        {
+          "text": "సర్వమై జీవుల శరణంబు చేయు",
+          "valid": true,
+          "markers": "U I U U I I I I U I U I",
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "text": "భర్త యోగ్యుండు ప్రాణులయందు సుఖము",
+          "valid": true,
+          "markers": "U I U U I U I I U I I I I",
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "elapsed": 3.0907087326049805
+    }
+  ]
+}
