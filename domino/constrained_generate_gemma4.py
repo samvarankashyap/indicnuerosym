@@ -22,7 +22,7 @@ import sys
 import time
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -36,7 +36,7 @@ from gana_nfa import (
     INDRA_GANAS, SURYA_GANAS,
 )
 
-MODEL_ID = "unsloth/gemma-4-E4B-it-unsloth-bnb-4bit"
+MODEL_ID = "google/gemma-4-E2B-it"
 
 ###############################################################################
 # 1) TOKEN FILTER
@@ -470,11 +470,36 @@ def load_model(model_id=MODEL_ID):
     print(f"  Loading model: {model_id} (pre-quantized 4-bit)")
 
     tokenizer = AutoTokenizer.from_pretrained(model_id)
+
+    import os
+    os.environ["PYTORCH_ALLOC_CONF"] = "expandable_segments:True"
+    # Disable the caching allocator warmup that tries to pre-allocate
+    # the full unquantized model size on GPU (OOM on small GPUs)
+    import transformers.modeling_utils as _mu
+    _mu.caching_allocator_warmup = lambda *args, **kwargs: None
+
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.bfloat16,
+        bnb_4bit_use_double_quant=True,
+        llm_int8_enable_fp32_cpu_offload=True,
+    )
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
+        quantization_config=bnb_config,
         device_map="auto",
+        max_memory={0: "7GiB", "cpu": "16GiB"},
+        low_cpu_mem_usage=True,
     )
     model.eval()
+
+    # Report device placement
+    devices = {str(p.device) for p in model.parameters()}
+    print(f"  Model devices: {devices}")
+    if torch.cuda.is_available():
+        alloc = torch.cuda.memory_allocated() / 1e9
+        print(f"  GPU memory used: {alloc:.1f} GB")
 
     # Report memory usage
     if torch.cuda.is_available():

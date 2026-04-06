@@ -578,6 +578,64 @@ def save_results(all_results, stats, per_prompt, output_path):
 #   gemma3-4b-lora    — Gemma 3 4B IT + LoRA adapter (best-checkpoint-2450)
 #   gemma3-1b-base    — Gemma 3 1B IT, no fine-tuning
 #   gemma3-4b-base    — Gemma 3 4B IT, no fine-tuning
+#   gemma4-e4b-base   — Gemma 4 E2B IT, no fine-tuning (4-bit quantized)
+
+# Models that were fine-tuned on dwipada data use a simple system prompt.
+# Base models need a detailed system prompt with explicit gana rules.
+FINETUNED_MODELS = {"gemma3-1b-merged", "gemma3-1b-lora", "gemma3-4b-lora"}
+
+SYSTEM_PROMPT_FINETUNED = (
+    "You are a Telugu and Sanskrit scholar specialising in Dwipada poetry."
+)
+
+SYSTEM_PROMPT_BASE = (
+    "You are a Telugu and Sanskrit scholar specialising in Dwipada poetry. "
+    "A Dwipada has exactly 2 lines. Each line has 3 Indra ganas + 1 Surya gana. "
+    "Indra ganas: Nala(IIII), Naga(IIIU), Sala(IIUI), Bha(UII), Ra(UIU), Ta(UUI). "
+    "Surya ganas: Na(III), Ha/Gala(UI). "
+    "Output ONLY the 2-line poem, nothing else."
+)
+
+
+def is_finetuned_model(model_choice):
+    """Check if a model choice is a fine-tuned dwipada model.
+
+    Fine-tuned models output a 'ద్విపద:' prefix before the poem.
+    Base models output poem text directly — no prefix to strip.
+    """
+    return model_choice in FINETUNED_MODELS
+
+
+def build_prompt_for_model(topic, tokenizer, model_choice):
+    """Build the generation prompt, adapting the system prompt to the model type.
+
+    Fine-tuned models (merged/lora) use a simple system prompt matching
+    their training format. Base models get a detailed prompt with explicit
+    gana rules to guide generation.
+    """
+    is_finetuned = model_choice in FINETUNED_MODELS
+    system_prompt = SYSTEM_PROMPT_FINETUNED if is_finetuned else SYSTEM_PROMPT_BASE
+
+    if is_finetuned:
+        user_prompt = (
+            "క్రింది తెలుగు భావానికి అనుగుణంగా ఒక ద్విపద పద్యం రచించండి. "
+            "ప్రతి పాదంలో 3 ఇంద్ర గణాలు + 1 సూర్య గణం ఉండాలి.\n\n"
+            f"తెలుగు భావం: {topic}"
+        )
+    else:
+        user_prompt = (
+            "క్రింది తెలుగు భావానికి అనుగుణంగా ఒక ద్విపద పద్యం రచించండి.\n\n"
+            f"భావం: {topic}\n\n"
+            "ద్విపద:"
+        )
+
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt},
+    ]
+    return tokenizer.apply_chat_template(
+        messages, tokenize=False, add_generation_prompt=True
+    )
 
 MODEL_CHOICES = [
     "gemma3-1b-merged",
@@ -585,6 +643,7 @@ MODEL_CHOICES = [
     "gemma3-4b-lora",
     "gemma3-1b-base",
     "gemma3-4b-base",
+    "gemma4-e4b-base",
 ]
 
 
@@ -595,6 +654,51 @@ def _get_bnb_config():
         bnb_4bit_compute_dtype=torch.bfloat16,
         bnb_4bit_use_double_quant=True,
     )
+
+
+def _extract_gemma4_text_weights(base_id="google/gemma-4-E2B-it"):
+    """Extract and cache text-only weights from the multimodal Gemma 4 E2B IT.
+
+    Same approach as Gemma 3 4B: load full model on CPU, extract language_model
+    weights, strip prefix, save to a lean checkpoint directory.
+    """
+    import gc
+    from safetensors.torch import save_file as safetensors_save
+
+    # Cache dir named after model
+    safe_name = base_id.replace("/", "_").replace("-", "_")
+    text_model_dir = os.path.join(PROJECT_DIR, "train_models", f"_text_only_{safe_name}")
+    if os.path.exists(os.path.join(text_model_dir, "model.safetensors")):
+        print(f"  Using cached text-only weights from {text_model_dir}")
+        return text_model_dir
+
+    print(f"  Extracting text-only weights from {base_id} (one-time)...")
+    from transformers import Gemma4ForConditionalGeneration
+    full_model = Gemma4ForConditionalGeneration.from_pretrained(
+        base_id,
+        torch_dtype=torch.bfloat16,
+        device_map="cpu",
+    )
+    text_state = {}
+    for k, v in full_model.state_dict().items():
+        if k.startswith("model.language_model."):
+            text_state[k.replace("model.language_model.", "model.")] = v
+        elif k.startswith("lm_head."):
+            text_state[k] = v
+
+    text_config = full_model.config.text_config
+    del full_model
+    gc.collect()
+
+    os.makedirs(text_model_dir, exist_ok=True)
+    text_state.pop("lm_head.weight", None)  # tied with embed_tokens
+    safetensors_save(text_state, os.path.join(text_model_dir, "model.safetensors"))
+    text_config.tie_word_embeddings = True
+    text_config.save_pretrained(text_model_dir)
+    del text_state
+    gc.collect()
+    print(f"  Text-only weights saved to {text_model_dir}")
+    return text_model_dir
 
 
 def _extract_gemma3_4b_text_weights():
@@ -689,6 +793,27 @@ def load_model(choice):
         )
         gc.collect()
         torch.cuda.empty_cache()
+
+    elif choice == "gemma4-e4b-base":
+        base_id = "google/gemma-4-E2B-it"
+        tokenizer = AutoTokenizer.from_pretrained(base_id)
+        # Monkey-patch to avoid OOM during caching allocator warmup
+        import transformers.modeling_utils as _mu
+        _mu.caching_allocator_warmup = lambda *args, **kwargs: None
+        bnb_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=torch.bfloat16,
+            bnb_4bit_use_double_quant=True,
+            llm_int8_enable_fp32_cpu_offload=True,
+        )
+        model = AutoModelForCausalLM.from_pretrained(
+            base_id,
+            quantization_config=bnb_config,
+            device_map="auto",
+            max_memory={0: "7GiB", "cpu": "16GiB"},
+            low_cpu_mem_usage=True,
+        )
 
     else:
         raise ValueError(f"Unknown model choice: {choice}")
