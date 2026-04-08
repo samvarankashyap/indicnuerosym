@@ -326,9 +326,9 @@ def format_chat(example):
     )
 
 
-def run_finetune(dataset_path, max_seq_len=512, lora_rank=16,
-                 lora_alpha=32, batch_size=2, grad_accum=8,
-                 epochs=4, lr=1e-4, merge=False,
+def run_finetune(dataset_path, max_seq_len=512, lora_rank=64,
+                 lora_alpha=128, batch_size=2, grad_accum=8,
+                 epochs=6, lr=5e-5, merge=False,
                  resume_from=None):
     """
     Local LoRA fine-tuning for Gemma 3 1B IT on Ragale data.
@@ -386,7 +386,7 @@ def run_finetune(dataset_path, max_seq_len=512, lora_rank=16,
     peft_config = LoraConfig(
         r=lora_rank,
         lora_alpha=lora_alpha,
-        lora_dropout=0.05,
+        lora_dropout=0.1,
         bias="none",
         target_modules=[
             "q_proj", "k_proj", "v_proj", "o_proj",
@@ -419,7 +419,7 @@ def run_finetune(dataset_path, max_seq_len=512, lora_rank=16,
         learning_rate=lr,
         weight_decay=0.01,
         max_grad_norm=1.0,
-        warmup_ratio=0.03,
+        warmup_ratio=0.06,
         lr_scheduler_type="cosine",
 
         # Precision
@@ -447,7 +447,7 @@ def run_finetune(dataset_path, max_seq_len=512, lora_rank=16,
         metric_for_best_model="eval_loss",
 
         # Misc
-        seed=42,
+        seed=2108,
         dataloader_num_workers=4,
         dataloader_pin_memory=True,
     )
@@ -654,18 +654,18 @@ def main():
                       help="Path to ift_alpaca.jsonl")
     p_ft.add_argument("--max-seq-len", type=int, default=512,
                       help="Max sequence length (default: 512)")
-    p_ft.add_argument("--lora-rank", type=int, default=16,
-                      help="LoRA rank (default: 16)")
-    p_ft.add_argument("--lora-alpha", type=int, default=32,
-                      help="LoRA alpha (default: 32)")
+    p_ft.add_argument("--lora-rank", type=int, default=64,
+                      help="LoRA rank (default: 64)")
+    p_ft.add_argument("--lora-alpha", type=int, default=128,
+                      help="LoRA alpha (default: 128)")
     p_ft.add_argument("--batch-size", type=int, default=2,
                       help="Per-device batch size (default: 2)")
     p_ft.add_argument("--grad-accum", type=int, default=8,
                       help="Gradient accumulation steps (default: 8)")
     p_ft.add_argument("--epochs", type=int, default=6,
                       help="Training epochs (default: 6)")
-    p_ft.add_argument("--lr", type=float, default=1e-4,
-                      help="Learning rate (default: 1e-4)")
+    p_ft.add_argument("--lr", type=float, default=5e-5,
+                      help="Learning rate (default: 5e-5)")
     p_ft.add_argument("--merge", action="store_true",
                       help="Merge LoRA adapter into base model after training")
     p_ft.add_argument("--resume-from", type=str, default=None,

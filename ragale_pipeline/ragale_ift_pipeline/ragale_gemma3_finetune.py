@@ -45,9 +45,9 @@ def format_chat(example):
     )
 
 
-def run_finetune(dataset_path, max_seq_len=512, lora_rank=16,
-                 lora_alpha=32, batch_size=2, grad_accum=8,
-                 epochs=4, lr=1e-4, merge=False,
+def run_finetune(dataset_path, max_seq_len=512, lora_rank=32,
+                 lora_alpha=64, batch_size=2, grad_accum=8,
+                 epochs=6, lr=5e-5, merge=False,
                  resume_from=None):
     """
     Full LoRA fine-tuning pipeline for Gemma 3 1B IT on Ragale data.
@@ -138,7 +138,7 @@ def run_finetune(dataset_path, max_seq_len=512, lora_rank=16,
         learning_rate=lr,
         weight_decay=0.01,
         max_grad_norm=1.0,
-        warmup_ratio=0.03,
+        warmup_ratio=0.06,
         lr_scheduler_type="cosine",
 
         # Precision
@@ -227,12 +227,12 @@ if __name__ == "__main__":
         help="Max sequence length (default: 512)"
     )
     parser.add_argument(
-        "--lora-rank", type=int, default=16,
-        help="LoRA rank (default: 16)"
+        "--lora-rank", type=int, default=32,
+        help="LoRA rank (default: 32)"
     )
     parser.add_argument(
-        "--lora-alpha", type=int, default=32,
-        help="LoRA alpha (default: 32)"
+        "--lora-alpha", type=int, default=64,
+        help="LoRA alpha (default: 64)"
     )
     parser.add_argument(
         "--batch-size", type=int, default=2,
@@ -247,8 +247,8 @@ if __name__ == "__main__":
         help="Number of training epochs (default: 6)"
     )
     parser.add_argument(
-        "--lr", type=float, default=1e-4,
-        help="Learning rate (default: 1e-4)"
+        "--lr", type=float, default=5e-5,
+        help="Learning rate (default: 5e-5)"
     )
     parser.add_argument(
         "--merge", action="store_true",
