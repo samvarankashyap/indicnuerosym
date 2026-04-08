@@ -18,6 +18,10 @@ venv/
 checkpoints/
 logs/
 
+# Large model files (download from HuggingFace instead)
+*.safetensors
+!**/adapter_model.safetensors
+
 # Credentials & secrets
 service_account.json
 config.yaml
