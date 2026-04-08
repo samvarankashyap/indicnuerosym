@@ -54,6 +54,59 @@ def load_model(model_name=DEFAULT_MODEL):
     return model, tokenizer
 
 
+def load_model_lora(base_name=DEFAULT_MODEL, adapter_path=None):
+    """Load base model + LoRA adapter via peft."""
+    import torch
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from peft import PeftModel
+
+    if adapter_path is None:
+        adapter_path = os.path.join(PROJECT_DIR, "ragale_checkpoints", "checkpoint-336")
+
+    print(f"\n  Loading base model: {base_name}")
+    tokenizer = AutoTokenizer.from_pretrained(base_name)
+    model = AutoModelForCausalLM.from_pretrained(
+        base_name,
+        torch_dtype=torch.bfloat16,
+        device_map="auto",
+        attn_implementation="sdpa",
+    )
+    print(f"  Loading LoRA adapter: {adapter_path}")
+    model = PeftModel.from_pretrained(model, adapter_path)
+    print(f"  Model + LoRA loaded on: {model.device}")
+    return model, tokenizer
+
+
+def load_model_quantized(model_name="google/gemma-4-E2B-it"):
+    """Load model with 4-bit NF4 quantization (for large models like Gemma 4 E2B)."""
+    import torch
+    from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+    import transformers.modeling_utils as _mu
+
+    print(f"\n  Loading quantized model: {model_name}")
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    # Monkey-patch to avoid OOM during caching allocator warmup
+    _mu.caching_allocator_warmup = lambda *args, **kwargs: None
+
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.bfloat16,
+        bnb_4bit_use_double_quant=True,
+        llm_int8_enable_fp32_cpu_offload=True,
+    )
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        quantization_config=bnb_config,
+        device_map="auto",
+        max_memory={0: "7GiB", "cpu": "16GiB"},
+        low_cpu_mem_usage=True,
+    )
+    print(f"  Quantized model loaded")
+    return model, tokenizer
+
+
 ###############################################################################
 # PROMPT BUILDING
 ###############################################################################
