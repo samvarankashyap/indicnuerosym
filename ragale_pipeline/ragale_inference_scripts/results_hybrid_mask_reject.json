@@ -1,0 +1,307 @@
+[
+  {
+    "topic": "rain",
+    "seed": 42,
+    "method": "hybrid_mask_reject",
+    "generated_text": "ಚುರುಕಾದುರ ಹರಕಹರಸ ರಾ\nಸಕಲದಕ ಕರುಹರಸದ ರಾ\n",
+    "poem_lines": [
+      "ಚುರುಕಾದುರ ಹರಕಹರಸ ರಾ",
+      "ಸಕಲದಕ ಕರುಹರಸದ ರಾ"
+    ],
+    "valid_lines": [
+      {
+        "line": "ಚು ರು ಕಾ ದು ರ ಹ ರ ಕ ಹ ರ ಸ ರಾ",
+        "syllables": [
+          "ಚು",
+          "ರು",
+          "ಕಾ",
+          "ದು",
+          "ರ",
+          "ಹ",
+          "ರ",
+          "ಕ",
+          "ಹ",
+          "ರ",
+          "ಸ",
+          "ರಾ"
+        ],
+        "markers": "I I U I I I I I I I I U",
+        "valid": true,
+        "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+        "syllable_count": 12,
+        "guru_ending": true
+      },
+      {
+        "line": "ಸ ಕ ಲ ದ ಕ ಕ ರು ಹ ರ ಸ ದ ರಾ",
+        "syllables": [
+          "ಸ",
+          "ಕ",
+          "ಲ",
+          "ದ",
+          "ಕ",
+          "ಕ",
+          "ರು",
+          "ಹ",
+          "ರ",
+          "ಸ",
+          "ದ",
+          "ರಾ"
+        ],
+        "markers": "I I I I I I I I I I I U",
+        "valid": true,
+        "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+        "syllable_count": 12,
+        "guru_ending": true
+      }
+    ],
+    "all_valid": true,
+    "elapsed": 1.4542250633239746,
+    "tokens_generated": 28,
+    "backtracks": 0,
+    "mask_computations": 26
+  },
+  {
+    "topic": "rain",
+    "seed": 49,
+    "method": "hybrid_mask_reject",
+    "generated_text": "ಚುರುಕಬರಿ ುತ್ತದೆ ುತ್ತದೆ ುತ್ತದೆ ನೀ\nಸಿನಕೀ ಕರಕಗಳು ನಮಹ ಆ\n",
+    "poem_lines": [
+      "ಚುರುಕಬರಿ ುತ್ತದೆ ುತ್ತದೆ ುತ್ತದೆ ನೀ",
+      "ಸಿನಕೀ ಕರಕಗಳು ನಮಹ ಆ"
+    ],
+    "valid_lines": [
+      {
+        "line": "ಚು ರು ಕ ಬ ರಿ ತ್ತ ದೆ ತ್ತ ದೆ ತ್ತ ದೆ ನೀ",
+        "syllables": [
+          "ಚು",
+          "ರು",
+          "ಕ",
+          "ಬ",
+          "ರಿ",
+          "ತ್ತ",
+          "ದೆ",
+          "ತ್ತ",
+          "ದೆ",
+          "ತ್ತ",
+          "ದೆ",
+          "ನೀ"
+        ],
+        "markers": "I I I I I I I I I I I U",
+        "valid": true,
+        "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+        "syllable_count": 12,
+        "guru_ending": true
+      },
+      {
+        "line": "ಸಿ ನ ಕೀ ಕ ರ ಕ ಗ ಳು ನ ಮ ಹ ಆ",
+        "syllables": [
+          "ಸಿ",
+          "ನ",
+          "ಕೀ",
+          "ಕ",
+          "ರ",
+          "ಕ",
+          "ಗ",
+          "ಳು",
+          "ನ",
+          "ಮ",
+          "ಹ",
+          "ಆ"
+        ],
+        "markers": "I I U I I I I I I I I U",
+        "valid": true,
+        "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+        "syllable_count": 12,
+        "guru_ending": true
+      }
+    ],
+    "all_valid": true,
+    "elapsed": 1.103132963180542,
+    "tokens_generated": 27,
+    "backtracks": 0,
+    "mask_computations": 25
+  },
+  {
+    "topic": "rain",
+    "seed": 56,
+    "method": "hybrid_mask_reject",
+    "generated_text": "ೌದು ರುಜೂ ರುಜು ರುಜು ರುಜು ರುಜ ಸೂ\nಅವನ ರುಜು ರುಜು ರುಜು ರುಜ ಸೂ\n",
+    "poem_lines": [
+      "ೌದು ರುಜೂ ರುಜು ರುಜು ರುಜು ರುಜ ಸೂ",
+      "ಅವನ ರುಜು ರುಜು ರುಜು ರುಜ ಸೂ"
+    ],
+    "valid_lines": [
+      {
+        "line": "ದು ರು ಜೂ ರು ಜು ರು ಜು ರು ಜು ರು ಜ ಸೂ",
+        "syllables": [
+          "ದು",
+          "ರು",
+          "ಜೂ",
+          "ರು",
+          "ಜು",
+          "ರು",
+          "ಜು",
+          "ರು",
+          "ಜು",
+          "ರು",
+          "ಜ",
+          "ಸೂ"
+        ],
+        "markers": "I I U I I I I I I I I U",
+        "valid": true,
+        "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+        "syllable_count": 12,
+        "guru_ending": true
+      },
+      {
+        "line": "ಅ ವ ನ ರು ಜು ರು ಜು ರು ಜು ರು ಜ ಸೂ",
+        "syllables": [
+          "ಅ",
+          "ವ",
+          "ನ",
+          "ರು",
+          "ಜು",
+          "ರು",
+          "ಜು",
+          "ರು",
+          "ಜು",
+          "ರು",
+          "ಜ",
+          "ಸೂ"
+        ],
+        "markers": "I I I I I I I I I I I U",
+        "valid": true,
+        "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+        "syllable_count": 12,
+        "guru_ending": true
+      }
+    ],
+    "all_valid": true,
+    "elapsed": 1.7780909538269043,
+    "tokens_generated": 43,
+    "backtracks": 0,
+    "mask_computations": 41
+  },
+  {
+    "topic": "rain",
+    "seed": 63,
+    "method": "hybrid_mask_reject",
+    "generated_text": "ಪರಿಚಿತ ಪವಿ ಮ ಬಯಸುವ ನೀ\nಕೃತ ಕೀಲ ಕಳ ಕರು ಪವಿ ಪದಾ\n",
+    "poem_lines": [
+      "ಪರಿಚಿತ ಪವಿ ಮ ಬಯಸುವ ನೀ",
+      "ಕೃತ ಕೀಲ ಕಳ ಕರು ಪವಿ ಪದಾ"
+    ],
+    "valid_lines": [
+      {
+        "line": "ಪ ರಿ ಚಿ ತ ಪ ವಿ ಮ ಬ ಯ ಸು ವ ನೀ",
+        "syllables": [
+          "ಪ",
+          "ರಿ",
+          "ಚಿ",
+          "ತ",
+          "ಪ",
+          "ವಿ",
+          "ಮ",
+          "ಬ",
+          "ಯ",
+          "ಸು",
+          "ವ",
+          "ನೀ"
+        ],
+        "markers": "I I I I I I I I I I I U",
+        "valid": true,
+        "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+        "syllable_count": 12,
+        "guru_ending": true
+      },
+      {
+        "line": "ಕೃ ತ ಕೀ ಲ ಕ ಳ ಕ ರು ಪ ವಿ ಪ ದಾ",
+        "syllables": [
+          "ಕೃ",
+          "ತ",
+          "ಕೀ",
+          "ಲ",
+          "ಕ",
+          "ಳ",
+          "ಕ",
+          "ರು",
+          "ಪ",
+          "ವಿ",
+          "ಪ",
+          "ದಾ"
+        ],
+        "markers": "I I U I I I I I I I I U",
+        "valid": true,
+        "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+        "syllable_count": 12,
+        "guru_ending": true
+      }
+    ],
+    "all_valid": true,
+    "elapsed": 1.019566535949707,
+    "tokens_generated": 25,
+    "backtracks": 0,
+    "mask_computations": 23
+  },
+  {
+    "topic": "rain",
+    "seed": 70,
+    "method": "hybrid_mask_reject",
+    "generated_text": "ವಿರಸಿಯ ಹ ಎರಸಸ ಧ್ಯಮಸಾ\nಸರಸ ಪ್ರಣಿಯ ಪ್ರ ಪ್ರಗಿಯ ಪ್ರಪಾ\n",
+    "poem_lines": [
+      "ವಿರಸಿಯ ಹ ಎರಸಸ ಧ್ಯಮಸಾ",
+      "ಸರಸ ಪ್ರಣಿಯ ಪ್ರ ಪ್ರಗಿಯ ಪ್ರಪಾ"
+    ],
+    "valid_lines": [
+      {
+        "line": "ವಿ ರ ಸಿ ಯ ಹ ಎ ರ ಸ ಸ ಧ್ಯ ಮ ಸಾ",
+        "syllables": [
+          "ವಿ",
+          "ರ",
+          "ಸಿ",
+          "ಯ",
+          "ಹ",
+          "ಎ",
+          "ರ",
+          "ಸ",
+          "ಸ",
+          "ಧ್ಯ",
+          "ಮ",
+          "ಸಾ"
+        ],
+        "markers": "I I I I I I I I I I I U",
+        "valid": true,
+        "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+        "syllable_count": 12,
+        "guru_ending": true
+      },
+      {
+        "line": "ಸ ರ ಸ ಪ್ರ ಣಿ ಯ ಪ್ರ ಪ್ರ ಗಿ ಯ ಪ್ರ ಪಾ",
+        "syllables": [
+          "ಸ",
+          "ರ",
+          "ಸ",
+          "ಪ್ರ",
+          "ಣಿ",
+          "ಯ",
+          "ಪ್ರ",
+          "ಪ್ರ",
+          "ಗಿ",
+          "ಯ",
+          "ಪ್ರ",
+          "ಪಾ"
+        ],
+        "markers": "I I I I I I I I I I I U",
+        "valid": true,
+        "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+        "syllable_count": 12,
+        "guru_ending": true
+      }
+    ],
+    "all_valid": true,
+    "elapsed": 1.0714302062988281,
+    "tokens_generated": 26,
+    "backtracks": 0,
+    "mask_computations": 24
+  }
+]

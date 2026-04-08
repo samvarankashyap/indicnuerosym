@@ -1,0 +1,11 @@
+{
+  "total_poems": 1010,
+  "train_poems": 808,
+  "val_poems": 101,
+  "test_poems": 101,
+  "profiles_per_poem": 3,
+  "train_examples": 2424,
+  "val_examples": 303,
+  "test_examples": 101,
+  "total_examples": 2828
+}

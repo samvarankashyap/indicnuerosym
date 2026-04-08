@@ -1,0 +1,24 @@
+# =============================================================================
+# Ragale Project — Requirements
+# =============================================================================
+#
+# Install:
+#   python3 -m venv venv
+#   source venv/bin/activate
+#   pip install -r requirements.txt
+#
+# GPU (CUDA) is required for inference scripts.
+# The analyser and NFA pipeline run on CPU only (no torch needed).
+#
+
+# --- Core: Analyser & NFA Pipeline (CPU only) ---
+# No dependencies — pure Python. Just run:
+#   python kannada_ragale_analyser.py poems.json
+#   python nfa_pipeline/ragale_pipeline.py poems.json
+
+# --- Inference Scripts (GPU required) ---
+torch>=2.2.0
+transformers>=4.44.0
+accelerate>=0.30.0
+sentencepiece>=0.2.0
+protobuf>=4.25.0
