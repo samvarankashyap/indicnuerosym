@@ -16,6 +16,8 @@ venv/
 
 # Model checkpoints & logs
 checkpoints/
+ragale_pipeline/ragale_checkpoints/
+ragale_pipeline/ragale_lora_adapter/
 logs/
 
 # Large model files (download from HuggingFace instead)
