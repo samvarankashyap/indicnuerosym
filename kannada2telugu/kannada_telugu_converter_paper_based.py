@@ -127,11 +127,11 @@ class EnhancedKannadaTeluguConverter:
             'ా': 'ಾ',   # AA (long tone)
             'ి': 'ಿ',   # I (95% resemblance)
             'ీ': 'ೀ',   # II (long tone)
-            'ು': 'ು',   # U (99% resemblance)
+            'ు': 'ು',   # U (99% resemblance)
             'ూ': 'ೂ',   # UU (long tone)
             'ృ': 'ೃ',   # Vocalic R (99% resemblance)
             'ౄ': 'ೄ',   # Vocalic RR (90% resemblance)
-            'ெ': 'ೆ',   # E
+            'ె': 'ೆ',   # E
             'ే': 'ೇ',   # EE
             'ై': 'ೈ',   # AI
             'ొ': 'ೊ',   # O
