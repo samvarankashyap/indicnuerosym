@@ -5,7 +5,6 @@ Usage:
     dwipada <command> [options]
 
 Commands:
-    crawl       Crawl poetry sources
     clean       Clean crawled data
     consolidate Consolidate text files to JSON
     stats       Dataset statistics
@@ -30,18 +29,6 @@ def main():
         description="Telugu Dwipada Poetry Generation Toolkit",
     )
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
-
-    # --- Crawl ---
-    crawl_parser = subparsers.add_parser("crawl", help="Crawl poetry sources")
-    crawl_parser.add_argument(
-        "source",
-        choices=[
-            "basava_puranam", "dwipada_bhagavatam",
-            "ranganatha_ramayanam", "palanati_veera_charitra",
-            "srirama_parinayamu",
-        ],
-        help="Source to crawl",
-    )
 
     # --- Clean ---
     clean_parser = subparsers.add_parser("clean", help="Clean crawled data")
@@ -126,13 +113,7 @@ def main():
 
 def _dispatch(args):
     """Route CLI commands to their implementations."""
-    if args.command == "crawl":
-        crawler = __import__(
-            f"dwipada.data.crawlers.{args.source}", fromlist=["main"]
-        )
-        crawler.main()
-
-    elif args.command == "clean":
+    if args.command == "clean":
         cleaner = __import__(
             f"dwipada.data.cleaners.{args.source}", fromlist=["main"]
         )

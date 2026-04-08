@@ -17,9 +17,8 @@ def test_paths_imports():
 
 
 def test_data_base_imports():
-    from dwipada.data.crawl_base import fetch_page, sanitize_filename, clean_text
     from dwipada.data.clean_base import clean_line, CHARS_TO_REMOVE
-    assert callable(fetch_page)
+    assert callable(clean_line)
     assert len(CHARS_TO_REMOVE) == 25
 
 
