@@ -29,7 +29,7 @@ service_account.json
 config.yaml
 
 # Generated / intermediate data
-/data/
+# /data/
 datasets/intermediate/
 datasets/dwipada_master_deduplicated.jsonl
 datasets/ift_alpaca.jsonl
