@@ -111,27 +111,65 @@ def load_model_quantized(model_name="google/gemma-4-E2B-it"):
 # PROMPT BUILDING
 ###############################################################################
 
-SYSTEM_PROMPT = (
+# System prompt for base models — strong "poem only" directive
+_SYSTEM_PROMPT_BASE = (
+    "You are a Kannada Maha Kavi. You output ONLY the poem — no greetings, "
+    "no explanations, no titles, no confirmations, no English text. "
+    "You write Utsaha Ragale poems: exactly 2 lines, 12 syllables per line, "
+    "4 ganas (III or IIU), ending on Guru, with Adi Prasa."
+)
+
+# System prompt for fine-tuned models — matches IFT training format
+_SYSTEM_PROMPT_LORA = (
     "You are an expert Kannada Scholar and Maha Kavi. "
     "You possess deep knowledge of Kannada Chandassu (Prosody). "
     "Generate Utsaha Ragale poems with exactly 12 syllables per line, "
     "4 ganas (III or IIU pattern), ending on Guru, with Adi Prasa."
 )
 
+# Rules block matching IFT training data (English — used for LoRA models)
+_RAGALE_RULES_EN = (
+    "Utsaha Ragale rules:\n"
+    "- 2 lines, each with exactly 12 syllables (aksharas)\n"
+    "- 4 ganas per line: each gana is III (laghu-laghu-laghu) "
+    "or IIU (laghu-laghu-guru)\n"
+    "- 4th gana must be IIU (line must end on Guru)\n"
+    "- Adi Prasa: the 2nd syllable's base consonant must match "
+    "between both lines"
+)
 
-def build_prompt(topic, tokenizer):
-    """Build generation prompt for a Kannada Ragale poem."""
-    user_prompt = (
-        f"Write a 2-line Utsaha Ragale poem in Kannada about: {topic}\n\n"
-        "Rules:\n"
-        "- Each line: exactly 12 syllables (aksharas)\n"
-        "- 4 ganas per line: III (short-short-short) or IIU (short-short-long)\n"
-        "- Both lines end on Guru (long syllable)\n"
-        "- 2nd syllable consonant must match between lines (Adi Prasa)\n\n"
-        "Poem:"
-    )
+
+def build_prompt(topic, tokenizer, model_name=None):
+    """Build generation prompt for a Kannada Ragale poem.
+
+    Uses English prompt for LoRA models (matching IFT training format)
+    and Kannada prompt for base models (to avoid conversational bleed).
+    """
+    is_lora = model_name and "lora" in model_name
+
+    if is_lora:
+        # Match the IFT training format (G1 profile)
+        system_prompt = _SYSTEM_PROMPT_LORA
+        user_prompt = (
+            f"{_RAGALE_RULES_EN}\n\n"
+            f"Write a 2-line Utsaha Ragale poem in Kannada about: {topic}"
+        )
+    else:
+        # Kannada prompt for base models — avoids ನಮಸ್ಕಾರ/ಖಚಿತ bleed
+        system_prompt = _SYSTEM_PROMPT_BASE
+        user_prompt = (
+            f"'{topic}' ಕುರಿತು ಉತ್ಸಾಹ ರಗಳೆ ಬರೆಯಿರಿ.\n\n"
+            "ನಿಯಮಗಳು:\n"
+            "- ಪ್ರತಿ ಸಾಲು: ನಿಖರವಾಗಿ 12 ಅಕ್ಷರಗಳು\n"
+            "- 4 ಗಣಗಳು: III (ಲಘು-ಲಘು-ಲಘು) ಅಥವಾ IIU (ಲಘು-ಲಘು-ಗುರು)\n"
+            "- ಎರಡೂ ಸಾಲುಗಳು ಗುರುವಿನಲ್ಲಿ ಕೊನೆಗೊಳ್ಳಬೇಕು\n"
+            "- ಆದಿ ಪ್ರಾಸ: 2ನೇ ಅಕ್ಷರದ ವ್ಯಂಜನ ಎರಡೂ ಸಾಲುಗಳಲ್ಲಿ ಹೊಂದಬೇಕು\n\n"
+            "ಕೇವಲ ಕನ್ನಡ ಪದ್ಯವನ್ನು ಮಾತ್ರ ಬರೆಯಿರಿ. "
+            "ಯಾವುದೇ ವಿವರಣೆ, ಶೀರ್ಷಿಕೆ, ಅಥವಾ ಇಂಗ್ಲಿಷ್ ಬೇಡ."
+        )
+
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},
     ]
     return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
@@ -226,8 +264,14 @@ def extract_poem_lines(text):
     raw = [l.strip() for l in text.split("\n") if l.strip()]
     lines = []
     for l in raw:
-        # Skip common prefixes
+        # Skip lines that are labels, titles, or meta-text
         if l.endswith(":") or l.startswith("Poem:"):
+            continue
+        # Strip known conversational/meta prefixes from base models
+        for prefix in ("ಖಚಿತತೆ:", "ಖಚಿತ:", "ನಮಸ್ಕಾರ", "ಶಸ್:"):
+            if l.startswith(prefix):
+                l = l[len(prefix):].strip()
+        if not l:
             continue
         # Check if line contains Kannada characters
         has_kannada = any(0x0C80 <= ord(ch) <= 0x0CFF for ch in l)

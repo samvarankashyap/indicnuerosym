@@ -44,13 +44,14 @@ def generate_poem(
     model, tokenizer, topic,
     kannada_ids, kannada_texts, static_mask, newline_token_id,
     max_new_tokens=150, temperature=0.7, top_p=0.9, seed=42,
+    model_name=None,
 ):
     """Generate a Ragale poem using logit masking only."""
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed(seed)
 
-    input_text = build_prompt(topic, tokenizer)
+    input_text = build_prompt(topic, tokenizer, model_name=model_name)
     input_ids = tokenizer(input_text, return_tensors="pt").to(model.device)
 
     generated_ids = []

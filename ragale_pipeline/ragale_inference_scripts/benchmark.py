@@ -136,6 +136,7 @@ def run_combination(model, tokenizer, strategy_name, strategy_fn,
                 model, tokenizer, topic,
                 kannada_ids, kannada_texts, static_mask, newline_token_id,
                 seed=seed,
+                model_name=model_name,
             )
             # Tag with model name for the summary
             r["model"] = model_name
