@@ -24,6 +24,7 @@ Usage:
 """
 
 import argparse
+import json
 import os
 import sys
 import time
@@ -396,11 +397,50 @@ def _print_stats(results, model_name, topic, num_seeds):
 # CLI
 ###############################################################################
 
+def _build_summary(all_results, model_name, total_time):
+    """Build a summary dict matching the format of existing benchmark JSONs."""
+    total_poems = len(all_results)
+    total_valid = sum(1 for r in all_results if r["all_valid"])
+    total_lines = sum(len(r["valid_lines"]) for r in all_results)
+    valid_lines = sum(
+        sum(1 for vl in r["valid_lines"] if vl["valid"])
+        for r in all_results
+    )
+    per_topic = {}
+    for r in all_results:
+        t = r["topic"]
+        if t not in per_topic:
+            per_topic[t] = {"total": 0, "valid": 0}
+        per_topic[t]["total"] += 1
+        if r["all_valid"]:
+            per_topic[t]["valid"] += 1
+    for v in per_topic.values():
+        v["rate"] = v["valid"] / v["total"] * 100 if v["total"] else 0
+
+    return {
+        "label": f"{model_name} — {METHOD_NAME}",
+        "method": METHOD_NAME,
+        "model": model_name,
+        "constrained": True,
+        "total_poems": total_poems,
+        "total_valid": total_valid,
+        "poem_accuracy": total_valid / total_poems * 100 if total_poems else 0,
+        "total_lines": total_lines,
+        "valid_lines": valid_lines,
+        "line_accuracy": valid_lines / total_lines * 100 if total_lines else 0,
+        "total_time": total_time,
+        "per_topic": per_topic,
+        "poems": all_results,
+    }
+
+
 def main():
     p = argparse.ArgumentParser(description=f"Dwipada benchmark: {METHOD_NAME}")
     p.add_argument("--model", type=str, default="gemma3-1b-merged", choices=MODEL_CHOICES)
     p.add_argument("--seeds", type=int, default=20)
     p.add_argument("--topic", type=str, default=None)
+    p.add_argument("--output", type=str, default=None,
+                   help="Path to save results JSON (default: benchmark_{METHOD_NAME}_{model}.json)")
     args = p.parse_args()
 
     model, tokenizer = load_model(args.model)
@@ -408,10 +448,23 @@ def main():
     telugu_ids, telugu_texts, static_mask, newline_token_id = precompute_token_data(tokenizer)
     topics = [args.topic] if args.topic else BENCHMARK_PROMPTS[:3]
 
+    all_results = []
+    total_start = time.time()
     for topic in topics:
-        run_experiment(model, tokenizer, topic,
+        results = run_experiment(model, tokenizer, topic,
                        telugu_ids, telugu_texts, static_mask, newline_token_id,
                        num_seeds=args.seeds, model_name=args.model)
+        all_results.extend(results)
+    total_time = time.time() - total_start
+
+    # Save results to JSON
+    output_path = args.output or os.path.join(
+        SCRIPT_DIR, f"benchmark_{METHOD_NAME}_{args.model}.json"
+    )
+    summary = _build_summary(all_results, args.model, total_time)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+    print(f"\n  Results saved to: {output_path}")
 
 
 if __name__ == "__main__":
