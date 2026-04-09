@@ -323,6 +323,48 @@ def print_summary(results, method_name):
 
 
 ###############################################################################
+# MODEL CHOICES (mirrors domino MODEL_CHOICES pattern)
+###############################################################################
+
+MODEL_CHOICES = [
+    "gemma3-1b-base",       # google/gemma-3-1b-it (no fine-tuning)
+    "gemma3-1b-lora",       # google/gemma-3-1b-it + ragale LoRA adapter
+]
+
+MODEL_CONFIGS = {
+    "gemma3-1b-base": {
+        "loader": "base",
+        "model_name": "google/gemma-3-1b-it",
+        "desc": "Gemma 3 1B IT (base)",
+    },
+    "gemma3-1b-lora": {
+        "loader": "lora",
+        "model_name": "google/gemma-3-1b-it",
+        "adapter_path": os.path.join(
+            os.path.dirname(SCRIPT_DIR), "ragale_checkpoints", "checkpoint-336"
+        ),
+        "desc": "Gemma 3 1B IT + Ragale LoRA",
+    },
+}
+
+
+def load_model_by_choice(model_choice):
+    """Load model+tokenizer based on model choice string."""
+    cfg = MODEL_CONFIGS[model_choice]
+    if cfg["loader"] == "base":
+        return load_model(cfg["model_name"])
+    elif cfg["loader"] == "lora":
+        return load_model_lora(cfg["model_name"], cfg.get("adapter_path"))
+    else:
+        raise ValueError(f"Unknown loader: {cfg['loader']}")
+
+
+def is_lora_model(model_choice):
+    """Check if a model choice is a LoRA fine-tuned model."""
+    return "lora" in model_choice
+
+
+###############################################################################
 # BENCHMARK TOPICS
 ###############################################################################
 
@@ -332,4 +374,9 @@ BENCHMARK_TOPICS = [
     "Rain",
     "Birds",
     "Flowers",
+    "River",
 ]
+
+# Default benchmark: first 3 topics x 34 seeds = 102 poems (matches domino)
+BENCHMARK_TOPICS_DEFAULT = BENCHMARK_TOPICS[:3]
+BENCHMARK_SEEDS_DEFAULT = 34
