@@ -1,0 +1,3092 @@
+{
+  "label": "gemma3-1b-base — hybrid_mask_reject",
+  "method": "hybrid_mask_reject",
+  "model": "gemma3-1b-base",
+  "constrained": true,
+  "total_poems": 102,
+  "total_valid": 102,
+  "poem_accuracy": 100.0,
+  "total_lines": 204,
+  "valid_lines": 204,
+  "line_accuracy": 100.0,
+  "total_time": 202.94930958747864,
+  "per_topic": {
+    "తల్లి ప్రేమ అన్నింటికంటే గొప్పది": {
+      "total": 34,
+      "valid": 34,
+      "rate": 100.0
+    },
+    "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను": {
+      "total": 34,
+      "valid": 34,
+      "rate": 100.0
+    },
+    "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను": {
+      "total": 34,
+      "valid": 34,
+      "rate": 100.0
+    }
+  },
+  "poems": [
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 42,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నతి నూతమాన తల నతి నూతమ్ త\nసూర్న్  తెల  వార్త నూతుమ్ తల నూరు\n",
+      "poem_lines": [
+        "నతి నూతమాన తల నతి నూతమ్ త",
+        "సూర్న్  తెల  వార్త నూతుమ్ తల నూరు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నతి నూతమాన తల నతి నూతమ్ త",
+          "markers": "I I U I U I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "సూర్న్  తెల  వార్త నూతుమ్ తల నూరు",
+          "markers": "U I I U I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.680551767349243,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 34
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 49,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నానా నభే నభే నభనే నభాయ\nఅనగరా నభనే నభాయ నభాయ\n",
+      "poem_lines": [
+        "నానా నభే నభే నభనే నభాయ",
+        "అనగరా నభనే నభాయ నభాయ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నానా నభే నభే నభనే నభాయ",
+          "markers": "U U I U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "అనగరా నభనే నభాయ నభాయ",
+          "markers": "I I I U I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9656932353973389,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 56,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "అందరి కంటే మెరవలేను తల్లి\nఅందరి ప్రేమ నూతనమేనవచ్చు\n",
+      "poem_lines": [
+        "అందరి కంటే మెరవలేను తల్లి",
+        "అందరి ప్రేమ నూతనమేనవచ్చు"
+      ],
+      "valid_lines": [
+        {
+          "line": "అందరి కంటే మెరవలేను తల్లి",
+          "markers": "U I I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "అందరి ప్రేమ నూతనమేనవచ్చు",
+          "markers": "U I I U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.433656930923462,
+      "tokens_generated": 22,
+      "backtracks": 0,
+      "mask_computations": 20
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 63,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నతి నతి నతి నతి న తినతి నద్ది\nనతి నతి నతి నతి న తినతి నద్ది\n",
+      "poem_lines": [
+        "నతి నతి నతి నతి న తినతి నద్ది",
+        "నతి నతి నతి నతి న తినతి నద్ది"
+      ],
+      "valid_lines": [
+        {
+          "line": "నతి నతి నతి నతి న తినతి నద్ది",
+          "markers": "I I I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "నతి నతి నతి నతి న తినతి నద్ది",
+          "markers": "I I I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9754469394683838,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 70,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "అందరి మూర్తిలోనైనా నయంన\nతల్ దేవునినమల మాయనమైన\n",
+      "poem_lines": [
+        "అందరి మూర్తిలోనైనా నయంన",
+        "తల్ దేవునినమల మాయనమైన"
+      ],
+      "valid_lines": [
+        {
+          "line": "అందరి మూర్తిలోనైనా నయంన",
+          "markers": "U I I U I U U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "తల్ దేవునినమల మాయనమైన",
+          "markers": "U U I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7522566318511963,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 77,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "అందరి ప్రియమైన మాతృమతి నయ\nఅందరి ప్రియమైన మాతృమతి నిజ\n",
+      "poem_lines": [
+        "అందరి ప్రియమైన మాతృమతి నయ",
+        "అందరి ప్రియమైన మాతృమతి నిజ"
+      ],
+      "valid_lines": [
+        {
+          "line": "అందరి ప్రియమైన మాతృమతి నయ",
+          "markers": "U I I I I U I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U I I\tSURYA - I I I"
+        },
+        {
+          "line": "అందరి ప్రియమైన మాతృమతి నిజ",
+          "markers": "U I I I I U I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7850773334503174,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 84,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నతి నవ్య కీరినాయ్ తల్చని వాడు\nవై ఔరపుల పూర్చు వాడు పురంత\n",
+      "poem_lines": [
+        "నతి నవ్య కీరినాయ్ తల్చని వాడు",
+        "వై ఔరపుల పూర్చు వాడు పురంత"
+      ],
+      "valid_lines": [
+        {
+          "line": "నతి నవ్య కీరినాయ్ తల్చని వాడు",
+          "markers": "I I U I U I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "వై ఔరపుల పూర్చు వాడు పురంత",
+          "markers": "U U I I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.223905324935913,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 91,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నలకల నలకల నవల\nనైల్ల సూర్య సముద్ర నరల నరాలు\n",
+      "poem_lines": [
+        "నలకల నలకల నలకల నవల",
+        "నైల్ల సూర్య సముద్ర నరల నరాలు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నలకల నలకల నవల",
+          "markers": "I I I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "నైల్ల సూర్య సముద్ర నరల నరాలు",
+          "markers": "U I U I I U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.083585023880005,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 98,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లుల ప్రేమ మనిగడమైనంత\nసూర్గ్ ఆనవేనంత పురుషులు కష్ట\n",
+      "poem_lines": [
+        "నల్లుల ప్రేమ మనిగడమైనంత",
+        "సూర్గ్ ఆనవేనంత పురుషులు కష్ట"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లుల ప్రేమ మనిగడమైనంత",
+          "markers": "U I I U I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "సూర్గ్ ఆనవేనంత పురుషులు కష్ట",
+          "markers": "U U I U U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.966414451599121,
+      "tokens_generated": 27,
+      "backtracks": 1,
+      "mask_computations": 28
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 105,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నతి నూనగాన నూనగన నూనసున\nభూమ్ తల నూనగన్ బూనగన నవ\n",
+      "poem_lines": [
+        "నతి నూనగాన నూనగన నూనసున",
+        "భూమ్ తల నూనగన్ బూనగన నవ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నతి నూనగాన నూనగన నూనసున",
+          "markers": "I I U I U I U I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - I I I U\tSURYA - I I I"
+        },
+        {
+          "line": "భూమ్ తల నూనగన్ బూనగన నవ",
+          "markers": "U I I U I U U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.3445277214050293,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 34
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 112,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లుల ప్రేమ అన్నింటికంటే ఘ\nనైల వెలసరిన మనసులో నిత్య\n",
+      "poem_lines": [
+        "నల్లుల ప్రేమ అన్నింటికంటే ఘ",
+        "నైల వెలసరిన మనసులో నిత్య"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లుల ప్రేమ అన్నింటికంటే ఘ",
+          "markers": "U I I U I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "నైల వెలసరిన మనసులో నిత్య",
+          "markers": "U I I I I I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6156835556030273,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 119,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లుల ప్రేమ అన్నింటికంటే ఘ\nఅర్ అందమైరి కీట కదలిక కురి\n",
+      "poem_lines": [
+        "నల్లుల ప్రేమ అన్నింటికంటే ఘ",
+        "అర్ అందమైరి కీట కదలిక కురి"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లుల ప్రేమ అన్నింటికంటే ఘ",
+          "markers": "U I I U I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "అర్ అందమైరి కీట కదలిక కురి",
+          "markers": "U U I U I U I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6467359066009521,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 126,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నగరి నాట కబురు దైవే లిలోన\nసూర్ గోప్యత కబురు స్త్రీ లిలోన అను\n",
+      "poem_lines": [
+        "నగరి నాట కబురు దైవే లిలోన",
+        "సూర్ గోప్యత కబురు స్త్రీ లిలోన అను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నగరి నాట కబురు దైవే లిలోన",
+          "markers": "I I I U I I I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్ గోప్యత కబురు స్త్రీ లిలోన అను",
+          "markers": "U U I I I I I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.226250648498535,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 133,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకలల నడిపి: న్యాయం నలకర\nసూర్ లాసల నడిపి: పురుషుల సాయి\n",
+      "poem_lines": [
+        "నలకలల నడిపి: న్యాయం నలకర",
+        "సూర్ లాసల నడిపి: పురుషుల సాయి"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకలల నడిపి: న్యాయం నలకర",
+          "markers": "I I I I I I I I U U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - U U I\tSURYA - I I I"
+        },
+        {
+          "line": "సూర్ లాసల నడిపి: పురుషుల సాయి",
+          "markers": "U U I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.229870319366455,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 140,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నానీల ఆనంద నమలమైనది మ\nఅన్నింటికంటే దొరకనది లేదు\n",
+      "poem_lines": [
+        "నానీల ఆనంద నమలమైనది మ",
+        "అన్నింటికంటే దొరకనది లేదు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నానీల ఆనంద నమలమైనది మ",
+          "markers": "U U I U U I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I I U\tSURYA - I I I"
+        },
+        {
+          "line": "అన్నింటికంటే దొరకనది లేదు",
+          "markers": "U U I U U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8214690685272217,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 147,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నలకల నలకల నాల\nనలకల నలకల నాల నలకర\n",
+      "poem_lines": [
+        "నలకల నలకల నలకల నాల",
+        "నలకల నలకల నాల నలకర"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నలకల నలకల నాల",
+          "markers": "I I I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "నలకల నలకల నాల నలకర",
+          "markers": "I I I I I I I I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.992046594619751,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 154,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లుల ప్రేమ అన్నింటికంటే ఘ\nనైల ఆనందం వెలకడలు కాయ\n",
+      "poem_lines": [
+        "నల్లుల ప్రేమ అన్నింటికంటే ఘ",
+        "నైల ఆనందం వెలకడలు కాయ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లుల ప్రేమ అన్నింటికంటే ఘ",
+          "markers": "U I I U I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "నైల ఆనందం వెలకడలు కాయ",
+          "markers": "U I U U U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6083300113677979,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 161,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "అందరి మూర్తి లోనైనది ప్రేమ\nఅందరి మూర్తి లోనైనది ప్రేమ\n",
+      "poem_lines": [
+        "అందరి మూర్తి లోనైనది ప్రేమ",
+        "అందరి మూర్తి లోనైనది ప్రేమ"
+      ],
+      "valid_lines": [
+        {
+          "line": "అందరి మూర్తి లోనైనది ప్రేమ",
+          "markers": "U I I U I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "అందరి మూర్తి లోనైనది ప్రేమ",
+          "markers": "U I I U I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7391815185546875,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 168,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "అందరిమ లత కీరవన మలత్ర\nభూమ్ దేవుడికి నమః బహుమతిన మల\n",
+      "poem_lines": [
+        "అందరిమ లత కీరవన మలత్ర",
+        "భూమ్ దేవుడికి నమః బహుమతిన మల"
+      ],
+      "valid_lines": [
+        {
+          "line": "అందరిమ లత కీరవన మలత్ర",
+          "markers": "U I I I I I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "భూమ్ దేవుడికి నమః బహుమతిన మల",
+          "markers": "U U I I I I U I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.202815532684326,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 175,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నతి నతి నతి నతి న తి నతి నతులు\nనతి నతి నతి నతి న తి నతి లింగ\n",
+      "poem_lines": [
+        "నతి నతి నతి నతి న తి నతి నతులు",
+        "నతి నతి నతి నతి న తి నతి లింగ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నతి నతి నతి నతి న తి నతి నతులు",
+          "markers": "I I I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "నతి నతి నతి నతి న తి నతి లింగ",
+          "markers": "I I I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.031914472579956,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 182,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లుల ప్రియమైన వంగుల కంద\nఅంల్యవల కదల మాయవాలెండ\n",
+      "poem_lines": [
+        "నల్లుల ప్రియమైన వంగుల కంద",
+        "అంల్యవల కదల మాయవాలెండ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లుల ప్రియమైన వంగుల కంద",
+          "markers": "U I I I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "అంల్యవల కదల మాయవాలెండ",
+          "markers": "U I I I I I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7617969512939453,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 189,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లరి మతి నూనగాన వదింప\nభీర్ లింగ మతి నూనమేన వదింప\n",
+      "poem_lines": [
+        "నల్లరి మతి నూనగాన వదింప",
+        "భీర్ లింగ మతి నూనమేన వదింప"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లరి మతి నూనగాన వదింప",
+          "markers": "U I I I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "భీర్ లింగ మతి నూనమేన వదింప",
+          "markers": "U U I I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9884614944458008,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 196,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "అందరి కంటే మెదంబ కీరాయ\nభౌర్ అండల కనిషే బకరిరాయ లిష\n",
+      "poem_lines": [
+        "అందరి కంటే మెదంబ కీరాయ",
+        "భౌర్ అండల కనిషే బకరిరాయ లిష"
+      ],
+      "valid_lines": [
+        {
+          "line": "అందరి కంటే మెదంబ కీరాయ",
+          "markers": "U I I U U I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "భౌర్ అండల కనిషే బకరిరాయ లిష",
+          "markers": "U U I I I I U I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9398760795593262,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 203,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లుల ప్రేమ అన్నింటికంటే ఘ\nప్రేమ్ ఎప్పుడూ మారుపడికింత లేదు\n",
+      "poem_lines": [
+        "నల్లుల ప్రేమ అన్నింటికంటే ఘ",
+        "ప్రేమ్ ఎప్పుడూ మారుపడికింత లేదు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లుల ప్రేమ అన్నింటికంటే ఘ",
+          "markers": "U I I U I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "ప్రేమ్ ఎప్పుడూ మారుపడికింత లేదు",
+          "markers": "U U I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6378304958343506,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 210,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నతి నూనల నతి నూనల నతి నాలి\nఅత్ర నూనల నతి నాలి నతి నవి\n",
+      "poem_lines": [
+        "నతి నూనల నతి నూనల నతి నాలి",
+        "అత్ర నూనల నతి నాలి నతి నవి"
+      ],
+      "valid_lines": [
+        {
+          "line": "నతి నూనల నతి నూనల నతి నాలి",
+          "markers": "I I U I I I I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "అత్ర నూనల నతి నాలి నతి నవి",
+          "markers": "U I U I I I I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.188861608505249,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 217,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నానా నలకల మలకల నడింప\nనానా నలకల నలకల నడింప\n",
+      "poem_lines": [
+        "నానా నలకల మలకల నడింప",
+        "నానా నలకల నలకల నడింప"
+      ],
+      "valid_lines": [
+        {
+          "line": "నానా నలకల మలకల నడింప",
+          "markers": "U U I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "నానా నలకల నలకల నడింప",
+          "markers": "U U I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9877934455871582,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 224,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "అందరిమ కడమల మలచును నలు\nఅందరిమ కడమల మలచును నలు\n",
+      "poem_lines": [
+        "అందరిమ కడమల మలచును నలు",
+        "అందరిమ కడమల మలచును నలు"
+      ],
+      "valid_lines": [
+        {
+          "line": "అందరిమ కడమల మలచును నలు",
+          "markers": "U I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "అందరిమ కడమల మలచును నలు",
+          "markers": "U I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9603703022003174,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 231,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "అందరి నీవుగా నవ్వలవి ప్రియ\nఅందరి ప్రేమతో కనమడైనట్టు\n",
+      "poem_lines": [
+        "అందరి నీవుగా నవ్వలవి ప్రియ",
+        "అందరి ప్రేమతో కనమడైనట్టు"
+      ],
+      "valid_lines": [
+        {
+          "line": "అందరి నీవుగా నవ్వలవి ప్రియ",
+          "markers": "U I I U I U U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I I\tSURYA - I I I"
+        },
+        {
+          "line": "అందరి ప్రేమతో కనమడైనట్టు",
+          "markers": "U I I U I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7488408088684082,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 238,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నమల తల్లీ అనుప వరలక్ష్మి నమ\nఅమత తల్లీ కీరలక్ష్మము నంద\n",
+      "poem_lines": [
+        "నమల తల్లీ అనుప వరలక్ష్మి నమ",
+        "అమత తల్లీ కీరలక్ష్మము నంద"
+      ],
+      "valid_lines": [
+        {
+          "line": "నమల తల్లీ అనుప వరలక్ష్మి నమ",
+          "markers": "I I I U U I I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - U I I\tINDRA - I I I U\tSURYA - I I I"
+        },
+        {
+          "line": "అమత తల్లీ కీరలక్ష్మము నంద",
+          "markers": "I I I U U U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - U U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.094618320465088,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 245,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "అందరి కంటే సువర్ణమణి అను\nసూర్ దోషల బరువులో  నిర్లలేను\n",
+      "poem_lines": [
+        "అందరి కంటే సువర్ణమణి అను",
+        "సూర్ దోషల బరువులో  నిర్లలేను"
+      ],
+      "valid_lines": [
+        {
+          "line": "అందరి కంటే సువర్ణమణి అను",
+          "markers": "U I I U U I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - U I I\tSURYA - I I I"
+        },
+        {
+          "line": "సూర్ దోషల బరువులో  నిర్లలేను",
+          "markers": "U U I I I I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6613409519195557,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 252,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "అందరి ప్రేమలు మాయమై సంగ\nతల్ దేవుడు మనిగెనమ వెలసాడు\n",
+      "poem_lines": [
+        "అందరి ప్రేమలు మాయమై సంగ",
+        "తల్ దేవుడు మనిగెనమ వెలసాడు"
+      ],
+      "valid_lines": [
+        {
+          "line": "అందరి ప్రేమలు మాయమై సంగ",
+          "markers": "U I I U I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "తల్ దేవుడు మనిగెనమ వెలసాడు",
+          "markers": "U U I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8043901920318604,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 259,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లునందమ కీరల కదలికమున\nఅమ్మ్  అమ్మ్  అమమ్  అమ్మ్  అగమనం లిమికిము\n",
+      "poem_lines": [
+        "నల్లునందమ కీరల కదలికమున",
+        "అమ్మ్  అమ్మ్  అమమ్  అమ్మ్  అగమనం లిమికిము"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లునందమ కీరల కదలికమున",
+          "markers": "U I U I I U I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "అమ్మ్  అమ్మ్  అమమ్  అమ్మ్  అగమనం లిమికిము",
+          "markers": "U U I U U I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.672086477279663,
+      "tokens_generated": 42,
+      "backtracks": 0,
+      "mask_computations": 40
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 266,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నతి నూట నూట దివల కీటమైన\nసూర్  ఆనవేకి  అనుగుణమైదు డుడు\n",
+      "poem_lines": [
+        "నతి నూట నూట దివల కీటమైన",
+        "సూర్  ఆనవేకి  అనుగుణమైదు డుడు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నతి నూట నూట దివల కీటమైన",
+          "markers": "I I U I U I I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్  ఆనవేకి  అనుగుణమైదు డుడు",
+          "markers": "U U I U I I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.198141574859619,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 273,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లున బూనగీ కనగీ న్యగీర\nఅంఉరి నూన బూనగలీ కనగడి\n",
+      "poem_lines": [
+        "నల్లున బూనగీ కనగీ న్యగీర",
+        "అంఉరి నూన బూనగలీ కనగడి"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లున బూనగీ కనగీ న్యగీర",
+          "markers": "U I I U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "అంఉరి నూన బూనగలీ కనగడి",
+          "markers": "U I I U I U I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.330519199371338,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 33
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 42,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకలల నడకల నడకలో క\nనాలతో లంకను పడగొట్టెను అను\n",
+      "poem_lines": [
+        "నలకలల నడకల నడకలో క",
+        "నాలతో లంకను పడగొట్టెను అను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకలల నడకల నడకలో క",
+          "markers": "I I I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "నాలతో లంకను పడగొట్టెను అను",
+          "markers": "U I U U I I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8682808876037598,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 49,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల నది నది నడకలో నలక్ష\nనైలు నైలు నడక నలకను చేరు\n",
+      "poem_lines": [
+        "నల్ల నది నది నడకలో నలక్ష",
+        "నైలు నైలు నడక నలకను చేరు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల నది నది నడకలో నలక్ష",
+          "markers": "U I I I I I I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "నైలు నైలు నడక నలకను చేరు",
+          "markers": "U I U I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9662630558013916,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 56,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నడకతో లంకను చేరు\nసూర్ లేపుతో ఆనసంతోడు రెండు\n",
+      "poem_lines": [
+        "నలకల నడకతో లంకను చేరు",
+        "సూర్ లేపుతో ఆనసంతోడు రెండు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నడకతో లంకను చేరు",
+          "markers": "I I I I I I I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్ లేపుతో ఆనసంతోడు రెండు",
+          "markers": "U U I U U I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6338469982147217,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 63,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నది గడిచా సముద్రాన\nనౌల నది గడిచా సంతోగమైన\n",
+      "poem_lines": [
+        "నలకల నది గడిచా సముద్రాన",
+        "నౌల నది గడిచా సంతోగమైన"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నది గడిచా సముద్రాన",
+          "markers": "I I I I I I I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "నౌల నది గడిచా సంతోగమైన",
+          "markers": "U I I I I I U U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9155993461608887,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 70,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల నది నది నల్ల నది నల్ల నది\nనల్ల నది నది నల్ల నది నల్ల నది\n",
+      "poem_lines": [
+        "నల్ల నది నది నల్ల నది నల్ల నది",
+        "నల్ల నది నది నల్ల నది నల్ల నది"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల నది నది నల్ల నది నల్ల నది",
+          "markers": "U I I I I I U I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - I I I"
+        },
+        {
+          "line": "నల్ల నది నది నల్ల నది నల్ల నది",
+          "markers": "U I I I I I U I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9641635417938232,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 77,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నలుమూలల నలుమూలలకు\nనౌల నలుమలుపు నలకలు చెరుగు\n",
+      "poem_lines": [
+        "నలకల నలుమూలల నలుమూలలకు",
+        "నౌల నలుమలుపు నలకలు చెరుగు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నలుమూలల నలుమూలలకు",
+          "markers": "I I I I I I U I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - I I I U\tSURYA - I I I"
+        },
+        {
+          "line": "నౌల నలుమలుపు నలకలు చెరుగు",
+          "markers": "U I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9725368022918701,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 84,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నలుమూలల నడిచే దిక్కు\nసూర్ అనుగుణన నడుపుటల నడువు\n",
+      "poem_lines": [
+        "నలకల నలుమూలల నడిచే దిక్కు",
+        "సూర్ అనుగుణన నడుపుటల నడువు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నలుమూలల నడిచే దిక్కు",
+          "markers": "I I I I I I U I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "సూర్ అనుగుణన నడుపుటల నడువు",
+          "markers": "U I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9492299556732178,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 91,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లని వృత్తాంతన నలుదిబడిన\nసూర్గ్ ఆనవేనై కలుసి లంకను నలు\n",
+      "poem_lines": [
+        "నల్లని వృత్తాంతన నలుదిబడిన",
+        "సూర్గ్ ఆనవేనై కలుసి లంకను నలు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లని వృత్తాంతన నలుదిబడిన",
+          "markers": "U I I U U I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "సూర్గ్ ఆనవేనై కలుసి లంకను నలు",
+          "markers": "U U I U U I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.075120687484741,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 98,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకలలు నలుమూలల నీడలు నలు\nసూర్ల్స్ ఆనవేసలు సము సముద్రాలు\n",
+      "poem_lines": [
+        "నలకలలు నలుమూలల నీడలు నలు",
+        "సూర్ల్స్ ఆనవేసలు సము సముద్రాలు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకలలు నలుమూలల నీడలు నలు",
+          "markers": "I I I I I I I U I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "సూర్ల్స్ ఆనవేసలు సము సముద్రాలు",
+          "markers": "U U I U I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0522561073303223,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 105,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నడుచు కుండలపు వలసలు\nనౌలల నడుచు కుండలపు వలసులు\n",
+      "poem_lines": [
+        "నలకల నడుచు కుండలపు వలసలు",
+        "నౌలల నడుచు కుండలపు వలసులు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నడుచు కుండలపు వలసలు",
+          "markers": "I I I I I I I U I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "నౌలల నడుచు కుండలపు వలసులు",
+          "markers": "U I I I I I U I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.071794033050537,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 112,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నానా నలక నలక నలక నాన\nనానా నలక నలక నలక నాన\n",
+      "poem_lines": [
+        "నానా నలక నలక నలక నాన",
+        "నానా నలక నలక నలక నాన"
+      ],
+      "valid_lines": [
+        {
+          "line": "నానా నలక నలక నలక నాన",
+          "markers": "U U I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "నానా నలక నలక నలక నాన",
+          "markers": "U U I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9806194305419922,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 119,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నలకల నలకల నలకు\nహృంక్ లంకను చెరునైలే లింకును తెలు\n",
+      "poem_lines": [
+        "నలకల నలకల నలకల నలకు",
+        "హృంక్ లంకను చెరునైలే లింకును తెలు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నలకల నలకల నలకు",
+          "markers": "I I I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "హృంక్ లంకను చెరునైలే లింకును తెలు",
+          "markers": "U U I I I I U U U I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - U U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.2229368686676025,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 126,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల కడలు సముద్రం దాటి వచ్చ\nనల్ల కడలు లంకను ధ్వనిస్తవుండు\n",
+      "poem_lines": [
+        "నల్ల కడలు సముద్రం దాటి వచ్చ",
+        "నల్ల కడలు లంకను ధ్వనిస్తవుండు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల కడలు సముద్రం దాటి వచ్చ",
+          "markers": "U I I I I I U U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "నల్ల కడలు లంకను ధ్వనిస్తవుండు",
+          "markers": "U I I I I U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.904745101928711,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 133,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నది నది నది నది నద దిగునట్లు\nనంద నంద నద నద దిగునట్లు లిమి\n",
+      "poem_lines": [
+        "నది నది నది నది నద దిగునట్లు",
+        "నంద నంద నద నద దిగునట్లు లిమి"
+      ],
+      "valid_lines": [
+        {
+          "line": "నది నది నది నది నద దిగునట్లు",
+          "markers": "I I I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "నంద నంద నద నద దిగునట్లు లిమి",
+          "markers": "U I U I I I I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0492804050445557,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 140,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల నది సముద్రన ప్రవహెను అను\nనల్ల నది సముద్రన ప్రవహెను అను\n",
+      "poem_lines": [
+        "నల్ల నది సముద్రన ప్రవహెను అను",
+        "నల్ల నది సముద్రన ప్రవహెను అను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల నది సముద్రన ప్రవహెను అను",
+          "markers": "U I I I I U I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "నల్ల నది సముద్రన ప్రవహెను అను",
+          "markers": "U I I I I U I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0040273666381836,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 147,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నలుమూలల సముద్రమునకు\nనౌల నలుమలుసు లంకను చేరు\n",
+      "poem_lines": [
+        "నలకల నలుమూలల సముద్రమునకు",
+        "నౌల నలుమలుసు లంకను చేరు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నలుమూలల సముద్రమునకు",
+          "markers": "I I I I I I U I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "నౌల నలుమలుసు లంకను చేరు",
+          "markers": "U I I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8256077766418457,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 154,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల నది నది సంపణి నడకాడు\nనౌల నది నది నలని నడచుడును\n",
+      "poem_lines": [
+        "నల్ల నది నది సంపణి నడకాడు",
+        "నౌల నది నది నలని నడచుడును"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల నది నది సంపణి నడకాడు",
+          "markers": "U I I I I I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "నౌల నది నది నలని నడచుడును",
+          "markers": "U I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9960575103759766,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 161,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల నది నదిలో నల్ల నలుకర\nసూర్శ్ ఆనవేన నూలు సముద్రమునకు\n",
+      "poem_lines": [
+        "నల్ల నది నదిలో నల్ల నలుకర",
+        "సూర్శ్ ఆనవేన నూలు సముద్రమునకు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల నది నదిలో నల్ల నలుకర",
+          "markers": "U I I I I I U U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - U I I\tSURYA - I I I"
+        },
+        {
+          "line": "సూర్శ్ ఆనవేన నూలు సముద్రమునకు",
+          "markers": "U U I U I U I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.912168264389038,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 168,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలక న లంకను ధైర్యము కుప్ప\nనౌల న హనుమంతుడై నైపుణీయ\n",
+      "poem_lines": [
+        "నలక న లంకను ధైర్యము కుప్ప",
+        "నౌల న హనుమంతుడై నైపుణీయ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలక న లంకను ధైర్యము కుప్ప",
+          "markers": "I I I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "నౌల న హనుమంతుడై నైపుణీయ",
+          "markers": "U I I I I U I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9896130561828613,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 175,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నైలు నైల మణుగురు కద\nనౌల నైలు నమైన తను కద లింగ\n",
+      "poem_lines": [
+        "నలకల నైలు నైల మణుగురు కద",
+        "నౌల నైలు నమైన తను కద లింగ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నైలు నైల మణుగురు కద",
+          "markers": "I I I I U I U I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I U\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "నౌల నైలు నమైన తను కద లింగ",
+          "markers": "U I U I I U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.2185142040252686,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 182,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నానా నలకల నంసల వలయం ది\nనానా నలకల నంసల వలయాన్ని\n",
+      "poem_lines": [
+        "నానా నలకల నంసల వలయం ది",
+        "నానా నలకల నంసల వలయాన్ని"
+      ],
+      "valid_lines": [
+        {
+          "line": "నానా నలకల నంసల వలయం ది",
+          "markers": "U U I I I I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "నానా నలకల నంసల వలయాన్ని",
+          "markers": "U U I I I I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1280956268310547,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 189,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నలుమూలల నలుమూలలను\nసూర్ లాగనల నలుమూలల నన్ను\n",
+      "poem_lines": [
+        "నలకల నలుమూలల నలుమూలలను",
+        "సూర్ లాగనల నలుమూలల నన్ను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నలుమూలల నలుమూలలను",
+          "markers": "I I I I I I U I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - I I I U\tSURYA - I I I"
+        },
+        {
+          "line": "సూర్ లాగనల నలుమూలల నన్ను",
+          "markers": "U U I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9659054279327393,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 196,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల నది నది నూతనము నందీన\nనల్ల నది నది నూతనము నందీల\n",
+      "poem_lines": [
+        "నల్ల నది నది నూతనము నందీన",
+        "నల్ల నది నది నూతనము నందీల"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల నది నది నూతనము నందీన",
+          "markers": "U I I I I I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "నల్ల నది నది నూతనము నందీల",
+          "markers": "U I I I I I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9817640781402588,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 203,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నలుమూలల మసకచుండ\nసూర్ లాగెనవ నలుమూలల వెలుగు\n",
+      "poem_lines": [
+        "నలకల నలుమూలల మసకచుండ",
+        "సూర్ లాగెనవ నలుమూలల వెలుగు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నలుమూలల మసకచుండ",
+          "markers": "I I I I I I U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్ లాగెనవ నలుమూలల వెలుగు",
+          "markers": "U U I I I I I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.97993803024292,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 210,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నలుమూలు సందులు సంగు\nనౌల నలుపు నది సంగు లంకించు\n",
+      "poem_lines": [
+        "నలకల నలుమూలు సందులు సంగు",
+        "నౌల నలుపు నది సంగు లంకించు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నలుమూలు సందులు సంగు",
+          "markers": "I I I I I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "నౌల నలుపు నది సంగు లంకించు",
+          "markers": "U I I I I I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8325259685516357,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 217,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల నది నడిచి కాలు వెనక్కి\nనైలు దిగువన గల నడిసముద్ర\n",
+      "poem_lines": [
+        "నల్ల నది నడిచి కాలు వెనక్కి",
+        "నైలు దిగువన గల నడిసముద్ర"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల నది నడిచి కాలు వెనక్కి",
+          "markers": "U I I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "నైలు దిగువన గల నడిసముద్ర",
+          "markers": "U I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8620531558990479,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 224,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నడుమ సంచికలు కదిలిన\nనౌల సందులు నడుస్తున్నాయి లింక\n",
+      "poem_lines": [
+        "నలకల నడుమ సంచికలు కదిలిన",
+        "నౌల సందులు నడుస్తున్నాయి లింక"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నడుమ సంచికలు కదిలిన",
+          "markers": "I I I I I I I U I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "నౌల సందులు నడుస్తున్నాయి లింక",
+          "markers": "U I U I I I U U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I U\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8346037864685059,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 231,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "సముదిందు దాటి లంకాన్ని చేరెంచు\nనార్ మూర్తి దిగును మనిగచును లింగ\n",
+      "poem_lines": [
+        "సముదిందు దాటి లంకాన్ని చేరెంచు",
+        "నార్ మూర్తి దిగును మనిగచును లింగ"
+      ],
+      "valid_lines": [
+        {
+          "line": "సముదిందు దాటి లంకాన్ని చేరెంచు",
+          "markers": "I I U I U I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "నార్ మూర్తి దిగును మనిగచును లింగ",
+          "markers": "U U I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0238471031188965,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 238,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల ఆకాశం దిగజగించి హన్న\nఅూర్ట్ అండగీక నల్ల నదికి నంద\n",
+      "poem_lines": [
+        "నల్ల ఆకాశం దిగజగించి హన్న",
+        "అూర్ట్ అండగీక నల్ల నదికి నంద"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల ఆకాశం దిగజగించి హన్న",
+          "markers": "U I U U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "అూర్ట్ అండగీక నల్ల నదికి నంద",
+          "markers": "U U I U I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9083271026611328,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 245,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "సముదింపనై లంక చేరెను వయ్య\nనై మూర్తి సముదింపును వయైయును అను\n",
+      "poem_lines": [
+        "సముదింపనై లంక చేరెను వయ్య",
+        "నై మూర్తి సముదింపును వయైయును అను"
+      ],
+      "valid_lines": [
+        {
+          "line": "సముదింపనై లంక చేరెను వయ్య",
+          "markers": "I I U I U U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "నై మూర్తి సముదింపును వయైయును అను",
+          "markers": "U U I I I U I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0788564682006836,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 252,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్లపు వజ్రాల నవ్వగా నల్ల\nసూర్ల్స్ ఆనవేస్తూ సము సముద్రమందు\n",
+      "poem_lines": [
+        "నల్లపు వజ్రాల నవ్వగా నల్ల",
+        "సూర్ల్స్ ఆనవేస్తూ సము సముద్రమందు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్లపు వజ్రాల నవ్వగా నల్ల",
+          "markers": "U I I U U I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "సూర్ల్స్ ఆనవేస్తూ సము సముద్రమందు",
+          "markers": "U U I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.03574275970459,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 259,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నైలుల నైలుల నైన\nసూర్ లాల నైలుల చైలుల నైన\n",
+      "poem_lines": [
+        "నలకల నైలుల నైలుల నైన",
+        "సూర్ లాల నైలుల చైలుల నైన"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నైలుల నైలుల నైన",
+          "markers": "I I I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్ లాల నైలుల చైలుల నైన",
+          "markers": "U U I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9578473567962646,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 266,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నలుమూలల సముద్రమునకు\nనౌల నలుపున నలకలు లంకాలు\n",
+      "poem_lines": [
+        "నలకల నలుమూలల సముద్రమునకు",
+        "నౌల నలుపున నలకలు లంకాలు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నలుమూలల సముద్రమునకు",
+          "markers": "I I I I I I U I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "నౌల నలుపున నలకలు లంకాలు",
+          "markers": "U I I I I I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9860613346099854,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 273,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల నది నది నడకల చుట్టూ న\nసూర్శ్ ఆత్మల నరకము నరకము నడ\n",
+      "poem_lines": [
+        "నల్ల నది నది నడకల చుట్టూ న",
+        "సూర్శ్ ఆత్మల నరకము నరకము నడ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల నది నది నడకల చుట్టూ న",
+          "markers": "U I I I I I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "సూర్శ్ ఆత్మల నరకము నరకము నడ",
+          "markers": "U U I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1450817584991455,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 31
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 42,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకలల నభమును రవిని చాల\nసూర్శ్ ఆనవేలును చాలించునుండు\n",
+      "poem_lines": [
+        "నలకలల నభమును రవిని చాల",
+        "సూర్శ్ ఆనవేలును చాలించునుండు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకలల నభమును రవిని చాల",
+          "markers": "I I I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్శ్ ఆనవేలును చాలించునుండు",
+          "markers": "U U I U I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9160096645355225,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 49,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నరకమును రఘును పట్టు\nసూర్శ్ ఆనవేరును సంరక్షము అను\n",
+      "poem_lines": [
+        "నలకల నరకమును రఘును పట్టు",
+        "సూర్శ్ ఆనవేరును సంరక్షము అను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నరకమును రఘును పట్టు",
+          "markers": "I I I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్శ్ ఆనవేరును సంరక్షము అను",
+          "markers": "U U I U I I U U I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0257835388183594,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 56,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నరటాల కవళికల బహు\nసీలత దేవిని వెలికిన నేను\n",
+      "poem_lines": [
+        "నలకల నరటాల కవళికల బహు",
+        "సీలత దేవిని వెలికిన నేను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నరటాల కవళికల బహు",
+          "markers": "I I I I I I U I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "సీలత దేవిని వెలికిన నేను",
+          "markers": "U I I U I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.980834722518921,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 63,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకాను రక్షించును లకమ్ము నేను\nనైలముగున భరవనమును విడిగ\n",
+      "poem_lines": [
+        "నలకాను రక్షించును లకమ్ము నేను",
+        "నైలముగున భరవనమును విడిగ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకాను రక్షించును లకమ్ము నేను",
+          "markers": "I I U I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "నైలముగున భరవనమును విడిగ",
+          "markers": "U I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.970093011856079,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 70,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నానా నగలు నలకా నలకా న\nసూర్ నినగలు నలక్ సూర్ ననకా న\n",
+      "poem_lines": [
+        "నానా నగలు నలకా నలకా న",
+        "సూర్ నినగలు నలక్ సూర్ ననకా న"
+      ],
+      "valid_lines": [
+        {
+          "line": "నానా నగలు నలకా నలకా న",
+          "markers": "U U I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్ నినగలు నలక్ సూర్ ననకా న",
+          "markers": "U I I I I I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9728782176971436,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 77,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నందెన సత్రం దిగుటకు\nశ్రీలక్ష్మి నమలము దిద్ది కుండించు\n",
+      "poem_lines": [
+        "నలకల నందెన సత్రం దిగుటకు",
+        "శ్రీలక్ష్మి నమలము దిద్ది కుండించు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నందెన సత్రం దిగుటకు",
+          "markers": "I I I I U I I U U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - U U I\tSURYA - I I I"
+        },
+        {
+          "line": "శ్రీలక్ష్మి నమలము దిద్ది కుండించు",
+          "markers": "U U I I I I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.985262393951416,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 84,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నందెనై నలకల వినవ\nప్రాత్ లోకవి నలకల కరవెన అను\n",
+      "poem_lines": [
+        "నలకల నందెనై నలకల వినవ",
+        "ప్రాత్ లోకవి నలకల కరవెన అను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నందెనై నలకల వినవ",
+          "markers": "I I I I U I U I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I U\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "ప్రాత్ లోకవి నలకల కరవెన అను",
+          "markers": "U U I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.234797954559326,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 91,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకాన్ని రక్షించుటందుకు లంక\nనలకాన్ని రక్షించుటందుకు లంక\n",
+      "poem_lines": [
+        "నలకాన్ని రక్షించుటందుకు లంక",
+        "నలకాన్ని రక్షించుటందుకు లంక"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకాన్ని రక్షించుటందుకు లంక",
+          "markers": "I I U I U U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "నలకాన్ని రక్షించుటందుకు లంక",
+          "markers": "I I U I U U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.56532621383667,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 98,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకలమలము నూట సితాదిని రచు\nశ్రీలకల మలము దిద్ది నూట లకు\n",
+      "poem_lines": [
+        "నలకలమలము నూట సితాదిని రచు",
+        "శ్రీలకల మలము దిద్ది నూట లకు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకలమలము నూట సితాదిని రచు",
+          "markers": "I I I I I I I U I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "శ్రీలకల మలము దిద్ది నూట లకు",
+          "markers": "U I I I I I I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.157705545425415,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 31
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 105,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నందెన నలకల నంద\nసీలను రక్షించుచు కలలోనంద\n",
+      "poem_lines": [
+        "నలకల నందెన నలకల నంద",
+        "సీలను రక్షించుచు కలలోనంద"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నందెన నలకల నంద",
+          "markers": "I I I I U I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "సీలను రక్షించుచు కలలోనంద",
+          "markers": "U I I U U I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7148003578186035,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 112,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నరల నందెన నలకైను నేను అను\nసూర్యల నందెన సూర్యమను అను\n",
+      "poem_lines": [
+        "నరల నందెన నలకైను నేను అను",
+        "సూర్యల నందెన సూర్యమను అను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నరల నందెన నలకైను నేను అను",
+          "markers": "I I I U I I I I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I I I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "line": "సూర్యల నందెన సూర్యమను అను",
+          "markers": "U I I U I I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0157830715179443,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 119,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నందెన నరల నభనల\nసూర్ల్స్ ఆనకల నందెను నభనల డును\n",
+      "poem_lines": [
+        "నలకల నందెన నరల నభనల",
+        "సూర్ల్స్ ఆనకల నందెను నభనల డును"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నందెన నరల నభనల",
+          "markers": "I I I I U I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "సూర్ల్స్ ఆనకల నందెను నభనల డును",
+          "markers": "U U I I I U I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.3239264488220215,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 34
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 126,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకమాన నవలమానము నంద\nసీలకమాన నది నది నవ నది\n",
+      "poem_lines": [
+        "నలకమాన నవలమానము నంద",
+        "సీలకమాన నది నది నవ నది"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకమాన నవలమానము నంద",
+          "markers": "I I I U I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "సీలకమాన నది నది నవ నది",
+          "markers": "U I I U I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.858370065689087,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 133,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నానా నభా నభా నభదా నభాను\nనైనత నైనత నైనత నభ్య\n",
+      "poem_lines": [
+        "నానా నభా నభా నభదా నభాను",
+        "నైనత నైనత నైనత నభ్య"
+      ],
+      "valid_lines": [
+        {
+          "line": "నానా నభా నభా నభదా నభాను",
+          "markers": "U U I U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "నైనత నైనత నైనత నభ్య",
+          "markers": "U I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0765440464019775,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 140,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నవలలు నవల కదలనందము నవ\nసీంక్ వాసనము కరమ్ తేనెబుల్లించు\n",
+      "poem_lines": [
+        "నవలలు నవల కదలనందము నవ",
+        "సీంక్ వాసనము కరమ్ తేనెబుల్లించు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నవలలు నవల కదలనందము నవ",
+          "markers": "I I I I I I I I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "సీంక్ వాసనము కరమ్ తేనెబుల్లించు",
+          "markers": "U U I I I I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0584049224853516,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 147,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నందెన నరకల నంద\nసీలత కలత కంపికిన వయాన\n",
+      "poem_lines": [
+        "నలకల నందెన నరకల నంద",
+        "సీలత కలత కంపికిన వయాన"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నందెన నరకల నంద",
+          "markers": "I I I I U I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "సీలత కలత కంపికిన వయాన",
+          "markers": "U I I I I I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.106454372406006,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 154,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నరకము నరకము నార\nసీలము సాయిరవింద్రము నార\n",
+      "poem_lines": [
+        "నలకల నరకము నరకము నార",
+        "సీలము సాయిరవింద్రము నార"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నరకము నరకము నార",
+          "markers": "I I I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "సీలము సాయిరవింద్రము నార",
+          "markers": "U I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8324854373931885,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 161,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నందమును నడిచి నేను\nశ్రీలక్ష్మిని రచుకుడిని యెను అనురె\n",
+      "poem_lines": [
+        "నలకల నందమును నడిచి నేను",
+        "శ్రీలక్ష్మిని రచుకుడిని యెను అనురె"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నందమును నడిచి నేను",
+          "markers": "I I I I U I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "శ్రీలక్ష్మిని రచుకుడిని యెను అనురె",
+          "markers": "U U I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9932959079742432,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 168,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలక నార్ల నరకమ తలును రక్ష\nసూర్ అష్ట నారమ సూర్య తలున్ను\n",
+      "poem_lines": [
+        "నలక నార్ల నరకమ తలును రక్ష",
+        "సూర్ అష్ట నారమ సూర్య తలున్ను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలక నార్ల నరకమ తలును రక్ష",
+          "markers": "I I I U I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్ అష్ట నారమ సూర్య తలున్ను",
+          "markers": "U U I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.021301507949829,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 175,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నమల నమల నలకాల\nనలకల నమల నమల నమల నల\n",
+      "poem_lines": [
+        "నలకల నమల నమల నలకాల",
+        "నలకల నమల నమల నమల నల"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నమల నమల నలకాల",
+          "markers": "I I I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "నలకల నమల నమల నమల నల",
+          "markers": "I I I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0730390548706055,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 182,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నరల సంఖ్యలు నలభై ఒకలు కలి\nసూర్యల సంఖ్యలు సూర్యల యొక్క\n",
+      "poem_lines": [
+        "నరల సంఖ్యలు నలభై ఒకలు కలి",
+        "సూర్యల సంఖ్యలు సూర్యల యొక్క"
+      ],
+      "valid_lines": [
+        {
+          "line": "నరల సంఖ్యలు నలభై ఒకలు కలి",
+          "markers": "I I I U I I I I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I I I\tINDRA - U I I\tSURYA - I I I"
+        },
+        {
+          "line": "సూర్యల సంఖ్యలు సూర్యల యొక్క",
+          "markers": "U I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8373641967773438,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 189,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నందెనై నలకల నంద\nసీల మలన లంక వెలిసెనై తేనె\n",
+      "poem_lines": [
+        "నలకల నందెనై నలకల నంద",
+        "సీల మలన లంక వెలిసెనై తేనె"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నందెనై నలకల నంద",
+          "markers": "I I I I U I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "సీల మలన లంక వెలిసెనై తేనె",
+          "markers": "U I I I I U I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1159169673919678,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 196,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకాన్ని రక్షించుట కు లంక నేను\nనాన్ ఇనును నవల కనమును లింగ\n",
+      "poem_lines": [
+        "నలకాన్ని రక్షించుట కు లంక నేను",
+        "నాన్ ఇనును నవల కనమును లింగ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకాన్ని రక్షించుట కు లంక నేను",
+          "markers": "I I U I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "నాన్ ఇనును నవల కనమును లింగ",
+          "markers": "U I I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.904223918914795,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 203,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నందెన నూలాను రక్ష\nసూర్ ఆనదెన నూలను పరుచును అను\n",
+      "poem_lines": [
+        "నలకల నందెన నూలాను రక్ష",
+        "సూర్ ఆనదెన నూలను పరుచును అను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నందెన నూలాను రక్ష",
+          "markers": "I I I I U I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్ ఆనదెన నూలను పరుచును అను",
+          "markers": "U U I I I U I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0861213207244873,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 210,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నందె కదలచుము నల్ల\nసూర్శ్ ఆనవానము చుందుము నల్ల\n",
+      "poem_lines": [
+        "నలకల నందె కదలచుము నల్ల",
+        "సూర్శ్ ఆనవానము చుందుము నల్ల"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నందె కదలచుము నల్ల",
+          "markers": "I I I I U I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "సూర్శ్ ఆనవానము చుందుము నల్ల",
+          "markers": "U U I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9659922122955322,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 217,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నవలలు నందెము  నందెము  నవల\nశ్రీ  అనందము  అనలందెము  నవల\n",
+      "poem_lines": [
+        "నవలలు నందెము  నందెము  నవల",
+        "శ్రీ  అనందము  అనలందెము  నవల"
+      ],
+      "valid_lines": [
+        {
+          "line": "నవలలు నందెము  నందెము  నవల",
+          "markers": "I I I I U I I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - U I I\tSURYA - I I I"
+        },
+        {
+          "line": "శ్రీ  అనందము  అనలందెము  నవల",
+          "markers": "U I U I I I I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.3729476928710938,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 224,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నార్మణిని చరిచీ పచ్చ\nసూర్ల్ లార్ని నార్మణియు కరవిచీ ప\n",
+      "poem_lines": [
+        "నలకల నార్మణిని చరిచీ పచ్చ",
+        "సూర్ల్ లార్ని నార్మణియు కరవిచీ ప"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నార్మణిని చరిచీ పచ్చ",
+          "markers": "I I I I U I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "సూర్ల్ లార్ని నార్మణియు కరవిచీ ప",
+          "markers": "U U I U I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.4598491191864014,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 231,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నల్ల నడిసముద్రన గల నందాను\nసీలను కాపాడెనేను అనుభవ\n",
+      "poem_lines": [
+        "నల్ల నడిసముద్రన గల నందాను",
+        "సీలను కాపాడెనేను అనుభవ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నల్ల నడిసముద్రన గల నందాను",
+          "markers": "U I I I I U I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "సీలను కాపాడెనేను అనుభవ",
+          "markers": "U I I U U I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.662954330444336,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 238,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నాల్గు నాల్గు నలగు నలగు నలడుగు\nసీలకు దేవిని వెలిగెనులే క\n",
+      "poem_lines": [
+        "నాల్గు నాల్గు నలగు నలగు నలడుగు",
+        "సీలకు దేవిని వెలిగెనులే క"
+      ],
+      "valid_lines": [
+        {
+          "line": "నాల్గు నాల్గు నలగు నలగు నలడుగు",
+          "markers": "U I U I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "సీలకు దేవిని వెలిగెనులే క",
+          "markers": "U I I U I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9794440269470215,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 245,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకలల నరక నరక నరలకు\nసూర్ఏల కీటల సింహము కరవ\n",
+      "poem_lines": [
+        "నలకలల నరక నరక నరలకు",
+        "సూర్ఏల కీటల సింహము కరవ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకలల నరక నరక నరలకు",
+          "markers": "I I I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "సూర్ఏల కీటల సింహము కరవ",
+          "markers": "U U I U I I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.046654224395752,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 252,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకవిరా నలక విశోదము లక\nసీలను రక్షించుచు  నలకవింద\n",
+      "poem_lines": [
+        "నలకవిరా నలక విశోదము లక",
+        "సీలను రక్షించుచు  నలకవింద"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకవిరా నలక విశోదము లక",
+          "markers": "I I I I U I I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "సీలను రక్షించుచు  నలకవింద",
+          "markers": "U I I U U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8628957271575928,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 259,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకాన్ని రక్షించుట కు లంక సంద\nనైల నందె దిగునును దిగునునునును\n",
+      "poem_lines": [
+        "నలకాన్ని రక్షించుట కు లంక సంద",
+        "నైల నందె దిగునును దిగునునునును"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకాన్ని రక్షించుట కు లంక సంద",
+          "markers": "I I U I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "నైల నందె దిగునును దిగునునునును",
+          "markers": "U I U I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.037808656692505,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 266,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నలకల నందెన గణెలు సంపాద\nసీల తలరవిని దిగికి వెళ్ళాను\n",
+      "poem_lines": [
+        "నలకల నందెన గణెలు సంపాద",
+        "సీల తలరవిని దిగికి వెళ్ళాను"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలకల నందెన గణెలు సంపాద",
+          "markers": "I I I I U I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "సీల తలరవిని దిగికి వెళ్ళాను",
+          "markers": "U I I I I I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9614005088806152,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 273,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "నరకము నలకాను రక్షము లంక\nభూరవనము నరవును నరము లకు\n",
+      "poem_lines": [
+        "నరకము నలకాను రక్షము లంక",
+        "భూరవనము నరవును నరము లకు"
+      ],
+      "valid_lines": [
+        {
+          "line": "నరకము నలకాను రక్షము లంక",
+          "markers": "I I I I I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "భూరవనము నరవును నరము లకు",
+          "markers": "U I I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.040825605392456,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    }
+  ]
+}

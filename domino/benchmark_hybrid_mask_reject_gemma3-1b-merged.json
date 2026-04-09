@@ -1,0 +1,3092 @@
+{
+  "label": "gemma3-1b-merged — hybrid_mask_reject",
+  "method": "hybrid_mask_reject",
+  "model": "gemma3-1b-merged",
+  "constrained": true,
+  "total_poems": 102,
+  "total_valid": 102,
+  "poem_accuracy": 100.0,
+  "total_lines": 204,
+  "valid_lines": 204,
+  "line_accuracy": 100.0,
+  "total_time": 155.95108342170715,
+  "per_topic": {
+    "తల్లి ప్రేమ అన్నింటికంటే గొప్పది": {
+      "total": 34,
+      "valid": 34,
+      "rate": 100.0
+    },
+    "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను": {
+      "total": 34,
+      "valid": 34,
+      "rate": 100.0
+    },
+    "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను": {
+      "total": 34,
+      "valid": 34,
+      "rate": 100.0
+    }
+  },
+  "poems": [
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 42,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లింగమంతయు నింపెడి బ్రియము లింగ\nలింగంబునందున నెల్లవారికిని\n",
+      "poem_lines": [
+        "లింగమంతయు నింపెడి బ్రియము లింగ",
+        "లింగంబునందున నెల్లవారికిని"
+      ],
+      "valid_lines": [
+        {
+          "line": "లింగమంతయు నింపెడి బ్రియము లింగ",
+          "markers": "U I U I I U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "లింగంబునందున నెల్లవారికిని",
+          "markers": "U U I U I I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0431723594665527,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 49,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దండ్రి ప్రేమయెదిరింతక దనవచ్చు\nమండ్రువంద్యుల కందఱ జయమౌదుమును\n",
+      "poem_lines": [
+        "దండ్రి ప్రేమయెదిరింతక దనవచ్చు",
+        "మండ్రువంద్యుల కందఱ జయమౌదుమును"
+      ],
+      "valid_lines": [
+        {
+          "line": "దండ్రి ప్రేమయెదిరింతక దనవచ్చు",
+          "markers": "U I U I I I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "మండ్రువంద్యుల కందఱ జయమౌదుమును",
+          "markers": "U I U I I U I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7001550197601318,
+      "tokens_generated": 37,
+      "backtracks": 0,
+      "mask_computations": 31
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 56,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దల్లులయందున దిరమున తల్లి\nప్రళయకాలమున పెంపార నిడునుచు\n",
+      "poem_lines": [
+        "దల్లులయందున దిరమున తల్లి",
+        "ప్రళయకాలమున పెంపార నిడునుచు"
+      ],
+      "valid_lines": [
+        {
+          "line": "దల్లులయందున దిరమున తల్లి",
+          "markers": "U I I U I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "ప్రళయకాలమున పెంపార నిడునుచు",
+          "markers": "I I I U I I I U U I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I I U\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.476928472518921,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 63,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లింగమెంతయ కాదె తల్లి ప్రేమించు\nమంగళమెంతయ కాదె తల్లి మన\n",
+      "poem_lines": [
+        "లింగమెంతయ కాదె తల్లి ప్రేమించు",
+        "మంగళమెంతయ కాదె తల్లి మన"
+      ],
+      "valid_lines": [
+        {
+          "line": "లింగమెంతయ కాదె తల్లి ప్రేమించు",
+          "markers": "U I U I I U I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "మంగళమెంతయ కాదె తల్లి మన",
+          "markers": "U I I U I I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2889575958251953,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 70,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: తల్లియే దేవుడంతే ప్రాధమైన\nఅలుగురా దేవుడే యందఱు కలుగు\n",
+      "poem_lines": [
+        "తల్లియే దేవుడంతే ప్రాధమైన",
+        "అలుగురా దేవుడే యందఱు కలుగు"
+      ],
+      "valid_lines": [
+        {
+          "line": "తల్లియే దేవుడంతే ప్రాధమైన",
+          "markers": "U I U U I U U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "అలుగురా దేవుడే యందఱు కలుగు",
+          "markers": "I I I U U I U U I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - U I U\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3741481304168701,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 77,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: తల్లియే ప్రేమకు దిక్కైనదింట\nపౌండ్ లేనొకో దారి పయనిల్లు వెనుక\n",
+      "poem_lines": [
+        "తల్లియే ప్రేమకు దిక్కైనదింట",
+        "పౌండ్ లేనొకో దారి పయనిల్లు వెనుక"
+      ],
+      "valid_lines": [
+        {
+          "line": "తల్లియే ప్రేమకు దిక్కైనదింట",
+          "markers": "U I U U I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "పౌండ్ లేనొకో దారి పయనిల్లు వెనుక",
+          "markers": "U U I U U I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.364922046661377,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 84,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: తల్లులకేను ప్రేమయది దైవంబ\nఅల్లుగారలకెంతయకయై మదినియు\n",
+      "poem_lines": [
+        "తల్లులకేను ప్రేమయది దైవంబ",
+        "అల్లుగారలకెంతయకయై మదినియు"
+      ],
+      "valid_lines": [
+        {
+          "line": "తల్లులకేను ప్రేమయది దైవంబ",
+          "markers": "U I I U I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "అల్లుగారలకెంతయకయై మదినియు",
+          "markers": "U I U I I U I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.539994716644287,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 91,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దేవుడు దేవుడు ప్రేమను పంచ\nమమ్ ఇదిగో తల్లియమ్మది లేదు\n",
+      "poem_lines": [
+        "దేవుడు దేవుడు ప్రేమను పంచ",
+        "మమ్ ఇదిగో తల్లియమ్మది లేదు"
+      ],
+      "valid_lines": [
+        {
+          "line": "దేవుడు దేవుడు ప్రేమను పంచ",
+          "markers": "U I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "మమ్ ఇదిగో తల్లియమ్మది లేదు",
+          "markers": "U I I U U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1762175559997559,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 21
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 98,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దల్లి ప్రేమయెవరునందె యెంతైన\nనల్లి ప్రేమయు దన కమ్మని మాట\n",
+      "poem_lines": [
+        "దల్లి ప్రేమయెవరునందె యెంతైన",
+        "నల్లి ప్రేమయు దన కమ్మని మాట"
+      ],
+      "valid_lines": [
+        {
+          "line": "దల్లి ప్రేమయెవరునందె యెంతైన",
+          "markers": "U I U I I I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "నల్లి ప్రేమయు దన కమ్మని మాట",
+          "markers": "U I U I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3819115161895752,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 105,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లింగము దేవుని లింగము తల్లి\nపంగవమ్మ లికిన పడతియె యంత\n",
+      "poem_lines": [
+        "లింగము దేవుని లింగము తల్లి",
+        "పంగవమ్మ లికిన పడతియె యంత"
+      ],
+      "valid_lines": [
+        {
+          "line": "లింగము దేవుని లింగము తల్లి",
+          "markers": "U I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "పంగవమ్మ లికిన పడతియె యంత",
+          "markers": "U I U I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.58953857421875,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 112,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దండ్రి ప్రేమయు దేవుని యెకట లిచ్చు\nతండ్రియెల్లలకంటె తగవు గాదన్న\n",
+      "poem_lines": [
+        "దండ్రి ప్రేమయు దేవుని యెకట లిచ్చు",
+        "తండ్రియెల్లలకంటె తగవు గాదన్న"
+      ],
+      "valid_lines": [
+        {
+          "line": "దండ్రి ప్రేమయు దేవుని యెకట లిచ్చు",
+          "markers": "U I U I I U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "తండ్రియెల్లలకంటె తగవు గాదన్న",
+          "markers": "U I U I I U I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7954392433166504,
+      "tokens_generated": 39,
+      "backtracks": 0,
+      "mask_computations": 33
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 119,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లింగంబునై తల్లి యేను మదింట\nమంగళము లికిగదా మదిలేని\n",
+      "poem_lines": [
+        "లింగంబునై తల్లి యేను మదింట",
+        "మంగళము లికిగదా మదిలేని"
+      ],
+      "valid_lines": [
+        {
+          "line": "లింగంబునై తల్లి యేను మదింట",
+          "markers": "U U I U U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "మంగళము లికిగదా మదిలేని",
+          "markers": "U I I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.368936538696289,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 126,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దాతయే ప్రేమ యెల్లదె యెంతయున్న\nఅతిపుణ్యకృపనులందఱముఖ్యమైన\n",
+      "poem_lines": [
+        "దాతయే ప్రేమ యెల్లదె యెంతయున్న",
+        "అతిపుణ్యకృపనులందఱముఖ్యమైన"
+      ],
+      "valid_lines": [
+        {
+          "line": "దాతయే ప్రేమ యెల్లదె యెంతయున్న",
+          "markers": "U I U U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "అతిపుణ్యకృపనులందఱముఖ్యమైన",
+          "markers": "I I U I I I I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6387419700622559,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 133,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: తల్లియే ప్రేమను దలప దేలింప\nఅల్లాడు లేనిది దారుణమైన\n",
+      "poem_lines": [
+        "తల్లియే ప్రేమను దలప దేలింప",
+        "అల్లాడు లేనిది దారుణమైన"
+      ],
+      "valid_lines": [
+        {
+          "line": "తల్లియే ప్రేమను దలప దేలింప",
+          "markers": "U I U U I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "అల్లాడు లేనిది దారుణమైన",
+          "markers": "U U I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2678823471069336,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 140,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: తల్లియే దేవుడు దయనిచ్చెడినుచు\nఅల్లియే దారిగా ఆకలి పాలు\n",
+      "poem_lines": [
+        "తల్లియే దేవుడు దయనిచ్చెడినుచు",
+        "అల్లియే దారిగా ఆకలి పాలు"
+      ],
+      "valid_lines": [
+        {
+          "line": "తల్లియే దేవుడు దయనిచ్చెడినుచు",
+          "markers": "U I U U I I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "అల్లియే దారిగా ఆకలి పాలు",
+          "markers": "U I U U I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4371576309204102,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 147,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: తల్లియే ప్రేమయు ప్రతిదానిలోని\nయిలయెల్ల బ్రియముగా నిలిచెడి తల్లి\n",
+      "poem_lines": [
+        "తల్లియే ప్రేమయు ప్రతిదానిలోని",
+        "యిలయెల్ల బ్రియముగా నిలిచెడి తల్లి"
+      ],
+      "valid_lines": [
+        {
+          "line": "తల్లియే ప్రేమయు ప్రతిదానిలోని",
+          "markers": "U I U U I I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "యిలయెల్ల బ్రియముగా నిలిచెడి తల్లి",
+          "markers": "I I U I I I I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.289783239364624,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 154,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దల్లి ప్రేమ యెవరిదియ గల్గియుంట\nమల్లికారంబున మాటినది యన\n",
+      "poem_lines": [
+        "దల్లి ప్రేమ యెవరిదియ గల్గియుంట",
+        "మల్లికారంబున మాటినది యన"
+      ],
+      "valid_lines": [
+        {
+          "line": "దల్లి ప్రేమ యెవరిదియ గల్గియుంట",
+          "markers": "U I U I I I I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "మల్లికారంబున మాటినది యన",
+          "markers": "U I U U I I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4541919231414795,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 161,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దాతయే మమ్ములందఱకు మెన్నైన\nమాతండ్రియగు తండ్రి మమతతో నెల్ల\n",
+      "poem_lines": [
+        "దాతయే మమ్ములందఱకు మెన్నైన",
+        "మాతండ్రియగు తండ్రి మమతతో నెల్ల"
+      ],
+      "valid_lines": [
+        {
+          "line": "దాతయే మమ్ములందఱకు మెన్నైన",
+          "markers": "U I U U I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "మాతండ్రియగు తండ్రి మమతతో నెల్ల",
+          "markers": "U U I I I U I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5223450660705566,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 168,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లింగమౌతినొక తల్లి యెవరిదింక\nమంగళమెల్ల యెన్నడమలకన్న\n",
+      "poem_lines": [
+        "లింగమౌతినొక తల్లి యెవరిదింక",
+        "మంగళమెల్ల యెన్నడమలకన్న"
+      ],
+      "valid_lines": [
+        {
+          "line": "లింగమౌతినొక తల్లి యెవరిదింక",
+          "markers": "U I U I I I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "మంగళమెల్ల యెన్నడమలకన్న",
+          "markers": "U I I U I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5252957344055176,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 175,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: అమ్మయే ప్రేమకు రాజంబె అంద\nమెమ్మన్న జూడంగ మెయిదోయ జాలు\n",
+      "poem_lines": [
+        "అమ్మయే ప్రేమకు రాజంబె అంద",
+        "మెమ్మన్న జూడంగ మెయిదోయ జాలు"
+      ],
+      "valid_lines": [
+        {
+          "line": "అమ్మయే ప్రేమకు రాజంబె అంద",
+          "markers": "U I U U I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "మెమ్మన్న జూడంగ మెయిదోయ జాలు",
+          "markers": "U U I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2771351337432861,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 182,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లింగమౌతండ్రియెల్లది మేలు లింగ\nమగటిమి నెల్లది యమలమౌతండ\n",
+      "poem_lines": [
+        "లింగమౌతండ్రియెల్లది మేలు లింగ",
+        "మగటిమి నెల్లది యమలమౌతండ"
+      ],
+      "valid_lines": [
+        {
+          "line": "లింగమౌతండ్రియెల్లది మేలు లింగ",
+          "markers": "U I U U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "మగటిమి నెల్లది యమలమౌతండ",
+          "markers": "I I I I U I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.737544298171997,
+      "tokens_generated": 38,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 189,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లింగమంతయు నెన్నటి కడకు ండి\nపిల్ గేల బాలుని పెంపొంది తల్లి\n",
+      "poem_lines": [
+        "లింగమంతయు నెన్నటి కడకు ండి",
+        "పిల్ గేల బాలుని పెంపొంది తల్లి"
+      ],
+      "valid_lines": [
+        {
+          "line": "లింగమంతయు నెన్నటి కడకు ండి",
+          "markers": "U I U I I U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "పిల్ గేల బాలుని పెంపొంది తల్లి",
+          "markers": "U U I U I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5047476291656494,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 196,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దాతయెల్లలకంటె దివ్యాభిమాన\nమాతృకృప గలిగె నా మదిలోని\n",
+      "poem_lines": [
+        "దాతయెల్లలకంటె దివ్యాభిమాన",
+        "మాతృకృప గలిగె నా మదిలోని"
+      ],
+      "valid_lines": [
+        {
+          "line": "దాతయెల్లలకంటె దివ్యాభిమాన",
+          "markers": "U I U I I U I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "మాతృకృప గలిగె నా మదిలోని",
+          "markers": "U I I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6260921955108643,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 203,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: తల్లియే దిక్కులే సకలకీర్తులను\nపాలింపగలుగును పద్మము వంటి\n",
+      "poem_lines": [
+        "తల్లియే దిక్కులే సకలకీర్తులను",
+        "పాలింపగలుగును పద్మము వంటి"
+      ],
+      "valid_lines": [
+        {
+          "line": "తల్లియే దిక్కులే సకలకీర్తులను",
+          "markers": "U I U U I U I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - I I I U\tSURYA - I I I"
+        },
+        {
+          "line": "పాలింపగలుగును పద్మము వంటి",
+          "markers": "U U I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2956395149230957,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 210,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: తల్లియే దేవుడు దయతో నిడుపును\nచెలిమి లేనిది తల్లి చెంతను చేరు\n",
+      "poem_lines": [
+        "తల్లియే దేవుడు దయతో నిడుపును",
+        "చెలిమి లేనిది తల్లి చెంతను చేరు"
+      ],
+      "valid_lines": [
+        {
+          "line": "తల్లియే దేవుడు దయతో నిడుపును",
+          "markers": "U I U U I I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "చెలిమి లేనిది తల్లి చెంతను చేరు",
+          "markers": "I I I U I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3070704936981201,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 217,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దాతయే ప్రేమయే దేహమంతైన\nఅతివ లేనిది యాకుపభ్రమ యంత\n",
+      "poem_lines": [
+        "దాతయే ప్రేమయే దేహమంతైన",
+        "అతివ లేనిది యాకుపభ్రమ యంత"
+      ],
+      "valid_lines": [
+        {
+          "line": "దాతయే ప్రేమయే దేహమంతైన",
+          "markers": "U I U U I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "అతివ లేనిది యాకుపభ్రమ యంత",
+          "markers": "I I I U I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3310916423797607,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 224,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: తల్లియే ప్రేమయు అంతాబుణించ\nదల్లి ప్రేమయెడయు దనరార నైన\n",
+      "poem_lines": [
+        "తల్లియే ప్రేమయు అంతాబుణించ",
+        "దల్లి ప్రేమయెడయు దనరార నైన"
+      ],
+      "valid_lines": [
+        {
+          "line": "తల్లియే ప్రేమయు అంతాబుణించ",
+          "markers": "U I U U I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "దల్లి ప్రేమయెడయు దనరార నైన",
+          "markers": "U I U I I I I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2486491203308105,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 231,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లింగమౌతడు ప్రేమ లేనట్టిదింట\nలింగమౌతడు ప్రేమ లేనిట్టిదింట\n",
+      "poem_lines": [
+        "లింగమౌతడు ప్రేమ లేనట్టిదింట",
+        "లింగమౌతడు ప్రేమ లేనిట్టిదింట"
+      ],
+      "valid_lines": [
+        {
+          "line": "లింగమౌతడు ప్రేమ లేనట్టిదింట",
+          "markers": "U I U I I U I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "లింగమౌతడు ప్రేమ లేనిట్టిదింట",
+          "markers": "U I U I I U I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3988206386566162,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 238,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దమ్మి దల్లులయందు దనకంటె లింగ\nమమ్మిది గతి యెంత మలసగుచున్న\n",
+      "poem_lines": [
+        "దమ్మి దల్లులయందు దనకంటె లింగ",
+        "మమ్మిది గతి యెంత మలసగుచున్న"
+      ],
+      "valid_lines": [
+        {
+          "line": "దమ్మి దల్లులయందు దనకంటె లింగ",
+          "markers": "U I U I I U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "మమ్మిది గతి యెంత మలసగుచున్న",
+          "markers": "U I I I I U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7355966567993164,
+      "tokens_generated": 38,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 245,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లింగమునందొకటి లెలమి గమ్మ\nగ్రంగాది దేవయైన కరుణాసార\n",
+      "poem_lines": [
+        "లింగమునందొకటి లెలమి గమ్మ",
+        "గ్రంగాది దేవయైన కరుణాసార"
+      ],
+      "valid_lines": [
+        {
+          "line": "లింగమునందొకటి లెలమి గమ్మ",
+          "markers": "U I I U I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "గ్రంగాది దేవయైన కరుణాసార",
+          "markers": "U U I U I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4323773384094238,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 252,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దేవురే దారిగా దిద్దినదింట\nఅవ్వని మదిలోని ఆనంద మిక్కు\n",
+      "poem_lines": [
+        "దేవురే దారిగా దిద్దినదింట",
+        "అవ్వని మదిలోని ఆనంద మిక్కు"
+      ],
+      "valid_lines": [
+        {
+          "line": "దేవురే దారిగా దిద్దినదింట",
+          "markers": "U I U U I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "అవ్వని మదిలోని ఆనంద మిక్కు",
+          "markers": "U I I I I U I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3008196353912354,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 259,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: అమ్మయే ప్రేమను అంతలేకంత\nఅమ్మలా ప్రేమను అందరి కంద\n",
+      "poem_lines": [
+        "అమ్మయే ప్రేమను అంతలేకంత",
+        "అమ్మలా ప్రేమను అందరి కంద"
+      ],
+      "valid_lines": [
+        {
+          "line": "అమ్మయే ప్రేమను అంతలేకంత",
+          "markers": "U I U U I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "అమ్మలా ప్రేమను అందరి కంద",
+          "markers": "U I U U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.011225938796997,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 18
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 266,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దల్లియెల్లందున దొదగు ప్రేమించు\nఅల్లిదె యెన్నడు నల్లన నేడు\n",
+      "poem_lines": [
+        "దల్లియెల్లందున దొదగు ప్రేమించు",
+        "అల్లిదె యెన్నడు నల్లన నేడు"
+      ],
+      "valid_lines": [
+        {
+          "line": "దల్లియెల్లందున దొదగు ప్రేమించు",
+          "markers": "U I U U I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "అల్లిదె యెన్నడు నల్లన నేడు",
+          "markers": "U I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5015339851379395,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "seed": 273,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లింగంబునకొకటి లలితమగుటకు\nతల్ గారవమును దైవంబెల్లకంట\n",
+      "poem_lines": [
+        "లింగంబునకొకటి లలితమగుటకు",
+        "తల్ గారవమును దైవంబెల్లకంట"
+      ],
+      "valid_lines": [
+        {
+          "line": "లింగంబునకొకటి లలితమగుటకు",
+          "markers": "U U I I I I I I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "తల్ గారవమును దైవంబెల్లకంట",
+          "markers": "U U I I I I U U U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6925227642059326,
+      "tokens_generated": 38,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 42,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ననుజన్ముడు నలుక నార్పులు సేయ\nజననాథుడంతటజచ్చె నుద్ధతన\n",
+      "poem_lines": [
+        "ననుజన్ముడు నలుక నార్పులు సేయ",
+        "జననాథుడంతటజచ్చె నుద్ధతన"
+      ],
+      "valid_lines": [
+        {
+          "line": "ననుజన్ముడు నలుక నార్పులు సేయ",
+          "markers": "I I U I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "జననాథుడంతటజచ్చె నుద్ధతన",
+          "markers": "I I U I U I I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6120927333831787,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 49,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: హనుమంతుడు లలితమై లంక కరిగ\nజనిన నంతట నశ్రులై యక్షులకును\n",
+      "poem_lines": [
+        "హనుమంతుడు లలితమై లంక కరిగ",
+        "జనిన నంతట నశ్రులై యక్షులకును"
+      ],
+      "valid_lines": [
+        {
+          "line": "హనుమంతుడు లలితమై లంక కరిగ",
+          "markers": "I I U I I I I I U U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I I\tINDRA - U U I\tSURYA - I I I"
+        },
+        {
+          "line": "జనిన నంతట నశ్రులై యక్షులకును",
+          "markers": "I I I U I I U I U U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - U U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5992116928100586,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 56,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ఋక్షీంద్రుడు మ్రొగులించి లయాదరించి\nయక్షాద్రిపై నెక్కి హయము గైకొన్న\n",
+      "poem_lines": [
+        "ఋక్షీంద్రుడు మ్రొగులించి లయాదరించి",
+        "యక్షాద్రిపై నెక్కి హయము గైకొన్న"
+      ],
+      "valid_lines": [
+        {
+          "line": "ఋక్షీంద్రుడు మ్రొగులించి లయాదరించి",
+          "markers": "U U I I I I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "యక్షాద్రిపై నెక్కి హయము గైకొన్న",
+          "markers": "U U I U U I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7650315761566162,
+      "tokens_generated": 39,
+      "backtracks": 0,
+      "mask_computations": 33
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 63,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: నంభోనిధి హనుమంత్కడ శైల ంబ\nమంభోరథము దాటి మంకజొచ్చేశ\n",
+      "poem_lines": [
+        "నంభోనిధి హనుమంత్కడ శైల ంబ",
+        "మంభోరథము దాటి మంకజొచ్చేశ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నంభోనిధి హనుమంత్కడ శైల ంబ",
+          "markers": "U U I I I I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "మంభోరథము దాటి మంకజొచ్చేశ",
+          "markers": "U U I I I U I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7505004405975342,
+      "tokens_generated": 39,
+      "backtracks": 0,
+      "mask_computations": 33
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 70,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: యంతకాకారుండు నడతెంచి లింక\nనంతరంగమున హనుమదాజి యొప్ప\n",
+      "poem_lines": [
+        "యంతకాకారుండు నడతెంచి లింక",
+        "నంతరంగమున హనుమదాజి యొప్ప"
+      ],
+      "valid_lines": [
+        {
+          "line": "యంతకాకారుండు నడతెంచి లింక",
+          "markers": "U I U U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "నంతరంగమున హనుమదాజి యొప్ప",
+          "markers": "U I U I I I I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4141411781311035,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 77,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: యట లంకకు బ్రహళులడగుచు ంద్ర\nహటవానరు దొణగె నా హనుమంతు\n",
+      "poem_lines": [
+        "యట లంకకు బ్రహళులడగుచు ంద్ర",
+        "హటవానరు దొణగె నా హనుమంతు"
+      ],
+      "valid_lines": [
+        {
+          "line": "యట లంకకు బ్రహళులడగుచు ంద్ర",
+          "markers": "I I U I I I I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I I\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "హటవానరు దొణగె నా హనుమంతు",
+          "markers": "I I U I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6005537509918213,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 84,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ఋక్షజుం డది యింక లేకున్నెదమున\nహృక్షించి సముదంబు హేమమై గడవ\n",
+      "poem_lines": [
+        "ఋక్షజుం డది యింక లేకున్నెదమున",
+        "హృక్షించి సముదంబు హేమమై గడవ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ఋక్షజుం డది యింక లేకున్నెదమున",
+          "markers": "U I U I I U I U U I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - U U I\tSURYA - I I I"
+        },
+        {
+          "line": "హృక్షించి సముదంబు హేమమై గడవ",
+          "markers": "U U I I I U I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.595266342163086,
+      "tokens_generated": 37,
+      "backtracks": 0,
+      "mask_computations": 31
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 91,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: హనుమంతుడు సముద్రమందు దాటింట\nజనియె లంకకు రాసహస్రాననముల\n",
+      "poem_lines": [
+        "హనుమంతుడు సముద్రమందు దాటింట",
+        "జనియె లంకకు రాసహస్రాననముల"
+      ],
+      "valid_lines": [
+        {
+          "line": "హనుమంతుడు సముద్రమందు దాటింట",
+          "markers": "I I U I I I U I U I U U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I U I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "జనియె లంకకు రాసహస్రాననముల",
+          "markers": "I I I U I I U I U U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - U U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5500144958496094,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 98,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: హనుమంతుడు లవణాశ్వంబు దాటి ఠగ\nమనుజేంద్రుపనుపున మఱచి యాతనికి\n",
+      "poem_lines": [
+        "హనుమంతుడు లవణాశ్వంబు దాటి ఠగ",
+        "మనుజేంద్రుపనుపున మఱచి యాతనికి"
+      ],
+      "valid_lines": [
+        {
+          "line": "హనుమంతుడు లవణాశ్వంబు దాటి ఠగ",
+          "markers": "I I U I I I I U U I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "line": "మనుజేంద్రుపనుపున మఱచి యాతనికి",
+          "markers": "I I U I I I I I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I I\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6591172218322754,
+      "tokens_generated": 38,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 105,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ననిలనందనుడు నంత నడచి సురల\nజనుము లంకకు నచ్చెరగబడరంగ\n",
+      "poem_lines": [
+        "ననిలనందనుడు నంత నడచి సురల",
+        "జనుము లంకకు నచ్చెరగబడరంగ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ననిలనందనుడు నంత నడచి సురల",
+          "markers": "I I I U I I I U I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I I U\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "జనుము లంకకు నచ్చెరగబడరంగ",
+          "markers": "I I I U I I U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5177826881408691,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 112,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దొల్లి యమున దూలి దుగ్ధభూమి ఠము\nలెల్లగైకొని యింకె నెఱిగింపవచ్చు\n",
+      "poem_lines": [
+        "దొల్లి యమున దూలి దుగ్ధభూమి ఠము",
+        "లెల్లగైకొని యింకె నెఱిగింపవచ్చు"
+      ],
+      "valid_lines": [
+        {
+          "line": "దొల్లి యమున దూలి దుగ్ధభూమి ఠము",
+          "markers": "U I I I I U I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "line": "లెల్లగైకొని యింకె నెఱిగింపవచ్చు",
+          "markers": "U I U I I U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7461302280426025,
+      "tokens_generated": 39,
+      "backtracks": 0,
+      "mask_computations": 33
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 119,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: నలి నార్చుచు బవరంబలరంగ లింక\nనలి నేగి యతడు లంకయటు దా వచ్చ\n",
+      "poem_lines": [
+        "నలి నార్చుచు బవరంబలరంగ లింక",
+        "నలి నేగి యతడు లంకయటు దా వచ్చ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నలి నార్చుచు బవరంబలరంగ లింక",
+          "markers": "I I U I I I I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "నలి నేగి యతడు లంకయటు దా వచ్చ",
+          "markers": "I I U I I I I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.570038080215454,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 126,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: హనుమంతుడు లవణాబ్జంబు దాటి ఠగ\nమనుటయు రథముతోడ మఱియుబంపు\n",
+      "poem_lines": [
+        "హనుమంతుడు లవణాబ్జంబు దాటి ఠగ",
+        "మనుటయు రథముతోడ మఱియుబంపు"
+      ],
+      "valid_lines": [
+        {
+          "line": "హనుమంతుడు లవణాబ్జంబు దాటి ఠగ",
+          "markers": "I I U I I I I U U I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "line": "మనుటయు రథముతోడ మఱియుబంపు",
+          "markers": "I I I I I I I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7562906742095947,
+      "tokens_generated": 39,
+      "backtracks": 0,
+      "mask_computations": 33
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 133,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: యలరి యక్షోణీశు నలరారవచ్చు\nహల్యంబు దాటి లంక కరిగె నంత\n",
+      "poem_lines": [
+        "యలరి యక్షోణీశు నలరారవచ్చు",
+        "హల్యంబు దాటి లంక కరిగె నంత"
+      ],
+      "valid_lines": [
+        {
+          "line": "యలరి యక్షోణీశు నలరారవచ్చు",
+          "markers": "I I I U U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "హల్యంబు దాటి లంక కరిగె నంత",
+          "markers": "U U I U I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5412676334381104,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 140,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ఋశ్యమూకయు దాటి రెండ్రా లవించి\nహశరుడు నొగి నేగు నడరినవాడ\n",
+      "poem_lines": [
+        "ఋశ్యమూకయు దాటి రెండ్రా లవించి",
+        "హశరుడు నొగి నేగు నడరినవాడ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ఋశ్యమూకయు దాటి రెండ్రా లవించి",
+          "markers": "U I U I I U I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "హశరుడు నొగి నేగు నడరినవాడ",
+          "markers": "I I I I I I U I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.64298677444458,
+      "tokens_generated": 37,
+      "backtracks": 0,
+      "mask_computations": 31
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 147,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: యంత నంబుధి దాటి లంక జేర్చుటకు\nనెంతయు హనుమంతు లింతియై యుండె\n",
+      "poem_lines": [
+        "యంత నంబుధి దాటి లంక జేర్చుటకు",
+        "నెంతయు హనుమంతు లింతియై యుండె"
+      ],
+      "valid_lines": [
+        {
+          "line": "యంత నంబుధి దాటి లంక జేర్చుటకు",
+          "markers": "U I U I I U I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "line": "నెంతయు హనుమంతు లింతియై యుండె",
+          "markers": "U I I I I U I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5043449401855469,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 154,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: హనుమంతుడు లవణావాసులగుటయు\nజనకుడై లంక జొచ్చె సముద్రమంత\n",
+      "poem_lines": [
+        "హనుమంతుడు లవణావాసులగుటయు",
+        "జనకుడై లంక జొచ్చె సముద్రమంత"
+      ],
+      "valid_lines": [
+        {
+          "line": "హనుమంతుడు లవణావాసులగుటయు",
+          "markers": "I I U I I I I U U I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - U I I\tSURYA - I I I"
+        },
+        {
+          "line": "జనకుడై లంక జొచ్చె సముద్రమంత",
+          "markers": "I I I U U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6676499843597412,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 161,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: హనుమంతు డా లంకయై వేగమునకు\nజనియె రఘువరుడు హర్షాసనముల\n",
+      "poem_lines": [
+        "హనుమంతు డా లంకయై వేగమునకు",
+        "జనియె రఘువరుడు హర్షాసనముల"
+      ],
+      "valid_lines": [
+        {
+          "line": "హనుమంతు డా లంకయై వేగమునకు",
+          "markers": "I I U I U U I U U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - U U I\tSURYA - I I I"
+        },
+        {
+          "line": "జనియె రఘువరుడు హర్షాసనముల",
+          "markers": "I I I I I I I I U U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - U U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6163203716278076,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 168,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దొల్లి యక్షుండు ధూతేశుండు లింక\nయెలమి లంక జొనియె నిలిచి యగ్గిల్లు\n",
+      "poem_lines": [
+        "దొల్లి యక్షుండు ధూతేశుండు లింక",
+        "యెలమి లంక జొనియె నిలిచి యగ్గిల్లు"
+      ],
+      "valid_lines": [
+        {
+          "line": "దొల్లి యక్షుండు ధూతేశుండు లింక",
+          "markers": "U I U U I U U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "యెలమి లంక జొనియె నిలిచి యగ్గిల్లు",
+          "markers": "I I I U I I I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8797893524169922,
+      "tokens_generated": 40,
+      "backtracks": 0,
+      "mask_computations": 34
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 175,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దనర నంబుధి దాటి లంకజొచ్చి ుడును\nననలజుని మదమున నలిదోక నడు\n",
+      "poem_lines": [
+        "దనర నంబుధి దాటి లంకజొచ్చి ుడును",
+        "ననలజుని మదమున నలిదోక నడు"
+      ],
+      "valid_lines": [
+        {
+          "line": "దనర నంబుధి దాటి లంకజొచ్చి ుడును",
+          "markers": "I I I U I I U I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "line": "ననలజుని మదమున నలిదోక నడు",
+          "markers": "I I I I I I I I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I I\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8406274318695068,
+      "tokens_generated": 40,
+      "backtracks": 0,
+      "mask_computations": 34
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 182,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రయమున హనుమంతుడంత నదియును\nజయియంగ లంకకుజవనంబు గడవ\n",
+      "poem_lines": [
+        "రయమున హనుమంతుడంత నదియును",
+        "జయియంగ లంకకుజవనంబు గడవ"
+      ],
+      "valid_lines": [
+        {
+          "line": "రయమున హనుమంతుడంత నదియును",
+          "markers": "I I I I I I U I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I U I\tINDRA - U I I\tSURYA - I I I"
+        },
+        {
+          "line": "జయియంగ లంకకుజవనంబు గడవ",
+          "markers": "I I U I U I I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5232117176055908,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 189,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: నంభోనిధి సముద్రుగా వచ్చి తాను\nలంభీరలీలమై యమరారి కరిగ\n",
+      "poem_lines": [
+        "నంభోనిధి సముద్రుగా వచ్చి తాను",
+        "లంభీరలీలమై యమరారి కరిగ"
+      ],
+      "valid_lines": [
+        {
+          "line": "నంభోనిధి సముద్రుగా వచ్చి తాను",
+          "markers": "U U I I I U I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "లంభీరలీలమై యమరారి కరిగ",
+          "markers": "U U I U I U I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.510429859161377,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 196,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: హనుమంతుడప్పు డబ్ధికడకడంగ\nజని లంకజొచ్చుట చాలదైతేర\n",
+      "poem_lines": [
+        "హనుమంతుడప్పు డబ్ధికడకడంగ",
+        "జని లంకజొచ్చుట చాలదైతేర"
+      ],
+      "valid_lines": [
+        {
+          "line": "హనుమంతుడప్పు డబ్ధికడకడంగ",
+          "markers": "I I U I U I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - I I I I\tSURYA - U I"
+        },
+        {
+          "line": "జని లంకజొచ్చుట చాలదైతేర",
+          "markers": "I I U I U I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.527141809463501,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 203,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: భంజించె నంత భర్త నడరి హనుమ\nదెంజకని నది దాటి తృణలీల కది\n",
+      "poem_lines": [
+        "భంజించె నంత భర్త నడరి హనుమ",
+        "దెంజకని నది దాటి తృణలీల కది"
+      ],
+      "valid_lines": [
+        {
+          "line": "భంజించె నంత భర్త నడరి హనుమ",
+          "markers": "U U I U I U I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I I I\tSURYA - I I I"
+        },
+        {
+          "line": "దెంజకని నది దాటి తృణలీల కది",
+          "markers": "U I I I I I U I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.722776174545288,
+      "tokens_generated": 38,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 210,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: యంతకాకారుడై హయదూళి మించి\nసంతసముద్రము దాటి చలింప\n",
+      "poem_lines": [
+        "యంతకాకారుడై హయదూళి మించి",
+        "సంతసముద్రము దాటి చలింప"
+      ],
+      "valid_lines": [
+        {
+          "line": "యంతకాకారుడై హయదూళి మించి",
+          "markers": "U I U U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "సంతసముద్రము దాటి చలింప",
+          "markers": "U I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4609060287475586,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 217,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ఋక్షుడు సముదంబెదిరి లంకజక్కి\nయక్షోభయుడు హనుమంతుండు సాల\n",
+      "poem_lines": [
+        "ఋక్షుడు సముదంబెదిరి లంకజక్కి",
+        "యక్షోభయుడు హనుమంతుండు సాల"
+      ],
+      "valid_lines": [
+        {
+          "line": "ఋక్షుడు సముదంబెదిరి లంకజక్కి",
+          "markers": "U I I I I U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "యక్షోభయుడు హనుమంతుండు సాల",
+          "markers": "U U I I I I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5596160888671875,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 224,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లంకకు నెక్కి యాలక్ష్మణుండుండె\nనంకించి యిట్లని నంత నాహల్య\n",
+      "poem_lines": [
+        "లంకకు నెక్కి యాలక్ష్మణుండుండె",
+        "నంకించి యిట్లని నంత నాహల్య"
+      ],
+      "valid_lines": [
+        {
+          "line": "లంకకు నెక్కి యాలక్ష్మణుండుండె",
+          "markers": "U I I U I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "నంకించి యిట్లని నంత నాహల్య",
+          "markers": "U U I U I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4269022941589355,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 231,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ఋక్షుడు దాటి లంకేంద్రుని కేతె\nయక్షతశక్తితోడ ననియె నంత\n",
+      "poem_lines": [
+        "ఋక్షుడు దాటి లంకేంద్రుని కేతె",
+        "యక్షతశక్తితోడ ననియె నంత"
+      ],
+      "valid_lines": [
+        {
+          "line": "ఋక్షుడు దాటి లంకేంద్రుని కేతె",
+          "markers": "U I I U I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "యక్షతశక్తితోడ ననియె నంత",
+          "markers": "U I I U I U I I I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.52392578125,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 238,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: హనుమంతుడు సముద్రు దాటి లంకయ్య\nజననాథుతో నావు సకలంబు వింటి\n",
+      "poem_lines": [
+        "హనుమంతుడు సముద్రు దాటి లంకయ్య",
+        "జననాథుతో నావు సకలంబు వింటి"
+      ],
+      "valid_lines": [
+        {
+          "line": "హనుమంతుడు సముద్రు దాటి లంకయ్య",
+          "markers": "I I U I I I U I U I U U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I U I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "జననాథుతో నావు సకలంబు వింటి",
+          "markers": "I I U I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.534139633178711,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 245,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దనరు నగ్గలిక దక్క నుపవాఱంగ\nహనుమంతు డా లంక కడతేర్చి వచ్చ\n",
+      "poem_lines": [
+        "దనరు నగ్గలిక దక్క నుపవాఱంగ",
+        "హనుమంతు డా లంక కడతేర్చి వచ్చ"
+      ],
+      "valid_lines": [
+        {
+          "line": "దనరు నగ్గలిక దక్క నుపవాఱంగ",
+          "markers": "I I I U I I I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I I U\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "హనుమంతు డా లంక కడతేర్చి వచ్చ",
+          "markers": "I I U I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5391747951507568,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 252,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: హనుమంతుడు లవణాంకస్థలిజక్కి\nజననాథుతో నెదురంగంబు దాటి\n",
+      "poem_lines": [
+        "హనుమంతుడు లవణాంకస్థలిజక్కి",
+        "జననాథుతో నెదురంగంబు దాటి"
+      ],
+      "valid_lines": [
+        {
+          "line": "హనుమంతుడు లవణాంకస్థలిజక్కి",
+          "markers": "I I U I I I I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "జననాథుతో నెదురంగంబు దాటి",
+          "markers": "I I U I U I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5073230266571045,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 259,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దొల్లి యార్కజుడొయ్యి సుధరంబు లింక\nగాలంబు దాటి లంక గడతేర్చుకొని\n",
+      "poem_lines": [
+        "దొల్లి యార్కజుడొయ్యి సుధరంబు లింక",
+        "గాలంబు దాటి లంక గడతేర్చుకొని"
+      ],
+      "valid_lines": [
+        {
+          "line": "దొల్లి యార్కజుడొయ్యి సుధరంబు లింక",
+          "markers": "U I U I I U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "గాలంబు దాటి లంక గడతేర్చుకొని",
+          "markers": "U U I U I U I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7074265480041504,
+      "tokens_generated": 38,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 266,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: హనుమంతుడు సముద్రమంతయు దాటి\nయని లంక కరిగె నా యనఘాత్మతనయ\n",
+      "poem_lines": [
+        "హనుమంతుడు సముద్రమంతయు దాటి",
+        "యని లంక కరిగె నా యనఘాత్మతనయ"
+      ],
+      "valid_lines": [
+        {
+          "line": "హనుమంతుడు సముద్రమంతయు దాటి",
+          "markers": "I I U I I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "యని లంక కరిగె నా యనఘాత్మతనయ",
+          "markers": "I I U I I I I U I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5288503170013428,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "seed": 273,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ఋక్షేశుడొక్కడు ఋక్షింతుగాన\nహక్షుండు సముదంబు నవలీల దాటి\n",
+      "poem_lines": [
+        "ఋక్షేశుడొక్కడు ఋక్షింతుగాన",
+        "హక్షుండు సముదంబు నవలీల దాటి"
+      ],
+      "valid_lines": [
+        {
+          "line": "ఋక్షేశుడొక్కడు ఋక్షింతుగాన",
+          "markers": "U U I U I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "హక్షుండు సముదంబు నవలీల దాటి",
+          "markers": "U U I I I U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.555290937423706,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 42,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ఋషభుండు సీత కిది దొణగించుటకు\nబ్రషణంబుగా లంకపైజనుదండ\n",
+      "poem_lines": [
+        "ఋషభుండు సీత కిది దొణగించుటకు",
+        "బ్రషణంబుగా లంకపైజనుదండ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ఋషభుండు సీత కిది దొణగించుటకు",
+          "markers": "I I U I U I I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - I I I U\tSURYA - I I I"
+        },
+        {
+          "line": "బ్రషణంబుగా లంకపైజనుదండ",
+          "markers": "I I U I U U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U U I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5473430156707764,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 49,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: శ్రీరాముడు లవనిజంబు సేయంగ\nనా రాముడొనరించె ననిన రామునకు\n",
+      "poem_lines": [
+        "శ్రీరాముడు లవనిజంబు సేయంగ",
+        "నా రాముడొనరించె ననిన రామునకు"
+      ],
+      "valid_lines": [
+        {
+          "line": "శ్రీరాముడు లవనిజంబు సేయంగ",
+          "markers": "U U I I I I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "నా రాముడొనరించె ననిన రామునకు",
+          "markers": "U U I I I U I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4988951683044434,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 56,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రఘురాముడమ్మని యచ్చటబోయ\nచృఘురాజవల్లభుజూచి రఘేశ\n",
+      "poem_lines": [
+        "రఘురాముడమ్మని యచ్చటబోయ",
+        "చృఘురాజవల్లభుజూచి రఘేశ"
+      ],
+      "valid_lines": [
+        {
+          "line": "రఘురాముడమ్మని యచ్చటబోయ",
+          "markers": "I I U I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "చృఘురాజవల్లభుజూచి రఘేశ",
+          "markers": "I I U I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5620088577270508,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 63,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ఋషభుండు సీత రక్షింపవలించు\nనృషభామణిజ కిచ్చె నింద్రుతోడనను\n",
+      "poem_lines": [
+        "ఋషభుండు సీత రక్షింపవలించు",
+        "నృషభామణిజ కిచ్చె నింద్రుతోడనను"
+      ],
+      "valid_lines": [
+        {
+          "line": "ఋషభుండు సీత రక్షింపవలించు",
+          "markers": "I I U I U I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I U\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "నృషభామణిజ కిచ్చె నింద్రుతోడనను",
+          "markers": "I I U I I I U I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I U I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5862271785736084,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 70,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: యింతియు శ్రీరాము డింక లంకనకు\nవృత్తాంత మది విచారింపుచు వచ్చి\n",
+      "poem_lines": [
+        "యింతియు శ్రీరాము డింక లంకనకు",
+        "వృత్తాంత మది విచారింపుచు వచ్చి"
+      ],
+      "valid_lines": [
+        {
+          "line": "యింతియు శ్రీరాము డింక లంకనకు",
+          "markers": "U I I U U I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U U I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "line": "వృత్తాంత మది విచారింపుచు వచ్చి",
+          "markers": "U U I I I I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4018235206604004,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 77,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లంకకు రాముడు లంకాధవేశ\nయెంకక దొల్లి రా యింద్రజిరంగ\n",
+      "poem_lines": [
+        "లంకకు రాముడు లంకాధవేశ",
+        "యెంకక దొల్లి రా యింద్రజిరంగ"
+      ],
+      "valid_lines": [
+        {
+          "line": "లంకకు రాముడు లంకాధవేశ",
+          "markers": "U I I U I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "యెంకక దొల్లి రా యింద్రజిరంగ",
+          "markers": "U I I U I U U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3877239227294922,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 84,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రఘురాముడు లవణాత్మజ నీకు లిచ్చి\nయెఘన యగు నొక యెట్టియెడ పాయించి\n",
+      "poem_lines": [
+        "రఘురాముడు లవణాత్మజ నీకు లిచ్చి",
+        "యెఘన యగు నొక యెట్టియెడ పాయించి"
+      ],
+      "valid_lines": [
+        {
+          "line": "రఘురాముడు లవణాత్మజ నీకు లిచ్చి",
+          "markers": "I I U I I I I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "యెఘన యగు నొక యెట్టియెడ పాయించి",
+          "markers": "I I I I I I I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9417388439178467,
+      "tokens_generated": 41,
+      "backtracks": 0,
+      "mask_computations": 35
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 91,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: శ్రీరాముడచ్చట సీత రక్షించు\nకార్యము సేయ రాఘవనాథుడంత\n",
+      "poem_lines": [
+        "శ్రీరాముడచ్చట సీత రక్షించు",
+        "కార్యము సేయ రాఘవనాథుడంత"
+      ],
+      "valid_lines": [
+        {
+          "line": "శ్రీరాముడచ్చట సీత రక్షించు",
+          "markers": "U U I U I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "కార్యము సేయ రాఘవనాథుడంత",
+          "markers": "U I I U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4427533149719238,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 98,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: శ్రీరాము డల్లన సీత రక్షింప\nజారుచు వచ్చెను జానకీమధ్య\n",
+      "poem_lines": [
+        "శ్రీరాము డల్లన సీత రక్షింప",
+        "జారుచు వచ్చెను జానకీమధ్య"
+      ],
+      "valid_lines": [
+        {
+          "line": "శ్రీరాము డల్లన సీత రక్షింప",
+          "markers": "U U I U I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "జారుచు వచ్చెను జానకీమధ్య",
+          "markers": "U I I U I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.32478928565979,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 105,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: ఋశ్యమూకరుడు సీరి రథంబెసంగ\nరాశిపై దేవి దాల్పంగబోయాడు\n",
+      "poem_lines": [
+        "ఋశ్యమూకరుడు సీరి రథంబెసంగ",
+        "రాశిపై దేవి దాల్పంగబోయాడు"
+      ],
+      "valid_lines": [
+        {
+          "line": "ఋశ్యమూకరుడు సీరి రథంబెసంగ",
+          "markers": "U I U I I I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "రాశిపై దేవి దాల్పంగబోయాడు",
+          "markers": "U I U U I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.638345718383789,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 112,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రాముడు సీత కిచ్చినకైవడి లికి\nయా మణిమణిజ యవతతినై వచ్చి\n",
+      "poem_lines": [
+        "రాముడు సీత కిచ్చినకైవడి లికి",
+        "యా మణిమణిజ యవతతినై వచ్చి"
+      ],
+      "valid_lines": [
+        {
+          "line": "రాముడు సీత కిచ్చినకైవడి లికి",
+          "markers": "U I I U I U I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "యా మణిమణిజ యవతతినై వచ్చి",
+          "markers": "U I I I I I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5905776023864746,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 119,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దెచ్చెదనని యిట్లు దేవేంద్రునకును\nనచ్చెరువంది శ్రీరాముండు రామ\n",
+      "poem_lines": [
+        "దెచ్చెదనని యిట్లు దేవేంద్రునకును",
+        "నచ్చెరువంది శ్రీరాముండు రామ"
+      ],
+      "valid_lines": [
+        {
+          "line": "దెచ్చెదనని యిట్లు దేవేంద్రునకును",
+          "markers": "U I I I I U I U U I I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U U I\tSURYA - I I I"
+        },
+        {
+          "line": "నచ్చెరువంది శ్రీరాముండు రామ",
+          "markers": "U I I U I U U U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5925750732421875,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 126,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: శ్రీరాముడు లవణాదిసుత రక్షింప\nజారుచు రాముడు నచ్చెరు వాలి\n",
+      "poem_lines": [
+        "శ్రీరాముడు లవణాదిసుత రక్షింప",
+        "జారుచు రాముడు నచ్చెరు వాలి"
+      ],
+      "valid_lines": [
+        {
+          "line": "శ్రీరాముడు లవణాదిసుత రక్షింప",
+          "markers": "U U I I I I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "జారుచు రాముడు నచ్చెరు వాలి",
+          "markers": "U I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5485577583312988,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 133,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దలచి సీతకు రామలక్ష్మణుడుండు\nజలజసంభవయు దావశ్యుడై వచ్చి\n",
+      "poem_lines": [
+        "దలచి సీతకు రామలక్ష్మణుడుండు",
+        "జలజసంభవయు దావశ్యుడై వచ్చి"
+      ],
+      "valid_lines": [
+        {
+          "line": "దలచి సీతకు రామలక్ష్మణుడుండు",
+          "markers": "I I I U I I U I U I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "జలజసంభవయు దావశ్యుడై వచ్చి",
+          "markers": "I I I U I I I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I I U\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5542545318603516,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 140,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రఘురాముడు లలి నద్దశగస్త్యు డున్న\nకైంఘిచే సీత రక్షించుచోబోయి\n",
+      "poem_lines": [
+        "రఘురాముడు లలి నద్దశగస్త్యు డున్న",
+        "కైంఘిచే సీత రక్షించుచోబోయి"
+      ],
+      "valid_lines": [
+        {
+          "line": "రఘురాముడు లలి నద్దశగస్త్యు డున్న",
+          "markers": "I I U I I I I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "కైంఘిచే సీత రక్షించుచోబోయి",
+          "markers": "U I U U I U U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - U I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8276114463806152,
+      "tokens_generated": 40,
+      "backtracks": 0,
+      "mask_computations": 34
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 147,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: యిచ్చలో సీత రాహతి రక్ష ాగించు\nచచ్చెదనని పల్క జలజాక్షు డాన\n",
+      "poem_lines": [
+        "యిచ్చలో సీత రాహతి రక్ష ాగించు",
+        "చచ్చెదనని పల్క జలజాక్షు డాన"
+      ],
+      "valid_lines": [
+        {
+          "line": "యిచ్చలో సీత రాహతి రక్ష ాగించు",
+          "markers": "U I U U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "చచ్చెదనని పల్క జలజాక్షు డాన",
+          "markers": "U I I I I U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6233489513397217,
+      "tokens_generated": 36,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 154,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: శ్రీరాముడు లవణాదికి రాగ లింక\nబౌరాణమునకుబోయబడెద నడవ\n",
+      "poem_lines": [
+        "శ్రీరాముడు లవణాదికి రాగ లింక",
+        "బౌరాణమునకుబోయబడెద నడవ"
+      ],
+      "valid_lines": [
+        {
+          "line": "శ్రీరాముడు లవణాదికి రాగ లింక",
+          "markers": "U U I I I I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "బౌరాణమునకుబోయబడెద నడవ",
+          "markers": "U U I I I I U I I I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5537917613983154,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 161,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: శ్రీరాముడు లవనిజంపగ వచ్చి\nయారయ నచ్చెరు నమర నా సీత\n",
+      "poem_lines": [
+        "శ్రీరాముడు లవనిజంపగ వచ్చి",
+        "యారయ నచ్చెరు నమర నా సీత"
+      ],
+      "valid_lines": [
+        {
+          "line": "శ్రీరాముడు లవనిజంపగ వచ్చి",
+          "markers": "U U I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "యారయ నచ్చెరు నమర నా సీత",
+          "markers": "U I I U I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.387347936630249,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 168,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రాఘవుడు లలిత రాక్షసరాజు\nసౌఘాతి రక్షింపజనరంగ వచ్చ\n",
+      "poem_lines": [
+        "రాఘవుడు లలిత రాక్షసరాజు",
+        "సౌఘాతి రక్షింపజనరంగ వచ్చ"
+      ],
+      "valid_lines": [
+        {
+          "line": "రాఘవుడు లలిత రాక్షసరాజు",
+          "markers": "U I I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "సౌఘాతి రక్షింపజనరంగ వచ్చ",
+          "markers": "U U I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.30800199508667,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 175,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రాముడు సీత రక్షితముగానంచు\nభామిని జనుదెంచి పర్ణశాలకును\n",
+      "poem_lines": [
+        "రాముడు సీత రక్షితముగానంచు",
+        "భామిని జనుదెంచి పర్ణశాలకును"
+      ],
+      "valid_lines": [
+        {
+          "line": "రాముడు సీత రక్షితముగానంచు",
+          "markers": "U I I U I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "భామిని జనుదెంచి పర్ణశాలకును",
+          "markers": "U I I I I U I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I U I\tINDRA - U I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.430149793624878,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 182,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దానవునిజమున దనరనాథతన\nయానతిచ్చిన శ్రీకమలసంభవుండు\n",
+      "poem_lines": [
+        "దానవునిజమున దనరనాథతన",
+        "యానతిచ్చిన శ్రీకమలసంభవుండు"
+      ],
+      "valid_lines": [
+        {
+          "line": "దానవునిజమున దనరనాథతన",
+          "markers": "U I I I I I I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - I I I I\tINDRA - I I I U\tSURYA - I I I"
+        },
+        {
+          "line": "యానతిచ్చిన శ్రీకమలసంభవుండు",
+          "markers": "U I U I I U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4426093101501465,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 189,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: దన రాముడచ్చెటి దేవి దెల్లించు\nకనలుచు లంకకుగదలి రఘేశ\n",
+      "poem_lines": [
+        "దన రాముడచ్చెటి దేవి దెల్లించు",
+        "కనలుచు లంకకుగదలి రఘేశ"
+      ],
+      "valid_lines": [
+        {
+          "line": "దన రాముడచ్చెటి దేవి దెల్లించు",
+          "markers": "I I U I U I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "కనలుచు లంకకుగదలి రఘేశ",
+          "markers": "I I I I U I I I I I I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U I I\tINDRA - I I I I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5953683853149414,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 196,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: శ్రీరాముడు లలంక చంపవలసిన\nయీ రాముడొక తెఱిగి యిటు వచ్చేశ\n",
+      "poem_lines": [
+        "శ్రీరాముడు లలంక చంపవలసిన",
+        "యీ రాముడొక తెఱిగి యిటు వచ్చేశ"
+      ],
+      "valid_lines": [
+        {
+          "line": "శ్రీరాముడు లలంక చంపవలసిన",
+          "markers": "U U I I I U I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I U I\tINDRA - U I I\tSURYA - I I I"
+        },
+        {
+          "line": "యీ రాముడొక తెఱిగి యిటు వచ్చేశ",
+          "markers": "U U I I I I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5077722072601318,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 203,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: లంకపైబనిచిన రాఘవుండుండి\nజంకించి సీత నిచ్చి సదనంబు తెఱ\n",
+      "poem_lines": [
+        "లంకపైబనిచిన రాఘవుండుండి",
+        "జంకించి సీత నిచ్చి సదనంబు తెఱ"
+      ],
+      "valid_lines": [
+        {
+          "line": "లంకపైబనిచిన రాఘవుండుండి",
+          "markers": "U I U I I I I U I U U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I I I\tINDRA - U I U\tSURYA - U I"
+        },
+        {
+          "line": "జంకించి సీత నిచ్చి సదనంబు తెఱ",
+          "markers": "U U I U I U I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I U\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3520622253417969,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 210,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: యింతి రాముడు లంక కేగి సీతలకు\nబెంతుడై పతిబూజసేయవలసిన\n",
+      "poem_lines": [
+        "యింతి రాముడు లంక కేగి సీతలకు",
+        "బెంతుడై పతిబూజసేయవలసిన"
+      ],
+      "valid_lines": [
+        {
+          "line": "యింతి రాముడు లంక కేగి సీతలకు",
+          "markers": "U I U I I U I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "line": "బెంతుడై పతిబూజసేయవలసిన",
+          "markers": "U I U I I U I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4852969646453857,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 217,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: సుతగాన రాముడుజూచి సీతలకు\nనతిరయంబునజాల నని సేయుచుండె\n",
+      "poem_lines": [
+        "సుతగాన రాముడుజూచి సీతలకు",
+        "నతిరయంబునజాల నని సేయుచుండె"
+      ],
+      "valid_lines": [
+        {
+          "line": "సుతగాన రాముడుజూచి సీతలకు",
+          "markers": "I I U I U I I U I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - U I U\tSURYA - I I I"
+        },
+        {
+          "line": "నతిరయంబునజాల నని సేయుచుండె",
+          "markers": "I I I U I I U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4919354915618896,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 224,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: భరతుడు సీతావిభు నొనర్చి యెందు\nరరిగి యచ్చట లంక రక్షణ కొరకు\n",
+      "poem_lines": [
+        "భరతుడు సీతావిభు నొనర్చి యెందు",
+        "రరిగి యచ్చట లంక రక్షణ కొరకు"
+      ],
+      "valid_lines": [
+        {
+          "line": "భరతుడు సీతావిభు నొనర్చి యెందు",
+          "markers": "I I I I U U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U U I\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "రరిగి యచ్చట లంక రక్షణ కొరకు",
+          "markers": "I I I U I I U I U I I I I I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - I I U I\tINDRA - U I I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4488282203674316,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 231,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రణభూమికి జనుదెంచిన రాము డుదయ\nజన్ఈతడు సచివుడై సీత గంటి\n",
+      "poem_lines": [
+        "రణభూమికి జనుదెంచిన రాము డుదయ",
+        "జన్ఈతడు సచివుడై సీత గంటి"
+      ],
+      "valid_lines": [
+        {
+          "line": "రణభూమికి జనుదెంచిన రాము డుదయ",
+          "markers": "I I U I I I I U I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "జన్ఈతడు సచివుడై సీత గంటి",
+          "markers": "U U I I I I I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6934165954589844,
+      "tokens_generated": 38,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 238,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: శ్రీరాముడేతెంచె శ్రీరాముడున్న\nకారణంబున లంక కడతేర్చెదయ్య\n",
+      "poem_lines": [
+        "శ్రీరాముడేతెంచె శ్రీరాముడున్న",
+        "కారణంబున లంక కడతేర్చెదయ్య"
+      ],
+      "valid_lines": [
+        {
+          "line": "శ్రీరాముడేతెంచె శ్రీరాముడున్న",
+          "markers": "U U I U U I U U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U U I\tINDRA - U U I\tSURYA - U I"
+        },
+        {
+          "line": "కారణంబున లంక కడతేర్చెదయ్య",
+          "markers": "U I U I I U I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I U\tINDRA - I I U I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.450901985168457,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 245,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రాముడు సీతని రక్షకు రావ\nలిమి యెక్కెద మట యెఱిగి లంకనకును\n",
+      "poem_lines": [
+        "రాముడు సీతని రక్షకు రావ",
+        "లిమి యెక్కెద మట యెఱిగి లంకనకును"
+      ],
+      "valid_lines": [
+        {
+          "line": "రాముడు సీతని రక్షకు రావ",
+          "markers": "U I I U I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "లిమి యెక్కెద మట యెఱిగి లంకనకును",
+          "markers": "I I U I I I I I I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I I\tINDRA - I I U I\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5678431987762451,
+      "tokens_generated": 35,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 252,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: శ్రీరాముడు లవణాబ్జసతి రక్షించు\nకరిగె నా లంకకు గదలి రాముండు\n",
+      "poem_lines": [
+        "శ్రీరాముడు లవణాబ్జసతి రక్షించు",
+        "కరిగె నా లంకకు గదలి రాముండు"
+      ],
+      "valid_lines": [
+        {
+          "line": "శ్రీరాముడు లవణాబ్జసతి రక్షించు",
+          "markers": "U U I I I I U I I I U U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I U\tINDRA - I I I U\tSURYA - U I"
+        },
+        {
+          "line": "కరిగె నా లంకకు గదలి రాముండు",
+          "markers": "I I I U U I I I I I U U I",
+          "valid": true,
+          "partition": "INDRA - I I I U\tINDRA - U I I\tINDRA - I I I U\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.5314741134643555,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 259,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రాముడు సీత మాయతబాల లిచ్చి\nరమణొంద లంక కరిగరయంగజని\n",
+      "poem_lines": [
+        "రాముడు సీత మాయతబాల లిచ్చి",
+        "రమణొంద లంక కరిగరయంగజని"
+      ],
+      "valid_lines": [
+        {
+          "line": "రాముడు సీత మాయతబాల లిచ్చి",
+          "markers": "U I I U I U I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U I I\tINDRA - U I U\tINDRA - I I U I\tSURYA - U I"
+        },
+        {
+          "line": "రమణొంద లంక కరిగరయంగజని",
+          "markers": "I I U I U I I I I I U I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - U I I\tINDRA - I I I U\tSURYA - I I I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4770276546478271,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 266,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: శ్రీరాముడు లలితరాగములైన\nనా రాముదేవి దలపడంగవచ్చు\n",
+      "poem_lines": [
+        "శ్రీరాముడు లలితరాగములైన",
+        "నా రాముదేవి దలపడంగవచ్చు"
+      ],
+      "valid_lines": [
+        {
+          "line": "శ్రీరాముడు లలితరాగములైన",
+          "markers": "U U I I I I I U I I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - I I I I\tINDRA - U I I\tSURYA - U I"
+        },
+        {
+          "line": "నా రాముదేవి దలపడంగవచ్చు",
+          "markers": "U U I U I I I I U I U I",
+          "valid": true,
+          "partition": "INDRA - U U I\tINDRA - U I I\tINDRA - I I U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2597789764404297,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "seed": 273,
+      "constrained": true,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ద్విపద: రఘురాముడు వలదెల్లన లంక ఱరిగి\nయఘనిధి రక్షించు నర్థంబు గాన\n",
+      "poem_lines": [
+        "రఘురాముడు వలదెల్లన లంక ఱరిగి",
+        "యఘనిధి రక్షించు నర్థంబు గాన"
+      ],
+      "valid_lines": [
+        {
+          "line": "రఘురాముడు వలదెల్లన లంక ఱరిగి",
+          "markers": "I I U I I I I U I I U I I I I",
+          "valid": true,
+          "partition": "INDRA - I I U I\tINDRA - I I I U\tINDRA - I I U I\tSURYA - I I I"
+        },
+        {
+          "line": "యఘనిధి రక్షించు నర్థంబు గాన",
+          "markers": "I I I I U U I U U I U I",
+          "valid": true,
+          "partition": "INDRA - I I I I\tINDRA - U U I\tINDRA - U U I\tSURYA - U I"
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6808223724365234,
+      "tokens_generated": 37,
+      "backtracks": 0,
+      "mask_computations": 31
+    }
+  ]
+}
