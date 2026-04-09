@@ -25,6 +25,7 @@ from validation_utils import (
     format_histogram,
     format_section_header,
     format_stat_line,
+    load_dataset,
     load_jsonl,
     write_report,
 )
@@ -45,9 +46,78 @@ def compute_ttr(words: list[str]) -> float:
     return len(set(words)) / len(words)
 
 
+def compute_mattr(words: list[str], window: int = 2) -> float:
+    """Moving Average TTR (Covington & McFall 2010).
+
+    Slides a fixed-size window across the text and averages the TTR
+    of each window position. Length-independent unlike raw TTR.
+    Default window=2 for short texts (dwipada ~6 words); use window=50
+    for corpus-level or longer texts.
+    """
+    n = len(words)
+    if n == 0:
+        return 0.0
+    if n <= window:
+        return compute_ttr(words)
+    ttrs = []
+    for i in range(n - window + 1):
+        segment = words[i : i + window]
+        ttrs.append(len(set(segment)) / window)
+    return sum(ttrs) / len(ttrs)
+
+
+def compute_yules_k(words: list[str]) -> float:
+    """Yule's K characteristic (Yule 1944).
+
+    Measures vocabulary richness via the frequency spectrum.
+    K = 10⁴ × (Σ i²·V_i - N) / N²  where V_i = number of words
+    appearing exactly i times, N = total words.
+    Lower = more diverse. <100 literary, 100-200 normal, >200 formulaic.
+    """
+    n = len(words)
+    if n == 0:
+        return 0.0
+    freq_counter = Counter(words)
+    # Build frequency spectrum: how many words appear exactly i times
+    spectrum = Counter(freq_counter.values())
+    sigma = sum(i * i * vi for i, vi in spectrum.items())
+    if n * n == n:  # degenerate case (single word)
+        return 0.0
+    return 1e4 * (sigma - n) / (n * n)
+
+
+def compute_honores_h(words: list[str]) -> float:
+    """Honoré's H statistic (Honoré 1979).
+
+    H = 100 × log(N) / (1 - V1/V)  where V1 = hapax count, V = vocab size.
+    Uses hapax ratio as a productivity signal.
+    Higher = more diverse. 1000-2000 for literary texts.
+
+    When all words are hapax (V1 = V), the denominator is zero. We apply a
+    continuity correction (V1 - 0.5) to keep H finite and maximally high,
+    reflecting that all-unique vocabulary is peak productivity.
+    """
+    import math
+    n = len(words)
+    if n == 0:
+        return 0.0
+    freq_counter = Counter(words)
+    v = len(freq_counter)
+    v1 = sum(1 for c in freq_counter.values() if c == 1)
+    if v == 0:
+        return 0.0
+    if v1 == v:
+        # Continuity correction: use (V1 - 0.5) to avoid division by zero
+        return 100.0 * math.log(n) / (1.0 - (v1 - 0.5) / v)
+    return 100.0 * math.log(n) / (1.0 - v1 / v)
+
+
 def analyze_corpus(records: list[dict], top_n: int = 25) -> dict:
     """Run full word-level TTR analysis on the corpus."""
     per_poem_ttrs = []
+    per_poem_mattrs = []
+    per_poem_yules_k = []
+    per_poem_honores_h = []
     per_poem_word_counts = []
     total_lines = 0
     corpus_counter = Counter()
@@ -68,6 +138,9 @@ def analyze_corpus(records: list[dict], top_n: int = 25) -> dict:
 
         ttr = compute_ttr(words)
         per_poem_ttrs.append(ttr)
+        per_poem_mattrs.append(compute_mattr(words))
+        per_poem_yules_k.append(compute_yules_k(words))
+        per_poem_honores_h.append(compute_honores_h(words))
         per_poem_word_counts.append(len(words))
         total_lines += len(poem.strip().split("\n"))
         corpus_counter.update(words)
@@ -91,8 +164,18 @@ def analyze_corpus(records: list[dict], top_n: int = 25) -> dict:
     # Word lengths (character count)
     word_lengths = [len(w) for w in corpus_counter.elements()]
 
-    # Hapax legomena
+    # Hapax legomena (freq == 1)
     hapax = [w for w, c in corpus_counter.items() if c == 1]
+
+    # Dis legomena (freq == 2)
+    dis_legomena = [w for w, c in corpus_counter.items() if c == 2]
+    sichels_s = len(dis_legomena) / vocab_size if vocab_size > 0 else 0.0
+
+    # Corpus-level advanced metrics (treat entire corpus as one text)
+    all_words = list(corpus_counter.elements())
+    corpus_mattr = compute_mattr(all_words, window=50)
+    corpus_yules_k = compute_yules_k(all_words)
+    corpus_honores_h = compute_honores_h(all_words)
 
     # Sort outliers by TTR
     outliers.sort(key=lambda x: x[1])
@@ -110,6 +193,15 @@ def analyze_corpus(records: list[dict], top_n: int = 25) -> dict:
         "avg_words_per_line": total_words / total_lines if total_lines > 0 else 0.0,
         "hapax_count": len(hapax),
         "hapax_ratio": len(hapax) / vocab_size if vocab_size > 0 else 0.0,
+        "dis_legomena_count": len(dis_legomena),
+        "dis_legomena_ratio": len(dis_legomena) / vocab_size if vocab_size > 0 else 0.0,
+        "sichels_s": sichels_s,
+        "corpus_mattr": corpus_mattr,
+        "corpus_yules_k": corpus_yules_k,
+        "corpus_honores_h": corpus_honores_h,
+        "per_poem_mattrs": per_poem_mattrs,
+        "per_poem_yules_k": per_poem_yules_k,
+        "per_poem_honores_h": per_poem_honores_h,
         "top_words": corpus_counter.most_common(top_n),
         "word_lengths": word_lengths,
         "source_data": source_data,
@@ -144,10 +236,16 @@ def build_report(results: dict, dataset_path: str) -> list[str]:
     lines.append(format_stat_line("Avg words per line", results["avg_words_per_line"]))
     lines.append("")
 
-    # Section 2: Corpus-Level TTR
-    lines.append(format_section_header("2. CORPUS-LEVEL TTR"))
+    # Section 2: Corpus-Level Lexical Diversity
+    lines.append(format_section_header("2. CORPUS-LEVEL LEXICAL DIVERSITY"))
     lines.append(format_stat_line("Corpus TTR (V/N)", results["corpus_ttr"]))
     lines.append(f"  (V = {results['vocab_size']:,} unique words / N = {results['total_words']:,} total words)")
+    lines.append(format_stat_line("MATTR (window=50, corpus)", results["corpus_mattr"]))
+    lines.append("  (Covington & McFall 2010; 0.70-0.80 typical prose)")
+    lines.append(format_stat_line("Yule's K", results["corpus_yules_k"]))
+    lines.append("  (Yule 1944; <100 literary, 100-200 normal, >200 formulaic)")
+    lines.append(format_stat_line("Honoré's H", results["corpus_honores_h"]))
+    lines.append("  (Honoré 1979; higher = more diverse, 1000-2000 literary)")
     lines.append("")
 
     # Section 3: Per-Poem TTR Distribution
@@ -165,14 +263,53 @@ def build_report(results: dict, dataset_path: str) -> list[str]:
         lines.append(h)
     lines.append("")
 
-    # Section 4: Hapax Legomena
-    lines.append(format_section_header("4. HAPAX LEGOMENA"))
-    lines.append(format_stat_line("Hapax count (freq=1)", results["hapax_count"]))
-    lines.append(format_stat_line("Hapax / vocabulary", results["hapax_ratio"]))
+    # Section 4: Hapax & Dis Legomena
+    lines.append(format_section_header("4. HAPAX & DIS LEGOMENA"))
+    lines.append(format_stat_line("Hapax legomena (freq=1)", results["hapax_count"]))
+    lines.append(format_stat_line("Hapax ratio (V1/V)", results["hapax_ratio"]))
+    lines.append(format_stat_line("Dis legomena (freq=2)", results["dis_legomena_count"]))
+    lines.append(format_stat_line("Dis legomena ratio (V2/V)", results["dis_legomena_ratio"]))
+    lines.append(format_stat_line("Sichel's S (V2/V)", results["sichels_s"]))
+    lines.append("  (Sichel 1975; complementary to hapax ratio)")
     lines.append("")
 
-    # Section 5: Top N Most Frequent Words
-    lines.append(format_section_header(f"5. TOP {len(results['top_words'])} MOST FREQUENT WORDS"))
+    # Section 5: Per-Poem Advanced Metrics
+    lines.append(format_section_header("5. PER-POEM ADVANCED METRICS"))
+    mattrs = results["per_poem_mattrs"]
+    lines.append("  MATTR (window=2, per-poem):")
+    lines.append(format_stat_line("    Mean", statistics.mean(mattrs)))
+    lines.append(format_stat_line("    Median", statistics.median(mattrs)))
+    lines.append(format_stat_line("    Min", min(mattrs)))
+    lines.append(format_stat_line("    Max", max(mattrs)))
+    lines.append("")
+    for h in format_histogram(mattrs, [0.0, 0.5, 0.7, 0.8, 0.9, 1.01]):
+        lines.append(h)
+    lines.append("")
+    yks = results["per_poem_yules_k"]
+    lines.append("  Yule's K:")
+    lines.append(format_stat_line("    Mean", statistics.mean(yks)))
+    lines.append(format_stat_line("    Median", statistics.median(yks)))
+    lines.append(format_stat_line("    Min", min(yks)))
+    lines.append(format_stat_line("    Max", max(yks)))
+    lines.append("")
+    for h in format_histogram(yks, [0, 50, 100, 200, 500, 1000, 5000]):
+        lines.append(h)
+    lines.append("")
+    hhs = results["per_poem_honores_h"]
+    lines.append("  Honoré's H:")
+    if hhs:
+        lines.append(format_stat_line("    Mean", statistics.mean(hhs)))
+        lines.append(format_stat_line("    Median", statistics.median(hhs)))
+        lines.append(format_stat_line("    Min", min(hhs)))
+        lines.append(format_stat_line("    Max", max(hhs)))
+    lines.append("")
+    if hhs:
+        for h in format_histogram(hhs, [0, 500, 1000, 1500, 2000, 3000, 5000]):
+            lines.append(h)
+        lines.append("")
+
+    # Section 6: Top N Most Frequent Words
+    lines.append(format_section_header(f"6. TOP {len(results['top_words'])} MOST FREQUENT WORDS"))
     lines.append(f"  {'Rank':<6} {'Word':<30} {'Freq':>8} {'%':>8}")
     lines.append(f"  {'─'*6} {'─'*30} {'─'*8} {'─'*8}")
     for rank, (word, freq) in enumerate(results["top_words"], 1):
@@ -180,9 +317,9 @@ def build_report(results: dict, dataset_path: str) -> list[str]:
         lines.append(f"  {rank:<6} {word:<30} {freq:>8,} {pct:>7.2f}%")
     lines.append("")
 
-    # Section 6: Word Length Distribution
+    # Section 7: Word Length Distribution
     wl = results["word_lengths"]
-    lines.append(format_section_header("6. WORD LENGTH DISTRIBUTION (characters)"))
+    lines.append(format_section_header("7. WORD LENGTH DISTRIBUTION (characters)"))
     lines.append(format_stat_line("Mean word length", statistics.mean(wl)))
     lines.append(format_stat_line("Median word length", statistics.median(wl)))
     lines.append("")
@@ -192,8 +329,8 @@ def build_report(results: dict, dataset_path: str) -> list[str]:
         lines.append(h)
     lines.append("")
 
-    # Section 7: Per-Source TTR Breakdown
-    lines.append(format_section_header("7. PER-SOURCE TTR BREAKDOWN"))
+    # Section 8: Per-Source TTR Breakdown
+    lines.append(format_section_header("8. PER-SOURCE TTR BREAKDOWN"))
     src = results["source_data"]
     src_rows = []
     for name, d in sorted(src.items()):
@@ -207,8 +344,8 @@ def build_report(results: dict, dataset_path: str) -> list[str]:
         lines.append(f"  {name:<35} {poems:>7,} {total:>9,} {unique:>8,} {s_ttr:>8.4f}")
     lines.append("")
 
-    # Section 8: TTR Outliers
-    lines.append(format_section_header("8. TTR OUTLIERS"))
+    # Section 9: TTR Outliers
+    lines.append(format_section_header("9. TTR OUTLIERS"))
     lines.append("")
     lines.append("  Lowest TTR (most repetitive):")
     lines.append(f"  {'Index':>7} {'TTR':>8} {'Words':>7}  Poem")
@@ -245,7 +382,10 @@ def main(args=None):
     args = parser.parse_args(args)
 
     print(f"Loading dataset: {args.dataset}")
-    records = load_jsonl(args.dataset)
+    if args.dataset.endswith(".jsonl"):
+        records = load_jsonl(args.dataset)
+    else:
+        records = load_dataset(args.dataset)
     print(f"Loaded {len(records):,} records.")
 
     print("Analysing word-level TTR...")
