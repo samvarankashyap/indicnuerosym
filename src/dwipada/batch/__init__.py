@@ -1,1 +1,1 @@
-"""Gemini and Vertex AI batch processing."""
+"""Gemini batch processing."""

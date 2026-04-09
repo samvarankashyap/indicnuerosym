@@ -1,1 +1,1 @@
-"""Dataset preparation, augmentation, and validation."""
+"""Dataset preparation and augmentation."""

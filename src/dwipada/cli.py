@@ -10,12 +10,11 @@ Commands:
     stats       Dataset statistics
     augment     Augment dataset with chandassu analysis
     combine     Combine real + synthetic datasets
-    validate    4-level dataset validation
+
     prepare     Prepare training data
     train       Fine-tune Gemma model with LoRA
     generate    Generate poems with trained model
     batch       Gemini batch API operations
-    batch-vertex Vertex AI batch operations
     analyze     Analyze a dwipada poem
 """
 
@@ -61,13 +60,6 @@ def main():
     # --- Prepare synthetic ---
     subparsers.add_parser("prepare-synthetic", help="Prepare synthetic dataset")
 
-    # --- Validate ---
-    validate_parser = subparsers.add_parser("validate", help="4-level dataset validation")
-    validate_parser.add_argument("--dataset", help="Path to dataset JSON")
-    validate_parser.add_argument("--skip-levels", nargs="*", type=int, help="Levels to skip")
-    validate_parser.add_argument("--limit", type=int, help="Max records to validate")
-    validate_parser.add_argument("--fresh", action="store_true", help="Ignore checkpoints")
-
     # --- Prepare training data ---
     subparsers.add_parser("prepare", help="Prepare training data")
 
@@ -93,9 +85,6 @@ def main():
     batch_parser.add_argument("--submit", help="Submit batch JSONL file")
     batch_parser.add_argument("--status", help="Check batch job status")
     batch_parser.add_argument("--results", help="Download batch results")
-
-    # --- Batch Vertex ---
-    subparsers.add_parser("batch-vertex", help="Vertex AI batch operations")
 
     # --- Analyze ---
     analyze_parser = subparsers.add_parser("analyze", help="Analyze a dwipada poem")
@@ -148,20 +137,6 @@ def _dispatch(args):
         from dwipada.dataset.prepare_synthetic import main
         main()
 
-    elif args.command == "validate":
-        from dwipada.dataset.validate import main as validate_main
-        extra_args = []
-        if args.dataset:
-            extra_args.extend(["--dataset", args.dataset])
-        if args.skip_levels:
-            extra_args.extend(["--skip-levels"] + [str(l) for l in args.skip_levels])
-        if args.limit:
-            extra_args.extend(["--limit", str(args.limit)])
-        if args.fresh:
-            extra_args.append("--fresh")
-        sys.argv = ["dwipada validate"] + extra_args
-        validate_main()
-
     elif args.command == "prepare":
         from dwipada.training.prepare_data import main
         main()
@@ -208,10 +183,6 @@ def _dispatch(args):
         if args.results:
             sys.argv.extend(["--results", args.results])
         batch_main()
-
-    elif args.command == "batch-vertex":
-        from dwipada.batch.vertex import main
-        main()
 
     elif args.command == "analyze":
         _run_analyze(args)
