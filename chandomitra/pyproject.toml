@@ -1,0 +1,5 @@
+[project]
+name = "dwipada"
+version = "0.1.0"
+description = "Telugu Dwipada Poetry Generation with Constrained Decoding"
+requires-python = ">=3.10"

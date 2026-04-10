@@ -1,0 +1,537 @@
+% ============================================================================
+% Appendix: Constrained Decoding Algorithms — ACL single-column
+% ============================================================================
+%
+% In preamble, use:
+%   \usepackage{algorithm}
+%   \usepackage{algpseudocode}    % NOT \usepackage{algorithmic}
+%
+% Place this content after your existing appendices.
+%
+
+\section{Constrained Decoding Algorithms}
+\label{app:algorithms}
+
+This appendix presents the formal pseudocode for the dead state detection
+mechanism (Algorithm~\ref{alg:is-reachable}), the stateless analysis
+subroutine (Algorithm~\ref{alg:analyze-text}), the dynamic mask builder
+(Algorithm~\ref{alg:build-mask}), and the three constrained decoding
+strategies described in Section~\ref{sec:constrained}:
+rejection sampling (Algorithm~\ref{alg:rejection-sampling}),
+logit masking with backtracking (Algorithm~\ref{alg:masking-backtrack}),
+and hybrid mask+rejection (Algorithm~\ref{alg:hybrid}).
+
+\paragraph{Notation.}
+$\theta$: language model;\;
+$\mathcal{T}$: tokenizer;\;
+$\mathbf{z}$: logit vector;\;
+$\boldsymbol{\pi}$: probability distribution;\;
+$\tau$: temperature;\;
+$\mathbf{y}$: generated token sequence;\;
+$\mathcal{S}$: \textsc{CompositeState} (incremental FST+NFA);\;
+$\mathcal{B}$: active NFA branches;\;
+$\mathcal{V}_{\text{tel}}$: pre-extracted Telugu token set;\;
+$\mathbf{M}_s$: static mask ($0$ for Telugu/EOS, $-\infty$ elsewhere);\;
+$\ell$: lines completed;\;
+$\mathcal{C}$: checkpoint ring buffer;\;
+$b, b_c$: total and consecutive backtrack counters.
+
+
+% --------------------------------------------------------------------
+% ALGORITHM 1: Dead State Detection
+% --------------------------------------------------------------------
+
+\begin{algorithm}[H]
+\caption{\textsc{IsReachable}: Dead State Detection}
+\label{alg:is-reachable}
+\scriptsize
+\begin{algorithmic}[1]
+\Require $\mathcal{B}$: active NFA branches;\;
+         $n$: syllables consumed in current line
+\Ensure \textbf{true} iff any branch can reach \textsc{Accept}
+        with $n_{\text{total}} \in [11, 15]$
+\For{$(s, g, j, \mathcal{M}) \in \mathcal{B}$}
+    \If{$s = \textsc{Accept}$}
+        \State \textbf{if} $n \in \{11,\ldots,15\}$
+               \textbf{then return true};\;
+               \textbf{continue}
+    \EndIf
+    \State $r \gets |\textsc{Pool}(s)[g]| - j$
+           \Comment{symbols left in current ga\d{n}a}
+    \If{$s \le 2$} \Comment{Indra slot}
+        \State $\ell_o \gets r + (2{-}s) \cdot 3 + 2$
+               \Comment{min to accept}
+        \State $h \gets r + (2{-}s) \cdot 4 + 3$
+               \Comment{max to accept}
+    \Else \Comment{Surya slot ($s = 3$)}
+        \State $\ell_o \gets r$;\; $h \gets r$
+    \EndIf
+    \If{$n + \ell_o \le 15$ \textbf{and} $n + h \ge 11$}
+        \State \Return \textbf{true}
+    \EndIf
+\EndFor
+\State \Return \textbf{false} \Comment{all branches doomed}
+\end{algorithmic}
+\end{algorithm}
+
+
+% --------------------------------------------------------------------
+% ALGORITHM 2: AnalyzeText
+% --------------------------------------------------------------------
+
+\begin{algorithm}[H]
+\caption{\textsc{AnalyzeText}: Stateless FST+NFA Analysis}
+\label{alg:analyze-text}
+\scriptsize
+\begin{algorithmic}[1]
+\Require Unicode string $w$ (prefix-stripped)
+\Ensure $(\text{alive},\; \ell_c,\; \text{acc},\; n,\; \mathcal{B})$
+\State Init fresh \textsc{SyllAssembler} $A$,
+       \textsc{GuruLaghuClassifier} $G$
+\State $\mathcal{B} \gets \textsc{SpawnSlot}(0, ())$;\;
+       $\ell_c \gets 0$;\; $\text{mk} \gets [\,]$
+\For{item $\in A.\text{process}(w)$}
+    \If{item $= \text{``\textbackslash n''}$}
+        \State Flush $G$; advance $\mathcal{B}$ with labels
+        \If{$\exists\, (\textsc{Accept},*,*,*) \in \mathcal{B}$}
+            \State $\ell_c \mathrel{+}= 1$
+        \EndIf
+        \State $\mathcal{B} \gets \textsc{SpawnSlot}(0,())$;\;
+               $\text{mk} \gets [\,]$
+    \ElsIf{item $= \text{``\textvisiblespace''}$}
+        \State Flush boundary; advance $\mathcal{B}$
+    \Else
+        \State Feed syllable to $G$; advance $\mathcal{B}$
+    \EndIf
+\EndFor
+\State Flush remaining; advance $\mathcal{B}$
+\State $n \gets |\text{mk}|$
+\State $\text{acc} \gets \exists\,(\textsc{Accept},*,*,*)
+       \in \mathcal{B} \,\wedge\, n \in \{11{\ldots}15\}$
+\State $\text{alive} \gets \textsc{IsReachable}(\mathcal{B}, n)
+       \vee (\ell_c \ge 2)$
+\State \Return $(\text{alive},\; \ell_c,\; \text{acc},\; n,\; \mathcal{B})$
+\end{algorithmic}
+\end{algorithm}
+
+
+% --------------------------------------------------------------------
+% ALGORITHM 3: BuildGanaMask
+% --------------------------------------------------------------------
+
+\begin{algorithm}[H]
+\caption{\textsc{BuildGanaMask}: Dynamic NFA Token Mask}
+\label{alg:build-mask}
+\scriptsize
+\begin{algorithmic}[1]
+\Require $\sigma$: \textsc{CompositeState} snapshot;\;
+         $\mathcal{V}_{\text{tel}} = (\text{ids}, \text{texts})$
+\Ensure $\mathcal{V}_v$: token IDs keeping all NFAs alive
+\State $\mathcal{V}_v \gets \emptyset$
+\For{$(\text{tid}, \text{txt}) \in
+     \text{zip}(\text{ids}, \text{texts})$}
+    \State $\mathcal{S}' \gets
+           \textsc{FromSnapshot}(\sigma)$
+    \State $\mathcal{S}'.\text{feed\_token}(\text{txt})$;\;
+           $\mathcal{S}'.\text{flush}()$
+    \If{$\mathcal{S}'.\text{is\_alive}()$}
+        \Comment{ga\d{n}a $\wedge$ pr\=asa $\wedge$ yati}
+        \State $\mathcal{V}_v \gets \mathcal{V}_v
+               \cup \{\text{tid}\}$
+    \EndIf
+\EndFor
+\State \Return $\mathcal{V}_v$
+\end{algorithmic}
+\end{algorithm}
+
+
+% --------------------------------------------------------------------
+% ALGORITHM 4: Rejection Sampling
+% --------------------------------------------------------------------
+
+\begin{algorithm}[H]
+\caption{Strategy~1: Rejection Sampling}
+\label{alg:rejection-sampling}
+\scriptsize
+\begin{algorithmic}[1]
+\Require $\theta$, $\mathcal{T}$, $\tau$, $K$, $p$
+\Ensure Two-line Dwipada poem text
+\State $\mathbf{y} \gets [\,]$;\; $\ell \gets 0$
+\While{$\ell < 2$}
+    \State $\boldsymbol{\pi} \gets
+           \text{softmax}(\theta(\mathbf{y})/\tau)$;\;
+           sort desc
+    \State $\text{st} \gets \textsc{AnalyzeText}(
+           \textsc{StripPrefix}(
+           \mathcal{T}.\text{dec}(\mathbf{y})))$
+    \State $\ell \gets \text{st}.\ell_c$;\;
+           \textbf{if} $\ell \ge 2$ \textbf{then break}
+    \State \Comment{\textit{Force newline on completion/overshoot}}
+    \If{$\text{st.acc} \wedge \text{st}.n \in \{11{\ldots}15\}$}
+        \State $\mathbf{y} \gets \mathbf{y} \,\|\,
+               [\textsc{NL}]$;\; \textbf{continue}
+    \EndIf
+    \If{$\text{st}.n > 15 \wedge \neg\text{st.acc}$}
+        \State $\mathbf{y} \gets \mathbf{y} \,\|\,
+               [\textsc{NL}]$;\; \textbf{continue}
+    \EndIf
+    \State $K' \gets K$;\;
+           \textbf{if} $\text{st}.n \ge 8$
+           \textbf{then} $K' \gets 2K$
+    \State \Comment{\textit{Rejection loop over top-$K'$}}
+    \State $\mathcal{V}_{\text{acc}} \gets \emptyset$;\;
+           $\mathcal{V}_{\text{alv}} \gets \emptyset$
+    \For{$k = 1$ \textbf{to} $K'$}
+        \State $c \gets \pi_k$;\;
+               \textbf{if} $\boldsymbol{\pi}(c) < 10^{-8}$
+               \textbf{then break}
+        \State \textbf{if} $c = \textsc{Eos} \wedge
+               \ell \ge 2$ \textbf{then} select $c$;
+               \textbf{break}
+        \State \textbf{if} $\neg\textsc{IsTelugu}(
+               \mathcal{T}.\text{dec}(c))$
+               \textbf{then continue}
+        \State $r \gets \textsc{AnalyzeText}(
+               \textsc{StripPrefix}(
+               \mathcal{T}.\text{dec}(
+               \mathbf{y} \,\|\, [c])))$
+               \Comment{full re-analysis}
+        \State \textbf{if} $\neg r.\text{alive}$
+               \textbf{then continue}
+        \State \textbf{if} ``\textbackslash n''
+               $\in \mathcal{T}.\text{dec}(c)
+               \wedge r.\ell_c \le \ell$
+               \textbf{then continue}
+        \State \textbf{if} $r.n > 15 \wedge
+               \neg r.\text{acc}$
+               \textbf{then continue}
+        \If{$r.\text{acc} \wedge r.n
+            \in \{11{\ldots}15\}$}
+            \State $\mathcal{V}_{\text{acc}} \gets
+                   \mathcal{V}_{\text{acc}} \cup
+                   \{(c, \boldsymbol{\pi}(c))\}$
+        \EndIf
+        \State $\mathcal{V}_{\text{alv}} \gets
+               \mathcal{V}_{\text{alv}} \cup
+               \{(c, \boldsymbol{\pi}(c))\}$
+        \State \textbf{if} $|\mathcal{V}_{\text{acc}}|
+               \ge 5$ \textbf{then break}
+    \EndFor
+    \State \Comment{\textit{Select from best candidate set}}
+    \State $\mathcal{V} \gets
+           \mathcal{V}_{\text{acc}}$ if $\neq\emptyset$,
+           else $\mathcal{V}_{\text{alv}}$
+    \If{$\mathcal{V} \ne \emptyset$}
+        \State Top-$p$ filter;\;
+               $\text{chosen} \gets$ weighted sample
+               from $\mathcal{V}$
+    \Else
+        \State \Comment{Exhaustive fallback (500 tokens)}
+        \For{$k = 1$ \textbf{to} $500$}
+            \If{$\textsc{IsTelugu}(\mathcal{T}.\text{dec}(\pi_k))$}
+                \State $r \gets \textsc{AnalyzeText}(
+                       \textsc{StripPrefix}(
+                       \mathcal{T}.\text{dec}(
+                       \mathbf{y} \,\|\, [\pi_k])))$
+                \If{$r.\text{alive} \wedge
+                    (r.n \le 15 \vee r.\text{acc})$}
+                    \State $\text{chosen} \gets \pi_k$;\;
+                           \textbf{break}
+                \EndIf
+            \EndIf
+        \EndFor
+    \EndIf
+    \State $\mathbf{y} \gets \mathbf{y} \,\|\,
+           [\text{chosen}]$
+\EndWhile
+\State \Return $\mathcal{T}.\text{dec}(\mathbf{y})$
+\end{algorithmic}
+\end{algorithm}
+
+
+% --------------------------------------------------------------------
+% ALGORITHM 5: Logit Masking with Backtracking
+% --------------------------------------------------------------------
+
+\begin{algorithm}[H]
+\caption{Strategy~2: Logit Masking with Backtracking}
+\label{alg:masking-backtrack}
+\scriptsize
+\begin{algorithmic}[1]
+\Require $\theta$, $\mathcal{T}$, $\mathcal{V}_{\text{tel}}$,
+         $\mathbf{M}_s$, $\tau$,
+         $\tau_{\max}{=}1.2$,
+         $\Delta\tau{=}0.15$, $D{=}6$
+\Ensure Two-line Dwipada poem text
+\State $\mathbf{y} \gets [\,]$;\;
+       $\mathcal{S} \gets$ new \textsc{CompositeState}();\;
+       $\ell \gets 0$;\; $\tau_c \gets \tau$
+\State $\mathcal{C} \gets [\,]$;\;
+       $b \gets 0$;\; $b_c \gets 0$;\; $d \gets 0$
+       \Comment{ring buffer, counters}
+\For{$t = 1$ \textbf{to} $T_{\max}$}
+    \If{$\ell \ge 2$} \textbf{break} \EndIf
+    \State $\mathbf{z} \gets \theta(\mathbf{y})/\tau_c
+           + \mathbf{M}_s$
+           \Comment{static mask}
+    \State \Comment{\textit{Checkpoint every 3 tokens}}
+    \If{$t \bmod 3 = 0$}
+        \State $\mathcal{C}.\text{push}(t,\;
+               \mathcal{S}.\text{snap}(),\;
+               |\mathbf{y}|,\; \ell,\; \tau_c)$
+        \State \textbf{if} $|\mathcal{C}| > 15$
+               \textbf{then}
+               $\mathcal{C} \gets \mathcal{C}[-15:]$
+    \EndIf
+    \State \Comment{\textit{Force newline on ACCEPT}}
+    \State $\mathcal{S}_f \gets \text{clone}(\mathcal{S})$;\;
+           $\mathcal{S}_f.\text{flush}()$
+    \If{$\mathcal{S}_f.\text{has\_accept}()$}
+        \State $\mathcal{S}.\text{feed}(
+               \text{``\textbackslash n''})$;\;
+               $\ell \gets \mathcal{S}.\ell_c$;\;
+               $\mathbf{y} \gets \mathbf{y} \,\|\,
+               [\textsc{NL}]$
+        \State $b_c \gets 0$;\; \textbf{continue}
+    \EndIf
+    \State \Comment{\textit{Build dynamic NFA mask}}
+    \State $\sigma \gets \mathcal{S}.\text{snap}()$;\;
+           $\mathcal{V}_v \gets
+           \textsc{BuildGanaMask}(\sigma,
+           \mathcal{V}_{\text{tel}})$
+    \State \Comment{\textit{Filter spurious newlines}}
+    \If{$\textsc{NL} \in \mathcal{V}_v$}
+        \State $\mathcal{S}' \gets
+               \textsc{FromSnap}(\sigma)$;\;
+               $\mathcal{S}'.\text{feed}(
+               \text{``\textbackslash n''})$
+        \If{$\mathcal{S}'.\ell_c \le \ell$}
+            \State $\mathcal{V}_v \gets
+                   \mathcal{V}_v \setminus
+                   \{\textsc{NL}\}$
+        \EndIf
+    \EndIf
+    \State \Comment{\textit{Backtrack if dead end}}
+    \If{$(|\mathcal{V}_v| < 3 \;\vee\;
+         \mathcal{S}_f.n > 15)$
+         \textbf{and} $|\mathcal{C}| > 0$
+         \textbf{and} $b < 30$}
+        \State $b \mathrel{+}= 1$;\;
+               $b_c \mathrel{+}= 1$
+        \State Pop $\min(b_c, |\mathcal{C}|)$
+               from $\mathcal{C}$
+        \State Restore $\mathcal{S}, \mathbf{y},
+               \ell, t$ from last popped
+        \State $\tau_c \gets \min(\text{ckpt}.\tau
+               + \Delta\tau \cdot b_c,\;
+               \tau_{\max})$
+               \Comment{escalate}
+        \State $d \gets D$;\;
+               $\textsc{Seed}(\text{seed}
+               + b \cdot 1337)$;\;
+               \textbf{continue}
+    \EndIf
+    \State \Comment{\textit{Apply dynamic mask and sample}}
+    \State $\mathbf{M}_d[i] \gets 0$ if
+           $i \in \mathcal{V}_v$, else $-\infty$
+    \State $\mathbf{z} \gets \mathbf{z} + \mathbf{M}_d$;\;
+           $\boldsymbol{\pi} \gets
+           \text{softmax}(\mathbf{z})$
+    \State $\text{chosen} \gets
+           \text{sample}(\boldsymbol{\pi}, p)$
+    \State \Comment{\textit{Commit token}}
+    \State $\mathbf{y} \gets \mathbf{y} \,\|\,
+           [\text{chosen}]$;\;
+           $\mathcal{S}.\text{feed\_token}(
+           \mathcal{T}.\text{dec}(\text{chosen}))$
+    \State $\ell \gets \mathcal{S}.\ell_c$;\;
+           $b_c \gets 0$
+    \State \Comment{\textit{Temperature decay}}
+    \If{$d > 0$}
+        \State $d \mathrel{-}= 1$;\;
+               \textbf{if} $d = 0$
+               \textbf{then} $\tau_c \gets \tau$
+    \EndIf
+\EndFor
+\State \Return $\mathcal{T}.\text{dec}(\mathbf{y})$
+\end{algorithmic}
+\end{algorithm}
+
+
+% --------------------------------------------------------------------
+% ALGORITHM 6: Hybrid (Mask + Rejection)
+% --------------------------------------------------------------------
+
+\begin{algorithm}[H]
+\caption{Strategy~3: Hybrid (Mask + Rejection)}
+\label{alg:hybrid}
+\scriptsize
+\begin{algorithmic}[1]
+\Require $\theta$, $\mathcal{T}$, $\mathcal{V}_{\text{tel}}$,
+         $\mathbf{M}_s$, $\tau$, $K_r{=}100$
+\Ensure Two-line Dwipada poem text
+\State $\mathbf{y} \gets [\,]$;\;
+       $\mathcal{S} \gets$ new \textsc{CompositeState}();\;
+       $\ell \gets 0$;\; $\tau_c \gets \tau$
+\State $\mathcal{C} \gets [\,]$;\;
+       $b \gets 0$;\; $b_c \gets 0$
+\For{$t = 1$ \textbf{to} $T_{\max}$}
+    \If{$\ell \ge 2$} \textbf{break} \EndIf
+    \State $\mathbf{z} \gets \theta(\mathbf{y})/\tau_c
+           + \mathbf{M}_s$
+    \State \textbf{if} $t \bmod 3 = 0$
+           \textbf{then} checkpoint
+           $\mathcal{C}$ (cap 15)
+    \State \Comment{\textit{Force newline on ACCEPT}}
+    \State $\mathcal{S}_f \gets \text{clone}(\mathcal{S})$;\;
+           $\mathcal{S}_f.\text{flush}()$
+    \If{$\mathcal{S}_f.\text{has\_accept}()$}
+        \State $\mathcal{S}.\text{feed}(
+               \text{``\textbackslash n''})$;\;
+               $\ell \gets \mathcal{S}.\ell_c$;\;
+               $\mathbf{y} \gets \mathbf{y} \,\|\,
+               [\textsc{NL}]$;\;
+               $b_c \gets 0$;\;
+               \textbf{continue}
+    \EndIf
+    \State \Comment{\textit{Build + apply dynamic NFA mask}}
+    \State $\sigma \gets \mathcal{S}.\text{snap}()$;\;
+           $\mathcal{V}_v \gets
+           \textsc{BuildGanaMask}(\sigma,
+           \mathcal{V}_{\text{tel}})$
+    \State Filter spurious newlines
+           (as Alg.~\ref{alg:masking-backtrack})
+    \State $\mathbf{M}_d[i] \gets 0$ if
+           $i \in \mathcal{V}_v$, else $-\infty$;\;
+           $\mathbf{z} \gets \mathbf{z} + \mathbf{M}_d$
+    \State $\boldsymbol{\pi} \gets
+           \text{softmax}(\mathbf{z})$;\;
+           sort desc
+    \State \Comment{\textit{NFA rejection over top-$K_r$
+           from masked dist.}}
+    \State $\mathcal{V}_{\text{acc}} \gets \emptyset$;\;
+           $\mathcal{V}_{\text{alv}} \gets \emptyset$
+    \For{$k = 1$ \textbf{to} $K_r$}
+        \State $c \gets \pi_k$;\;
+               \textbf{if} $\boldsymbol{\pi}(c) < 10^{-8}$
+               \textbf{then break}
+        \State \textbf{if} $c = \textsc{Eos} \wedge
+               \ell \ge 2$ \textbf{then} select $c$;
+               \textbf{break}
+        \State \Comment{Clone state, simulate candidate}
+        \State $\mathcal{S}' \gets
+               \textsc{FromSnap}(\sigma)$
+        \State \textbf{for each} ch $\in
+               \mathcal{T}.\text{dec}(c)$
+               \textbf{do} $\mathcal{S}'.\text{feed}(
+               \text{ch})$
+        \State $\mathcal{S}'_f \gets
+               \text{clone}(\mathcal{S}')$;\;
+               $\mathcal{S}'_f.\text{flush}()$
+        \State \textbf{if} $\neg\mathcal{S}'_f
+               .\text{alive}()$
+               \textbf{then continue}
+        \State \textbf{if} ``\textbackslash n''
+               $\in \mathcal{T}.\text{dec}(c) \wedge
+               \mathcal{S}'.\ell_c \le \ell$
+               \textbf{then continue}
+        \State \textbf{if} $\mathcal{S}'_f.n > 15
+               \wedge \neg\mathcal{S}'_f.\text{acc}()$
+               \textbf{then continue}
+        \If{$\mathcal{S}'_f.\text{has\_accept}()$}
+            \State $\mathcal{V}_{\text{acc}} \gets
+                   \mathcal{V}_{\text{acc}} \cup
+                   \{(c, \boldsymbol{\pi}(c))\}$
+        \EndIf
+        \State $\mathcal{V}_{\text{alv}} \gets
+               \mathcal{V}_{\text{alv}} \cup
+               \{(c, \boldsymbol{\pi}(c))\}$
+        \State \textbf{if} $|\mathcal{V}_{\text{acc}}|
+               \ge 3$ \textbf{then break}
+        \State \textbf{if} $|\mathcal{V}_{\text{alv}}|
+               \ge 10 \wedge
+               \mathcal{V}_{\text{acc}} = \emptyset$
+               \textbf{then break}
+    \EndFor
+    \State \Comment{\textit{Select or backtrack}}
+    \State $\mathcal{V} \gets
+           \mathcal{V}_{\text{acc}}$ if $\neq\emptyset$,
+           else $\mathcal{V}_{\text{alv}}$
+    \If{$\mathcal{V} \ne \emptyset$}
+        \State Normalize;\;
+               $\text{chosen} \gets$ weighted sample
+    \ElsIf{$|\mathcal{C}| > 0 \wedge b < 30$}
+        \State $b \mathrel{+}= 1$;\;
+               $b_c \mathrel{+}= 1$;\;
+               pop $\min(b_c, |\mathcal{C}|)$
+               from $\mathcal{C}$
+        \State Restore $\mathcal{S}, \mathbf{y},
+               \ell, t$;\;
+               $\tau_c \gets \min(\text{ckpt}.\tau
+               {+} \Delta\tau {\cdot} b_c,\,
+               \tau_{\max})$
+        \State $\textsc{Seed}(\text{seed}
+               {+} b {\cdot} 1337)$;\;
+               \textbf{continue}
+    \Else
+        \State $\text{chosen} \gets \pi_1$
+               \Comment{last resort}
+    \EndIf
+    \State $\mathbf{y} \gets \mathbf{y} \,\|\,
+           [\text{chosen}]$;\;
+           $\mathcal{S}.\text{feed\_token}(
+           \mathcal{T}.\text{dec}(\text{chosen}))$;\;
+           $\ell \gets \mathcal{S}.\ell_c$;\;
+           $b_c \gets 0$
+\EndFor
+\State \Return $\mathcal{T}.\text{dec}(\mathbf{y})$
+\end{algorithmic}
+\end{algorithm}
+
+
+% --------------------------------------------------------------------
+% COMPARISON TABLE
+% --------------------------------------------------------------------
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Comparison of constrained decoding strategies.}
+\label{tab:strategy-comparison}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Property}
+    & \textbf{Rejection}
+    & \textbf{Masking}
+    & \textbf{Hybrid} \\
+    & (Alg~\ref{alg:rejection-sampling})
+    & (Alg~\ref{alg:masking-backtrack})
+    & (Alg~\ref{alg:hybrid}) \\
+\midrule
+State track.
+    & Stateless
+    & Incremental
+    & Incremental \\
+Per-step
+    & $O(KL)$
+    & $O(|\mathcal{V}_t|)$
+    & $O(|\mathcal{V}_t|{+}K_r)$ \\
+Seq.\ dep.
+    & Yes
+    & No
+    & No \\
+Recovery
+    & Exhaust.
+    & Backtrack
+    & Backtrack \\
+Temp.\ adapt.
+    & None
+    & Escalation
+    & Escalation \\
+Constraints
+    & Ga\d{n}a
+    & All 3
+    & All 3 \\
+\bottomrule
+\end{tabular}
+\end{table}

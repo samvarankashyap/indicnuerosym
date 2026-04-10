@@ -1,0 +1,354 @@
+{
+  "model": "google/gemma-4-E2B-it",
+  "method": "chandomitra_constrained_masking",
+  "quantization": "4-bit NF4",
+  "total_poems": 20,
+  "valid_poems": 5,
+  "valid_rate": 25.0,
+  "avg_score": 70.6,
+  "avg_time_per_poem": 2.3,
+  "avg_tokens_per_poem": 33.0,
+  "total_time": 59.0,
+  "poems": [
+    {
+      "topic": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+      "poem": "తల్లి ప్రేమ జగ అతి మధురం కనువి\nతల్లి ప్రేమ జగ అతి మధురం కనువి",
+      "score": 100.0,
+      "is_valid": true,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 100.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 2.01642107963562,
+      "tokens_generated": 24
+    },
+    {
+      "topic": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+      "poem": "సముద సముద్రం           ించ నగ కొన\nలంక                              వ్యులల్ అయ్య డే స్వచ్చు రెక్త",
+      "score": 52.5,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 0.0,
+        "yati_average": 50.0
+      },
+      "elapsed": 4.92206072807312,
+      "tokens_generated": 64
+    },
+    {
+      "topic": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను",
+      "poem": "శ్రీరాముడు లవన్‌   విజయుడు సూర్య నమ\nసీతాన్   మొదించాడు నిజలీదనంక",
+      "score": 65.0,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 2.1557416915893555,
+      "tokens_generated": 31
+    },
+    {
+      "topic": "గురువు శిష్యునకు విద్యను బోధించెను",
+      "poem": "గురుడు బోధించెన్ లకు జ్ఞనమును కను\nశిష్యు  ద్దిపాటు జాగ్రఫ తే నిజరుగు",
+      "score": 52.5,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 0.0,
+        "yati_average": 50.0
+      },
+      "elapsed": 2.1291682720184326,
+      "tokens_generated": 30
+    },
+    {
+      "topic": "సూర్యోదయమున ప్రకృతి అందముగా వెలుగును",
+      "poem": "సూర్యోదయం వెలుస్తున ప్రకృతి కను\nనగ         ‌ల చూడ అనేక నెలవరకు క్ష గు",
+      "score": 65.0,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 2.3558380603790283,
+      "tokens_generated": 32
+    },
+    {
+      "topic": "కృష్ణుడు అర్జునునకు గీతోపదేశము చేసెను",
+      "poem": "కృష్ణుడు గీతోప్యకరిచి అర్జునుని\nజ్ఞానోద్                కిచిత కులెష్యమ్ముార్ష్ట్ర యాశ్ తు",
+      "score": 65.0,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 3.681123971939087,
+      "tokens_generated": 47
+    },
+    {
+      "topic": "నదులు పర్వతముల నుండి సముద్రమునకు ప్రవహించును",
+      "poem": "నదులు పర్వత  వలన సముద్రమున ప\nసము     ంబ డొక్కములన్నద్ విలువయి",
+      "score": 65.0,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 2.362222671508789,
+      "tokens_generated": 32
+    },
+    {
+      "topic": "విజయమునకు కఠోర పరిశ్రమ అవసరము",
+      "poem": "కఠిన కృషి పిొ ందుకు విజయము కను\nకష్టే టకురి వద్ద పథ తమ తెలుగు",
+      "score": 65.0,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 1.8265831470489502,
+      "tokens_generated": 25
+    },
+    {
+      "topic": "రావణుడు సీతను అపహరించి లంకకు తీసుకొనిపోయెను",
+      "poem": "రావణుడు కదల్  వలన సీతను పది\nలంకై         తి ఆయనరుందు కే దగ్ లె",
+      "score": 65.0,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 2.461416244506836,
+      "tokens_generated": 35
+    },
+    {
+      "topic": "భగవంతుడు సర్వ ప్రాణులను రక్షించును",
+      "poem": "సర్వ ప్రాణమును  వచ్చును భగవాను\nరక్ష్యే     మహా వరకు సెల అంది తమ",
+      "score": 52.5,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 0.0,
+        "yati_average": 50.0
+      },
+      "elapsed": 1.9397408962249756,
+      "tokens_generated": 29
+    },
+    {
+      "topic": "పుస్తకం జ్ఞానాన్ని ఇచ్చే నేస్తం",
+      "poem": "పుస్తకం జ్ఞానాన్ని పంచే మితరుడు\nమాటై           మికెల నాకు బాధ సహ్యాన్ని",
+      "score": 65.0,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 2.259906053543091,
+      "tokens_generated": 33
+    },
+    {
+      "topic": "ప్రకృతి అందాలు మనసును రంజింపజేయును",
+      "poem": "పచ్చని చెలియై          లువలు కనుల కన\nమధు  కళ చక్క క్ాలయ కాల అంశ",
+      "score": 65.0,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 2.3260576725006104,
+      "tokens_generated": 35
+    },
+    {
+      "topic": "విద్య వల్ల జ్ఞానం లభించును",
+      "poem": "విద్యల వలన            జ్ఞాపకము లభించు\nజ్ఞానో     లలో గోస్సు సీమని మండ",
+      "score": 65.0,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 2.4149279594421387,
+      "tokens_generated": 36
+    },
+    {
+      "topic": "నది ప్రవాహం అందమైనది",
+      "poem": "నది ప్రవాహం మృద్ అనుభవం కనువిచ\nఅందమైనది నీ డియోలొకన సత",
+      "score": 100.0,
+      "is_valid": true,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 100.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 1.4653308391571045,
+      "tokens_generated": 30
+    },
+    {
+      "topic": "సముద్రము విశాలమైనది అనంతమైనది",
+      "poem": "సముదరమునె ప్రదేశము అనంతమున\nఅన్రీ సి చి మరిత్స దృష్టిచె గొప్ప",
+      "score": 52.5,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 0.0,
+        "yati_average": 50.0
+      },
+      "elapsed": 1.9576737880706787,
+      "tokens_generated": 27
+    },
+    {
+      "topic": "చంద్రుడు రాత్రిని వెలిగించును",
+      "poem": "చంద్రుడు రాత్రిని చరితాడు నక్ష\nచంద్రుడు వెలుగు కాశమున హరితడు",
+      "score": 100.0,
+      "is_valid": true,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 100.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 1.3203341960906982,
+      "tokens_generated": 27
+    },
+    {
+      "topic": "దేశభక్తి మనకు ధర్మము",
+      "poem": "దేశమంటే మమత మనలో నిలిచి\nధర్మం            తు కలి దేవ నో తే కమి ఒ కి",
+      "score": 52.5,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 0.0,
+        "yati_average": 50.0
+      },
+      "elapsed": 2.5659077167510986,
+      "tokens_generated": 35
+    },
+    {
+      "topic": "స్నేహం జీవితంలో అమూల్యమైనది",
+      "poem": "స్నేహం సదా అమూల్ సేయది నా హ\nస్నేహం సదా అమూల్ సేయది నా హ",
+      "score": 100.0,
+      "is_valid": true,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 100.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 1.3711395263671875,
+      "tokens_generated": 28
+    },
+    {
+      "topic": "కాలము ఎవరికొరకు ఆగదు",
+      "poem": "కాలము ఎవరిొరకు నిలిచిపోదు\nకాలము ఎవరిొరకు నిలిచిపోదు",
+      "score": 100.0,
+      "is_valid": true,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 100.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 1.231982707977295,
+      "tokens_generated": 24
+    },
+    {
+      "topic": "ధర్మము సత్యము కలిసి నడచును",
+      "poem": "ధర్మ సత్యం కలిది నడకలోన\nసత్యం          దవహిత కావ కళ ఉండకొని",
+      "score": 65.0,
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "elapsed": 2.288236141204834,
+      "tokens_generated": 33
+    }
+  ]
+}

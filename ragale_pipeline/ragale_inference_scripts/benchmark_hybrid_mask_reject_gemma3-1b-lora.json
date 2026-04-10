@@ -1,0 +1,6254 @@
+{
+  "label": "gemma3-1b-lora -- hybrid_mask_reject",
+  "method": "hybrid_mask_reject",
+  "model": "gemma3-1b-lora",
+  "constrained": true,
+  "total_poems": 102,
+  "total_valid": 102,
+  "poem_accuracy": 100.0,
+  "total_lines": 204,
+  "valid_lines": 204,
+  "line_accuracy": 100.0,
+  "total_time": 207.07660102844238,
+  "per_topic": {
+    "Bubbles": {
+      "total": 34,
+      "valid": 34,
+      "rate": 100.0
+    },
+    "Moon": {
+      "total": 34,
+      "valid": 34,
+      "rate": 100.0
+    },
+    "Rain": {
+      "total": 34,
+      "valid": 34,
+      "rate": 100.0
+    }
+  },
+  "poems": [
+    {
+      "topic": "Bubbles",
+      "seed": 42,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕನಸು ಮುಡಿಯು ಕದನ ಹಸಿವಾ\nಒಲವನು ಕಡಲನು ಮಧುರವಾ\n",
+      "poem_lines": [
+        "ಕನಸು ಮುಡಿಯು ಕದನ ಹಸಿವಾ",
+        "ಒಲವನು ಕಡಲನು ಮಧುರವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ನ ಸು ಮು ಡಿ ಯು ಕ ದ ನ ಹ ಸಿ ವಾ",
+          "syllables": [
+            "ಕ",
+            "ನ",
+            "ಸು",
+            "ಮು",
+            "ಡಿ",
+            "ಯು",
+            "ಕ",
+            "ದ",
+            "ನ",
+            "ಹ",
+            "ಸಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಲ ವ ನು ಕ ಡ ಲ ನು ಮ ಧು ರ ವಾ",
+          "syllables": [
+            "ಒ",
+            "ಲ",
+            "ವ",
+            "ನು",
+            "ಕ",
+            "ಡ",
+            "ಲ",
+            "ನು",
+            "ಮ",
+            "ಧು",
+            "ರ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.6382856369018555,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 49,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕನಸು ಮುಗಿಲ ನಡುವೆ ಸುಳಿಯಾ\nಹಸನ ದಣಿವ ಕರಗ ನಲಿವಾ\n",
+      "poem_lines": [
+        "ಕನಸು ಮುಗಿಲ ನಡುವೆ ಸುಳಿಯಾ",
+        "ಹಸನ ದಣಿವ ಕರಗ ನಲಿವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ನ ಸು ಮು ಗಿ ಲ ನ ಡು ವೆ ಸು ಳಿ ಯಾ",
+          "syllables": [
+            "ಕ",
+            "ನ",
+            "ಸು",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಸು",
+            "ಳಿ",
+            "ಯಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಹ ಸ ನ ದ ಣಿ ವ ಕ ರ ಗ ನ ಲಿ ವಾ",
+          "syllables": [
+            "ಹ",
+            "ಸ",
+            "ನ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ರ",
+            "ಗ",
+            "ನ",
+            "ಲಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.96040678024292,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 56,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಸರಿಯು ತಿರುವ ಮುಗಿಲ ಕಡಲಾ\nಹರಿಯು ತಿರುವ ಮುಗಿಲ ಕಡಲಾ\n",
+      "poem_lines": [
+        "ಸರಿಯು ತಿರುವ ಮುಗಿಲ ಕಡಲಾ",
+        "ಹರಿಯು ತಿರುವ ಮುಗಿಲ ಕಡಲಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಸ ರಿ ಯು ತಿ ರು ವ ಮು ಗಿ ಲ ಕ ಡ ಲಾ",
+          "syllables": [
+            "ಸ",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಕ",
+            "ಡ",
+            "ಲಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಹ ರಿ ಯು ತಿ ರು ವ ಮು ಗಿ ಲ ಕ ಡ ಲಾ",
+          "syllables": [
+            "ಹ",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಕ",
+            "ಡ",
+            "ಲಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8535172939300537,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 63,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಪವನ ಗಗನಾ ಗಗನಾ ನಭವಾ\nಮಮತೆ ಕಡೆಗೆ ಮಿನುಗು ಬರುವಾ\n",
+      "poem_lines": [
+        "ಪವನ ಗಗನಾ ಗಗನಾ ನಭವಾ",
+        "ಮಮತೆ ಕಡೆಗೆ ಮಿನುಗು ಬರುವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಪ ವ ನ ಗ ಗ ನಾ ಗ ಗ ನಾ ನ ಭ ವಾ",
+          "syllables": [
+            "ಪ",
+            "ವ",
+            "ನ",
+            "ಗ",
+            "ಗ",
+            "ನಾ",
+            "ಗ",
+            "ಗ",
+            "ನಾ",
+            "ನ",
+            "ಭ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I U I I U I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮ ಮ ತೆ ಕ ಡೆ ಗೆ ಮಿ ನು ಗು ಬ ರು ವಾ",
+          "syllables": [
+            "ಮ",
+            "ಮ",
+            "ತೆ",
+            "ಕ",
+            "ಡೆ",
+            "ಗೆ",
+            "ಮಿ",
+            "ನು",
+            "ಗು",
+            "ಬ",
+            "ರು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1096789836883545,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 70,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಸಿರು ಮಧುರ ದೆಡೆಗೆ ಅರಿವೂ\nಕೊಳವ ಮರೆಯ ಹೊಳಪು ಸವಿಯೂ\n",
+      "poem_lines": [
+        "ಹಸಿರು ಮಧುರ ದೆಡೆಗೆ ಅರಿವೂ",
+        "ಕೊಳವ ಮರೆಯ ಹೊಳಪು ಸವಿಯೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಸಿ ರು ಮ ಧು ರ ದೆ ಡೆ ಗೆ ಅ ರಿ ವೂ",
+          "syllables": [
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಮ",
+            "ಧು",
+            "ರ",
+            "ದೆ",
+            "ಡೆ",
+            "ಗೆ",
+            "ಅ",
+            "ರಿ",
+            "ವೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕೊ ಳ ವ ಮ ರೆ ಯ ಹೊ ಳ ಪು ಸ ವಿ ಯೂ",
+          "syllables": [
+            "ಕೊ",
+            "ಳ",
+            "ವ",
+            "ಮ",
+            "ರೆ",
+            "ಯ",
+            "ಹೊ",
+            "ಳ",
+            "ಪು",
+            "ಸ",
+            "ವಿ",
+            "ಯೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.103241205215454,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 77,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನಗುತ ಸುರಿಯು ತಿರುವ ಅಸುನೀ\nಹಗಲ ನಡುವೆ ಉರಿಯು ಬೆರಗೂ\n",
+      "poem_lines": [
+        "ನಗುತ ಸುರಿಯು ತಿರುವ ಅಸುನೀ",
+        "ಹಗಲ ನಡುವೆ ಉರಿಯು ಬೆರಗೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ಗು ತ ಸು ರಿ ಯು ತಿ ರು ವ ಅ ಸು ನೀ",
+          "syllables": [
+            "ನ",
+            "ಗು",
+            "ತ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಅ",
+            "ಸು",
+            "ನೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಹ ಗ ಲ ನ ಡು ವೆ ಉ ರಿ ಯು ಬೆ ರ ಗೂ",
+          "syllables": [
+            "ಹ",
+            "ಗ",
+            "ಲ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಉ",
+            "ರಿ",
+            "ಯು",
+            "ಬೆ",
+            "ರ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8598847389221191,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 84,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮುಗಿಲ ಸುರಿಯು ತಿರುತ ಕಣಿಯೇ\nಒಡಲ ನಡುವೆ ಬೆರೆಯು ತಿರುತಾ\n",
+      "poem_lines": [
+        "ಮುಗಿಲ ಸುರಿಯು ತಿರುತ ಕಣಿಯೇ",
+        "ಒಡಲ ನಡುವೆ ಬೆರೆಯು ತಿರುತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮು ಗಿ ಲ ಸು ರಿ ಯು ತಿ ರು ತ ಕ ಣಿ ಯೇ",
+          "syllables": [
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ತ",
+            "ಕ",
+            "ಣಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಡ ಲ ನ ಡು ವೆ ಬೆ ರೆ ಯು ತಿ ರು ತಾ",
+          "syllables": [
+            "ಒ",
+            "ಡ",
+            "ಲ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಬೆ",
+            "ರೆ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9749846458435059,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 91,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕಮಲ ಮುಗಿಲ ಸುರಿಯು ತಿರುವಾ\nಬೆರಗ ತರುವ ಮಧುರ ಸಿರಿಯೇ\n",
+      "poem_lines": [
+        "ಕಮಲ ಮುಗಿಲ ಸುರಿಯು ತಿರುವಾ",
+        "ಬೆರಗ ತರುವ ಮಧುರ ಸಿರಿಯೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ಮ ಲ ಮು ಗಿ ಲ ಸು ರಿ ಯು ತಿ ರು ವಾ",
+          "syllables": [
+            "ಕ",
+            "ಮ",
+            "ಲ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ರ ಗ ತ ರು ವ ಮ ಧು ರ ಸಿ ರಿ ಯೇ",
+          "syllables": [
+            "ಬೆ",
+            "ರ",
+            "ಗ",
+            "ತ",
+            "ರು",
+            "ವ",
+            "ಮ",
+            "ಧು",
+            "ರ",
+            "ಸಿ",
+            "ರಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1040055751800537,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 98,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಪವನ ಮರಳೀ ಹಗುರ ಪಟವೂ\nಮರಳೀ ನುಸಿಯು ಮುದದೀ ಸುಖವೂ\n",
+      "poem_lines": [
+        "ಪವನ ಮರಳೀ ಹಗುರ ಪಟವೂ",
+        "ಮರಳೀ ನುಸಿಯು ಮುದದೀ ಸುಖವೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಪ ವ ನ ಮ ರ ಳೀ ಹ ಗು ರ ಪ ಟ ವೂ",
+          "syllables": [
+            "ಪ",
+            "ವ",
+            "ನ",
+            "ಮ",
+            "ರ",
+            "ಳೀ",
+            "ಹ",
+            "ಗು",
+            "ರ",
+            "ಪ",
+            "ಟ",
+            "ವೂ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮ ರ ಳೀ ನು ಸಿ ಯು ಮು ದ ದೀ ಸು ಖ ವೂ",
+          "syllables": [
+            "ಮ",
+            "ರ",
+            "ಳೀ",
+            "ನು",
+            "ಸಿ",
+            "ಯು",
+            "ಮು",
+            "ದ",
+            "ದೀ",
+            "ಸು",
+            "ಖ",
+            "ವೂ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.19043231010437,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 105,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕವಿಯ ನಡುವೆ ಕುಣಿಯೀ ಕಣಿಯೇ\nನವನ ದಳದ ನಡುವೆ ನಲೆಯೇ\n",
+      "poem_lines": [
+        "ಕವಿಯ ನಡುವೆ ಕುಣಿಯೀ ಕಣಿಯೇ",
+        "ನವನ ದಳದ ನಡುವೆ ನಲೆಯೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ವಿ ಯ ನ ಡು ವೆ ಕು ಣಿ ಯೀ ಕ ಣಿ ಯೇ",
+          "syllables": [
+            "ಕ",
+            "ವಿ",
+            "ಯ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಕು",
+            "ಣಿ",
+            "ಯೀ",
+            "ಕ",
+            "ಣಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ವ ನ ದ ಳ ದ ನ ಡು ವೆ ನ ಲೆ ಯೇ",
+          "syllables": [
+            "ನ",
+            "ವ",
+            "ನ",
+            "ದ",
+            "ಳ",
+            "ದ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ನ",
+            "ಲೆ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9835450649261475,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 112,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕದನ ದಣಿವ ಕರಗಿ ನಲವಾ\nಬದದ ನಡುವೆ ಕುಣಿವ ನಲವಾ\n",
+      "poem_lines": [
+        "ಕದನ ದಣಿವ ಕರಗಿ ನಲವಾ",
+        "ಬದದ ನಡುವೆ ಕುಣಿವ ನಲವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ದ ನ ದ ಣಿ ವ ಕ ರ ಗಿ ನ ಲ ವಾ",
+          "syllables": [
+            "ಕ",
+            "ದ",
+            "ನ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ರ",
+            "ಗಿ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬ ದ ದ ನ ಡು ವೆ ಕು ಣಿ ವ ನ ಲ ವಾ",
+          "syllables": [
+            "ಬ",
+            "ದ",
+            "ದ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಕು",
+            "ಣಿ",
+            "ವ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.955456018447876,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 119,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನಲಿದು ಕುಣಿವ ಕಡಲ ಕವಿಯೇ\nಎಸಳ ಹಗುರ ಸುರಿಯು ನಲೆಯೇ\n",
+      "poem_lines": [
+        "ನಲಿದು ಕುಣಿವ ಕಡಲ ಕವಿಯೇ",
+        "ಎಸಳ ಹಗುರ ಸುರಿಯು ನಲೆಯೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ಲಿ ದು ಕು ಣಿ ವ ಕ ಡ ಲ ಕ ವಿ ಯೇ",
+          "syllables": [
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ಕು",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ಡ",
+            "ಲ",
+            "ಕ",
+            "ವಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಎ ಸ ಳ ಹ ಗು ರ ಸು ರಿ ಯು ನ ಲೆ ಯೇ",
+          "syllables": [
+            "ಎ",
+            "ಸ",
+            "ಳ",
+            "ಹ",
+            "ಗು",
+            "ರ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ನ",
+            "ಲೆ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1117942333221436,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 126,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮುಗಿಲ ನಗುತ ಮುಗಿಲ ನದಿಯೇ\nಜಗದ ನಡುವೆ ಕುಣಿವ ಕಡಲೂ\n",
+      "poem_lines": [
+        "ಮುಗಿಲ ನಗುತ ಮುಗಿಲ ನದಿಯೇ",
+        "ಜಗದ ನಡುವೆ ಕುಣಿವ ಕಡಲೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮು ಗಿ ಲ ನ ಗು ತ ಮು ಗಿ ಲ ನ ದಿ ಯೇ",
+          "syllables": [
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ನ",
+            "ಗು",
+            "ತ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ನ",
+            "ದಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಜ ಗ ದ ನ ಡು ವೆ ಕು ಣಿ ವ ಕ ಡ ಲೂ",
+          "syllables": [
+            "ಜ",
+            "ಗ",
+            "ದ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಕು",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ಡ",
+            "ಲೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8770248889923096,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 133,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಿಸಿಯು ಮುಗಿಲ ನಡುವೆ ಜಿಗಿಯಾ\nಕಡೆಯ ಹಸಿರು ಕಳೆಯುವ ಕವಾ\n",
+      "poem_lines": [
+        "ಬಿಸಿಯು ಮುಗಿಲ ನಡುವೆ ಜಿಗಿಯಾ",
+        "ಕಡೆಯ ಹಸಿರು ಕಳೆಯುವ ಕವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬಿ ಸಿ ಯು ಮು ಗಿ ಲ ನ ಡು ವೆ ಜಿ ಗಿ ಯಾ",
+          "syllables": [
+            "ಬಿ",
+            "ಸಿ",
+            "ಯು",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಜಿ",
+            "ಗಿ",
+            "ಯಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಡೆ ಯ ಹ ಸಿ ರು ಕ ಳೆ ಯು ವ ಕ ವಾ",
+          "syllables": [
+            "ಕ",
+            "ಡೆ",
+            "ಯ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಕ",
+            "ಳೆ",
+            "ಯು",
+            "ವ",
+            "ಕ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7820796966552734,
+      "tokens_generated": 23,
+      "backtracks": 0,
+      "mask_computations": 21
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 140,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕೊಳವ ಪದಗಳು ಮರದಿ ಬೆೆಯೇ\nಒಲವ ಮುಗಿಲ ಹಸಿರು ಬೆರೆದೇ\n",
+      "poem_lines": [
+        "ಕೊಳವ ಪದಗಳು ಮರದಿ ಬೆೆಯೇ",
+        "ಒಲವ ಮುಗಿಲ ಹಸಿರು ಬೆರೆದೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕೊ ಳ ವ ಪ ದ ಗ ಳು ಮ ರ ದಿ ಬೆ ಯೇ",
+          "syllables": [
+            "ಕೊ",
+            "ಳ",
+            "ವ",
+            "ಪ",
+            "ದ",
+            "ಗ",
+            "ಳು",
+            "ಮ",
+            "ರ",
+            "ದಿ",
+            "ಬೆ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಲ ವ ಮು ಗಿ ಲ ಹ ಸಿ ರು ಬೆ ರೆ ದೇ",
+          "syllables": [
+            "ಒ",
+            "ಲ",
+            "ವ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಬೆ",
+            "ರೆ",
+            "ದೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.866422176361084,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 147,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕಮಲ ದಣಿವ ಕಳೆಯುತಿಹುದೇ\nಪಸರ ಮರೆಯುತ ಮಣಿಯುತಿಲೇ\n",
+      "poem_lines": [
+        "ಕಮಲ ದಣಿವ ಕಳೆಯುತಿಹುದೇ",
+        "ಪಸರ ಮರೆಯುತ ಮಣಿಯುತಿಲೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ಮ ಲ ದ ಣಿ ವ ಕ ಳೆ ಯು ತಿ ಹು ದೇ",
+          "syllables": [
+            "ಕ",
+            "ಮ",
+            "ಲ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ಳೆ",
+            "ಯು",
+            "ತಿ",
+            "ಹು",
+            "ದೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ಸ ರ ಮ ರೆ ಯು ತ ಮ ಣಿ ಯು ತಿ ಲೇ",
+          "syllables": [
+            "ಪ",
+            "ಸ",
+            "ರ",
+            "ಮ",
+            "ರೆ",
+            "ಯು",
+            "ತ",
+            "ಮ",
+            "ಣಿ",
+            "ಯು",
+            "ತಿ",
+            "ಲೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.031251907348633,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 154,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನಗುತ ದಡದಿ ನಲಿದು ನಲಈ\nಕವಿಯ ನಡುವೆ ಬೆರೆತು ಮರಲೀ\n",
+      "poem_lines": [
+        "ನಗುತ ದಡದಿ ನಲಿದು ನಲಈ",
+        "ಕವಿಯ ನಡುವೆ ಬೆರೆತು ಮರಲೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ಗು ತ ದ ಡ ದಿ ನ ಲಿ ದು ನ ಲ ಈ",
+          "syllables": [
+            "ನ",
+            "ಗು",
+            "ತ",
+            "ದ",
+            "ಡ",
+            "ದಿ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ನ",
+            "ಲ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ವಿ ಯ ನ ಡು ವೆ ಬೆ ರೆ ತು ಮ ರ ಲೀ",
+          "syllables": [
+            "ಕ",
+            "ವಿ",
+            "ಯ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಬೆ",
+            "ರೆ",
+            "ತು",
+            "ಮ",
+            "ರ",
+            "ಲೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0213372707366943,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 161,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಗುರ ಮುಗಿಲ ದಣಿವ ಕಣವೂ\nಬಗುರ ಹಸಿರು ಕವಚ ನಭವೂ\n",
+      "poem_lines": [
+        "ಹಗುರ ಮುಗಿಲ ದಣಿವ ಕಣವೂ",
+        "ಬಗುರ ಹಸಿರು ಕವಚ ನಭವೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಗು ರ ಮು ಗಿ ಲ ದ ಣಿ ವ ಕ ಣ ವೂ",
+          "syllables": [
+            "ಹ",
+            "ಗು",
+            "ರ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ಣ",
+            "ವೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬ ಗು ರ ಹ ಸಿ ರು ಕ ವ ಚ ನ ಭ ವೂ",
+          "syllables": [
+            "ಬ",
+            "ಗು",
+            "ರ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಕ",
+            "ವ",
+            "ಚ",
+            "ನ",
+            "ಭ",
+            "ವೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.037487506866455,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 168,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಳದಿ ಅರಿವ ಮರದ ಹಸಿವಾ\nಒಳಗೆ ನಲಿದು ಬೆರೆಯುವ ಮಲಾ\n",
+      "poem_lines": [
+        "ಹಳದಿ ಅರಿವ ಮರದ ಹಸಿವಾ",
+        "ಒಳಗೆ ನಲಿದು ಬೆರೆಯುವ ಮಲಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಳ ದಿ ಅ ರಿ ವ ಮ ರ ದ ಹ ಸಿ ವಾ",
+          "syllables": [
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಅ",
+            "ರಿ",
+            "ವ",
+            "ಮ",
+            "ರ",
+            "ದ",
+            "ಹ",
+            "ಸಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಳ ಗೆ ನ ಲಿ ದು ಬೆ ರೆ ಯು ವ ಮ ಲಾ",
+          "syllables": [
+            "ಒ",
+            "ಳ",
+            "ಗೆ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ಬೆ",
+            "ರೆ",
+            "ಯು",
+            "ವ",
+            "ಮ",
+            "ಲಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.939657211303711,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 175,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕನಸು ಜಲದ ನಡುವೆ ಹಗುರೋ\nಬಗೆಯ ಸುರಿಯು ತಿರುವ ಬೆರಗೂ\n",
+      "poem_lines": [
+        "ಕನಸು ಜಲದ ನಡುವೆ ಹಗುರೋ",
+        "ಬಗೆಯ ಸುರಿಯು ತಿರುವ ಬೆರಗೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ನ ಸು ಜ ಲ ದ ನ ಡು ವೆ ಹ ಗು ರೋ",
+          "syllables": [
+            "ಕ",
+            "ನ",
+            "ಸು",
+            "ಜ",
+            "ಲ",
+            "ದ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಹ",
+            "ಗು",
+            "ರೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬ ಗೆ ಯ ಸು ರಿ ಯು ತಿ ರು ವ ಬೆ ರ ಗೂ",
+          "syllables": [
+            "ಬ",
+            "ಗೆ",
+            "ಯ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಬೆ",
+            "ರ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.854954481124878,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 182,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಳುಕು ಕರೆಯುತ ಇಡುತ ಮಲಾ\nನವಿಲ ಪರಿಯುತಿ ಸುಖವ ತಗೂ\n",
+      "poem_lines": [
+        "ಬಳುಕು ಕರೆಯುತ ಇಡುತ ಮಲಾ",
+        "ನವಿಲ ಪರಿಯುತಿ ಸುಖವ ತಗೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಳು ಕು ಕ ರೆ ಯು ತ ಇ ಡು ತ ಮ ಲಾ",
+          "syllables": [
+            "ಬ",
+            "ಳು",
+            "ಕು",
+            "ಕ",
+            "ರೆ",
+            "ಯು",
+            "ತ",
+            "ಇ",
+            "ಡು",
+            "ತ",
+            "ಮ",
+            "ಲಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ವಿ ಲ ಪ ರಿ ಯು ತಿ ಸು ಖ ವ ತ ಗೂ",
+          "syllables": [
+            "ನ",
+            "ವಿ",
+            "ಲ",
+            "ಪ",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ಸು",
+            "ಖ",
+            "ವ",
+            "ತ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0192649364471436,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 189,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕವಿಯೀ ಅರಳೀ ನಲಿದೀ ಮರುನಾ\nಬೆರಳುತಿ ಮುಖದಲಿ ಮರೆಸಿಲಾ\n",
+      "poem_lines": [
+        "ಕವಿಯೀ ಅರಳೀ ನಲಿದೀ ಮರುನಾ",
+        "ಬೆರಳುತಿ ಮುಖದಲಿ ಮರೆಸಿಲಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ವಿ ಯೀ ಅ ರ ಳೀ ನ ಲಿ ದೀ ಮ ರು ನಾ",
+          "syllables": [
+            "ಕ",
+            "ವಿ",
+            "ಯೀ",
+            "ಅ",
+            "ರ",
+            "ಳೀ",
+            "ನ",
+            "ಲಿ",
+            "ದೀ",
+            "ಮ",
+            "ರು",
+            "ನಾ"
+          ],
+          "markers": "I I U I I U I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ರ ಳು ತಿ ಮು ಖ ದ ಲಿ ಮ ರೆ ಸಿ ಲಾ",
+          "syllables": [
+            "ಬೆ",
+            "ರ",
+            "ಳು",
+            "ತಿ",
+            "ಮು",
+            "ಖ",
+            "ದ",
+            "ಲಿ",
+            "ಮ",
+            "ರೆ",
+            "ಸಿ",
+            "ಲಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.2682864665985107,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 196,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನನೆಯ ಪದರ ಸೆಳೆವ ಅರದಾ\nಕಡೆಯ ತೆರದಿ ಮರಳ ಕವಿಯಾ\n",
+      "poem_lines": [
+        "ನನೆಯ ಪದರ ಸೆಳೆವ ಅರದಾ",
+        "ಕಡೆಯ ತೆರದಿ ಮರಳ ಕವಿಯಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ನೆ ಯ ಪ ದ ರ ಸೆ ಳೆ ವ ಅ ರ ದಾ",
+          "syllables": [
+            "ನ",
+            "ನೆ",
+            "ಯ",
+            "ಪ",
+            "ದ",
+            "ರ",
+            "ಸೆ",
+            "ಳೆ",
+            "ವ",
+            "ಅ",
+            "ರ",
+            "ದಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಡೆ ಯ ತೆ ರ ದಿ ಮ ರ ಳ ಕ ವಿ ಯಾ",
+          "syllables": [
+            "ಕ",
+            "ಡೆ",
+            "ಯ",
+            "ತೆ",
+            "ರ",
+            "ದಿ",
+            "ಮ",
+            "ರ",
+            "ಳ",
+            "ಕ",
+            "ವಿ",
+            "ಯಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7202649116516113,
+      "tokens_generated": 22,
+      "backtracks": 0,
+      "mask_computations": 20
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 203,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕದನ ದಣಿವ ಕಲೆಯು ಬೆರೆತಾ\nಸದನ ಪರಿಯ ನುಡಿಯು ಬೆರೆತಾ\n",
+      "poem_lines": [
+        "ಕದನ ದಣಿವ ಕಲೆಯು ಬೆರೆತಾ",
+        "ಸದನ ಪರಿಯ ನುಡಿಯು ಬೆರೆತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ದ ನ ದ ಣಿ ವ ಕ ಲೆ ಯು ಬೆ ರೆ ತಾ",
+          "syllables": [
+            "ಕ",
+            "ದ",
+            "ನ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ಲೆ",
+            "ಯು",
+            "ಬೆ",
+            "ರೆ",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ದ ನ ಪ ರಿ ಯ ನು ಡಿ ಯು ಬೆ ರೆ ತಾ",
+          "syllables": [
+            "ಸ",
+            "ದ",
+            "ನ",
+            "ಪ",
+            "ರಿ",
+            "ಯ",
+            "ನು",
+            "ಡಿ",
+            "ಯು",
+            "ಬೆ",
+            "ರೆ",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.022099256515503,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 210,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಳದಿ ನಲಿದು ಕುಣಿವ ಮಮತಾ\nಮಳೆಯಾ ಅರಳುವ ಹಸಿರು ಪತಾ\n",
+      "poem_lines": [
+        "ಹಳದಿ ನಲಿದು ಕುಣಿವ ಮಮತಾ",
+        "ಮಳೆಯಾ ಅರಳುವ ಹಸಿರು ಪತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಳ ದಿ ನ ಲಿ ದು ಕು ಣಿ ವ ಮ ಮ ತಾ",
+          "syllables": [
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ಕು",
+            "ಣಿ",
+            "ವ",
+            "ಮ",
+            "ಮ",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮ ಳೆ ಯಾ ಅ ರ ಳು ವ ಹ ಸಿ ರು ಪ ತಾ",
+          "syllables": [
+            "ಮ",
+            "ಳೆ",
+            "ಯಾ",
+            "ಅ",
+            "ರ",
+            "ಳು",
+            "ವ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಪ",
+            "ತಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.027709722518921,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 217,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನವನ ಮುಗಿಲ ಪದಗಳ ಕಪಾ\nತಿನಿಸುತಿ ಹುದುಗಿದ ನದಿಯಲೀ\n",
+      "poem_lines": [
+        "ನವನ ಮುಗಿಲ ಪದಗಳ ಕಪಾ",
+        "ತಿನಿಸುತಿ ಹುದುಗಿದ ನದಿಯಲೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ವ ನ ಮು ಗಿ ಲ ಪ ದ ಗ ಳ ಕ ಪಾ",
+          "syllables": [
+            "ನ",
+            "ವ",
+            "ನ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಪ",
+            "ದ",
+            "ಗ",
+            "ಳ",
+            "ಕ",
+            "ಪಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ತಿ ನಿ ಸು ತಿ ಹು ದು ಗಿ ದ ನ ದಿ ಯ ಲೀ",
+          "syllables": [
+            "ತಿ",
+            "ನಿ",
+            "ಸು",
+            "ತಿ",
+            "ಹು",
+            "ದು",
+            "ಗಿ",
+            "ದ",
+            "ನ",
+            "ದಿ",
+            "ಯ",
+            "ಲೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9556152820587158,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 224,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನಲಿದು ಕುಡಿಯುವ ಮುಗಿಲು ಬೆ ನೀ\nಒಲಿದು ಕುಡಿಯುವ ಮುಗಿಲು ಬೆ ನೀ\n",
+      "poem_lines": [
+        "ನಲಿದು ಕುಡಿಯುವ ಮುಗಿಲು ಬೆ ನೀ",
+        "ಒಲಿದು ಕುಡಿಯುವ ಮುಗಿಲು ಬೆ ನೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ಲಿ ದು ಕು ಡಿ ಯು ವ ಮು ಗಿ ಲು ಬೆ ನೀ",
+          "syllables": [
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ಕು",
+            "ಡಿ",
+            "ಯು",
+            "ವ",
+            "ಮು",
+            "ಗಿ",
+            "ಲು",
+            "ಬೆ",
+            "ನೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಲಿ ದು ಕು ಡಿ ಯು ವ ಮು ಗಿ ಲು ಬೆ ನೀ",
+          "syllables": [
+            "ಒ",
+            "ಲಿ",
+            "ದು",
+            "ಕು",
+            "ಡಿ",
+            "ಯು",
+            "ವ",
+            "ಮು",
+            "ಗಿ",
+            "ಲು",
+            "ಬೆ",
+            "ನೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.030815839767456,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 231,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಸನ ಪರಿಯ ಕಳೆಯೆ ಸುಳಿಯಾ\nಒಲವ ಕವಿಯೆ ನಗುತ ಸವಿಯಾ\n",
+      "poem_lines": [
+        "ಹಸನ ಪರಿಯ ಕಳೆಯೆ ಸುಳಿಯಾ",
+        "ಒಲವ ಕವಿಯೆ ನಗುತ ಸವಿಯಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಸ ನ ಪ ರಿ ಯ ಕ ಳೆ ಯೆ ಸು ಳಿ ಯಾ",
+          "syllables": [
+            "ಹ",
+            "ಸ",
+            "ನ",
+            "ಪ",
+            "ರಿ",
+            "ಯ",
+            "ಕ",
+            "ಳೆ",
+            "ಯೆ",
+            "ಸು",
+            "ಳಿ",
+            "ಯಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಲ ವ ಕ ವಿ ಯೆ ನ ಗು ತ ಸ ವಿ ಯಾ",
+          "syllables": [
+            "ಒ",
+            "ಲ",
+            "ವ",
+            "ಕ",
+            "ವಿ",
+            "ಯೆ",
+            "ನ",
+            "ಗು",
+            "ತ",
+            "ಸ",
+            "ವಿ",
+            "ಯಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.046825885772705,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 238,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆರಗೀ ಹಗುರ ನಲಿದಾ ನಲವಾ\nಕಡೆಯೀ ಅಲೆಯು ತಿರುವ ಹಗುವಾ\n",
+      "poem_lines": [
+        "ಬೆರಗೀ ಹಗುರ ನಲಿದಾ ನಲವಾ",
+        "ಕಡೆಯೀ ಅಲೆಯು ತಿರುವ ಹಗುವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ರ ಗೀ ಹ ಗು ರ ನ ಲಿ ದಾ ನ ಲ ವಾ",
+          "syllables": [
+            "ಬೆ",
+            "ರ",
+            "ಗೀ",
+            "ಹ",
+            "ಗು",
+            "ರ",
+            "ನ",
+            "ಲಿ",
+            "ದಾ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಡೆ ಯೀ ಅ ಲೆ ಯು ತಿ ರು ವ ಹ ಗು ವಾ",
+          "syllables": [
+            "ಕ",
+            "ಡೆ",
+            "ಯೀ",
+            "ಅ",
+            "ಲೆ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಹ",
+            "ಗು",
+            "ವಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.207998275756836,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 245,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಸಿರು ಮರಳೀ ಸುರಿಯು ತಿರುತಾ\nಮುಗಿಲಲ್ ಮರದಿ ಮುದವು ಮರೆತಾ\n",
+      "poem_lines": [
+        "ಹಸಿರು ಮರಳೀ ಸುರಿಯು ತಿರುತಾ",
+        "ಮುಗಿಲಲ್ ಮರದಿ ಮುದವು ಮರೆತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಸಿ ರು ಮ ರ ಳೀ ಸು ರಿ ಯು ತಿ ರು ತಾ",
+          "syllables": [
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಮ",
+            "ರ",
+            "ಳೀ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮು ಗಿ ಲಲ್ ಮ ರ ದಿ ಮು ದ ವು ಮ ರೆ ತಾ",
+          "syllables": [
+            "ಮು",
+            "ಗಿ",
+            "ಲಲ್",
+            "ಮ",
+            "ರ",
+            "ದಿ",
+            "ಮು",
+            "ದ",
+            "ವು",
+            "ಮ",
+            "ರೆ",
+            "ತಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1325652599334717,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 252,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮರುವೀ ಜಲವ ಸವಿಯೀ ಸಿರಿಯೇ\nಕಮಲವ ಮರೆಯಲಿ ಹರುಷಿಯೇ\n",
+      "poem_lines": [
+        "ಮರುವೀ ಜಲವ ಸವಿಯೀ ಸಿರಿಯೇ",
+        "ಕಮಲವ ಮರೆಯಲಿ ಹರುಷಿಯೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ರು ವೀ ಜ ಲ ವ ಸ ವಿ ಯೀ ಸಿ ರಿ ಯೇ",
+          "syllables": [
+            "ಮ",
+            "ರು",
+            "ವೀ",
+            "ಜ",
+            "ಲ",
+            "ವ",
+            "ಸ",
+            "ವಿ",
+            "ಯೀ",
+            "ಸಿ",
+            "ರಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಮ ಲ ವ ಮ ರೆ ಯ ಲಿ ಹ ರು ಷಿ ಯೇ",
+          "syllables": [
+            "ಕ",
+            "ಮ",
+            "ಲ",
+            "ವ",
+            "ಮ",
+            "ರೆ",
+            "ಯ",
+            "ಲಿ",
+            "ಹ",
+            "ರು",
+            "ಷಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1183583736419678,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 259,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಪವನ ದಳದ ನಡುವೆ ಸುರಿವಾ\nನವನ ಪರಿಯುತಿರುವ ಹರಿವಾ\n",
+      "poem_lines": [
+        "ಪವನ ದಳದ ನಡುವೆ ಸುರಿವಾ",
+        "ನವನ ಪರಿಯುತಿರುವ ಹರಿವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಪ ವ ನ ದ ಳ ದ ನ ಡು ವೆ ಸು ರಿ ವಾ",
+          "syllables": [
+            "ಪ",
+            "ವ",
+            "ನ",
+            "ದ",
+            "ಳ",
+            "ದ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಸು",
+            "ರಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ವ ನ ಪ ರಿ ಯು ತಿ ರು ವ ಹ ರಿ ವಾ",
+          "syllables": [
+            "ನ",
+            "ವ",
+            "ನ",
+            "ಪ",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಹ",
+            "ರಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8737132549285889,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 266,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆರಗಾ ತರುವ ಮುದವು ಸುಖವೇ\nಕರಿಯಾ ಗೊಳಿಸು ತಿರುತ ನಲೆಯೇ\n",
+      "poem_lines": [
+        "ಬೆರಗಾ ತರುವ ಮುದವು ಸುಖವೇ",
+        "ಕರಿಯಾ ಗೊಳಿಸು ತಿರುತ ನಲೆಯೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ರ ಗಾ ತ ರು ವ ಮು ದ ವು ಸು ಖ ವೇ",
+          "syllables": [
+            "ಬೆ",
+            "ರ",
+            "ಗಾ",
+            "ತ",
+            "ರು",
+            "ವ",
+            "ಮು",
+            "ದ",
+            "ವು",
+            "ಸು",
+            "ಖ",
+            "ವೇ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ರಿ ಯಾ ಗೊ ಳಿ ಸು ತಿ ರು ತ ನ ಲೆ ಯೇ",
+          "syllables": [
+            "ಕ",
+            "ರಿ",
+            "ಯಾ",
+            "ಗೊ",
+            "ಳಿ",
+            "ಸು",
+            "ತಿ",
+            "ರು",
+            "ತ",
+            "ನ",
+            "ಲೆ",
+            "ಯೇ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.2033960819244385,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 273,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಗಲ ದಣಿವ ಕಳೆಯೆ ನಗುತಾ\nಕದನ ಮರೆತು ಸಿರಿಯೆ ಬೆರೆತಾ\n",
+      "poem_lines": [
+        "ಹಗಲ ದಣಿವ ಕಳೆಯೆ ನಗುತಾ",
+        "ಕದನ ಮರೆತು ಸಿರಿಯೆ ಬೆರೆತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಗ ಲ ದ ಣಿ ವ ಕ ಳೆ ಯೆ ನ ಗು ತಾ",
+          "syllables": [
+            "ಹ",
+            "ಗ",
+            "ಲ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ಳೆ",
+            "ಯೆ",
+            "ನ",
+            "ಗು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ದ ನ ಮ ರೆ ತು ಸಿ ರಿ ಯೆ ಬೆ ರೆ ತಾ",
+          "syllables": [
+            "ಕ",
+            "ದ",
+            "ನ",
+            "ಮ",
+            "ರೆ",
+            "ತು",
+            "ಸಿ",
+            "ರಿ",
+            "ಯೆ",
+            "ಬೆ",
+            "ರೆ",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.13531756401062,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Moon",
+      "seed": 42,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕನಸು ತಿರುತ ಜಲದ ಅಳಿವಾ\nಹಗಲ ಬಿಸಿಯು ಮುಗಿಲ ತರುವಾ\n",
+      "poem_lines": [
+        "ಕನಸು ತಿರುತ ಜಲದ ಅಳಿವಾ",
+        "ಹಗಲ ಬಿಸಿಯು ಮುಗಿಲ ತರುವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ನ ಸು ತಿ ರು ತ ಜ ಲ ದ ಅ ಳಿ ವಾ",
+          "syllables": [
+            "ಕ",
+            "ನ",
+            "ಸು",
+            "ತಿ",
+            "ರು",
+            "ತ",
+            "ಜ",
+            "ಲ",
+            "ದ",
+            "ಅ",
+            "ಳಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಹ ಗ ಲ ಬಿ ಸಿ ಯು ಮು ಗಿ ಲ ತ ರು ವಾ",
+          "syllables": [
+            "ಹ",
+            "ಗ",
+            "ಲ",
+            "ಬಿ",
+            "ಸಿ",
+            "ಯು",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ತ",
+            "ರು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.063450813293457,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 49,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕನಸು ತಿರುವ ಗಿರಿಯ ಕವಿಯೇ\nಹಸನ ದೆಡೆಗೆ ಹರಿಯ ಸುಳಿಯೇ\n",
+      "poem_lines": [
+        "ಕನಸು ತಿರುವ ಗಿರಿಯ ಕವಿಯೇ",
+        "ಹಸನ ದೆಡೆಗೆ ಹರಿಯ ಸುಳಿಯೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ನ ಸು ತಿ ರು ವ ಗಿ ರಿ ಯ ಕ ವಿ ಯೇ",
+          "syllables": [
+            "ಕ",
+            "ನ",
+            "ಸು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಗಿ",
+            "ರಿ",
+            "ಯ",
+            "ಕ",
+            "ವಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಹ ಸ ನ ದೆ ಡೆ ಗೆ ಹ ರಿ ಯ ಸು ಳಿ ಯೇ",
+          "syllables": [
+            "ಹ",
+            "ಸ",
+            "ನ",
+            "ದೆ",
+            "ಡೆ",
+            "ಗೆ",
+            "ಹ",
+            "ರಿ",
+            "ಯ",
+            "ಸು",
+            "ಳಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.973940134048462,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Moon",
+      "seed": 56,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಪವನ ದೆಡೆಗೆ ಹಯವಿದ ನಲಾ\nಹರುಷ ದೆಡೆಗೆ ಅರಳಿದ ನಲಾ\n",
+      "poem_lines": [
+        "ಪವನ ದೆಡೆಗೆ ಹಯವಿದ ನಲಾ",
+        "ಹರುಷ ದೆಡೆಗೆ ಅರಳಿದ ನಲಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಪ ವ ನ ದೆ ಡೆ ಗೆ ಹ ಯ ವಿ ದ ನ ಲಾ",
+          "syllables": [
+            "ಪ",
+            "ವ",
+            "ನ",
+            "ದೆ",
+            "ಡೆ",
+            "ಗೆ",
+            "ಹ",
+            "ಯ",
+            "ವಿ",
+            "ದ",
+            "ನ",
+            "ಲಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಹ ರು ಷ ದೆ ಡೆ ಗೆ ಅ ರ ಳಿ ದ ನ ಲಾ",
+          "syllables": [
+            "ಹ",
+            "ರು",
+            "ಷ",
+            "ದೆ",
+            "ಡೆ",
+            "ಗೆ",
+            "ಅ",
+            "ರ",
+            "ಳಿ",
+            "ದ",
+            "ನ",
+            "ಲಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.26737117767334,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Moon",
+      "seed": 63,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಒಲವ ಮುಗಿಲ ಮಣಿಯ ಬಲವಾ\nಹಲವು ನಿನಗೆ ಸವಿಯ ತರುವಾ\n",
+      "poem_lines": [
+        "ಒಲವ ಮುಗಿಲ ಮಣಿಯ ಬಲವಾ",
+        "ಹಲವು ನಿನಗೆ ಸವಿಯ ತರುವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಒ ಲ ವ ಮು ಗಿ ಲ ಮ ಣಿ ಯ ಬ ಲ ವಾ",
+          "syllables": [
+            "ಒ",
+            "ಲ",
+            "ವ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಮ",
+            "ಣಿ",
+            "ಯ",
+            "ಬ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಹ ಲ ವು ನಿ ನ ಗೆ ಸ ವಿ ಯ ತ ರು ವಾ",
+          "syllables": [
+            "ಹ",
+            "ಲ",
+            "ವು",
+            "ನಿ",
+            "ನ",
+            "ಗೆ",
+            "ಸ",
+            "ವಿ",
+            "ಯ",
+            "ತ",
+            "ರು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.086061954498291,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 70,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಳಗು ತಿರುತ ಸುಬಗಿದ ನಲಾ\nನನೆಯ ಹಸಿರು ನಲಿದ ಬಿಸಿಯೂ\n",
+      "poem_lines": [
+        "ಬೆಳಗು ತಿರುತ ಸುಬಗಿದ ನಲಾ",
+        "ನನೆಯ ಹಸಿರು ನಲಿದ ಬಿಸಿಯೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಳ ಗು ತಿ ರು ತ ಸು ಬ ಗಿ ದ ನ ಲಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ತ",
+            "ಸು",
+            "ಬ",
+            "ಗಿ",
+            "ದ",
+            "ನ",
+            "ಲಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ನೆ ಯ ಹ ಸಿ ರು ನ ಲಿ ದ ಬಿ ಸಿ ಯೂ",
+          "syllables": [
+            "ನ",
+            "ನೆ",
+            "ಯ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ನ",
+            "ಲಿ",
+            "ದ",
+            "ಬಿ",
+            "ಸಿ",
+            "ಯೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.059147596359253,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 77,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಳದಿ ಬೆಳಕನು ಬೆಳಗುವ ರಾ\nಮುಳದಿ ಹೊಳಪು ಹಸಿರ ಕೃತವಾ\n",
+      "poem_lines": [
+        "ಹಳದಿ ಬೆಳಕನು ಬೆಳಗುವ ರಾ",
+        "ಮುಳದಿ ಹೊಳಪು ಹಸಿರ ಕೃತವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಳ ದಿ ಬೆ ಳ ಕ ನು ಬೆ ಳ ಗು ವ ರಾ",
+          "syllables": [
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಬೆ",
+            "ಳ",
+            "ಕ",
+            "ನು",
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ವ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮು ಳ ದಿ ಹೊ ಳ ಪು ಹ ಸಿ ರ ಕೃ ತ ವಾ",
+          "syllables": [
+            "ಮು",
+            "ಳ",
+            "ದಿ",
+            "ಹೊ",
+            "ಳ",
+            "ಪು",
+            "ಹ",
+            "ಸಿ",
+            "ರ",
+            "ಕೃ",
+            "ತ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.89725923538208,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Moon",
+      "seed": 84,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮುಗಿಲ ತುದಿಯ ಬೆರೆತ ಉರುವಾ\nಬೆಳಗು ಕವಿಯೀ ನಲುವ ಸುಧವಾ\n",
+      "poem_lines": [
+        "ಮುಗಿಲ ತುದಿಯ ಬೆರೆತ ಉರುವಾ",
+        "ಬೆಳಗು ಕವಿಯೀ ನಲುವ ಸುಧವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮು ಗಿ ಲ ತು ದಿ ಯ ಬೆ ರೆ ತ ಉ ರು ವಾ",
+          "syllables": [
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ತು",
+            "ದಿ",
+            "ಯ",
+            "ಬೆ",
+            "ರೆ",
+            "ತ",
+            "ಉ",
+            "ರು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ಳ ಗು ಕ ವಿ ಯೀ ನ ಲು ವ ಸು ಧ ವಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ಕ",
+            "ವಿ",
+            "ಯೀ",
+            "ನ",
+            "ಲು",
+            "ವ",
+            "ಸು",
+            "ಧ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.2181315422058105,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Moon",
+      "seed": 91,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕೊಳವ ಅಸುರ ದಳವ ಮಿನಗೂ\nಬೆರಗ ತರುವ ಮುಗಿಲ ನಲಿಗೂ\n",
+      "poem_lines": [
+        "ಕೊಳವ ಅಸುರ ದಳವ ಮಿನಗೂ",
+        "ಬೆರಗ ತರುವ ಮುಗಿಲ ನಲಿಗೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕೊ ಳ ವ ಅ ಸು ರ ದ ಳ ವ ಮಿ ನ ಗೂ",
+          "syllables": [
+            "ಕೊ",
+            "ಳ",
+            "ವ",
+            "ಅ",
+            "ಸು",
+            "ರ",
+            "ದ",
+            "ಳ",
+            "ವ",
+            "ಮಿ",
+            "ನ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ರ ಗ ತ ರು ವ ಮು ಗಿ ಲ ನ ಲಿ ಗೂ",
+          "syllables": [
+            "ಬೆ",
+            "ರ",
+            "ಗ",
+            "ತ",
+            "ರು",
+            "ವ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ನ",
+            "ಲಿ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.047255039215088,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 98,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಒಲವ ಮಿನುಗು ತಿರುವ ನಯದಾ\nಬೆಳಗು ಮರಿಯ ತೆರದಿ ನಲವಾ\n",
+      "poem_lines": [
+        "ಒಲವ ಮಿನುಗು ತಿರುವ ನಯದಾ",
+        "ಬೆಳಗು ಮರಿಯ ತೆರದಿ ನಲವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಒ ಲ ವ ಮಿ ನು ಗು ತಿ ರು ವ ನ ಯ ದಾ",
+          "syllables": [
+            "ಒ",
+            "ಲ",
+            "ವ",
+            "ಮಿ",
+            "ನು",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ನ",
+            "ಯ",
+            "ದಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ಳ ಗು ಮ ರಿ ಯ ತೆ ರ ದಿ ನ ಲ ವಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ಮ",
+            "ರಿ",
+            "ಯ",
+            "ತೆ",
+            "ರ",
+            "ದಿ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0338973999023438,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 105,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕಮಲ ದೊಳಗೆ ಮರೆಯ ಬೆರಗೂ\nಪವನ ದೊಳಗೆ ಕರಗಿ ಬೆರಗೂ\n",
+      "poem_lines": [
+        "ಕಮಲ ದೊಳಗೆ ಮರೆಯ ಬೆರಗೂ",
+        "ಪವನ ದೊಳಗೆ ಕರಗಿ ಬೆರಗೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ಮ ಲ ದೊ ಳ ಗೆ ಮ ರೆ ಯ ಬೆ ರ ಗೂ",
+          "syllables": [
+            "ಕ",
+            "ಮ",
+            "ಲ",
+            "ದೊ",
+            "ಳ",
+            "ಗೆ",
+            "ಮ",
+            "ರೆ",
+            "ಯ",
+            "ಬೆ",
+            "ರ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ವ ನ ದೊ ಳ ಗೆ ಕ ರ ಗಿ ಬೆ ರ ಗೂ",
+          "syllables": [
+            "ಪ",
+            "ವ",
+            "ನ",
+            "ದೊ",
+            "ಳ",
+            "ಗೆ",
+            "ಕ",
+            "ರ",
+            "ಗಿ",
+            "ಬೆ",
+            "ರ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9644196033477783,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Moon",
+      "seed": 112,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕವಿಯ ನುಡಿಯು ಬೆಳಗುತಿಹುದೇ\nಬೆಳಗುತಿಹು ತಿರುವ ನುಡಿಯದೇ\n",
+      "poem_lines": [
+        "ಕವಿಯ ನುಡಿಯು ಬೆಳಗುತಿಹುದೇ",
+        "ಬೆಳಗುತಿಹು ತಿರುವ ನುಡಿಯದೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ವಿ ಯ ನು ಡಿ ಯು ಬೆ ಳ ಗು ತಿ ಹು ದೇ",
+          "syllables": [
+            "ಕ",
+            "ವಿ",
+            "ಯ",
+            "ನು",
+            "ಡಿ",
+            "ಯು",
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ಹು",
+            "ದೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ಳ ಗು ತಿ ಹು ತಿ ರು ವ ನು ಡಿ ಯ ದೇ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ಹು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ನು",
+            "ಡಿ",
+            "ಯ",
+            "ದೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1175730228424072,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Moon",
+      "seed": 119,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಳದಿ ಬಿಸಿಯೆ ಬೆಳಗು ತಿರುತಾ\nಕುಸುಮ ಹಳದಿ ಒಲವಾ ಮಗುತಾ\n",
+      "poem_lines": [
+        "ಹಳದಿ ಬಿಸಿಯೆ ಬೆಳಗು ತಿರುತಾ",
+        "ಕುಸುಮ ಹಳದಿ ಒಲವಾ ಮಗುತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಳ ದಿ ಬಿ ಸಿ ಯೆ ಬೆ ಳ ಗು ತಿ ರು ತಾ",
+          "syllables": [
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಬಿ",
+            "ಸಿ",
+            "ಯೆ",
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕು ಸು ಮ ಹ ಳ ದಿ ಒ ಲ ವಾ ಮ ಗು ತಾ",
+          "syllables": [
+            "ಕು",
+            "ಸು",
+            "ಮ",
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಒ",
+            "ಲ",
+            "ವಾ",
+            "ಮ",
+            "ಗು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.121622085571289,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Moon",
+      "seed": 126,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮುಗಿಲ ದಣಿವ ಸುರಿಯುತಿಹ ರಾ\nಪವನ ದಣಿವ ಸುರಿಯುತಿಹ ರಾ\n",
+      "poem_lines": [
+        "ಮುಗಿಲ ದಣಿವ ಸುರಿಯುತಿಹ ರಾ",
+        "ಪವನ ದಣಿವ ಸುರಿಯುತಿಹ ರಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮು ಗಿ ಲ ದ ಣಿ ವ ಸು ರಿ ಯು ತಿ ಹ ರಾ",
+          "syllables": [
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ಹ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ವ ನ ದ ಣಿ ವ ಸು ರಿ ಯು ತಿ ಹ ರಾ",
+          "syllables": [
+            "ಪ",
+            "ವ",
+            "ನ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ಹ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0443661212921143,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 133,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಅರಳಿ ಬೆಳಗುವ ಕವಿಯ ನನಾ\nಪರಲ ಬರುವ ಕವಿಯ ನಡನಾ\n",
+      "poem_lines": [
+        "ಅರಳಿ ಬೆಳಗುವ ಕವಿಯ ನನಾ",
+        "ಪರಲ ಬರುವ ಕವಿಯ ನಡನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಅ ರ ಳಿ ಬೆ ಳ ಗು ವ ಕ ವಿ ಯ ನ ನಾ",
+          "syllables": [
+            "ಅ",
+            "ರ",
+            "ಳಿ",
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ವ",
+            "ಕ",
+            "ವಿ",
+            "ಯ",
+            "ನ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ರ ಲ ಬ ರು ವ ಕ ವಿ ಯ ನ ಡ ನಾ",
+          "syllables": [
+            "ಪ",
+            "ರ",
+            "ಲ",
+            "ಬ",
+            "ರು",
+            "ವ",
+            "ಕ",
+            "ವಿ",
+            "ಯ",
+            "ನ",
+            "ಡ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8794782161712646,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Moon",
+      "seed": 140,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕದನ ನಡುತ ಮುಗಿಲಲ್ ಮಣಿಯೇ\nತಮಸ ಹಸಿರು ಮುಗಿಲಲ್ ಮಣಿಯೇ\n",
+      "poem_lines": [
+        "ಕದನ ನಡುತ ಮುಗಿಲಲ್ ಮಣಿಯೇ",
+        "ತಮಸ ಹಸಿರು ಮುಗಿಲಲ್ ಮಣಿಯೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ದ ನ ನ ಡು ತ ಮು ಗಿ ಲಲ್ ಮ ಣಿ ಯೇ",
+          "syllables": [
+            "ಕ",
+            "ದ",
+            "ನ",
+            "ನ",
+            "ಡು",
+            "ತ",
+            "ಮು",
+            "ಗಿ",
+            "ಲಲ್",
+            "ಮ",
+            "ಣಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ತ ಮ ಸ ಹ ಸಿ ರು ಮು ಗಿ ಲಲ್ ಮ ಣಿ ಯೇ",
+          "syllables": [
+            "ತ",
+            "ಮ",
+            "ಸ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಮು",
+            "ಗಿ",
+            "ಲಲ್",
+            "ಮ",
+            "ಣಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.2132809162139893,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Moon",
+      "seed": 147,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕೊಳದ ನಡುವೆ ಅರಳೀ ಬೆರಗೂ\nಮಳೆಯ ನಡುವೆ ನುಡಿಯೀ ನಗೆಗೂ\n",
+      "poem_lines": [
+        "ಕೊಳದ ನಡುವೆ ಅರಳೀ ಬೆರಗೂ",
+        "ಮಳೆಯ ನಡುವೆ ನುಡಿಯೀ ನಗೆಗೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕೊ ಳ ದ ನ ಡು ವೆ ಅ ರ ಳೀ ಬೆ ರ ಗೂ",
+          "syllables": [
+            "ಕೊ",
+            "ಳ",
+            "ದ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಅ",
+            "ರ",
+            "ಳೀ",
+            "ಬೆ",
+            "ರ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮ ಳೆ ಯ ನ ಡು ವೆ ನು ಡಿ ಯೀ ನ ಗೆ ಗೂ",
+          "syllables": [
+            "ಮ",
+            "ಳೆ",
+            "ಯ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ನು",
+            "ಡಿ",
+            "ಯೀ",
+            "ನ",
+            "ಗೆ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8835742473602295,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Moon",
+      "seed": 154,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಳೆಯ ಕಪಿಯ ಬೆಳಗ ನಗುತಾ\nಕಳೆಯು ತಿರುವ ಹಳದಿ ನಲಿತಾ\n",
+      "poem_lines": [
+        "ಹಳೆಯ ಕಪಿಯ ಬೆಳಗ ನಗುತಾ",
+        "ಕಳೆಯು ತಿರುವ ಹಳದಿ ನಲಿತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಳೆ ಯ ಕ ಪಿ ಯ ಬೆ ಳ ಗ ನ ಗು ತಾ",
+          "syllables": [
+            "ಹ",
+            "ಳೆ",
+            "ಯ",
+            "ಕ",
+            "ಪಿ",
+            "ಯ",
+            "ಬೆ",
+            "ಳ",
+            "ಗ",
+            "ನ",
+            "ಗು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಳೆ ಯು ತಿ ರು ವ ಹ ಳ ದಿ ನ ಲಿ ತಾ",
+          "syllables": [
+            "ಕ",
+            "ಳೆ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ನ",
+            "ಲಿ",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7924919128417969,
+      "tokens_generated": 23,
+      "backtracks": 0,
+      "mask_computations": 21
+    },
+    {
+      "topic": "Moon",
+      "seed": 161,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಳದಿ ಬೆಳಗಿ ಹೊಳೆಯೆ ನುಣಿಯೇ\nಮುಳದಿ ಕುಣಿವ ಮರೆಯೆ ಸೆಳೆದೇ\n",
+      "poem_lines": [
+        "ಹಳದಿ ಬೆಳಗಿ ಹೊಳೆಯೆ ನುಣಿಯೇ",
+        "ಮುಳದಿ ಕುಣಿವ ಮರೆಯೆ ಸೆಳೆದೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಳ ದಿ ಬೆ ಳ ಗಿ ಹೊ ಳೆ ಯೆ ನು ಣಿ ಯೇ",
+          "syllables": [
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಬೆ",
+            "ಳ",
+            "ಗಿ",
+            "ಹೊ",
+            "ಳೆ",
+            "ಯೆ",
+            "ನು",
+            "ಣಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮು ಳ ದಿ ಕು ಣಿ ವ ಮ ರೆ ಯೆ ಸೆ ಳೆ ದೇ",
+          "syllables": [
+            "ಮು",
+            "ಳ",
+            "ದಿ",
+            "ಕು",
+            "ಣಿ",
+            "ವ",
+            "ಮ",
+            "ರೆ",
+            "ಯೆ",
+            "ಸೆ",
+            "ಳೆ",
+            "ದೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.148634672164917,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Moon",
+      "seed": 168,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಳಗಿನ ಗಿಲವು ಬೆಳಗು ತಿಲೂ\nಪಸರ ಮರೆಯೆ ಹಳೆಯ ಕವಿಯೂ\n",
+      "poem_lines": [
+        "ಬೆಳಗಿನ ಗಿಲವು ಬೆಳಗು ತಿಲೂ",
+        "ಪಸರ ಮರೆಯೆ ಹಳೆಯ ಕವಿಯೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಳ ಗಿ ನ ಗಿ ಲ ವು ಬೆ ಳ ಗು ತಿ ಲೂ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗಿ",
+            "ನ",
+            "ಗಿ",
+            "ಲ",
+            "ವು",
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ಲೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ಸ ರ ಮ ರೆ ಯೆ ಹ ಳೆ ಯ ಕ ವಿ ಯೂ",
+          "syllables": [
+            "ಪ",
+            "ಸ",
+            "ರ",
+            "ಮ",
+            "ರೆ",
+            "ಯೆ",
+            "ಹ",
+            "ಳೆ",
+            "ಯ",
+            "ಕ",
+            "ವಿ",
+            "ಯೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.037113666534424,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 175,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕನಸು ಅರಳ ತರುವ ಬೆರಗೂ\nಮುದನ ಮುಗಿಲ ನಗುತ ಬರುವೂ\n",
+      "poem_lines": [
+        "ಕನಸು ಅರಳ ತರುವ ಬೆರಗೂ",
+        "ಮುದನ ಮುಗಿಲ ನಗುತ ಬರುವೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ನ ಸು ಅ ರ ಳ ತ ರು ವ ಬೆ ರ ಗೂ",
+          "syllables": [
+            "ಕ",
+            "ನ",
+            "ಸು",
+            "ಅ",
+            "ರ",
+            "ಳ",
+            "ತ",
+            "ರು",
+            "ವ",
+            "ಬೆ",
+            "ರ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮು ದ ನ ಮು ಗಿ ಲ ನ ಗು ತ ಬ ರು ವೂ",
+          "syllables": [
+            "ಮು",
+            "ದ",
+            "ನ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ನ",
+            "ಗು",
+            "ತ",
+            "ಬ",
+            "ರು",
+            "ವೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8808252811431885,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Moon",
+      "seed": 182,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಅಳಿಲು ಅಳಿಲು ಅಲೆಯಾ ನಗುತಾ\nಮುಳಿದು ಮುಗಿಲಲ್ ನಲಿವ ತಿನದೇ\n",
+      "poem_lines": [
+        "ಅಳಿಲು ಅಳಿಲು ಅಲೆಯಾ ನಗುತಾ",
+        "ಮುಳಿದು ಮುಗಿಲಲ್ ನಲಿವ ತಿನದೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಅ ಳಿ ಲು ಅ ಳಿ ಲು ಅ ಲೆ ಯಾ ನ ಗು ತಾ",
+          "syllables": [
+            "ಅ",
+            "ಳಿ",
+            "ಲು",
+            "ಅ",
+            "ಳಿ",
+            "ಲು",
+            "ಅ",
+            "ಲೆ",
+            "ಯಾ",
+            "ನ",
+            "ಗು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮು ಳಿ ದು ಮು ಗಿ ಲಲ್ ನ ಲಿ ವ ತಿ ನ ದೇ",
+          "syllables": [
+            "ಮು",
+            "ಳಿ",
+            "ದು",
+            "ಮು",
+            "ಗಿ",
+            "ಲಲ್",
+            "ನ",
+            "ಲಿ",
+            "ವ",
+            "ತಿ",
+            "ನ",
+            "ದೇ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.272897481918335,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Moon",
+      "seed": 189,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕಮಲ ನಲಿವ ಅಸುರ ದೊಳಗೂ\nಉದಯ ಮುಗಿಲ ದೆಡೆಗೆ ಬೆರೆಗೂ\n",
+      "poem_lines": [
+        "ಕಮಲ ನಲಿವ ಅಸುರ ದೊಳಗೂ",
+        "ಉದಯ ಮುಗಿಲ ದೆಡೆಗೆ ಬೆರೆಗೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ಮ ಲ ನ ಲಿ ವ ಅ ಸು ರ ದೊ ಳ ಗೂ",
+          "syllables": [
+            "ಕ",
+            "ಮ",
+            "ಲ",
+            "ನ",
+            "ಲಿ",
+            "ವ",
+            "ಅ",
+            "ಸು",
+            "ರ",
+            "ದೊ",
+            "ಳ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಉ ದ ಯ ಮು ಗಿ ಲ ದೆ ಡೆ ಗೆ ಬೆ ರೆ ಗೂ",
+          "syllables": [
+            "ಉ",
+            "ದ",
+            "ಯ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ದೆ",
+            "ಡೆ",
+            "ಗೆ",
+            "ಬೆ",
+            "ರೆ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.053642988204956,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 196,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಸನ ಮಡಿಲ ನಡುವೆ ಅಸುರೂ\nನವಿಲ ನಲಿದು ಕುಣಿಯುವ ಮುನಾ\n",
+      "poem_lines": [
+        "ಹಸನ ಮಡಿಲ ನಡುವೆ ಅಸುರೂ",
+        "ನವಿಲ ನಲಿದು ಕುಣಿಯುವ ಮುನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಸ ನ ಮ ಡಿ ಲ ನ ಡು ವೆ ಅ ಸು ರೂ",
+          "syllables": [
+            "ಹ",
+            "ಸ",
+            "ನ",
+            "ಮ",
+            "ಡಿ",
+            "ಲ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಅ",
+            "ಸು",
+            "ರೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ವಿ ಲ ನ ಲಿ ದು ಕು ಣಿ ಯು ವ ಮು ನಾ",
+          "syllables": [
+            "ನ",
+            "ವಿ",
+            "ಲ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ಕು",
+            "ಣಿ",
+            "ಯು",
+            "ವ",
+            "ಮು",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.054206609725952,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 203,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕವಿಯ ನುಡಿಯ ಬೆಳಗ ತರುವಾ\nಮುಗಿಲ ಕಲೆಯ ಹರುಷ ಸವಿಯಾ\n",
+      "poem_lines": [
+        "ಕವಿಯ ನುಡಿಯ ಬೆಳಗ ತರುವಾ",
+        "ಮುಗಿಲ ಕಲೆಯ ಹರುಷ ಸವಿಯಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ವಿ ಯ ನು ಡಿ ಯ ಬೆ ಳ ಗ ತ ರು ವಾ",
+          "syllables": [
+            "ಕ",
+            "ವಿ",
+            "ಯ",
+            "ನು",
+            "ಡಿ",
+            "ಯ",
+            "ಬೆ",
+            "ಳ",
+            "ಗ",
+            "ತ",
+            "ರು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮು ಗಿ ಲ ಕ ಲೆ ಯ ಹ ರು ಷ ಸ ವಿ ಯಾ",
+          "syllables": [
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಕ",
+            "ಲೆ",
+            "ಯ",
+            "ಹ",
+            "ರು",
+            "ಷ",
+            "ಸ",
+            "ವಿ",
+            "ಯಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9070541858673096,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Moon",
+      "seed": 210,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಳಗು ತಿರುವ ಕಳೆಯ ಸುರಿವಾ\nತಯನದ ನಡುವೆ ಅಲೆಬರುವಾ\n",
+      "poem_lines": [
+        "ಬೆಳಗು ತಿರುವ ಕಳೆಯ ಸುರಿವಾ",
+        "ತಯನದ ನಡುವೆ ಅಲೆಬರುವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಳ ಗು ತಿ ರು ವ ಕ ಳೆ ಯ ಸು ರಿ ವಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಕ",
+            "ಳೆ",
+            "ಯ",
+            "ಸು",
+            "ರಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ತ ಯ ನ ದ ನ ಡು ವೆ ಅ ಲೆ ಬ ರು ವಾ",
+          "syllables": [
+            "ತ",
+            "ಯ",
+            "ನ",
+            "ದ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಅ",
+            "ಲೆ",
+            "ಬ",
+            "ರು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.797865867614746,
+      "tokens_generated": 23,
+      "backtracks": 0,
+      "mask_computations": 21
+    },
+    {
+      "topic": "Moon",
+      "seed": 217,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಗಲ ನಡುವೆ ಬೆಳಗ ಸುಳಿಯೂ\nಜಗದ ನಡುವೆ ಅರಳುವ ನಲಾ\n",
+      "poem_lines": [
+        "ಹಗಲ ನಡುವೆ ಬೆಳಗ ಸುಳಿಯೂ",
+        "ಜಗದ ನಡುವೆ ಅರಳುವ ನಲಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಗ ಲ ನ ಡು ವೆ ಬೆ ಳ ಗ ಸು ಳಿ ಯೂ",
+          "syllables": [
+            "ಹ",
+            "ಗ",
+            "ಲ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಬೆ",
+            "ಳ",
+            "ಗ",
+            "ಸು",
+            "ಳಿ",
+            "ಯೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಜ ಗ ದ ನ ಡು ವೆ ಅ ರ ಳು ವ ನ ಲಾ",
+          "syllables": [
+            "ಜ",
+            "ಗ",
+            "ದ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಅ",
+            "ರ",
+            "ಳು",
+            "ವ",
+            "ನ",
+            "ಲಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.6539344787597656,
+      "tokens_generated": 21,
+      "backtracks": 0,
+      "mask_computations": 19
+    },
+    {
+      "topic": "Moon",
+      "seed": 224,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಳದಿ ಅರಳ ಬೆರೆಸಿ ನಯವೇ\nಕಳೆಯ ದೆಡೆಗೆ ಉರುಳಿ ನಗುತಾ\n",
+      "poem_lines": [
+        "ಹಳದಿ ಅರಳ ಬೆರೆಸಿ ನಯವೇ",
+        "ಕಳೆಯ ದೆಡೆಗೆ ಉರುಳಿ ನಗುತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಳ ದಿ ಅ ರ ಳ ಬೆ ರೆ ಸಿ ನ ಯ ವೇ",
+          "syllables": [
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಅ",
+            "ರ",
+            "ಳ",
+            "ಬೆ",
+            "ರೆ",
+            "ಸಿ",
+            "ನ",
+            "ಯ",
+            "ವೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಳೆ ಯ ದೆ ಡೆ ಗೆ ಉ ರು ಳಿ ನ ಗು ತಾ",
+          "syllables": [
+            "ಕ",
+            "ಳೆ",
+            "ಯ",
+            "ದೆ",
+            "ಡೆ",
+            "ಗೆ",
+            "ಉ",
+            "ರು",
+            "ಳಿ",
+            "ನ",
+            "ಗು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.971757411956787,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Moon",
+      "seed": 231,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಳಗು ತಿರುವ ಕವಿಯೆ ನಲವಾ\nಒಳಗು ತಿರುವ ನಯನ ಬೆರೆವಾ\n",
+      "poem_lines": [
+        "ಬೆಳಗು ತಿರುವ ಕವಿಯೆ ನಲವಾ",
+        "ಒಳಗು ತಿರುವ ನಯನ ಬೆರೆವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಳ ಗು ತಿ ರು ವ ಕ ವಿ ಯೆ ನ ಲ ವಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಕ",
+            "ವಿ",
+            "ಯೆ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಳ ಗು ತಿ ರು ವ ನ ಯ ನ ಬೆ ರೆ ವಾ",
+          "syllables": [
+            "ಒ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ನ",
+            "ಯ",
+            "ನ",
+            "ಬೆ",
+            "ರೆ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0449984073638916,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 238,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಅಲಿದು ತಿರುವ ಕವಿಯೀ ಉಡುವಾ\nಮಲದ ಮರೆಯ ಹಳದಿ ನಲವಾ\n",
+      "poem_lines": [
+        "ಅಲಿದು ತಿರುವ ಕವಿಯೀ ಉಡುವಾ",
+        "ಮಲದ ಮರೆಯ ಹಳದಿ ನಲವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಅ ಲಿ ದು ತಿ ರು ವ ಕ ವಿ ಯೀ ಉ ಡು ವಾ",
+          "syllables": [
+            "ಅ",
+            "ಲಿ",
+            "ದು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಕ",
+            "ವಿ",
+            "ಯೀ",
+            "ಉ",
+            "ಡು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮ ಲ ದ ಮ ರೆ ಯ ಹ ಳ ದಿ ನ ಲ ವಾ",
+          "syllables": [
+            "ಮ",
+            "ಲ",
+            "ದ",
+            "ಮ",
+            "ರೆ",
+            "ಯ",
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.038429021835327,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 245,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಳಗುತಿರುವ ಉರಿಯಾ ಕೃತನಾ\nಅಳೆಯುತಿರುವ ಉರಿಯಾ ಕೃತನಾ\n",
+      "poem_lines": [
+        "ಬೆಳಗುತಿರುವ ಉರಿಯಾ ಕೃತನಾ",
+        "ಅಳೆಯುತಿರುವ ಉರಿಯಾ ಕೃತನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಳ ಗು ತಿ ರು ವ ಉ ರಿ ಯಾ ಕೃ ತ ನಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಉ",
+            "ರಿ",
+            "ಯಾ",
+            "ಕೃ",
+            "ತ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಅ ಳೆ ಯು ತಿ ರು ವ ಉ ರಿ ಯಾ ಕೃ ತ ನಾ",
+          "syllables": [
+            "ಅ",
+            "ಳೆ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಉ",
+            "ರಿ",
+            "ಯಾ",
+            "ಕೃ",
+            "ತ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9471750259399414,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Moon",
+      "seed": 252,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನಗುತ ಬರುವ ಅಳಿಲು ಸವಿಯಾ\nಮಗುವ ಮಿನುಗು ಕರದಿ ನಲಿವಾ\n",
+      "poem_lines": [
+        "ನಗುತ ಬರುವ ಅಳಿಲು ಸವಿಯಾ",
+        "ಮಗುವ ಮಿನುಗು ಕರದಿ ನಲಿವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ಗು ತ ಬ ರು ವ ಅ ಳಿ ಲು ಸ ವಿ ಯಾ",
+          "syllables": [
+            "ನ",
+            "ಗು",
+            "ತ",
+            "ಬ",
+            "ರು",
+            "ವ",
+            "ಅ",
+            "ಳಿ",
+            "ಲು",
+            "ಸ",
+            "ವಿ",
+            "ಯಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮ ಗು ವ ಮಿ ನು ಗು ಕ ರ ದಿ ನ ಲಿ ವಾ",
+          "syllables": [
+            "ಮ",
+            "ಗು",
+            "ವ",
+            "ಮಿ",
+            "ನು",
+            "ಗು",
+            "ಕ",
+            "ರ",
+            "ದಿ",
+            "ನ",
+            "ಲಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0495893955230713,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 259,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಒಲಿದು ಕವಿಯೀ ನುಡಿಯು ಕರಲೀ\nಹಲವು ಜಗದಿ ಬೆಳಗು ನಲೆಯೇ\n",
+      "poem_lines": [
+        "ಒಲಿದು ಕವಿಯೀ ನುಡಿಯು ಕರಲೀ",
+        "ಹಲವು ಜಗದಿ ಬೆಳಗು ನಲೆಯೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಒ ಲಿ ದು ಕ ವಿ ಯೀ ನು ಡಿ ಯು ಕ ರ ಲೀ",
+          "syllables": [
+            "ಒ",
+            "ಲಿ",
+            "ದು",
+            "ಕ",
+            "ವಿ",
+            "ಯೀ",
+            "ನು",
+            "ಡಿ",
+            "ಯು",
+            "ಕ",
+            "ರ",
+            "ಲೀ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಹ ಲ ವು ಜ ಗ ದಿ ಬೆ ಳ ಗು ನ ಲೆ ಯೇ",
+          "syllables": [
+            "ಹ",
+            "ಲ",
+            "ವು",
+            "ಜ",
+            "ಗ",
+            "ದಿ",
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ನ",
+            "ಲೆ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.3012053966522217,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Moon",
+      "seed": 266,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಅಳಿಯ ದೊಳಗೆ ಹಗುರ ಮಿನವೂ\nಕಳೆಯುತಿರುವ ಬೆಳಗ ನಲಿವೂ\n",
+      "poem_lines": [
+        "ಅಳಿಯ ದೊಳಗೆ ಹಗುರ ಮಿನವೂ",
+        "ಕಳೆಯುತಿರುವ ಬೆಳಗ ನಲಿವೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಅ ಳಿ ಯ ದೊ ಳ ಗೆ ಹ ಗು ರ ಮಿ ನ ವೂ",
+          "syllables": [
+            "ಅ",
+            "ಳಿ",
+            "ಯ",
+            "ದೊ",
+            "ಳ",
+            "ಗೆ",
+            "ಹ",
+            "ಗು",
+            "ರ",
+            "ಮಿ",
+            "ನ",
+            "ವೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಳೆ ಯು ತಿ ರು ವ ಬೆ ಳ ಗ ನ ಲಿ ವೂ",
+          "syllables": [
+            "ಕ",
+            "ಳೆ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಬೆ",
+            "ಳ",
+            "ಗ",
+            "ನ",
+            "ಲಿ",
+            "ವೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9092702865600586,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Moon",
+      "seed": 273,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಳಗು ತಿರುವ ಕವಿಯ ಮಿನಿಯೂ\nಪವನ ಮರೆಸಿ ಉಗಿಯ ಸುಖವೂ\n",
+      "poem_lines": [
+        "ಬೆಳಗು ತಿರುವ ಕವಿಯ ಮಿನಿಯೂ",
+        "ಪವನ ಮರೆಸಿ ಉಗಿಯ ಸುಖವೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಳ ಗು ತಿ ರು ವ ಕ ವಿ ಯ ಮಿ ನಿ ಯೂ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಕ",
+            "ವಿ",
+            "ಯ",
+            "ಮಿ",
+            "ನಿ",
+            "ಯೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ವ ನ ಮ ರೆ ಸಿ ಉ ಗಿ ಯ ಸು ಖ ವೂ",
+          "syllables": [
+            "ಪ",
+            "ವ",
+            "ನ",
+            "ಮ",
+            "ರೆ",
+            "ಸಿ",
+            "ಉ",
+            "ಗಿ",
+            "ಯ",
+            "ಸು",
+            "ಖ",
+            "ವೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.038928270339966,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Rain",
+      "seed": 42,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಳದಿ ಬರುವ ಮಳೆಯ ತರುವಾ\nಪಸರ ಮರಳ ನಡುವೆ ಬೆಳೆವಾ\n",
+      "poem_lines": [
+        "ಹಳದಿ ಬರುವ ಮಳೆಯ ತರುವಾ",
+        "ಪಸರ ಮರಳ ನಡುವೆ ಬೆಳೆವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಳ ದಿ ಬ ರು ವ ಮ ಳೆ ಯ ತ ರು ವಾ",
+          "syllables": [
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಬ",
+            "ರು",
+            "ವ",
+            "ಮ",
+            "ಳೆ",
+            "ಯ",
+            "ತ",
+            "ರು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ಸ ರ ಮ ರ ಳ ನ ಡು ವೆ ಬೆ ಳೆ ವಾ",
+          "syllables": [
+            "ಪ",
+            "ಸ",
+            "ರ",
+            "ಮ",
+            "ರ",
+            "ಳ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಬೆ",
+            "ಳೆ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7227814197540283,
+      "tokens_generated": 22,
+      "backtracks": 0,
+      "mask_computations": 20
+    },
+    {
+      "topic": "Rain",
+      "seed": 49,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಳದಿ ಬಿಸಿಲ ನಡುವೆ ಬರುತಾ\nಒಳಗೆ ಸುರಿಯುತಿರುವ ಜಲವಾ\n",
+      "poem_lines": [
+        "ಹಳದಿ ಬಿಸಿಲ ನಡುವೆ ಬರುತಾ",
+        "ಒಳಗೆ ಸುರಿಯುತಿರುವ ಜಲವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಳ ದಿ ಬಿ ಸಿ ಲ ನ ಡು ವೆ ಬ ರು ತಾ",
+          "syllables": [
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಬಿ",
+            "ಸಿ",
+            "ಲ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಬ",
+            "ರು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಳ ಗೆ ಸು ರಿ ಯು ತಿ ರು ವ ಜ ಲ ವಾ",
+          "syllables": [
+            "ಒ",
+            "ಳ",
+            "ಗೆ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಜ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8921377658843994,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Rain",
+      "seed": 56,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಸವಿಯೀ ಜಲವೀ ಸುರಿಯು ತಿರುತಾ\nತವಿಯೀ ಕಡೆಯೇ ನಲಿದು ಬರಲೀ\n",
+      "poem_lines": [
+        "ಸವಿಯೀ ಜಲವೀ ಸುರಿಯು ತಿರುತಾ",
+        "ತವಿಯೀ ಕಡೆಯೇ ನಲಿದು ಬರಲೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಸ ವಿ ಯೀ ಜ ಲ ವೀ ಸು ರಿ ಯು ತಿ ರು ತಾ",
+          "syllables": [
+            "ಸ",
+            "ವಿ",
+            "ಯೀ",
+            "ಜ",
+            "ಲ",
+            "ವೀ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ತಾ"
+          ],
+          "markers": "I I U I I U I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ತ ವಿ ಯೀ ಕ ಡೆ ಯೇ ನ ಲಿ ದು ಬ ರ ಲೀ",
+          "syllables": [
+            "ತ",
+            "ವಿ",
+            "ಯೀ",
+            "ಕ",
+            "ಡೆ",
+            "ಯೇ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ಬ",
+            "ರ",
+            "ಲೀ"
+          ],
+          "markers": "I I U I I U I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.290789842605591,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Rain",
+      "seed": 63,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮುಗಿಲ ಮುಗಿಲ ಹಳದಿ ಅರಲೀ\nಕಮಲ ಮುಗಿಲ ಹಳದಿ ಅರಲೀ\n",
+      "poem_lines": [
+        "ಮುಗಿಲ ಮುಗಿಲ ಹಳದಿ ಅರಲೀ",
+        "ಕಮಲ ಮುಗಿಲ ಹಳದಿ ಅರಲೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮು ಗಿ ಲ ಮು ಗಿ ಲ ಹ ಳ ದಿ ಅ ರ ಲೀ",
+          "syllables": [
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಅ",
+            "ರ",
+            "ಲೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಮ ಲ ಮು ಗಿ ಲ ಹ ಳ ದಿ ಅ ರ ಲೀ",
+          "syllables": [
+            "ಕ",
+            "ಮ",
+            "ಲ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಅ",
+            "ರ",
+            "ಲೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0525248050689697,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Rain",
+      "seed": 70,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನಿನಗೆ ಬರುತಿರುವ ಉಸಿರಲೀ\nಒದಿನ ಮರೆಯೆ ತರುತ ಹವೆಯೇ\n",
+      "poem_lines": [
+        "ನಿನಗೆ ಬರುತಿರುವ ಉಸಿರಲೀ",
+        "ಒದಿನ ಮರೆಯೆ ತರುತ ಹವೆಯೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನಿ ನ ಗೆ ಬ ರು ತಿ ರು ವ ಉ ಸಿ ರ ಲೀ",
+          "syllables": [
+            "ನಿ",
+            "ನ",
+            "ಗೆ",
+            "ಬ",
+            "ರು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಉ",
+            "ಸಿ",
+            "ರ",
+            "ಲೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ದಿ ನ ಮ ರೆ ಯೆ ತ ರು ತ ಹ ವೆ ಯೇ",
+          "syllables": [
+            "ಒ",
+            "ದಿ",
+            "ನ",
+            "ಮ",
+            "ರೆ",
+            "ಯೆ",
+            "ತ",
+            "ರು",
+            "ತ",
+            "ಹ",
+            "ವೆ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9710979461669922,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Rain",
+      "seed": 77,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕೊಳದ ಸುರಿಯುತಿರುವ ಜಲದಾ\nಒಲವ ಮರಳೀ ನಲಿದುತಿಹುತಾ\n",
+      "poem_lines": [
+        "ಕೊಳದ ಸುರಿಯುತಿರುವ ಜಲದಾ",
+        "ಒಲವ ಮರಳೀ ನಲಿದುತಿಹುತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕೊ ಳ ದ ಸು ರಿ ಯು ತಿ ರು ವ ಜ ಲ ದಾ",
+          "syllables": [
+            "ಕೊ",
+            "ಳ",
+            "ದ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಜ",
+            "ಲ",
+            "ದಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಲ ವ ಮ ರ ಳೀ ನ ಲಿ ದು ತಿ ಹು ತಾ",
+          "syllables": [
+            "ಒ",
+            "ಲ",
+            "ವ",
+            "ಮ",
+            "ರ",
+            "ಳೀ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ತಿ",
+            "ಹು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.044407844543457,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Rain",
+      "seed": 84,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮಳೆಯ ತೆರದಿ ಉರಿಯ ಬಗೆಯೇ\nಕಡೆಯಲಿ ಸುರಿಯು ಕುಣಿವ ಪದಾ\n",
+      "poem_lines": [
+        "ಮಳೆಯ ತೆರದಿ ಉರಿಯ ಬಗೆಯೇ",
+        "ಕಡೆಯಲಿ ಸುರಿಯು ಕುಣಿವ ಪದಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ಳೆ ಯ ತೆ ರ ದಿ ಉ ರಿ ಯ ಬ ಗೆ ಯೇ",
+          "syllables": [
+            "ಮ",
+            "ಳೆ",
+            "ಯ",
+            "ತೆ",
+            "ರ",
+            "ದಿ",
+            "ಉ",
+            "ರಿ",
+            "ಯ",
+            "ಬ",
+            "ಗೆ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಡೆ ಯ ಲಿ ಸು ರಿ ಯು ಕು ಣಿ ವ ಪ ದಾ",
+          "syllables": [
+            "ಕ",
+            "ಡೆ",
+            "ಯ",
+            "ಲಿ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ಕು",
+            "ಣಿ",
+            "ವ",
+            "ಪ",
+            "ದಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7988932132720947,
+      "tokens_generated": 23,
+      "backtracks": 0,
+      "mask_computations": 21
+    },
+    {
+      "topic": "Rain",
+      "seed": 91,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆರಗ ಅರಳು ಸುರಿಯು ಬರಲೂ\nಮರೆಯುತ ಜಲದಿ ಮುಗಿಲ ಕವಾ\n",
+      "poem_lines": [
+        "ಬೆರಗ ಅರಳು ಸುರಿಯು ಬರಲೂ",
+        "ಮರೆಯುತ ಜಲದಿ ಮುಗಿಲ ಕವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ರ ಗ ಅ ರ ಳು ಸು ರಿ ಯು ಬ ರ ಲೂ",
+          "syllables": [
+            "ಬೆ",
+            "ರ",
+            "ಗ",
+            "ಅ",
+            "ರ",
+            "ಳು",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ಬ",
+            "ರ",
+            "ಲೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮ ರೆ ಯು ತ ಜ ಲ ದಿ ಮು ಗಿ ಲ ಕ ವಾ",
+          "syllables": [
+            "ಮ",
+            "ರೆ",
+            "ಯು",
+            "ತ",
+            "ಜ",
+            "ಲ",
+            "ದಿ",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಕ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.042297124862671,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Rain",
+      "seed": 98,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮುಗಿಲ ಕಡೆಗೆ ಹಗುರ ಪಸವೂ\nಕನಸು ತಿರುತ ನಲಿದು ಬರುವೂ\n",
+      "poem_lines": [
+        "ಮುಗಿಲ ಕಡೆಗೆ ಹಗುರ ಪಸವೂ",
+        "ಕನಸು ತಿರುತ ನಲಿದು ಬರುವೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮು ಗಿ ಲ ಕ ಡೆ ಗೆ ಹ ಗು ರ ಪ ಸ ವೂ",
+          "syllables": [
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ಕ",
+            "ಡೆ",
+            "ಗೆ",
+            "ಹ",
+            "ಗು",
+            "ರ",
+            "ಪ",
+            "ಸ",
+            "ವೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ನ ಸು ತಿ ರು ತ ನ ಲಿ ದು ಬ ರು ವೂ",
+          "syllables": [
+            "ಕ",
+            "ನ",
+            "ಸು",
+            "ತಿ",
+            "ರು",
+            "ತ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ಬ",
+            "ರು",
+            "ವೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1373326778411865,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Rain",
+      "seed": 105,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಸನ ಮರಳ ದಣಿವ ಕರಲೀ\nನನೆಯ ಹಸಿರು ಸುಖವ ತರಲೀ\n",
+      "poem_lines": [
+        "ಹಸನ ಮರಳ ದಣಿವ ಕರಲೀ",
+        "ನನೆಯ ಹಸಿರು ಸುಖವ ತರಲೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಸ ನ ಮ ರ ಳ ದ ಣಿ ವ ಕ ರ ಲೀ",
+          "syllables": [
+            "ಹ",
+            "ಸ",
+            "ನ",
+            "ಮ",
+            "ರ",
+            "ಳ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ರ",
+            "ಲೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ನೆ ಯ ಹ ಸಿ ರು ಸು ಖ ವ ತ ರ ಲೀ",
+          "syllables": [
+            "ನ",
+            "ನೆ",
+            "ಯ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಸು",
+            "ಖ",
+            "ವ",
+            "ತ",
+            "ರ",
+            "ಲೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8974769115447998,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Rain",
+      "seed": 112,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹೊಳೆಯುತಿರುವ ಮಳೆಯಾ ನಲವಾ\nಬೆಳಗುತಿರುವ ಹಳದಿ ಸುಖವಾ\n",
+      "poem_lines": [
+        "ಹೊಳೆಯುತಿರುವ ಮಳೆಯಾ ನಲವಾ",
+        "ಬೆಳಗುತಿರುವ ಹಳದಿ ಸುಖವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹೊ ಳೆ ಯು ತಿ ರು ವ ಮ ಳೆ ಯಾ ನ ಲ ವಾ",
+          "syllables": [
+            "ಹೊ",
+            "ಳೆ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಮ",
+            "ಳೆ",
+            "ಯಾ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ಳ ಗು ತಿ ರು ವ ಹ ಳ ದಿ ಸು ಖ ವಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಸು",
+            "ಖ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.050211191177368,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Rain",
+      "seed": 119,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕದನ ದಣಿವ ಕಳೆಯೆ ಸುಳಿಯೇ\nಜಗದ ಹಸಿವ ಮರಳ ತರಲೀ\n",
+      "poem_lines": [
+        "ಕದನ ದಣಿವ ಕಳೆಯೆ ಸುಳಿಯೇ",
+        "ಜಗದ ಹಸಿವ ಮರಳ ತರಲೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ದ ನ ದ ಣಿ ವ ಕ ಳೆ ಯೆ ಸು ಳಿ ಯೇ",
+          "syllables": [
+            "ಕ",
+            "ದ",
+            "ನ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ಳೆ",
+            "ಯೆ",
+            "ಸು",
+            "ಳಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಜ ಗ ದ ಹ ಸಿ ವ ಮ ರ ಳ ತ ರ ಲೀ",
+          "syllables": [
+            "ಜ",
+            "ಗ",
+            "ದ",
+            "ಹ",
+            "ಸಿ",
+            "ವ",
+            "ಮ",
+            "ರ",
+            "ಳ",
+            "ತ",
+            "ರ",
+            "ಲೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8785417079925537,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Rain",
+      "seed": 126,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮರದೀ ರುಚಿಯು ಬಿಸಿಯೋ ನಲವಾ\nಕದನೀ ಹಸಿರು ಸುರಿಯೋ ನಲವಾ\n",
+      "poem_lines": [
+        "ಮರದೀ ರುಚಿಯು ಬಿಸಿಯೋ ನಲವಾ",
+        "ಕದನೀ ಹಸಿರು ಸುರಿಯೋ ನಲವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ರ ದೀ ರು ಚಿ ಯು ಬಿ ಸಿ ಯೋ ನ ಲ ವಾ",
+          "syllables": [
+            "ಮ",
+            "ರ",
+            "ದೀ",
+            "ರು",
+            "ಚಿ",
+            "ಯು",
+            "ಬಿ",
+            "ಸಿ",
+            "ಯೋ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ದ ನೀ ಹ ಸಿ ರು ಸು ರಿ ಯೋ ನ ಲ ವಾ",
+          "syllables": [
+            "ಕ",
+            "ದ",
+            "ನೀ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಸು",
+            "ರಿ",
+            "ಯೋ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.2848446369171143,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Rain",
+      "seed": 133,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಗೆಯ ಕರದಿ ಬರುವ ಬೆರಗೂ\nತಮಸ ಬಿಸಿಲು ಮುಗಿಲ ನೆಲೆಗೂ\n",
+      "poem_lines": [
+        "ಬಗೆಯ ಕರದಿ ಬರುವ ಬೆರಗೂ",
+        "ತಮಸ ಬಿಸಿಲು ಮುಗಿಲ ನೆಲೆಗೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಗೆ ಯ ಕ ರ ದಿ ಬ ರು ವ ಬೆ ರ ಗೂ",
+          "syllables": [
+            "ಬ",
+            "ಗೆ",
+            "ಯ",
+            "ಕ",
+            "ರ",
+            "ದಿ",
+            "ಬ",
+            "ರು",
+            "ವ",
+            "ಬೆ",
+            "ರ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ತ ಮ ಸ ಬಿ ಸಿ ಲು ಮು ಗಿ ಲ ನೆ ಲೆ ಗೂ",
+          "syllables": [
+            "ತ",
+            "ಮ",
+            "ಸ",
+            "ಬಿ",
+            "ಸಿ",
+            "ಲು",
+            "ಮು",
+            "ಗಿ",
+            "ಲ",
+            "ನೆ",
+            "ಲೆ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.962428331375122,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Rain",
+      "seed": 140,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಗಲ ನಡುವ ಬರುವ ಹಳಿಯಾ\nಒಲವ ಹಸಿರು ಸುರಿಯುತಿಹ ಮೋ\n",
+      "poem_lines": [
+        "ಹಗಲ ನಡುವ ಬರುವ ಹಳಿಯಾ",
+        "ಒಲವ ಹಸಿರು ಸುರಿಯುತಿಹ ಮೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಗ ಲ ನ ಡು ವ ಬ ರು ವ ಹ ಳಿ ಯಾ",
+          "syllables": [
+            "ಹ",
+            "ಗ",
+            "ಲ",
+            "ನ",
+            "ಡು",
+            "ವ",
+            "ಬ",
+            "ರು",
+            "ವ",
+            "ಹ",
+            "ಳಿ",
+            "ಯಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಲ ವ ಹ ಸಿ ರು ಸು ರಿ ಯು ತಿ ಹ ಮೋ",
+          "syllables": [
+            "ಒ",
+            "ಲ",
+            "ವ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ಹ",
+            "ಮೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.7985570430755615,
+      "tokens_generated": 23,
+      "backtracks": 0,
+      "mask_computations": 21
+    },
+    {
+      "topic": "Rain",
+      "seed": 147,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಸಿರು ಮರಳೀ ನಲಿದು ನಲವಾ\nಕವಿಯೀ ಹಸಿರು ಮರಳೀ ನಲವಾ\n",
+      "poem_lines": [
+        "ಹಸಿರು ಮರಳೀ ನಲಿದು ನಲವಾ",
+        "ಕವಿಯೀ ಹಸಿರು ಮರಳೀ ನಲವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಸಿ ರು ಮ ರ ಳೀ ನ ಲಿ ದು ನ ಲ ವಾ",
+          "syllables": [
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಮ",
+            "ರ",
+            "ಳೀ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ವಿ ಯೀ ಹ ಸಿ ರು ಮ ರ ಳೀ ನ ಲ ವಾ",
+          "syllables": [
+            "ಕ",
+            "ವಿ",
+            "ಯೀ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಮ",
+            "ರ",
+            "ಳೀ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.2055490016937256,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 154,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕೊಳದ ಹಸಿರು ಹೊಳೆಯ ಬೆರಗೂ\nಬೆಳಗು ತಿರುವ ಪರಿಯ ಬಗೆಗೂ\n",
+      "poem_lines": [
+        "ಕೊಳದ ಹಸಿರು ಹೊಳೆಯ ಬೆರಗೂ",
+        "ಬೆಳಗು ತಿರುವ ಪರಿಯ ಬಗೆಗೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕೊ ಳ ದ ಹ ಸಿ ರು ಹೊ ಳೆ ಯ ಬೆ ರ ಗೂ",
+          "syllables": [
+            "ಕೊ",
+            "ಳ",
+            "ದ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಹೊ",
+            "ಳೆ",
+            "ಯ",
+            "ಬೆ",
+            "ರ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ಳ ಗು ತಿ ರು ವ ಪ ರಿ ಯ ಬ ಗೆ ಗೂ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಪ",
+            "ರಿ",
+            "ಯ",
+            "ಬ",
+            "ಗೆ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.876894474029541,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Rain",
+      "seed": 161,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕಮಲ ಮರಳೀ ಜಲದೀ ಪಥವೇ\nನಮಿಸೇ ಅರಳಿ ನಲಿಯೆ ಹಡಗೋ\n",
+      "poem_lines": [
+        "ಕಮಲ ಮರಳೀ ಜಲದೀ ಪಥವೇ",
+        "ನಮಿಸೇ ಅರಳಿ ನಲಿಯೆ ಹಡಗೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ಮ ಲ ಮ ರ ಳೀ ಜ ಲ ದೀ ಪ ಥ ವೇ",
+          "syllables": [
+            "ಕ",
+            "ಮ",
+            "ಲ",
+            "ಮ",
+            "ರ",
+            "ಳೀ",
+            "ಜ",
+            "ಲ",
+            "ದೀ",
+            "ಪ",
+            "ಥ",
+            "ವೇ"
+          ],
+          "markers": "I I I I I U I I U I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ಮಿ ಸೇ ಅ ರ ಳಿ ನ ಲಿ ಯೆ ಹ ಡ ಗೋ",
+          "syllables": [
+            "ನ",
+            "ಮಿ",
+            "ಸೇ",
+            "ಅ",
+            "ರ",
+            "ಳಿ",
+            "ನ",
+            "ಲಿ",
+            "ಯೆ",
+            "ಹ",
+            "ಡ",
+            "ಗೋ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.2089428901672363,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 168,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನಲಿದಾ ರುಚಿಯೀ ಮಳೆಯೇ ಬರುತಾ\nಕಲದೀ ನಲಿದುತಿರುವ ಮೃದುತಾ\n",
+      "poem_lines": [
+        "ನಲಿದಾ ರುಚಿಯೀ ಮಳೆಯೇ ಬರುತಾ",
+        "ಕಲದೀ ನಲಿದುತಿರುವ ಮೃದುತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ಲಿ ದಾ ರು ಚಿ ಯೀ ಮ ಳೆ ಯೇ ಬ ರು ತಾ",
+          "syllables": [
+            "ನ",
+            "ಲಿ",
+            "ದಾ",
+            "ರು",
+            "ಚಿ",
+            "ಯೀ",
+            "ಮ",
+            "ಳೆ",
+            "ಯೇ",
+            "ಬ",
+            "ರು",
+            "ತಾ"
+          ],
+          "markers": "I I U I I U I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಲ ದೀ ನ ಲಿ ದು ತಿ ರು ವ ಮೃ ದು ತಾ",
+          "syllables": [
+            "ಕ",
+            "ಲ",
+            "ದೀ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಮೃ",
+            "ದು",
+            "ತಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.439709186553955,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "Rain",
+      "seed": 175,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಳದಿ ನಡುವೆ ಅರಳೀ ಸುರಿತಾ\nಮಳೆವ ಮಗುವ ಕಳೆಯೆ ನಲವಾ\n",
+      "poem_lines": [
+        "ಹಳದಿ ನಡುವೆ ಅರಳೀ ಸುರಿತಾ",
+        "ಮಳೆವ ಮಗುವ ಕಳೆಯೆ ನಲವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಳ ದಿ ನ ಡು ವೆ ಅ ರ ಳೀ ಸು ರಿ ತಾ",
+          "syllables": [
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಅ",
+            "ರ",
+            "ಳೀ",
+            "ಸು",
+            "ರಿ",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಮ ಳೆ ವ ಮ ಗು ವ ಕ ಳೆ ಯೆ ನ ಲ ವಾ",
+          "syllables": [
+            "ಮ",
+            "ಳೆ",
+            "ವ",
+            "ಮ",
+            "ಗು",
+            "ವ",
+            "ಕ",
+            "ಳೆ",
+            "ಯೆ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9535846710205078,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Rain",
+      "seed": 182,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಳಸಿ ಸುರಿಯುತಿರುವ ಹಸಿವಾ\nಹಳದಿ ಮಣಿಯುತಿರುವ ಕಡಲಾ\n",
+      "poem_lines": [
+        "ಬಳಸಿ ಸುರಿಯುತಿರುವ ಹಸಿವಾ",
+        "ಹಳದಿ ಮಣಿಯುತಿರುವ ಕಡಲಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಳ ಸಿ ಸು ರಿ ಯು ತಿ ರು ವ ಹ ಸಿ ವಾ",
+          "syllables": [
+            "ಬ",
+            "ಳ",
+            "ಸಿ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಹ",
+            "ಸಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಹ ಳ ದಿ ಮ ಣಿ ಯು ತಿ ರು ವ ಕ ಡ ಲಾ",
+          "syllables": [
+            "ಹ",
+            "ಳ",
+            "ದಿ",
+            "ಮ",
+            "ಣಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಕ",
+            "ಡ",
+            "ಲಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.872626543045044,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Rain",
+      "seed": 189,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹಸನ ಮಳೆಯ ನಡುವೆ ಸುಖವಾ\nಪಸರ ಬೆಳೆಯೆ ಹಸಿರು ಸುಖವಾ\n",
+      "poem_lines": [
+        "ಹಸನ ಮಳೆಯ ನಡುವೆ ಸುಖವಾ",
+        "ಪಸರ ಬೆಳೆಯೆ ಹಸಿರು ಸುಖವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹ ಸ ನ ಮ ಳೆ ಯ ನ ಡು ವೆ ಸು ಖ ವಾ",
+          "syllables": [
+            "ಹ",
+            "ಸ",
+            "ನ",
+            "ಮ",
+            "ಳೆ",
+            "ಯ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಸು",
+            "ಖ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ಸ ರ ಬೆ ಳೆ ಯೆ ಹ ಸಿ ರು ಸು ಖ ವಾ",
+          "syllables": [
+            "ಪ",
+            "ಸ",
+            "ರ",
+            "ಬೆ",
+            "ಳೆ",
+            "ಯೆ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಸು",
+            "ಖ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.881532907485962,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Rain",
+      "seed": 196,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಳಗುತ ಇರುಳವ ಮಳೆಯದೇ\nಹೊಳೆಯುತ ಹಗುರ ಹಳೆಯ ಬಲೋ\n",
+      "poem_lines": [
+        "ಬೆಳಗುತ ಇರುಳವ ಮಳೆಯದೇ",
+        "ಹೊಳೆಯುತ ಹಗುರ ಹಳೆಯ ಬಲೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಳ ಗು ತ ಇ ರು ಳ ವ ಮ ಳೆ ಯ ದೇ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತ",
+            "ಇ",
+            "ರು",
+            "ಳ",
+            "ವ",
+            "ಮ",
+            "ಳೆ",
+            "ಯ",
+            "ದೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಹೊ ಳೆ ಯು ತ ಹ ಗು ರ ಹ ಳೆ ಯ ಬ ಲೋ",
+          "syllables": [
+            "ಹೊ",
+            "ಳೆ",
+            "ಯು",
+            "ತ",
+            "ಹ",
+            "ಗು",
+            "ರ",
+            "ಹ",
+            "ಳೆ",
+            "ಯ",
+            "ಬ",
+            "ಲೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0629312992095947,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Rain",
+      "seed": 203,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಹೊಳೆಯುತಿರುವ ಕಡಲ ಬೆರಗೂ\nಪವನ ಪರಿಯ ನಲುವ ಹಸಿಗೂ\n",
+      "poem_lines": [
+        "ಹೊಳೆಯುತಿರುವ ಕಡಲ ಬೆರಗೂ",
+        "ಪವನ ಪರಿಯ ನಲುವ ಹಸಿಗೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಹೊ ಳೆ ಯು ತಿ ರು ವ ಕ ಡ ಲ ಬೆ ರ ಗೂ",
+          "syllables": [
+            "ಹೊ",
+            "ಳೆ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಕ",
+            "ಡ",
+            "ಲ",
+            "ಬೆ",
+            "ರ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ವ ನ ಪ ರಿ ಯ ನ ಲು ವ ಹ ಸಿ ಗೂ",
+          "syllables": [
+            "ಪ",
+            "ವ",
+            "ನ",
+            "ಪ",
+            "ರಿ",
+            "ಯ",
+            "ನ",
+            "ಲು",
+            "ವ",
+            "ಹ",
+            "ಸಿ",
+            "ಗೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.991962194442749,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Rain",
+      "seed": 210,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನಲಿದು ತಿರುವ ಜಲದ ಹಸಿವಾ\nಎಲುವ ನಡುವೆ ಕಡಲ ನಲವಾ\n",
+      "poem_lines": [
+        "ನಲಿದು ತಿರುವ ಜಲದ ಹಸಿವಾ",
+        "ಎಲುವ ನಡುವೆ ಕಡಲ ನಲವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ಲಿ ದು ತಿ ರು ವ ಜ ಲ ದ ಹ ಸಿ ವಾ",
+          "syllables": [
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಜ",
+            "ಲ",
+            "ದ",
+            "ಹ",
+            "ಸಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಎ ಲು ವ ನ ಡು ವೆ ಕ ಡ ಲ ನ ಲ ವಾ",
+          "syllables": [
+            "ಎ",
+            "ಲು",
+            "ವ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ಕ",
+            "ಡ",
+            "ಲ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0138819217681885,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Rain",
+      "seed": 217,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕವಿಯೀ ನಲಿದೀ ಬಿಸಿಲೀ ಪಳಿಯೇ\nಬೆಳಗೀ ಕರಗಿ ಪರಿಯೀ ಸುಳಿಯೇ\n",
+      "poem_lines": [
+        "ಕವಿಯೀ ನಲಿದೀ ಬಿಸಿಲೀ ಪಳಿಯೇ",
+        "ಬೆಳಗೀ ಕರಗಿ ಪರಿಯೀ ಸುಳಿಯೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ವಿ ಯೀ ನ ಲಿ ದೀ ಬಿ ಸಿ ಲೀ ಪ ಳಿ ಯೇ",
+          "syllables": [
+            "ಕ",
+            "ವಿ",
+            "ಯೀ",
+            "ನ",
+            "ಲಿ",
+            "ದೀ",
+            "ಬಿ",
+            "ಸಿ",
+            "ಲೀ",
+            "ಪ",
+            "ಳಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I U I I U I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ಳ ಗೀ ಕ ರ ಗಿ ಪ ರಿ ಯೀ ಸು ಳಿ ಯೇ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗೀ",
+            "ಕ",
+            "ರ",
+            "ಗಿ",
+            "ಪ",
+            "ರಿ",
+            "ಯೀ",
+            "ಸು",
+            "ಳಿ",
+            "ಯೇ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.4184746742248535,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Rain",
+      "seed": 224,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕನಸು ಮರೆಯ ಒಡೆದೀ ಮಗನೇ\nನಭದೀ ನುಸಿಯು ತರಲೀ ಮಗನೇ\n",
+      "poem_lines": [
+        "ಕನಸು ಮರೆಯ ಒಡೆದೀ ಮಗನೇ",
+        "ನಭದೀ ನುಸಿಯು ತರಲೀ ಮಗನೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ನ ಸು ಮ ರೆ ಯ ಒ ಡೆ ದೀ ಮ ಗ ನೇ",
+          "syllables": [
+            "ಕ",
+            "ನ",
+            "ಸು",
+            "ಮ",
+            "ರೆ",
+            "ಯ",
+            "ಒ",
+            "ಡೆ",
+            "ದೀ",
+            "ಮ",
+            "ಗ",
+            "ನೇ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ಭ ದೀ ನು ಸಿ ಯು ತ ರ ಲೀ ಮ ಗ ನೇ",
+          "syllables": [
+            "ನ",
+            "ಭ",
+            "ದೀ",
+            "ನು",
+            "ಸಿ",
+            "ಯು",
+            "ತ",
+            "ರ",
+            "ಲೀ",
+            "ಮ",
+            "ಗ",
+            "ನೇ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.3232579231262207,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 231,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನಳಿಯ ತರುತ ಮಳೆಯ ಬರುವಾ\nಬೆಳಗುವ ಹಸಿರು ಮಣಿಯ ಕನಾ\n",
+      "poem_lines": [
+        "ನಳಿಯ ತರುತ ಮಳೆಯ ಬರುವಾ",
+        "ಬೆಳಗುವ ಹಸಿರು ಮಣಿಯ ಕನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ಳಿ ಯ ತ ರು ತ ಮ ಳೆ ಯ ಬ ರು ವಾ",
+          "syllables": [
+            "ನ",
+            "ಳಿ",
+            "ಯ",
+            "ತ",
+            "ರು",
+            "ತ",
+            "ಮ",
+            "ಳೆ",
+            "ಯ",
+            "ಬ",
+            "ರು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ಳ ಗು ವ ಹ ಸಿ ರು ಮ ಣಿ ಯ ಕ ನಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ವ",
+            "ಹ",
+            "ಸಿ",
+            "ರು",
+            "ಮ",
+            "ಣಿ",
+            "ಯ",
+            "ಕ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.0167057514190674,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Rain",
+      "seed": 238,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬದಿಯ ಸುರಿಯು ತಿರುವ ಬೆಳೆಕಾ\nನವನ ಸವಿಯ ಕಡಲ ಕರವಾ\n",
+      "poem_lines": [
+        "ಬದಿಯ ಸುರಿಯು ತಿರುವ ಬೆಳೆಕಾ",
+        "ನವನ ಸವಿಯ ಕಡಲ ಕರವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ದಿ ಯ ಸು ರಿ ಯು ತಿ ರು ವ ಬೆ ಳೆ ಕಾ",
+          "syllables": [
+            "ಬ",
+            "ದಿ",
+            "ಯ",
+            "ಸು",
+            "ರಿ",
+            "ಯು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ಬೆ",
+            "ಳೆ",
+            "ಕಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ವ ನ ಸ ವಿ ಯ ಕ ಡ ಲ ಕ ರ ವಾ",
+          "syllables": [
+            "ನ",
+            "ವ",
+            "ನ",
+            "ಸ",
+            "ವಿ",
+            "ಯ",
+            "ಕ",
+            "ಡ",
+            "ಲ",
+            "ಕ",
+            "ರ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9986474514007568,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Rain",
+      "seed": 245,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನಿನಗೆ ಬರುವ ಪದರ ಬೆರೆತಾ\nಕನಸು ಕಳೆಯೆ ಸುರಿಯ ತೆರೆತಾ\n",
+      "poem_lines": [
+        "ನಿನಗೆ ಬರುವ ಪದರ ಬೆರೆತಾ",
+        "ಕನಸು ಕಳೆಯೆ ಸುರಿಯ ತೆರೆತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನಿ ನ ಗೆ ಬ ರು ವ ಪ ದ ರ ಬೆ ರೆ ತಾ",
+          "syllables": [
+            "ನಿ",
+            "ನ",
+            "ಗೆ",
+            "ಬ",
+            "ರು",
+            "ವ",
+            "ಪ",
+            "ದ",
+            "ರ",
+            "ಬೆ",
+            "ರೆ",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ನ ಸು ಕ ಳೆ ಯೆ ಸು ರಿ ಯ ತೆ ರೆ ತಾ",
+          "syllables": [
+            "ಕ",
+            "ನ",
+            "ಸು",
+            "ಕ",
+            "ಳೆ",
+            "ಯೆ",
+            "ಸು",
+            "ರಿ",
+            "ಯ",
+            "ತೆ",
+            "ರೆ",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8227803707122803,
+      "tokens_generated": 23,
+      "backtracks": 0,
+      "mask_computations": 21
+    },
+    {
+      "topic": "Rain",
+      "seed": 252,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಪಸರ ನಲಿದು ಬರಲು ಬರಲೂ\nಬಿಸಿಲ ನಗುತ ಮಣಿಯು ಸುಖಲೂ\n",
+      "poem_lines": [
+        "ಪಸರ ನಲಿದು ಬರಲು ಬರಲೂ",
+        "ಬಿಸಿಲ ನಗುತ ಮಣಿಯು ಸುಖಲೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಪ ಸ ರ ನ ಲಿ ದು ಬ ರ ಲು ಬ ರ ಲೂ",
+          "syllables": [
+            "ಪ",
+            "ಸ",
+            "ರ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ಬ",
+            "ರ",
+            "ಲು",
+            "ಬ",
+            "ರ",
+            "ಲೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬಿ ಸಿ ಲ ನ ಗು ತ ಮ ಣಿ ಯು ಸು ಖ ಲೂ",
+          "syllables": [
+            "ಬಿ",
+            "ಸಿ",
+            "ಲ",
+            "ನ",
+            "ಗು",
+            "ತ",
+            "ಮ",
+            "ಣಿ",
+            "ಯು",
+            "ಸು",
+            "ಖ",
+            "ಲೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.970628261566162,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Rain",
+      "seed": 259,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮುಗಿಲಾ ಕಲೆಯ ನಡುವೆ ನಲವಾ\nಒಡಲ ನಡುವೆ ನಲಿದು ಬರುವಾ\n",
+      "poem_lines": [
+        "ಮುಗಿಲಾ ಕಲೆಯ ನಡುವೆ ನಲವಾ",
+        "ಒಡಲ ನಡುವೆ ನಲಿದು ಬರುವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮು ಗಿ ಲಾ ಕ ಲೆ ಯ ನ ಡು ವೆ ನ ಲ ವಾ",
+          "syllables": [
+            "ಮು",
+            "ಗಿ",
+            "ಲಾ",
+            "ಕ",
+            "ಲೆ",
+            "ಯ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ನ",
+            "ಲ",
+            "ವಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಒ ಡ ಲ ನ ಡು ವೆ ನ ಲಿ ದು ಬ ರು ವಾ",
+          "syllables": [
+            "ಒ",
+            "ಡ",
+            "ಲ",
+            "ನ",
+            "ಡು",
+            "ವೆ",
+            "ನ",
+            "ಲಿ",
+            "ದು",
+            "ಬ",
+            "ರು",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.8773829936981201,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Rain",
+      "seed": 266,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಳಗುತ ಮಳೆಯ ಮಧುರ ಸರೋ\nಕದನ ನುಸಿಯು ನಲಿವ ಸಿರಿಯಾ\n",
+      "poem_lines": [
+        "ಬೆಳಗುತ ಮಳೆಯ ಮಧುರ ಸರೋ",
+        "ಕದನ ನುಸಿಯು ನಲಿವ ಸಿರಿಯಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಳ ಗು ತ ಮ ಳೆ ಯ ಮ ಧು ರ ಸ ರೋ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತ",
+            "ಮ",
+            "ಳೆ",
+            "ಯ",
+            "ಮ",
+            "ಧು",
+            "ರ",
+            "ಸ",
+            "ರೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ದ ನ ನು ಸಿ ಯು ನ ಲಿ ವ ಸಿ ರಿ ಯಾ",
+          "syllables": [
+            "ಕ",
+            "ದ",
+            "ನ",
+            "ನು",
+            "ಸಿ",
+            "ಯು",
+            "ನ",
+            "ಲಿ",
+            "ವ",
+            "ಸಿ",
+            "ರಿ",
+            "ಯಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.207207202911377,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 273,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ನವನ ದಣಿವ ಕಳೆಯೆ ತರುತಾ\nಬೆಳಗುತಿರುವ ನುಡಿಯು ಸುಧತಾ\n",
+      "poem_lines": [
+        "ನವನ ದಣಿವ ಕಳೆಯೆ ತರುತಾ",
+        "ಬೆಳಗುತಿರುವ ನುಡಿಯು ಸುಧತಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ನ ವ ನ ದ ಣಿ ವ ಕ ಳೆ ಯೆ ತ ರು ತಾ",
+          "syllables": [
+            "ನ",
+            "ವ",
+            "ನ",
+            "ದ",
+            "ಣಿ",
+            "ವ",
+            "ಕ",
+            "ಳೆ",
+            "ಯೆ",
+            "ತ",
+            "ರು",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ಳ ಗು ತಿ ರು ವ ನು ಡಿ ಯು ಸು ಧ ತಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಳ",
+            "ಗು",
+            "ತಿ",
+            "ರು",
+            "ವ",
+            "ನು",
+            "ಡಿ",
+            "ಯು",
+            "ಸು",
+            "ಧ",
+            "ತಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 2.1232380867004395,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    }
+  ]
+}

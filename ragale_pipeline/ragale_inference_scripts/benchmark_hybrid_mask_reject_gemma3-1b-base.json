@@ -1,0 +1,6202 @@
+{
+  "label": "gemma3-1b-base -- hybrid_mask_reject",
+  "method": "hybrid_mask_reject",
+  "model": "gemma3-1b-base",
+  "constrained": true,
+  "total_poems": 102,
+  "total_valid": 69,
+  "poem_accuracy": 67.64705882352942,
+  "total_lines": 202,
+  "valid_lines": 162,
+  "line_accuracy": 80.19801980198021,
+  "total_time": 135.991872549057,
+  "per_topic": {
+    "Bubbles": {
+      "total": 34,
+      "valid": 17,
+      "rate": 50.0
+    },
+    "Moon": {
+      "total": 34,
+      "valid": 24,
+      "rate": 70.58823529411765
+    },
+    "Rain": {
+      "total": 34,
+      "valid": 28,
+      "rate": 82.35294117647058
+    }
+  },
+  "poems": [
+    {
+      "topic": "Bubbles",
+      "seed": 42,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚಿ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಶಾ\nಬ ಚಿ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಶಾ\n",
+      "poem_lines": [
+        "ಬ ಚಿ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಶಾ",
+        "ಬ ಚಿ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಶಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚಿ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಶಾ",
+          "syllables": [
+            "ಬ",
+            "ಚಿ",
+            "ಚಿ",
+            "ಬ",
+            "ಚಿ",
+            "ಬ",
+            "ಚಿ",
+            "ಬ",
+            "ಚಿ",
+            "ಬ",
+            "ಚಿ",
+            "ಶಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬ ಚಿ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಬ ಚಿ ಶಾ",
+          "syllables": [
+            "ಬ",
+            "ಚಿ",
+            "ಚಿ",
+            "ಬ",
+            "ಚಿ",
+            "ಬ",
+            "ಚಿ",
+            "ಬ",
+            "ಚಿ",
+            "ಬ",
+            "ಚಿ",
+            "ಶಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3798012733459473,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 49,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಬಿ ನಿನ್ನ ಅಡ ಇಿರುವ ಸಿನ ಮಾ\nಸಿನ ಸಿನ ಸಿನ ಸಿನ ಸಿನ ಸನಾ\n",
+      "poem_lines": [
+        "ಬಬಿ ನಿನ್ನ ಅಡ ಇಿರುವ ಸಿನ ಮಾ",
+        "ಸಿನ ಸಿನ ಸಿನ ಸಿನ ಸಿನ ಸನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಬಿ ನಿ ನ್ನ ಅ ಡ ಇ ರು ವ ಸಿ ನ ಮಾ",
+          "syllables": [
+            "ಬ",
+            "ಬಿ",
+            "ನಿ",
+            "ನ್ನ",
+            "ಅ",
+            "ಡ",
+            "ಇ",
+            "ರು",
+            "ವ",
+            "ಸಿ",
+            "ನ",
+            "ಮಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ನ ಸಿ ನ ಸಿ ನ ಸಿ ನ ಸಿ ನ ಸ ನಾ",
+          "syllables": [
+            "ಸಿ",
+            "ನ",
+            "ಸಿ",
+            "ನ",
+            "ಸಿ",
+            "ನ",
+            "ಸಿ",
+            "ನ",
+            "ಸಿ",
+            "ನ",
+            "ಸ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.027341365814209,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 56,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಶುರುಕಿನ ಕಲೆ ನಿರತರದು ನೀ\nನಿರತರ ತರಕ ಪ್ರಣಿಯ ತ ಮೋ\n",
+      "poem_lines": [
+        "ಶುರುಕಿನ ಕಲೆ ನಿರತರದು ನೀ",
+        "ನಿರತರ ತರಕ ಪ್ರಣಿಯ ತ ಮೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಶು ರು ಕಿ ನ ಕ ಲೆ ನಿ ರ ತ ರ ದು ನೀ",
+          "syllables": [
+            "ಶು",
+            "ರು",
+            "ಕಿ",
+            "ನ",
+            "ಕ",
+            "ಲೆ",
+            "ನಿ",
+            "ರ",
+            "ತ",
+            "ರ",
+            "ದು",
+            "ನೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನಿ ರ ತ ರ ತ ರ ಕ ಪ್ರ ಣಿ ಯ ತ ಮೋ",
+          "syllables": [
+            "ನಿ",
+            "ರ",
+            "ತ",
+            "ರ",
+            "ತ",
+            "ರ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಣಿ",
+            "ಯ",
+            "ತ",
+            "ಮೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0276200771331787,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 63,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚಿಲ್ ಕೀಲಗಳು ುತ್ತದೆ  ಕುರಿತು ಏ\nಸರಿ ವಿನ ಪ್ರಗತ ಕರಗಳು ಮೂ\n",
+      "poem_lines": [
+        "ಬ ಚಿಲ್ ಕೀಲಗಳು ುತ್ತದೆ  ಕುರಿತು ಏ",
+        "ಸರಿ ವಿನ ಪ್ರಗತ ಕರಗಳು ಮೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚಿಲ್ ಕೀ ಲ ಗ ಳು ತ್ತ ದೆ ಕು ರಿ ತು ಏ",
+          "syllables": [
+            "ಬ",
+            "ಚಿಲ್",
+            "ಕೀ",
+            "ಲ",
+            "ಗ",
+            "ಳು",
+            "ತ್ತ",
+            "ದೆ",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಏ"
+          ],
+          "markers": "I U U I I I I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರಿ ವಿ ನ ಪ್ರ ಗ ತ ಕ ರ ಗ ಳು ಮೂ",
+          "syllables": [
+            "ಸ",
+            "ರಿ",
+            "ವಿ",
+            "ನ",
+            "ಪ್ರ",
+            "ಗ",
+            "ತ",
+            "ಕ",
+            "ರ",
+            "ಗ",
+            "ಳು",
+            "ಮೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.112217664718628,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 70,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಬುಲ್ಸ್ ಕುರಿತು ಉತ್ಸಹ ರಗಳ ಸೋ\nಗತ ಮಾಡ್ಗ ತರಬಲ್ ಬ ತರ ಬಕಾ\n",
+      "poem_lines": [
+        "ಬ ಬುಲ್ಸ್ ಕುರಿತು ಉತ್ಸಹ ರಗಳ ಸೋ",
+        "ಗತ ಮಾಡ್ಗ ತರಬಲ್ ಬ ತರ ಬಕಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಬುಲ್ಸ್ ಕು ರಿ ತು ಉ ತ್ಸ ಹ ರ ಗ ಳ ಸೋ",
+          "syllables": [
+            "ಬ",
+            "ಬುಲ್ಸ್",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉ",
+            "ತ್ಸ",
+            "ಹ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಸೋ"
+          ],
+          "markers": "I U I I I U I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಗ ತ ಮಾ ಡ್ಗ ತ ರ ಬಲ್ ಬ ತ ರ ಬ ಕಾ",
+          "syllables": [
+            "ಗ",
+            "ತ",
+            "ಮಾ",
+            "ಡ್ಗ",
+            "ತ",
+            "ರ",
+            "ಬಲ್",
+            "ಬ",
+            "ತ",
+            "ರ",
+            "ಬ",
+            "ಕಾ"
+          ],
+          "markers": "I I U I I I U I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.1883747577667236,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 77,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚಿಲ್ ಪದ್ಯವು: ೀ ಪ್ರೀ ಪ್ರಪರ್ ಪ್ರೀ ಪ್ರಪ ಸಂ\nಚು ಪ್ರ ಪ್ರೀ ಪ್ರಪರ್ ಪ್ರೀ ಪ್ರಪರ್ ಪ್ರೀ ಪ್ರಪ ಸಂ\n",
+      "poem_lines": [
+        "ಬ ಚಿಲ್ ಪದ್ಯವು: ೀ ಪ್ರೀ ಪ್ರಪರ್ ಪ್ರೀ ಪ್ರಪ ಸಂ",
+        "ಚು ಪ್ರ ಪ್ರೀ ಪ್ರಪರ್ ಪ್ರೀ ಪ್ರಪರ್ ಪ್ರೀ ಪ್ರಪ ಸಂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚಿಲ್ ಪ ದ್ಯ ವು ಪ್ರೀ ಪ್ರ ಪರ್ ಪ್ರೀ ಪ್ರ ಪ ಸಂ",
+          "syllables": [
+            "ಬ",
+            "ಚಿಲ್",
+            "ಪ",
+            "ದ್ಯ",
+            "ವು",
+            "ಪ್ರೀ",
+            "ಪ್ರ",
+            "ಪರ್",
+            "ಪ್ರೀ",
+            "ಪ್ರ",
+            "ಪ",
+            "ಸಂ"
+          ],
+          "markers": "I U U I I U I U U I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ಪ್ರ ಪ್ರೀ ಪ್ರ ಪರ್ ಪ್ರೀ ಪ್ರ ಪರ್ ಪ್ರೀ ಪ್ರ ಪ ಸಂ",
+          "syllables": [
+            "ಚು",
+            "ಪ್ರ",
+            "ಪ್ರೀ",
+            "ಪ್ರ",
+            "ಪರ್",
+            "ಪ್ರೀ",
+            "ಪ್ರ",
+            "ಪರ್",
+            "ಪ್ರೀ",
+            "ಪ್ರ",
+            "ಪ",
+            "ಸಂ"
+          ],
+          "markers": "I I U I U U I U U I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.6806714534759521,
+      "tokens_generated": 39,
+      "backtracks": 0,
+      "mask_computations": 37
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 84,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚಿಲ್ ಅರಿಯು ನಾಯುಗಳು ು ನವನಾ\nಪ್ರಯಹ ಕರಹನರಸನವನಾ\n",
+      "poem_lines": [
+        "ಬ ಚಿಲ್ ಅರಿಯು ನಾಯುಗಳು ು ನವನಾ",
+        "ಪ್ರಯಹ ಕರಹನರಸನವನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚಿಲ್ ಅ ರಿ ಯು ನಾ ಯು ಗ ಳು ನ ವ ನಾ",
+          "syllables": [
+            "ಬ",
+            "ಚಿಲ್",
+            "ಅ",
+            "ರಿ",
+            "ಯು",
+            "ನಾ",
+            "ಯು",
+            "ಗ",
+            "ಳು",
+            "ನ",
+            "ವ",
+            "ನಾ"
+          ],
+          "markers": "I U I I I U I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ್ರ ಯ ಹ ಕ ರ ಹ ನ ರ ಸ ನ ವ ನಾ",
+          "syllables": [
+            "ಪ್ರ",
+            "ಯ",
+            "ಹ",
+            "ಕ",
+            "ರ",
+            "ಹ",
+            "ನ",
+            "ರ",
+            "ಸ",
+            "ನ",
+            "ವ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.2383270263671875,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 91,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಬುಲಗಳು  ಕುರಿತು ಉತ್ಸಹ ರಾ\nಬ ಬುಲಗಳು  ಕುರಿತು ಉತ್ಸಹ ರಾ\n",
+      "poem_lines": [
+        "ಬ ಬುಲಗಳು  ಕುರಿತು ಉತ್ಸಹ ರಾ",
+        "ಬ ಬುಲಗಳು  ಕುರಿತು ಉತ್ಸಹ ರಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಬು ಲ ಗ ಳು ಕು ರಿ ತು ಉ ತ್ಸ ಹ ರಾ",
+          "syllables": [
+            "ಬ",
+            "ಬು",
+            "ಲ",
+            "ಗ",
+            "ಳು",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉ",
+            "ತ್ಸ",
+            "ಹ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬ ಬು ಲ ಗ ಳು ಕು ರಿ ತು ಉ ತ್ಸ ಹ ರಾ",
+          "syllables": [
+            "ಬ",
+            "ಬು",
+            "ಲ",
+            "ಗ",
+            "ಳು",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉ",
+            "ತ್ಸ",
+            "ಹ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0939934253692627,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 98,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚಿ ನಯೆಗನ ಅಯೆನಗ ಕಈ\nನಯೆನಗ ಬ ಚಿ ನಯೆನಗ ಅನಾ\n",
+      "poem_lines": [
+        "ಬ ಚಿ ನಯೆಗನ ಅಯೆನಗ ಕಈ",
+        "ನಯೆನಗ ಬ ಚಿ ನಯೆನಗ ಅನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚಿ ನ ಯೆ ಗ ನ ಅ ಯೆ ನ ಗ ಕ ಈ",
+          "syllables": [
+            "ಬ",
+            "ಚಿ",
+            "ನ",
+            "ಯೆ",
+            "ಗ",
+            "ನ",
+            "ಅ",
+            "ಯೆ",
+            "ನ",
+            "ಗ",
+            "ಕ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ಯೆ ನ ಗ ಬ ಚಿ ನ ಯೆ ನ ಗ ಅ ನಾ",
+          "syllables": [
+            "ನ",
+            "ಯೆ",
+            "ನ",
+            "ಗ",
+            "ಬ",
+            "ಚಿ",
+            "ನ",
+            "ಯೆ",
+            "ನ",
+            "ಗ",
+            "ಅ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2569448947906494,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 105,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಲದ ಕಲೆ ಒಂದು ಕಲೆ ಪ್ರವ ವಾ\nಸಹನಗಳು ಪ್ರೇಣಿಯ ಪ್ರವ ಪ್ರವೀ\n",
+      "poem_lines": [
+        "ಬೆಲದ ಕಲೆ ಒಂದು ಕಲೆ ಪ್ರವ ವಾ",
+        "ಸಹನಗಳು ಪ್ರೇಣಿಯ ಪ್ರವ ಪ್ರವೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಲ ದ ಕ ಲೆ ಒಂ ದು ಕ ಲೆ ಪ್ರ ವ ವಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಲ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ಒಂ",
+            "ದು",
+            "ಕ",
+            "ಲೆ",
+            "ಪ್ರ",
+            "ವ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಹ ನ ಗ ಳು ಪ್ರೇ ಣಿ ಯ ಪ್ರ ವ ಪ್ರ ವೀ",
+          "syllables": [
+            "ಸ",
+            "ಹ",
+            "ನ",
+            "ಗ",
+            "ಳು",
+            "ಪ್ರೇ",
+            "ಣಿ",
+            "ಯ",
+            "ಪ್ರ",
+            "ವ",
+            "ಪ್ರ",
+            "ವೀ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0719044208526611,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 112,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಬ್ಸ್ ಕುರಿತು ಉತ್ ಸಾಹರಗಳ ಪ ಸಂ\nಸಿನಕ ಕರನ ಕಲೆಗೆ ಅರಿವಾ\n",
+      "poem_lines": [
+        "ಬಬ್ಸ್ ಕುರಿತು ಉತ್ ಸಾಹರಗಳ ಪ ಸಂ",
+        "ಸಿನಕ ಕರನ ಕಲೆಗೆ ಅರಿವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬಬ್ಸ್ ಕು ರಿ ತು ಉತ್ ಸಾ ಹ ರ ಗ ಳ ಪ ಸಂ",
+          "syllables": [
+            "ಬಬ್ಸ್",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉತ್",
+            "ಸಾ",
+            "ಹ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಪ",
+            "ಸಂ"
+          ],
+          "markers": "U I I I U U I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ನ ಕ ಕ ರ ನ ಕ ಲೆ ಗೆ ಅ ರಿ ವಾ",
+          "syllables": [
+            "ಸಿ",
+            "ನ",
+            "ಕ",
+            "ಕ",
+            "ರ",
+            "ನ",
+            "ಕ",
+            "ಲೆ",
+            "ಗೆ",
+            "ಅ",
+            "ರಿ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.1037328243255615,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 119,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಲದ ಕಲೆ ಒಂದು ಕಥನವ ಈ\nಧುಡಿಯು ಜಗತದ ಕಲೆ ಪ್ರವ ವಾ\n",
+      "poem_lines": [
+        "ಬೆಲದ ಕಲೆ ಒಂದು ಕಥನವ ಈ",
+        "ಧುಡಿಯು ಜಗತದ ಕಲೆ ಪ್ರವ ವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಲ ದ ಕ ಲೆ ಒಂ ದು ಕ ಥ ನ ವ ಈ",
+          "syllables": [
+            "ಬೆ",
+            "ಲ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ಒಂ",
+            "ದು",
+            "ಕ",
+            "ಥ",
+            "ನ",
+            "ವ",
+            "ಈ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಧು ಡಿ ಯು ಜ ಗ ತ ದ ಕ ಲೆ ಪ್ರ ವ ವಾ",
+          "syllables": [
+            "ಧು",
+            "ಡಿ",
+            "ಯು",
+            "ಜ",
+            "ಗ",
+            "ತ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ಪ್ರ",
+            "ವ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1160261631011963,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 126,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಡ್ಡ್ಸ್ ಕರಗಳು: ುಲವಗಳು ುಲವವಾ\nಬಡ್ಡ್ಸ್ ಕರಗಳು: ುಲವಗಳು ುಲವವಾ\n",
+      "poem_lines": [
+        "ಬಡ್ಡ್ಸ್ ಕರಗಳು: ುಲವಗಳು ುಲವವಾ",
+        "ಬಡ್ಡ್ಸ್ ಕರಗಳು: ುಲವಗಳು ುಲವವಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬಡ್ಡ್ಸ್ ಕ ರ ಗ ಳು ಲ ವ ಗ ಳು ಲ ವ ವಾ",
+          "syllables": [
+            "ಬಡ್ಡ್ಸ್",
+            "ಕ",
+            "ರ",
+            "ಗ",
+            "ಳು",
+            "ಲ",
+            "ವ",
+            "ಗ",
+            "ಳು",
+            "ಲ",
+            "ವ",
+            "ವಾ"
+          ],
+          "markers": "U I I I I I I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬಡ್ಡ್ಸ್ ಕ ರ ಗ ಳು ಲ ವ ಗ ಳು ಲ ವ ವಾ",
+          "syllables": [
+            "ಬಡ್ಡ್ಸ್",
+            "ಕ",
+            "ರ",
+            "ಗ",
+            "ಳು",
+            "ಲ",
+            "ವ",
+            "ಗ",
+            "ಳು",
+            "ಲ",
+            "ವ",
+            "ವಾ"
+          ],
+          "markers": "U I I I I I I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.611234426498413,
+      "tokens_generated": 38,
+      "backtracks": 0,
+      "mask_computations": 36
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 133,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಬುಲ್ಸ್ ಕುರಿತು ಉತ್ಸಹ ರಗಳ ಈ\nಗುರು ಅಸ್ಮಿತ ಬ್ಲಮ್ ಬ್ಲಮ್ ುತ್ತದೆ ುತ್ತದೆ ಐ\n",
+      "poem_lines": [
+        "ಬ ಬುಲ್ಸ್ ಕುರಿತು ಉತ್ಸಹ ರಗಳ ಈ",
+        "ಗುರು ಅಸ್ಮಿತ ಬ್ಲಮ್ ಬ್ಲಮ್ ುತ್ತದೆ ುತ್ತದೆ ಐ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಬುಲ್ಸ್ ಕು ರಿ ತು ಉ ತ್ಸ ಹ ರ ಗ ಳ ಈ",
+          "syllables": [
+            "ಬ",
+            "ಬುಲ್ಸ್",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉ",
+            "ತ್ಸ",
+            "ಹ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಈ"
+          ],
+          "markers": "I U I I I U I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಗು ರು ಅ ಸ್ಮಿ ತ ಬ್ಲಮ್ ಬ್ಲಮ್ ತ್ತ ದೆ ತ್ತ ದೆ ಐ",
+          "syllables": [
+            "ಗು",
+            "ರು",
+            "ಅ",
+            "ಸ್ಮಿ",
+            "ತ",
+            "ಬ್ಲಮ್",
+            "ಬ್ಲಮ್",
+            "ತ್ತ",
+            "ದೆ",
+            "ತ್ತ",
+            "ದೆ",
+            "ಐ"
+          ],
+          "markers": "I I U I I U U I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.4028046131134033,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 140,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಬಿ ಮುಸ್ಸು ಬಿಸಲು ಬಯಸವ ಈ\nಬಯಸ್ ನರಿವನ ಕಲೆ ತರಸ ಹಾ\n",
+      "poem_lines": [
+        "ಬಬಿ ಮುಸ್ಸು ಬಿಸಲು ಬಯಸವ ಈ",
+        "ಬಯಸ್ ನರಿವನ ಕಲೆ ತರಸ ಹಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಬಿ ಮು ಸ್ಸು ಬಿ ಸ ಲು ಬ ಯ ಸ ವ ಈ",
+          "syllables": [
+            "ಬ",
+            "ಬಿ",
+            "ಮು",
+            "ಸ್ಸು",
+            "ಬಿ",
+            "ಸ",
+            "ಲು",
+            "ಬ",
+            "ಯ",
+            "ಸ",
+            "ವ",
+            "ಈ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬ ಯಸ್ ನ ರಿ ವ ನ ಕ ಲೆ ತ ರ ಸ ಹಾ",
+          "syllables": [
+            "ಬ",
+            "ಯಸ್",
+            "ನ",
+            "ರಿ",
+            "ವ",
+            "ನ",
+            "ಕ",
+            "ಲೆ",
+            "ತ",
+            "ರ",
+            "ಸ",
+            "ಹಾ"
+          ],
+          "markers": "I U I I I I I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.0660405158996582,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 147,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಬುಬಲ್ಸ್ ಕುರಿತು ಉತ್೨ಹ ರಗಳಈ\nಸಹನಗಳು ಬ೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧",
+      "poem_lines": [
+        "ಬ ಬುಬಲ್ಸ್ ಕುರಿತು ಉತ್೨ಹ ರಗಳಈ",
+        "ಸಹನಗಳು ಬ೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧೧"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಬು ಬಲ್ಸ್ ಕು ರಿ ತು ಉತ್ ಹ ರ ಗ ಳ ಈ",
+          "syllables": [
+            "ಬ",
+            "ಬು",
+            "ಬಲ್ಸ್",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉತ್",
+            "ಹ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಈ"
+          ],
+          "markers": "I U U I I I U I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಹ ನ ಗ ಳು ಬ",
+          "syllables": [
+            "ಸ",
+            "ಹ",
+            "ನ",
+            "ಗ",
+            "ಳು",
+            "ಬ"
+          ],
+          "markers": "I I I I I I",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 6,
+          "guru_ending": false
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 8.023500442504883,
+      "tokens_generated": 150,
+      "backtracks": 0,
+      "mask_computations": 149
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 154,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಬ್ಸ್ ಕುರಿತು ಉತ್ ಸಾಹರಗಳ ಪ ಸಂ\nಸರಿಗ ಬಸದ ಬಕಹ ಪರ ಆ\n",
+      "poem_lines": [
+        "ಬಬ್ಸ್ ಕುರಿತು ಉತ್ ಸಾಹರಗಳ ಪ ಸಂ",
+        "ಸರಿಗ ಬಸದ ಬಕಹ ಪರ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬಬ್ಸ್ ಕು ರಿ ತು ಉತ್ ಸಾ ಹ ರ ಗ ಳ ಪ ಸಂ",
+          "syllables": [
+            "ಬಬ್ಸ್",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉತ್",
+            "ಸಾ",
+            "ಹ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಪ",
+            "ಸಂ"
+          ],
+          "markers": "U I I I U U I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರಿ ಗ ಬ ಸ ದ ಬ ಕ ಹ ಪ ರ ಆ",
+          "syllables": [
+            "ಸ",
+            "ರಿ",
+            "ಗ",
+            "ಬ",
+            "ಸ",
+            "ದ",
+            "ಬ",
+            "ಕ",
+            "ಹ",
+            "ಪ",
+            "ರ",
+            "ಆ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.0986230373382568,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 161,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬುಬಲ್ಸ್  ಕುರಿತು ಉತ್ಸಹ ರಗಳ ಈ\nಅಲದ ಶುಲತಿಕುತ ಬ್ಲಕಿನ ಮಾ\n",
+      "poem_lines": [
+        "ಬುಬಲ್ಸ್  ಕುರಿತು ಉತ್ಸಹ ರಗಳ ಈ",
+        "ಅಲದ ಶುಲತಿಕುತ ಬ್ಲಕಿನ ಮಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬು ಬಲ್ಸ್ ಕು ರಿ ತು ಉ ತ್ಸ ಹ ರ ಗ ಳ ಈ",
+          "syllables": [
+            "ಬು",
+            "ಬಲ್ಸ್",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉ",
+            "ತ್ಸ",
+            "ಹ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಈ"
+          ],
+          "markers": "U U I I I U I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಅ ಲ ದ ಶು ಲ ತಿ ಕು ತ ಬ್ಲ ಕಿ ನ ಮಾ",
+          "syllables": [
+            "ಅ",
+            "ಲ",
+            "ದ",
+            "ಶು",
+            "ಲ",
+            "ತಿ",
+            "ಕು",
+            "ತ",
+            "ಬ್ಲ",
+            "ಕಿ",
+            "ನ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.3727421760559082,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 31
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 168,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚಿ ಬ ಚಿ ನರಿತ ಪ್ರಪಂಚದ ಈ\nಸ ಅಡದ ಪ್ರಪಕೃತ ವಯ ಪ್ರಏ\n",
+      "poem_lines": [
+        "ಬ ಚಿ ಬ ಚಿ ನರಿತ ಪ್ರಪಂಚದ ಈ",
+        "ಸ ಅಡದ ಪ್ರಪಕೃತ ವಯ ಪ್ರಏ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚಿ ಬ ಚಿ ನ ರಿ ತ ಪ್ರ ಪಂ ಚ ದ ಈ",
+          "syllables": [
+            "ಬ",
+            "ಚಿ",
+            "ಬ",
+            "ಚಿ",
+            "ನ",
+            "ರಿ",
+            "ತ",
+            "ಪ್ರ",
+            "ಪಂ",
+            "ಚ",
+            "ದ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಅ ಡ ದ ಪ್ರ ಪ ಕೃ ತ ವ ಯ ಪ್ರ ಏ",
+          "syllables": [
+            "ಸ",
+            "ಅ",
+            "ಡ",
+            "ದ",
+            "ಪ್ರ",
+            "ಪ",
+            "ಕೃ",
+            "ತ",
+            "ವ",
+            "ಯ",
+            "ಪ್ರ",
+            "ಏ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0689990520477295,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 175,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚಿ ಹರ ರುಬಾ ರುಬಲ ವರಸಾ\nಪರಿಗ ಅಯನ ರುಬಲ ವರಸಾ\n",
+      "poem_lines": [
+        "ಬ ಚಿ ಹರ ರುಬಾ ರುಬಲ ವರಸಾ",
+        "ಪರಿಗ ಅಯನ ರುಬಲ ವರಸಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚಿ ಹ ರ ರು ಬಾ ರು ಬ ಲ ವ ರ ಸಾ",
+          "syllables": [
+            "ಬ",
+            "ಚಿ",
+            "ಹ",
+            "ರ",
+            "ರು",
+            "ಬಾ",
+            "ರು",
+            "ಬ",
+            "ಲ",
+            "ವ",
+            "ರ",
+            "ಸಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ರಿ ಗ ಅ ಯ ನ ರು ಬ ಲ ವ ರ ಸಾ",
+          "syllables": [
+            "ಪ",
+            "ರಿ",
+            "ಗ",
+            "ಅ",
+            "ಯ",
+            "ನ",
+            "ರು",
+            "ಬ",
+            "ಲ",
+            "ವ",
+            "ರ",
+            "ಸಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2388594150543213,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 182,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಬ್ಸ್ ಕುರಿತು ಉತ್ ಸಾಹರಗಳ ಪ ಸಂ\nಕೃತ ಬಬ್ಸ್ ಕುರಿತು ಪಯಲ ಪಯಲೋ\n",
+      "poem_lines": [
+        "ಬಬ್ಸ್ ಕುರಿತು ಉತ್ ಸಾಹರಗಳ ಪ ಸಂ",
+        "ಕೃತ ಬಬ್ಸ್ ಕುರಿತು ಪಯಲ ಪಯಲೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬಬ್ಸ್ ಕು ರಿ ತು ಉತ್ ಸಾ ಹ ರ ಗ ಳ ಪ ಸಂ",
+          "syllables": [
+            "ಬಬ್ಸ್",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉತ್",
+            "ಸಾ",
+            "ಹ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಪ",
+            "ಸಂ"
+          ],
+          "markers": "U I I I U U I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕೃ ತ ಬಬ್ಸ್ ಕು ರಿ ತು ಪ ಯ ಲ ಪ ಯ ಲೋ",
+          "syllables": [
+            "ಕೃ",
+            "ತ",
+            "ಬಬ್ಸ್",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಪ",
+            "ಯ",
+            "ಲ",
+            "ಪ",
+            "ಯ",
+            "ಲೋ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.1846673488616943,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 189,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬೆಲಗಳು ಉರುಟುಂಡು ನಮಗ ಮಾ\nಬೆಲಗಳು ಉರುಟುಂಡು ನಮಗ ಮಾ\n",
+      "poem_lines": [
+        "ಬೆಲಗಳು ಉರುಟುಂಡು ನಮಗ ಮಾ",
+        "ಬೆಲಗಳು ಉರುಟುಂಡು ನಮಗ ಮಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬೆ ಲ ಗ ಳು ಉ ರು ಟುಂ ಡು ನ ಮ ಗ ಮಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಲ",
+            "ಗ",
+            "ಳು",
+            "ಉ",
+            "ರು",
+            "ಟುಂ",
+            "ಡು",
+            "ನ",
+            "ಮ",
+            "ಗ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I U I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಬೆ ಲ ಗ ಳು ಉ ರು ಟುಂ ಡು ನ ಮ ಗ ಮಾ",
+          "syllables": [
+            "ಬೆ",
+            "ಲ",
+            "ಗ",
+            "ಳು",
+            "ಉ",
+            "ರು",
+            "ಟುಂ",
+            "ಡು",
+            "ನ",
+            "ಮ",
+            "ಗ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I U I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.2396221160888672,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 196,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮ ಮುಹಲಲಕಲಮ ಅಸರವಾ\nಗಗಗಗಗಗಗಗಗಗಗಕಾ\n",
+      "poem_lines": [
+        "ಮ ಮುಹಲಲಕಲಮ ಅಸರವಾ",
+        "ಗಗಗಗಗಗಗಗಗಗಗಕಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ಮು ಹ ಲ ಲ ಕ ಲ ಮ ಅ ಸ ರ ವಾ",
+          "syllables": [
+            "ಮ",
+            "ಮು",
+            "ಹ",
+            "ಲ",
+            "ಲ",
+            "ಕ",
+            "ಲ",
+            "ಮ",
+            "ಅ",
+            "ಸ",
+            "ರ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಗ ಗ ಗ ಗ ಗ ಗ ಗ ಗ ಗ ಗ ಗ ಕಾ",
+          "syllables": [
+            "ಗ",
+            "ಗ",
+            "ಗ",
+            "ಗ",
+            "ಗ",
+            "ಗ",
+            "ಗ",
+            "ಗ",
+            "ಗ",
+            "ಗ",
+            "ಗ",
+            "ಕಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0755603313446045,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 203,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಬ್ಸ್ ಕುರಿತು ಉತ್ ಸಾಹರಗಳ ಪ ಸಂ\nನಗುವಿನ ಕಲೆಗೆ ಹ ಆತ್ಮ ಪ್ರವೇ\n",
+      "poem_lines": [
+        "ಬಬ್ಸ್ ಕುರಿತು ಉತ್ ಸಾಹರಗಳ ಪ ಸಂ",
+        "ನಗುವಿನ ಕಲೆಗೆ ಹ ಆತ್ಮ ಪ್ರವೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬಬ್ಸ್ ಕು ರಿ ತು ಉತ್ ಸಾ ಹ ರ ಗ ಳ ಪ ಸಂ",
+          "syllables": [
+            "ಬಬ್ಸ್",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉತ್",
+            "ಸಾ",
+            "ಹ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಪ",
+            "ಸಂ"
+          ],
+          "markers": "U I I I U U I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ಗು ವಿ ನ ಕ ಲೆ ಗೆ ಹ ಆ ತ್ಮ ಪ್ರ ವೇ",
+          "syllables": [
+            "ನ",
+            "ಗು",
+            "ವಿ",
+            "ನ",
+            "ಕ",
+            "ಲೆ",
+            "ಗೆ",
+            "ಹ",
+            "ಆ",
+            "ತ್ಮ",
+            "ಪ್ರ",
+            "ವೇ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.0599913597106934,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 210,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚಿಲ್ೈ ಬ ಚಿಲ್ೈ ಕರಕ ಪ್ರಕ ಕ್ಯಾ\nಸಿಕುಗೀಸ ಪ್ರಕ ಪ್ರಕ ಪ್ರಕ ಪ್ರಕಾ\n",
+      "poem_lines": [
+        "ಬ ಚಿಲ್ೈ ಬ ಚಿಲ್ೈ ಕರಕ ಪ್ರಕ ಕ್ಯಾ",
+        "ಸಿಕುಗೀಸ ಪ್ರಕ ಪ್ರಕ ಪ್ರಕ ಪ್ರಕಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚಿ ಲ್ೈ ಬ ಚಿ ಲ್ೈ ಕ ರ ಕ ಪ್ರ ಕ ಕ್ಯಾ",
+          "syllables": [
+            "ಬ",
+            "ಚಿ",
+            "ಲ್ೈ",
+            "ಬ",
+            "ಚಿ",
+            "ಲ್ೈ",
+            "ಕ",
+            "ರ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಕ",
+            "ಕ್ಯಾ"
+          ],
+          "markers": "I I U I I U I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ಕು ಗೀ ಸ ಪ್ರ ಕ ಪ್ರ ಕ ಪ್ರ ಕ ಪ್ರ ಕಾ",
+          "syllables": [
+            "ಸಿ",
+            "ಕು",
+            "ಗೀ",
+            "ಸ",
+            "ಪ್ರ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಕಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.241936206817627,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 217,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮಳೆಗೀರು ಅರಿವುರು ಗಳು ುರವೇ\nಗಣಿತನ ಸ ಕುರಿವುರು ಗಳು ಆ\n",
+      "poem_lines": [
+        "ಮಳೆಗೀರು ಅರಿವುರು ಗಳು ುರವೇ",
+        "ಗಣಿತನ ಸ ಕುರಿವುರು ಗಳು ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ಳೆ ಗೀ ರು ಅ ರಿ ವು ರು ಗ ಳು ರ ವೇ",
+          "syllables": [
+            "ಮ",
+            "ಳೆ",
+            "ಗೀ",
+            "ರು",
+            "ಅ",
+            "ರಿ",
+            "ವು",
+            "ರು",
+            "ಗ",
+            "ಳು",
+            "ರ",
+            "ವೇ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಗ ಣಿ ತ ನ ಸ ಕು ರಿ ವು ರು ಗ ಳು ಆ",
+          "syllables": [
+            "ಗ",
+            "ಣಿ",
+            "ತ",
+            "ನ",
+            "ಸ",
+            "ಕು",
+            "ರಿ",
+            "ವು",
+            "ರು",
+            "ಗ",
+            "ಳು",
+            "ಆ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2020471096038818,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 224,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮತಗಳು ಜಲದ ಪ್ರ ಚಿಹ್ನ ಚಿ ಏ\nಸಕಲಗಳು ಜಲದ ಪ್ರ ಚಿಹ್ ನ ಆ\n",
+      "poem_lines": [
+        "ಮತಗಳು ಜಲದ ಪ್ರ ಚಿಹ್ನ ಚಿ ಏ",
+        "ಸಕಲಗಳು ಜಲದ ಪ್ರ ಚಿಹ್ ನ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ತ ಗ ಳು ಜ ಲ ದ ಪ್ರ ಚಿ ಹ್ನ ಚಿ ಏ",
+          "syllables": [
+            "ಮ",
+            "ತ",
+            "ಗ",
+            "ಳು",
+            "ಜ",
+            "ಲ",
+            "ದ",
+            "ಪ್ರ",
+            "ಚಿ",
+            "ಹ್ನ",
+            "ಚಿ",
+            "ಏ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಕ ಲ ಗ ಳು ಜ ಲ ದ ಪ್ರ ಚಿಹ್ ನ ಆ",
+          "syllables": [
+            "ಸ",
+            "ಕ",
+            "ಲ",
+            "ಗ",
+            "ಳು",
+            "ಜ",
+            "ಲ",
+            "ದ",
+            "ಪ್ರ",
+            "ಚಿಹ್",
+            "ನ",
+            "ಆ"
+          ],
+          "markers": "I I I I I I I I I U I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.0714502334594727,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 231,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಾ\nಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಾ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಾ",
+        "ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಮಾ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಮಾ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2607779502868652,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 238,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಡ್ಡ್ಸ್ ಕುರಿತು ಉತ್ ಸಾಹರ ರಗಳ ಈ\nತಿಕಿರಣದ ಕುರಿತು ಪದ್ಯಕ ಈ\n",
+      "poem_lines": [
+        "ಬಡ್ಡ್ಸ್ ಕುರಿತು ಉತ್ ಸಾಹರ ರಗಳ ಈ",
+        "ತಿಕಿರಣದ ಕುರಿತು ಪದ್ಯಕ ಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬಡ್ಡ್ಸ್ ಕು ರಿ ತು ಉತ್ ಸಾ ಹ ರ ರ ಗ ಳ ಈ",
+          "syllables": [
+            "ಬಡ್ಡ್ಸ್",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉತ್",
+            "ಸಾ",
+            "ಹ",
+            "ರ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಈ"
+          ],
+          "markers": "U I I I U U I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ತಿ ಕಿ ರ ಣ ದ ಕು ರಿ ತು ಪ ದ್ಯ ಕ ಈ",
+          "syllables": [
+            "ತಿ",
+            "ಕಿ",
+            "ರ",
+            "ಣ",
+            "ದ",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಪ",
+            "ದ್ಯ",
+            "ಕ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.1502702236175537,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 245,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಗಳು ಅರಿವಹರ ವ ಶಾ\nಸರಸರ ಪ್ರವೇಶ ವ ಅರಿವಿಯಾ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಗಳು ಅರಿವಹರ ವ ಶಾ",
+        "ಸರಸರ ಪ್ರವೇಶ ವ ಅರಿವಿಯಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಗ ಳು ಅ ರಿ ವ ಹ ರ ವ ಶಾ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗ",
+            "ಳು",
+            "ಅ",
+            "ರಿ",
+            "ವ",
+            "ಹ",
+            "ರ",
+            "ವ",
+            "ಶಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರ ಸ ರ ಪ್ರ ವೇ ಶ ವ ಅ ರಿ ವಿ ಯಾ",
+          "syllables": [
+            "ಸ",
+            "ರ",
+            "ಸ",
+            "ರ",
+            "ಪ್ರ",
+            "ವೇ",
+            "ಶ",
+            "ವ",
+            "ಅ",
+            "ರಿ",
+            "ವಿ",
+            "ಯಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0399847030639648,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 252,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಬಿಬಾಲಿಕ್ ಬಲಬ ಹಿ ಬಲಮ ಆ\nನವ ಹನಕ ಬಕಲ ವಹಲ ಮಾ\n",
+      "poem_lines": [
+        "ಬಬಿಬಾಲಿಕ್ ಬಲಬ ಹಿ ಬಲಮ ಆ",
+        "ನವ ಹನಕ ಬಕಲ ವಹಲ ಮಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಬಿ ಬಾ ಲಿಕ್ ಬ ಲ ಬ ಹಿ ಬ ಲ ಮ ಆ",
+          "syllables": [
+            "ಬ",
+            "ಬಿ",
+            "ಬಾ",
+            "ಲಿಕ್",
+            "ಬ",
+            "ಲ",
+            "ಬ",
+            "ಹಿ",
+            "ಬ",
+            "ಲ",
+            "ಮ",
+            "ಆ"
+          ],
+          "markers": "I I U U I I I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ವ ಹ ನ ಕ ಬ ಕ ಲ ವ ಹ ಲ ಮಾ",
+          "syllables": [
+            "ನ",
+            "ವ",
+            "ಹ",
+            "ನ",
+            "ಕ",
+            "ಬ",
+            "ಕ",
+            "ಲ",
+            "ವ",
+            "ಹ",
+            "ಲ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.1655502319335938,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 259,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚಿಲ್ಾ ವುಡಕಾ ುಡಕ ವುಡಕ ರಾ\nಪರಿತ ಬ ಚುರಕ ಹಲಕಲ ಆ\n",
+      "poem_lines": [
+        "ಬ ಚಿಲ್ಾ ವುಡಕಾ ುಡಕ ವುಡಕ ರಾ",
+        "ಪರಿತ ಬ ಚುರಕ ಹಲಕಲ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚಿ ಲ್ಾ ವು ಡ ಕಾ ಡ ಕ ವು ಡ ಕ ರಾ",
+          "syllables": [
+            "ಬ",
+            "ಚಿ",
+            "ಲ್ಾ",
+            "ವು",
+            "ಡ",
+            "ಕಾ",
+            "ಡ",
+            "ಕ",
+            "ವು",
+            "ಡ",
+            "ಕ",
+            "ರಾ"
+          ],
+          "markers": "I I U I I U I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ ರಿ ತ ಬ ಚು ರ ಕ ಹ ಲ ಕ ಲ ಆ",
+          "syllables": [
+            "ಪ",
+            "ರಿ",
+            "ತ",
+            "ಬ",
+            "ಚು",
+            "ರ",
+            "ಕ",
+            "ಹ",
+            "ಲ",
+            "ಕ",
+            "ಲ",
+            "ಆ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3809034824371338,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 31
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 266,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚಿಲ್ಾಕಿನ ಅಡಿಲಗಳು ಕ್ಷಮಾ\nಸಿಕಿ ಕೀಕಟುಲಕಿನ ಬಲಕಮಾ\n",
+      "poem_lines": [
+        "ಬ ಚಿಲ್ಾಕಿನ ಅಡಿಲಗಳು ಕ್ಷಮಾ",
+        "ಸಿಕಿ ಕೀಕಟುಲಕಿನ ಬಲಕಮಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚಿ ಲ್ಾ ಕಿ ನ ಅ ಡಿ ಲ ಗ ಳು ಕ್ಷ ಮಾ",
+          "syllables": [
+            "ಬ",
+            "ಚಿ",
+            "ಲ್ಾ",
+            "ಕಿ",
+            "ನ",
+            "ಅ",
+            "ಡಿ",
+            "ಲ",
+            "ಗ",
+            "ಳು",
+            "ಕ್ಷ",
+            "ಮಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ಕಿ ಕೀ ಕ ಟು ಲ ಕಿ ನ ಬ ಲ ಕ ಮಾ",
+          "syllables": [
+            "ಸಿ",
+            "ಕಿ",
+            "ಕೀ",
+            "ಕ",
+            "ಟು",
+            "ಲ",
+            "ಕಿ",
+            "ನ",
+            "ಬ",
+            "ಲ",
+            "ಕ",
+            "ಮಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2483155727386475,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Bubbles",
+      "seed": 273,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಬಿ ಮುಗಳು ಬಬಿ ಮುಗಳು ನ್ಮಮಾ\nಗುರಗೀ ನಮಮಾ ಅನಿ ಮುಗಳು ಮೂ\n",
+      "poem_lines": [
+        "ಬಬಿ ಮುಗಳು ಬಬಿ ಮುಗಳು ನ್ಮಮಾ",
+        "ಗುರಗೀ ನಮಮಾ ಅನಿ ಮುಗಳು ಮೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಬಿ ಮು ಗ ಳು ಬ ಬಿ ಮು ಗ ಳು ನ್ಮ ಮಾ",
+          "syllables": [
+            "ಬ",
+            "ಬಿ",
+            "ಮು",
+            "ಗ",
+            "ಳು",
+            "ಬ",
+            "ಬಿ",
+            "ಮು",
+            "ಗ",
+            "ಳು",
+            "ನ್ಮ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಗು ರ ಗೀ ನ ಮ ಮಾ ಅ ನಿ ಮು ಗ ಳು ಮೂ",
+          "syllables": [
+            "ಗು",
+            "ರ",
+            "ಗೀ",
+            "ನ",
+            "ಮ",
+            "ಮಾ",
+            "ಅ",
+            "ನಿ",
+            "ಮು",
+            "ಗ",
+            "ಳು",
+            "ಮೂ"
+          ],
+          "markers": "I I U I I U I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0724551677703857,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 42,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗದ ಸ ಇಳೀ ುತ್ತದೆ ುತ್ತದೆ ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು",
+      "poem_lines": [
+        "ಮೃಗದ ಸ ಇಳೀ ುತ್ತದೆ ುತ್ತದೆ ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು ು"
+      ],
+      "valid_lines": [],
+      "all_valid": false,
+      "elapsed": 7.736191987991333,
+      "tokens_generated": 150,
+      "backtracks": 0,
+      "mask_computations": 150
+    },
+    {
+      "topic": "Moon",
+      "seed": 49,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗದ ಪ್ರವೃತದ ಪ್ರವತಕ ರಾ\nಚುರಕದ ಕರಮಗಳ ಕಥ ನಾ\n",
+      "poem_lines": [
+        "ಮೃಗದ ಪ್ರವೃತದ ಪ್ರವತಕ ರಾ",
+        "ಚುರಕದ ಕರಮಗಳ ಕಥ ನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ದ ಪ್ರ ವೃ ತ ದ ಪ್ರ ವ ತ ಕ ರಾ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ದ",
+            "ಪ್ರ",
+            "ವೃ",
+            "ತ",
+            "ದ",
+            "ಪ್ರ",
+            "ವ",
+            "ತ",
+            "ಕ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ರ ಕ ದ ಕ ರ ಮ ಗ ಳ ಕ ಥ ನಾ",
+          "syllables": [
+            "ಚು",
+            "ರ",
+            "ಕ",
+            "ದ",
+            "ಕ",
+            "ರ",
+            "ಮ",
+            "ಗ",
+            "ಳ",
+            "ಕ",
+            "ಥ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1631357669830322,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Moon",
+      "seed": 56,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಚುಂಡು ಕಛಿಪುರಕರು ಅಂಡಿ ಬ ನಾ\nಸರಸನ ಅರಕಕರು ಅರಕಾ\n",
+      "poem_lines": [
+        "ಚುಂಡು ಕಛಿಪುರಕರು ಅಂಡಿ ಬ ನಾ",
+        "ಸರಸನ ಅರಕಕರು ಅರಕಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಚುಂ ಡು ಕ ಛಿ ಪು ರ ಕ ರು ಅಂ ಡಿ ಬ ನಾ",
+          "syllables": [
+            "ಚುಂ",
+            "ಡು",
+            "ಕ",
+            "ಛಿ",
+            "ಪು",
+            "ರ",
+            "ಕ",
+            "ರು",
+            "ಅಂ",
+            "ಡಿ",
+            "ಬ",
+            "ನಾ"
+          ],
+          "markers": "U I I I I I I I U I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರ ಸ ನ ಅ ರ ಕ ಕ ರು ಅ ರ ಕಾ",
+          "syllables": [
+            "ಸ",
+            "ರ",
+            "ಸ",
+            "ನ",
+            "ಅ",
+            "ರ",
+            "ಕ",
+            "ಕ",
+            "ರು",
+            "ಅ",
+            "ರ",
+            "ಕಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.2456166744232178,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Moon",
+      "seed": 63,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗವನವ ಪ್ರಕೃತಿಗೀತೆ ಮಹಾ\nಚುಲವ ಪ್ರ ಚಿಂತಕ ಪ್ರಪರಮ ಆ\n",
+      "poem_lines": [
+        "ಮೃಗವನವ ಪ್ರಕೃತಿಗೀತೆ ಮಹಾ",
+        "ಚುಲವ ಪ್ರ ಚಿಂತಕ ಪ್ರಪರಮ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ವ ನ ವ ಪ್ರ ಕೃ ತಿ ಗೀ ತೆ ಮ ಹಾ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ವ",
+            "ನ",
+            "ವ",
+            "ಪ್ರ",
+            "ಕೃ",
+            "ತಿ",
+            "ಗೀ",
+            "ತೆ",
+            "ಮ",
+            "ಹಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ಲ ವ ಪ್ರ ಚಿಂ ತ ಕ ಪ್ರ ಪ ರ ಮ ಆ",
+          "syllables": [
+            "ಚು",
+            "ಲ",
+            "ವ",
+            "ಪ್ರ",
+            "ಚಿಂ",
+            "ತ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಪ",
+            "ರ",
+            "ಮ",
+            "ಆ"
+          ],
+          "markers": "I I I I U I I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.413527250289917,
+      "tokens_generated": 31,
+      "backtracks": 1,
+      "mask_computations": 32
+    },
+    {
+      "topic": "Moon",
+      "seed": 70,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಗಿತಿಸಿಗಿತಿಸಿಗಿತ ಕೋ\nಅನು ಪ್ರಗತಿಕರ ಅಸ್ ಮುಗಿಸಿಗೋ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಗಿತಿಸಿಗಿತಿಸಿಗಿತ ಕೋ",
+        "ಅನು ಪ್ರಗತಿಕರ ಅಸ್ ಮುಗಿಸಿಗೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಗಿ ತಿ ಸಿ ಗಿ ತಿ ಸಿ ಗಿ ತ ಕೋ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗಿ",
+            "ತಿ",
+            "ಸಿ",
+            "ಗಿ",
+            "ತಿ",
+            "ಸಿ",
+            "ಗಿ",
+            "ತ",
+            "ಕೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಅ ನು ಪ್ರ ಗ ತಿ ಕ ರ ಅಸ್ ಮು ಗಿ ಸಿ ಗೋ",
+          "syllables": [
+            "ಅ",
+            "ನು",
+            "ಪ್ರ",
+            "ಗ",
+            "ತಿ",
+            "ಕ",
+            "ರ",
+            "ಅಸ್",
+            "ಮು",
+            "ಗಿ",
+            "ಸಿ",
+            "ಗೋ"
+          ],
+          "markers": "I I I I I I I U I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.121933937072754,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Moon",
+      "seed": 77,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಾ\nಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಾ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಾ",
+        "ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಮಾ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಮಾ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2486536502838135,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Moon",
+      "seed": 84,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗವಸಿಯ ಕೀತೆ ಕವಿಗ ಸ ಸೋ\nಗಣಯೆಗ ಪ್ರಪರಣರ ಕರನಾ\n",
+      "poem_lines": [
+        "ಮೃಗವಸಿಯ ಕೀತೆ ಕವಿಗ ಸ ಸೋ",
+        "ಗಣಯೆಗ ಪ್ರಪರಣರ ಕರನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ವ ಸಿ ಯ ಕೀ ತೆ ಕ ವಿ ಗ ಸ ಸೋ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ವ",
+            "ಸಿ",
+            "ಯ",
+            "ಕೀ",
+            "ತೆ",
+            "ಕ",
+            "ವಿ",
+            "ಗ",
+            "ಸ",
+            "ಸೋ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಗ ಣ ಯೆ ಗ ಪ್ರ ಪ ರ ಣ ರ ಕ ರ ನಾ",
+          "syllables": [
+            "ಗ",
+            "ಣ",
+            "ಯೆ",
+            "ಗ",
+            "ಪ್ರ",
+            "ಪ",
+            "ರ",
+            "ಣ",
+            "ರ",
+            "ಕ",
+            "ರ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2054216861724854,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Moon",
+      "seed": 91,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗ ಕಲೆಮಗನನ ಕವಿಗ ವೈ\nಚುರುಕ ಕವಿಗ ಕಲೆಮಗನ ಈ\n",
+      "poem_lines": [
+        "ಮೃಗ ಕಲೆಮಗನನ ಕವಿಗ ವೈ",
+        "ಚುರುಕ ಕವಿಗ ಕಲೆಮಗನ ಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ಕ ಲೆ ಮ ಗ ನ ನ ಕ ವಿ ಗ ವೈ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ಕ",
+            "ಲೆ",
+            "ಮ",
+            "ಗ",
+            "ನ",
+            "ನ",
+            "ಕ",
+            "ವಿ",
+            "ಗ",
+            "ವೈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ರು ಕ ಕ ವಿ ಗ ಕ ಲೆ ಮ ಗ ನ ಈ",
+          "syllables": [
+            "ಚು",
+            "ರು",
+            "ಕ",
+            "ಕ",
+            "ವಿ",
+            "ಗ",
+            "ಕ",
+            "ಲೆ",
+            "ಮ",
+            "ಗ",
+            "ನ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1612138748168945,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Moon",
+      "seed": 98,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗವಯದ ಕವಿ ಎ ಆಗಿ ಕರೇ\nಚುಲ ಕರಗಳ ಸೃಜನಮಯ ಆ\n",
+      "poem_lines": [
+        "ಮೃಗವಯದ ಕವಿ ಎ ಆಗಿ ಕರೇ",
+        "ಚುಲ ಕರಗಳ ಸೃಜನಮಯ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ವ ಯ ದ ಕ ವಿ ಎ ಆ ಗಿ ಕ ರೇ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ವ",
+            "ಯ",
+            "ದ",
+            "ಕ",
+            "ವಿ",
+            "ಎ",
+            "ಆ",
+            "ಗಿ",
+            "ಕ",
+            "ರೇ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ಲ ಕ ರ ಗ ಳ ಸೃ ಜ ನ ಮ ಯ ಆ",
+          "syllables": [
+            "ಚು",
+            "ಲ",
+            "ಕ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಸೃ",
+            "ಜ",
+            "ನ",
+            "ಮ",
+            "ಯ",
+            "ಆ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1118803024291992,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Moon",
+      "seed": 105,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗದ ಕಲೆ ಚುರುಕ ಶಾಸು ಕ್ಷಮಾ\nಕೃತಕ ಕಲೆ ಚುರುಕ ಶಾಸು ಕ್ಷಮಾ\n",
+      "poem_lines": [
+        "ಮೃಗದ ಕಲೆ ಚುರುಕ ಶಾಸು ಕ್ಷಮಾ",
+        "ಕೃತಕ ಕಲೆ ಚುರುಕ ಶಾಸು ಕ್ಷಮಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ದ ಕ ಲೆ ಚು ರು ಕ ಶಾ ಸು ಕ್ಷ ಮಾ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ಚು",
+            "ರು",
+            "ಕ",
+            "ಶಾ",
+            "ಸು",
+            "ಕ್ಷ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕೃ ತ ಕ ಕ ಲೆ ಚು ರು ಕ ಶಾ ಸು ಕ್ಷ ಮಾ",
+          "syllables": [
+            "ಕೃ",
+            "ತ",
+            "ಕ",
+            "ಕ",
+            "ಲೆ",
+            "ಚು",
+            "ರು",
+            "ಕ",
+            "ಶಾ",
+            "ಸು",
+            "ಕ್ಷ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3682150840759277,
+      "tokens_generated": 33,
+      "backtracks": 0,
+      "mask_computations": 31
+    },
+    {
+      "topic": "Moon",
+      "seed": 112,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮತಕ ಕಲೆಮೂಲದ ಕವಿರಲೇ\nಚುಲಕ ಸವದ ಕವಿರಂತೆ ುತಸಾ\n",
+      "poem_lines": [
+        "ಮತಕ ಕಲೆಮೂಲದ ಕವಿರಲೇ",
+        "ಚುಲಕ ಸವದ ಕವಿರಂತೆ ುತಸಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ತ ಕ ಕ ಲೆ ಮೂ ಲ ದ ಕ ವಿ ರ ಲೇ",
+          "syllables": [
+            "ಮ",
+            "ತ",
+            "ಕ",
+            "ಕ",
+            "ಲೆ",
+            "ಮೂ",
+            "ಲ",
+            "ದ",
+            "ಕ",
+            "ವಿ",
+            "ರ",
+            "ಲೇ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ಲ ಕ ಸ ವ ದ ಕ ವಿ ರಂ ತೆ ತ ಸಾ",
+          "syllables": [
+            "ಚು",
+            "ಲ",
+            "ಕ",
+            "ಸ",
+            "ವ",
+            "ದ",
+            "ಕ",
+            "ವಿ",
+            "ರಂ",
+            "ತೆ",
+            "ತ",
+            "ಸಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2454211711883545,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Moon",
+      "seed": 119,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗದ ಕಲೆ ಚುರಚು ಚುರಚ ಸೂ\nನಿರ ಕುರಿತು ಉತ್ಸಹ ರಗಳ ಈ\n",
+      "poem_lines": [
+        "ಮೃಗದ ಕಲೆ ಚುರಚು ಚುರಚ ಸೂ",
+        "ನಿರ ಕುರಿತು ಉತ್ಸಹ ರಗಳ ಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ದ ಕ ಲೆ ಚು ರ ಚು ಚು ರ ಚ ಸೂ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ಚು",
+            "ರ",
+            "ಚು",
+            "ಚು",
+            "ರ",
+            "ಚ",
+            "ಸೂ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನಿ ರ ಕು ರಿ ತು ಉ ತ್ಸ ಹ ರ ಗ ಳ ಈ",
+          "syllables": [
+            "ನಿ",
+            "ರ",
+            "ಕು",
+            "ರಿ",
+            "ತು",
+            "ಉ",
+            "ತ್ಸ",
+            "ಹ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಈ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2089929580688477,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Moon",
+      "seed": 126,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗ ಸಾರವು ನೀರಸದ ಸನ್ ಪ್ರಭಾ\nಸರಜನ್ ಪ್ರಭೆ ಪ್ರಭೆ ಪ್ರಭೆ ಪ್ರಭಈ\n",
+      "poem_lines": [
+        "ಮೃಗ ಸಾರವು ನೀರಸದ ಸನ್ ಪ್ರಭಾ",
+        "ಸರಜನ್ ಪ್ರಭೆ ಪ್ರಭೆ ಪ್ರಭೆ ಪ್ರಭಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ಸಾ ರ ವು ನೀ ರ ಸ ದ ಸನ್ ಪ್ರ ಭಾ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ಸಾ",
+            "ರ",
+            "ವು",
+            "ನೀ",
+            "ರ",
+            "ಸ",
+            "ದ",
+            "ಸನ್",
+            "ಪ್ರ",
+            "ಭಾ"
+          ],
+          "markers": "I I U I I U I I I U I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರ ಜನ್ ಪ್ರ ಭೆ ಪ್ರ ಭೆ ಪ್ರ ಭೆ ಪ್ರ ಭ ಈ",
+          "syllables": [
+            "ಸ",
+            "ರ",
+            "ಜನ್",
+            "ಪ್ರ",
+            "ಭೆ",
+            "ಪ್ರ",
+            "ಭೆ",
+            "ಪ್ರ",
+            "ಭೆ",
+            "ಪ್ರ",
+            "ಭ",
+            "ಈ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.3433690071105957,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "Moon",
+      "seed": 133,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮ್ರುಕ ಮರಕ ದೀಪಗಳು ಜಗ ತಾ\nಸಿನಕ ಕಪಲಕರು ಜೀವನ ಆ\n",
+      "poem_lines": [
+        "ಮ್ರುಕ ಮರಕ ದೀಪಗಳು ಜಗ ತಾ",
+        "ಸಿನಕ ಕಪಲಕರು ಜೀವನ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ್ರು ಕ ಮ ರ ಕ ದೀ ಪ ಗ ಳು ಜ ಗ ತಾ",
+          "syllables": [
+            "ಮ್ರು",
+            "ಕ",
+            "ಮ",
+            "ರ",
+            "ಕ",
+            "ದೀ",
+            "ಪ",
+            "ಗ",
+            "ಳು",
+            "ಜ",
+            "ಗ",
+            "ತಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ನ ಕ ಕ ಪ ಲ ಕ ರು ಜೀ ವ ನ ಆ",
+          "syllables": [
+            "ಸಿ",
+            "ನ",
+            "ಕ",
+            "ಕ",
+            "ಪ",
+            "ಲ",
+            "ಕ",
+            "ರು",
+            "ಜೀ",
+            "ವ",
+            "ನ",
+            "ಆ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2143354415893555,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Moon",
+      "seed": 140,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮಳೆಗೀ ಗಿವರ ಕವಿಗೀನ ಕವೇ\nಚುರಕಿನ ಕರು ಕರಗೀಗ ಪ್ರ ಲೋ\n",
+      "poem_lines": [
+        "ಮಳೆಗೀ ಗಿವರ ಕವಿಗೀನ ಕವೇ",
+        "ಚುರಕಿನ ಕರು ಕರಗೀಗ ಪ್ರ ಲೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ಳೆ ಗೀ ಗಿ ವ ರ ಕ ವಿ ಗೀ ನ ಕ ವೇ",
+          "syllables": [
+            "ಮ",
+            "ಳೆ",
+            "ಗೀ",
+            "ಗಿ",
+            "ವ",
+            "ರ",
+            "ಕ",
+            "ವಿ",
+            "ಗೀ",
+            "ನ",
+            "ಕ",
+            "ವೇ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ರ ಕಿ ನ ಕ ರು ಕ ರ ಗೀ ಗ ಪ್ರ ಲೋ",
+          "syllables": [
+            "ಚು",
+            "ರ",
+            "ಕಿ",
+            "ನ",
+            "ಕ",
+            "ರು",
+            "ಕ",
+            "ರ",
+            "ಗೀ",
+            "ಗ",
+            "ಪ್ರ",
+            "ಲೋ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3006153106689453,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "Moon",
+      "seed": 147,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗದ ಕಲೆ ಚುರುಕಮ್ ನವಿನ ಆ\nಸಹನವ್ಯಗಳ ಕಲೆ ಚುರುಕಮ್ ಆ\n",
+      "poem_lines": [
+        "ಮೃಗದ ಕಲೆ ಚುರುಕಮ್ ನವಿನ ಆ",
+        "ಸಹನವ್ಯಗಳ ಕಲೆ ಚುರುಕಮ್ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ದ ಕ ಲೆ ಚು ರು ಕಮ್ ನ ವಿ ನ ಆ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ಚು",
+            "ರು",
+            "ಕಮ್",
+            "ನ",
+            "ವಿ",
+            "ನ",
+            "ಆ"
+          ],
+          "markers": "I I I I I I I U I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಹ ನ ವ್ಯ ಗ ಳ ಕ ಲೆ ಚು ರು ಕಮ್ ಆ",
+          "syllables": [
+            "ಸ",
+            "ಹ",
+            "ನ",
+            "ವ್ಯ",
+            "ಗ",
+            "ಳ",
+            "ಕ",
+            "ಲೆ",
+            "ಚು",
+            "ರು",
+            "ಕಮ್",
+            "ಆ"
+          ],
+          "markers": "I I U I I I I I I I U U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.3421099185943604,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "Moon",
+      "seed": 154,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮಳೆ ಕರಹರಿ ಗಣಕನ ಕಊ\nಅವಸದ ಕರಹರಿ ನರಿವ ಈ\n",
+      "poem_lines": [
+        "ಮಳೆ ಕರಹರಿ ಗಣಕನ ಕಊ",
+        "ಅವಸದ ಕರಹರಿ ನರಿವ ಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ಳೆ ಕ ರ ಹ ರಿ ಗ ಣ ಕ ನ ಕ ಊ",
+          "syllables": [
+            "ಮ",
+            "ಳೆ",
+            "ಕ",
+            "ರ",
+            "ಹ",
+            "ರಿ",
+            "ಗ",
+            "ಣ",
+            "ಕ",
+            "ನ",
+            "ಕ",
+            "ಊ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಅ ವ ಸ ದ ಕ ರ ಹ ರಿ ನ ರಿ ವ ಈ",
+          "syllables": [
+            "ಅ",
+            "ವ",
+            "ಸ",
+            "ದ",
+            "ಕ",
+            "ರ",
+            "ಹ",
+            "ರಿ",
+            "ನ",
+            "ರಿ",
+            "ವ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.090815544128418,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 161,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗದ ಕಲೆಗೇ ಪ್ರ ಚಿರಾಕ ಪ್ರ ಲೋ\nಸರಮಹ ಪ್ರ ಚಿರಕ ಪ್ರಕೃತ ಆ\n",
+      "poem_lines": [
+        "ಮೃಗದ ಕಲೆಗೇ ಪ್ರ ಚಿರಾಕ ಪ್ರ ಲೋ",
+        "ಸರಮಹ ಪ್ರ ಚಿರಕ ಪ್ರಕೃತ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ದ ಕ ಲೆ ಗೇ ಪ್ರ ಚಿ ರಾ ಕ ಪ್ರ ಲೋ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ಗೇ",
+            "ಪ್ರ",
+            "ಚಿ",
+            "ರಾ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಲೋ"
+          ],
+          "markers": "I I I I I U I I U I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರ ಮ ಹ ಪ್ರ ಚಿ ರ ಕ ಪ್ರ ಕೃ ತ ಆ",
+          "syllables": [
+            "ಸ",
+            "ರ",
+            "ಮ",
+            "ಹ",
+            "ಪ್ರ",
+            "ಚಿ",
+            "ರ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಕೃ",
+            "ತ",
+            "ಆ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.214888572692871,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Moon",
+      "seed": 168,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಗಳು ಎಲೆ ಎಲೆ ಪ್ರವ ಕೋ\nಕ್ಷಮಿಸಿಗಳು ಎಲೆ ಎಲೆ ಪ್ರವ ಕೋ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಗಳು ಎಲೆ ಎಲೆ ಪ್ರವ ಕೋ",
+        "ಕ್ಷಮಿಸಿಗಳು ಎಲೆ ಎಲೆ ಪ್ರವ ಕೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಗ ಳು ಎ ಲೆ ಎ ಲೆ ಪ್ರ ವ ಕೋ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗ",
+            "ಳು",
+            "ಎ",
+            "ಲೆ",
+            "ಎ",
+            "ಲೆ",
+            "ಪ್ರ",
+            "ವ",
+            "ಕೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಗ ಳು ಎ ಲೆ ಎ ಲೆ ಪ್ರ ವ ಕೋ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗ",
+            "ಳು",
+            "ಎ",
+            "ಲೆ",
+            "ಎ",
+            "ಲೆ",
+            "ಪ್ರ",
+            "ವ",
+            "ಕೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.002298355102539,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Moon",
+      "seed": 175,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗವನ ಅರಿವನ ಕವಲವೇ\nಸಹನ ಕಲೆ ಚುರುಕವೇ ುರರವೇ\n",
+      "poem_lines": [
+        "ಮೃಗವನ ಅರಿವನ ಕವಲವೇ",
+        "ಸಹನ ಕಲೆ ಚುರುಕವೇ ುರರವೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ವ ನ ಅ ರಿ ವ ನ ಕ ವ ಲ ವೇ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ವ",
+            "ನ",
+            "ಅ",
+            "ರಿ",
+            "ವ",
+            "ನ",
+            "ಕ",
+            "ವ",
+            "ಲ",
+            "ವೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಹ ನ ಕ ಲೆ ಚು ರು ಕ ವೇ ರ ರ ವೇ",
+          "syllables": [
+            "ಸ",
+            "ಹ",
+            "ನ",
+            "ಕ",
+            "ಲೆ",
+            "ಚು",
+            "ರು",
+            "ಕ",
+            "ವೇ",
+            "ರ",
+            "ರ",
+            "ವೇ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2484135627746582,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Moon",
+      "seed": 182,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮತಕ ಪ್ರಜನು ಪ್ರಜನು ಪ್ರಜನೀ\nಅ ಪ್ರಜನು ಪ್ರಜನು ಪ್ರಜನು ಪ್ರಈ\n",
+      "poem_lines": [
+        "ಮತಕ ಪ್ರಜನು ಪ್ರಜನು ಪ್ರಜನೀ",
+        "ಅ ಪ್ರಜನು ಪ್ರಜನು ಪ್ರಜನು ಪ್ರಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ತ ಕ ಪ್ರ ಜ ನು ಪ್ರ ಜ ನು ಪ್ರ ಜ ನೀ",
+          "syllables": [
+            "ಮ",
+            "ತ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಜ",
+            "ನು",
+            "ಪ್ರ",
+            "ಜ",
+            "ನು",
+            "ಪ್ರ",
+            "ಜ",
+            "ನೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಅ ಪ್ರ ಜ ನು ಪ್ರ ಜ ನು ಪ್ರ ಜ ನು ಪ್ರ ಈ",
+          "syllables": [
+            "ಅ",
+            "ಪ್ರ",
+            "ಜ",
+            "ನು",
+            "ಪ್ರ",
+            "ಜ",
+            "ನು",
+            "ಪ್ರ",
+            "ಜ",
+            "ನು",
+            "ಪ್ರ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0804901123046875,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 189,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗವೀಕರಣರಗಳ ಅರಿ ಸೋ\nಸರಿ ಕೀ ಸನ್ ಸನ್ ಪ್ರಗತ ಪ್ರಪ ತುಂಬಾ\n",
+      "poem_lines": [
+        "ಮೃಗವೀಕರಣರಗಳ ಅರಿ ಸೋ",
+        "ಸರಿ ಕೀ ಸನ್ ಸನ್ ಪ್ರಗತ ಪ್ರಪ ತುಂಬಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ವೀ ಕ ರ ಣ ರ ಗ ಳ ಅ ರಿ ಸೋ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ವೀ",
+            "ಕ",
+            "ರ",
+            "ಣ",
+            "ರ",
+            "ಗ",
+            "ಳ",
+            "ಅ",
+            "ರಿ",
+            "ಸೋ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರಿ ಕೀ ಸನ್ ಸನ್ ಪ್ರ ಗ ತ ಪ್ರ ಪ ತುಂ ಬಾ",
+          "syllables": [
+            "ಸ",
+            "ರಿ",
+            "ಕೀ",
+            "ಸನ್",
+            "ಸನ್",
+            "ಪ್ರ",
+            "ಗ",
+            "ತ",
+            "ಪ್ರ",
+            "ಪ",
+            "ತುಂ",
+            "ಬಾ"
+          ],
+          "markers": "I I U U U I I I I I U U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.1244478225708008,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Moon",
+      "seed": 196,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಚುಂಡು ಕಲೆ ನಿಂತು ಕಲೆ ಪ್ರೀತವನೇ\nಅನು ಪ್ರವ ಚಿಂತನ ಪ್ರಪಂಚ ಪ್ರವೀ\n",
+      "poem_lines": [
+        "ಚುಂಡು ಕಲೆ ನಿಂತು ಕಲೆ ಪ್ರೀತವನೇ",
+        "ಅನು ಪ್ರವ ಚಿಂತನ ಪ್ರಪಂಚ ಪ್ರವೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಚುಂ ಡು ಕ ಲೆ ನಿಂ ತು ಕ ಲೆ ಪ್ರೀ ತ ವ ನೇ",
+          "syllables": [
+            "ಚುಂ",
+            "ಡು",
+            "ಕ",
+            "ಲೆ",
+            "ನಿಂ",
+            "ತು",
+            "ಕ",
+            "ಲೆ",
+            "ಪ್ರೀ",
+            "ತ",
+            "ವ",
+            "ನೇ"
+          ],
+          "markers": "U I I I U I I I U I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಅ ನು ಪ್ರ ವ ಚಿಂ ತ ನ ಪ್ರ ಪಂ ಚ ಪ್ರ ವೀ",
+          "syllables": [
+            "ಅ",
+            "ನು",
+            "ಪ್ರ",
+            "ವ",
+            "ಚಿಂ",
+            "ತ",
+            "ನ",
+            "ಪ್ರ",
+            "ಪಂ",
+            "ಚ",
+            "ಪ್ರ",
+            "ವೀ"
+          ],
+          "markers": "I I I I U I I I U I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.2086875438690186,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Moon",
+      "seed": 203,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗದ ಕಲೆ ಕರಮಗಳೆ ತ್ರವೇ\nಸರಿಕ ಶುತವ ಹರಕದ ತ ಮೋ\n",
+      "poem_lines": [
+        "ಮೃಗದ ಕಲೆ ಕರಮಗಳೆ ತ್ರವೇ",
+        "ಸರಿಕ ಶುತವ ಹರಕದ ತ ಮೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ದ ಕ ಲೆ ಕ ರ ಮ ಗ ಳೆ ತ್ರ ವೇ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ಕ",
+            "ರ",
+            "ಮ",
+            "ಗ",
+            "ಳೆ",
+            "ತ್ರ",
+            "ವೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರಿ ಕ ಶು ತ ವ ಹ ರ ಕ ದ ತ ಮೋ",
+          "syllables": [
+            "ಸ",
+            "ರಿ",
+            "ಕ",
+            "ಶು",
+            "ತ",
+            "ವ",
+            "ಹ",
+            "ರ",
+            "ಕ",
+            "ದ",
+            "ತ",
+            "ಮೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.203665018081665,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Moon",
+      "seed": 210,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗದ ಕಲೆಮನೆ ುತ್ತದೆ ುನ್ನು ನವೇ\nಗಣಿತದ ಸಮಾಜದ ಕಲೆಮನೇ\n",
+      "poem_lines": [
+        "ಮೃಗದ ಕಲೆಮನೆ ುತ್ತದೆ ುನ್ನು ನವೇ",
+        "ಗಣಿತದ ಸಮಾಜದ ಕಲೆಮನೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ದ ಕ ಲೆ ಮ ನೆ ತ್ತ ದೆ ನ್ನು ನ ವೇ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ಮ",
+            "ನೆ",
+            "ತ್ತ",
+            "ದೆ",
+            "ನ್ನು",
+            "ನ",
+            "ವೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಗ ಣಿ ತ ದ ಸ ಮಾ ಜ ದ ಕ ಲೆ ಮ ನೇ",
+          "syllables": [
+            "ಗ",
+            "ಣಿ",
+            "ತ",
+            "ದ",
+            "ಸ",
+            "ಮಾ",
+            "ಜ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ಮ",
+            "ನೇ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2020936012268066,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Moon",
+      "seed": 217,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಚುಲಕನ ಕಲೆ ಕರಬಕಹ ರಾ\nಚುಲಕನ ಕಲೆ ಕರಬಕಹ ರಾ\n",
+      "poem_lines": [
+        "ಚುಲಕನ ಕಲೆ ಕರಬಕಹ ರಾ",
+        "ಚುಲಕನ ಕಲೆ ಕರಬಕಹ ರಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಚು ಲ ಕ ನ ಕ ಲೆ ಕ ರ ಬ ಕ ಹ ರಾ",
+          "syllables": [
+            "ಚು",
+            "ಲ",
+            "ಕ",
+            "ನ",
+            "ಕ",
+            "ಲೆ",
+            "ಕ",
+            "ರ",
+            "ಬ",
+            "ಕ",
+            "ಹ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ಲ ಕ ನ ಕ ಲೆ ಕ ರ ಬ ಕ ಹ ರಾ",
+          "syllables": [
+            "ಚು",
+            "ಲ",
+            "ಕ",
+            "ನ",
+            "ಕ",
+            "ಲೆ",
+            "ಕ",
+            "ರ",
+            "ಬ",
+            "ಕ",
+            "ಹ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.167921781539917,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Moon",
+      "seed": 224,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಚುಯಿನ ಕಲೆ ಕಣ್ಣು ನಿಂತೇನ ಅಶಾ\nಸಹನಗಳು ಕರಹ ತೀನ ವರಾ\n",
+      "poem_lines": [
+        "ಚುಯಿನ ಕಲೆ ಕಣ್ಣು ನಿಂತೇನ ಅಶಾ",
+        "ಸಹನಗಳು ಕರಹ ತೀನ ವರಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಚು ಯಿ ನ ಕ ಲೆ ಕ ಣ್ಣು ನಿಂ ತೇ ನ ಅ ಶಾ",
+          "syllables": [
+            "ಚು",
+            "ಯಿ",
+            "ನ",
+            "ಕ",
+            "ಲೆ",
+            "ಕ",
+            "ಣ್ಣು",
+            "ನಿಂ",
+            "ತೇ",
+            "ನ",
+            "ಅ",
+            "ಶಾ"
+          ],
+          "markers": "I I I I I U I U U I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಹ ನ ಗ ಳು ಕ ರ ಹ ತೀ ನ ವ ರಾ",
+          "syllables": [
+            "ಸ",
+            "ಹ",
+            "ನ",
+            "ಗ",
+            "ಳು",
+            "ಕ",
+            "ರ",
+            "ಹ",
+            "ತೀ",
+            "ನ",
+            "ವ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.2080528736114502,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Moon",
+      "seed": 231,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿ ನಮಸ್ ನನಗನವಸಮಾ\nಚುಲಕನ ಕಟುಕನವಸಸಮಾ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿ ನಮಸ್ ನನಗನವಸಮಾ",
+        "ಚುಲಕನ ಕಟುಕನವಸಸಮಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ನ ಮಸ್ ನ ನ ಗ ನ ವ ಸ ಮಾ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ನ",
+            "ಮಸ್",
+            "ನ",
+            "ನ",
+            "ಗ",
+            "ನ",
+            "ವ",
+            "ಸ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I U I I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ಲ ಕ ನ ಕ ಟು ಕ ನ ವ ಸ ಸ ಮಾ",
+          "syllables": [
+            "ಚು",
+            "ಲ",
+            "ಕ",
+            "ನ",
+            "ಕ",
+            "ಟು",
+            "ಕ",
+            "ನ",
+            "ವ",
+            "ಸ",
+            "ಸ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.2073309421539307,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Moon",
+      "seed": 238,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮಲಯಾಳಕ ಪದ್ಯವು: ನಕ್ಷರ ಆ\nಸರಿಯತದ ಸೂರ್ಯನ ಕಲೆ ಪ್ರರೂ\n",
+      "poem_lines": [
+        "ಮಲಯಾಳಕ ಪದ್ಯವು: ನಕ್ಷರ ಆ",
+        "ಸರಿಯತದ ಸೂರ್ಯನ ಕಲೆ ಪ್ರರೂ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ಲ ಯಾ ಳ ಕ ಪ ದ್ಯ ವು ನ ಕ್ಷ ರ ಆ",
+          "syllables": [
+            "ಮ",
+            "ಲ",
+            "ಯಾ",
+            "ಳ",
+            "ಕ",
+            "ಪ",
+            "ದ್ಯ",
+            "ವು",
+            "ನ",
+            "ಕ್ಷ",
+            "ರ",
+            "ಆ"
+          ],
+          "markers": "I I U I I U I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರಿ ಯ ತ ದ ಸೂ ರ್ಯ ನ ಕ ಲೆ ಪ್ರ ರೂ",
+          "syllables": [
+            "ಸ",
+            "ರಿ",
+            "ಯ",
+            "ತ",
+            "ದ",
+            "ಸೂ",
+            "ರ್ಯ",
+            "ನ",
+            "ಕ",
+            "ಲೆ",
+            "ಪ್ರ",
+            "ರೂ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1263086795806885,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Moon",
+      "seed": 245,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಗದುಗಳು ಕ್ಷಮಿಸಿಗಊ\nಚುರುಕದ ಅತಿ ಕರಮ ಚುರುಕಾ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಗದುಗಳು ಕ್ಷಮಿಸಿಗಊ",
+        "ಚುರುಕದ ಅತಿ ಕರಮ ಚುರುಕಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಗ ದು ಗ ಳು ಕ್ಷ ಮಿ ಸಿ ಗ ಊ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗ",
+            "ದು",
+            "ಗ",
+            "ಳು",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗ",
+            "ಊ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ರು ಕ ದ ಅ ತಿ ಕ ರ ಮ ಚು ರು ಕಾ",
+          "syllables": [
+            "ಚು",
+            "ರು",
+            "ಕ",
+            "ದ",
+            "ಅ",
+            "ತಿ",
+            "ಕ",
+            "ರ",
+            "ಮ",
+            "ಚು",
+            "ರು",
+            "ಕಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1629719734191895,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Moon",
+      "seed": 252,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮಳೆ ಹಳಿಗೆ ತೇಲುವಲಕ ಪ್ರವಾ\nಗಣಗಳ ಕಲೆ ತರದ ತರವೇ\n",
+      "poem_lines": [
+        "ಮಳೆ ಹಳಿಗೆ ತೇಲುವಲಕ ಪ್ರವಾ",
+        "ಗಣಗಳ ಕಲೆ ತರದ ತರವೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ಳೆ ಹ ಳಿ ಗೆ ತೇ ಲು ವ ಲ ಕ ಪ್ರ ವಾ",
+          "syllables": [
+            "ಮ",
+            "ಳೆ",
+            "ಹ",
+            "ಳಿ",
+            "ಗೆ",
+            "ತೇ",
+            "ಲು",
+            "ವ",
+            "ಲ",
+            "ಕ",
+            "ಪ್ರ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಗ ಣ ಗ ಳ ಕ ಲೆ ತ ರ ದ ತ ರ ವೇ",
+          "syllables": [
+            "ಗ",
+            "ಣ",
+            "ಗ",
+            "ಳ",
+            "ಕ",
+            "ಲೆ",
+            "ತ",
+            "ರ",
+            "ದ",
+            "ತ",
+            "ರ",
+            "ವೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0346271991729736,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Moon",
+      "seed": 259,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗದ ಹ ಬೆಳಸವದ ಪ್ರವ ಕೋ\nಸ ಇ ನಮಗವ ರವ ಪ್ರವಕ ಕೋ\n",
+      "poem_lines": [
+        "ಮೃಗದ ಹ ಬೆಳಸವದ ಪ್ರವ ಕೋ",
+        "ಸ ಇ ನಮಗವ ರವ ಪ್ರವಕ ಕೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ದ ಹ ಬೆ ಳ ಸ ವ ದ ಪ್ರ ವ ಕೋ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ದ",
+            "ಹ",
+            "ಬೆ",
+            "ಳ",
+            "ಸ",
+            "ವ",
+            "ದ",
+            "ಪ್ರ",
+            "ವ",
+            "ಕೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಇ ನ ಮ ಗ ವ ರ ವ ಪ್ರ ವ ಕ ಕೋ",
+          "syllables": [
+            "ಸ",
+            "ಇ",
+            "ನ",
+            "ಮ",
+            "ಗ",
+            "ವ",
+            "ರ",
+            "ವ",
+            "ಪ್ರ",
+            "ವ",
+            "ಕ",
+            "ಕೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0794436931610107,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Moon",
+      "seed": 266,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮೃಗದ ವದನಂ ಪ್ರಪಕೃತ ಪ೧ ನ್ಮಾ\nಸಹನಂ ನ್ಮಿತ ಪ್ರಪಕೃತ ಪ್ರಪಕಾ\n",
+      "poem_lines": [
+        "ಮೃಗದ ವದನಂ ಪ್ರಪಕೃತ ಪ೧ ನ್ಮಾ",
+        "ಸಹನಂ ನ್ಮಿತ ಪ್ರಪಕೃತ ಪ್ರಪಕಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮೃ ಗ ದ ವ ದ ನಂ ಪ್ರ ಪ ಕೃ ತ ಪ ನ್ಮಾ",
+          "syllables": [
+            "ಮೃ",
+            "ಗ",
+            "ದ",
+            "ವ",
+            "ದ",
+            "ನಂ",
+            "ಪ್ರ",
+            "ಪ",
+            "ಕೃ",
+            "ತ",
+            "ಪ",
+            "ನ್ಮಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಹ ನಂ ನ್ಮಿ ತ ಪ್ರ ಪ ಕೃ ತ ಪ್ರ ಪ ಕಾ",
+          "syllables": [
+            "ಸ",
+            "ಹ",
+            "ನಂ",
+            "ನ್ಮಿ",
+            "ತ",
+            "ಪ್ರ",
+            "ಪ",
+            "ಕೃ",
+            "ತ",
+            "ಪ್ರ",
+            "ಪ",
+            "ಕಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.4101407527923584,
+      "tokens_generated": 34,
+      "backtracks": 0,
+      "mask_computations": 32
+    },
+    {
+      "topic": "Moon",
+      "seed": 273,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮಳೆಗೀಗ ನಿರಂತರವಾಗಿ ನ ಬೀ\nಸರಿಯ ಕರಗೀಗ ಜಲಸರ ಆ\n",
+      "poem_lines": [
+        "ಮಳೆಗೀಗ ನಿರಂತರವಾಗಿ ನ ಬೀ",
+        "ಸರಿಯ ಕರಗೀಗ ಜಲಸರ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ಳೆ ಗೀ ಗ ನಿ ರಂ ತ ರ ವಾ ಗಿ ನ ಬೀ",
+          "syllables": [
+            "ಮ",
+            "ಳೆ",
+            "ಗೀ",
+            "ಗ",
+            "ನಿ",
+            "ರಂ",
+            "ತ",
+            "ರ",
+            "ವಾ",
+            "ಗಿ",
+            "ನ",
+            "ಬೀ"
+          ],
+          "markers": "I I U I I U I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರಿ ಯ ಕ ರ ಗೀ ಗ ಜ ಲ ಸ ರ ಆ",
+          "syllables": [
+            "ಸ",
+            "ರಿ",
+            "ಯ",
+            "ಕ",
+            "ರ",
+            "ಗೀ",
+            "ಗ",
+            "ಜ",
+            "ಲ",
+            "ಸ",
+            "ರ",
+            "ಆ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.0334603786468506,
+      "tokens_generated": 25,
+      "backtracks": 0,
+      "mask_computations": 23
+    },
+    {
+      "topic": "Rain",
+      "seed": 42,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬರಹನಕರುಕರು ಪ್ರೀಕೃತಲೋ\nಸರಜೀ ನದಿ ನಮಹಲೋ ಳವ ಲೋ\n",
+      "poem_lines": [
+        "ಬರಹನಕರುಕರು ಪ್ರೀಕೃತಲೋ",
+        "ಸರಜೀ ನದಿ ನಮಹಲೋ ಳವ ಲೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ರ ಹ ನ ಕ ರು ಕ ರು ಪ್ರೀ ಕೃ ತ ಲೋ",
+          "syllables": [
+            "ಬ",
+            "ರ",
+            "ಹ",
+            "ನ",
+            "ಕ",
+            "ರು",
+            "ಕ",
+            "ರು",
+            "ಪ್ರೀ",
+            "ಕೃ",
+            "ತ",
+            "ಲೋ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರ ಜೀ ನ ದಿ ನ ಮ ಹ ಲೋ ಳ ವ ಲೋ",
+          "syllables": [
+            "ಸ",
+            "ರ",
+            "ಜೀ",
+            "ನ",
+            "ದಿ",
+            "ನ",
+            "ಮ",
+            "ಹ",
+            "ಲೋ",
+            "ಳ",
+            "ವ",
+            "ಲೋ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.208683967590332,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Rain",
+      "seed": 49,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಳಸುಕರ ರಗಳೆ ಕ್ಷಮಿಸಿ ನೀ\nಸಿನಕಳಿಯ ಕಲೆಗೆ ಹೂವಿನ ಆ\n",
+      "poem_lines": [
+        "ಬಳಸುಕರ ರಗಳೆ ಕ್ಷಮಿಸಿ ನೀ",
+        "ಸಿನಕಳಿಯ ಕಲೆಗೆ ಹೂವಿನ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಳ ಸು ಕ ರ ರ ಗ ಳೆ ಕ್ಷ ಮಿ ಸಿ ನೀ",
+          "syllables": [
+            "ಬ",
+            "ಳ",
+            "ಸು",
+            "ಕ",
+            "ರ",
+            "ರ",
+            "ಗ",
+            "ಳೆ",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ನೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ನ ಕ ಳಿ ಯ ಕ ಲೆ ಗೆ ಹೂ ವಿ ನ ಆ",
+          "syllables": [
+            "ಸಿ",
+            "ನ",
+            "ಕ",
+            "ಳಿ",
+            "ಯ",
+            "ಕ",
+            "ಲೆ",
+            "ಗೆ",
+            "ಹೂ",
+            "ವಿ",
+            "ನ",
+            "ಆ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1719629764556885,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 56,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕರಗ ಕರ ಕರ ಕುರಿಕ ಶಲೇ\nನಮಸ್ ನಮಸ್ ನ್ವಯ ಪ್ರವಯ ಶಲೆ ರಾ\n",
+      "poem_lines": [
+        "ಕರಗ ಕರ ಕರ ಕುರಿಕ ಶಲೇ",
+        "ನಮಸ್ ನಮಸ್ ನ್ವಯ ಪ್ರವಯ ಶಲೆ ರಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ರ ಗ ಕ ರ ಕ ರ ಕು ರಿ ಕ ಶ ಲೇ",
+          "syllables": [
+            "ಕ",
+            "ರ",
+            "ಗ",
+            "ಕ",
+            "ರ",
+            "ಕ",
+            "ರ",
+            "ಕು",
+            "ರಿ",
+            "ಕ",
+            "ಶ",
+            "ಲೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ಮಸ್ ನ ಮಸ್ ನ್ವ ಯ ಪ್ರ ವ ಯ ಶ ಲೆ ರಾ",
+          "syllables": [
+            "ನ",
+            "ಮಸ್",
+            "ನ",
+            "ಮಸ್",
+            "ನ್ವ",
+            "ಯ",
+            "ಪ್ರ",
+            "ವ",
+            "ಯ",
+            "ಶ",
+            "ಲೆ",
+            "ರಾ"
+          ],
+          "markers": "I U I U I I I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.2104988098144531,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Rain",
+      "seed": 63,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಶುರುಕಾದ ಹ ಸಂದಿ ಪ್ರವಣ ಪ್ರವೇ\nಗುರು ಪ್ರಾಪನಕ ಕರನ ಪ್ರವನೇ\n",
+      "poem_lines": [
+        "ಶುರುಕಾದ ಹ ಸಂದಿ ಪ್ರವಣ ಪ್ರವೇ",
+        "ಗುರು ಪ್ರಾಪನಕ ಕರನ ಪ್ರವನೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಶು ರು ಕಾ ದ ಹ ಸಂ ದಿ ಪ್ರ ವ ಣ ಪ್ರ ವೇ",
+          "syllables": [
+            "ಶು",
+            "ರು",
+            "ಕಾ",
+            "ದ",
+            "ಹ",
+            "ಸಂ",
+            "ದಿ",
+            "ಪ್ರ",
+            "ವ",
+            "ಣ",
+            "ಪ್ರ",
+            "ವೇ"
+          ],
+          "markers": "I I U I I U I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಗು ರು ಪ್ರಾ ಪ ನ ಕ ಕ ರ ನ ಪ್ರ ವ ನೇ",
+          "syllables": [
+            "ಗು",
+            "ರು",
+            "ಪ್ರಾ",
+            "ಪ",
+            "ನ",
+            "ಕ",
+            "ಕ",
+            "ರ",
+            "ನ",
+            "ಪ್ರ",
+            "ವ",
+            "ನೇ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1222689151763916,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Rain",
+      "seed": 70,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಗಳು ಪ್ರಪತಿ ಪ್ರಪತಿ ರಾ\nಸಿನಕೇ ಪ್ರಪತಿ ರಗಳೆ ುತ್ತದೆ ನೀ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಗಳು ಪ್ರಪತಿ ಪ್ರಪತಿ ರಾ",
+        "ಸಿನಕೇ ಪ್ರಪತಿ ರಗಳೆ ುತ್ತದೆ ನೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಗ ಳು ಪ್ರ ಪ ತಿ ಪ್ರ ಪ ತಿ ರಾ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗ",
+            "ಳು",
+            "ಪ್ರ",
+            "ಪ",
+            "ತಿ",
+            "ಪ್ರ",
+            "ಪ",
+            "ತಿ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ನ ಕೇ ಪ್ರ ಪ ತಿ ರ ಗ ಳೆ ತ್ತ ದೆ ನೀ",
+          "syllables": [
+            "ಸಿ",
+            "ನ",
+            "ಕೇ",
+            "ಪ್ರ",
+            "ಪ",
+            "ತಿ",
+            "ರ",
+            "ಗ",
+            "ಳೆ",
+            "ತ್ತ",
+            "ದೆ",
+            "ನೀ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.091162919998169,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Rain",
+      "seed": 77,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮತಕೀಕೃತ ಪ್ರಕೃತಿ ತೀಸರವೇ\nಸರಕೀಕೃತ ಪ್ರಕೃತಿ ತೀಸರವೇ\n",
+      "poem_lines": [
+        "ಮತಕೀಕೃತ ಪ್ರಕೃತಿ ತೀಸರವೇ",
+        "ಸರಕೀಕೃತ ಪ್ರಕೃತಿ ತೀಸರವೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ತ ಕೀ ಕೃ ತ ಪ್ರ ಕೃ ತಿ ತೀ ಸ ರ ವೇ",
+          "syllables": [
+            "ಮ",
+            "ತ",
+            "ಕೀ",
+            "ಕೃ",
+            "ತ",
+            "ಪ್ರ",
+            "ಕೃ",
+            "ತಿ",
+            "ತೀ",
+            "ಸ",
+            "ರ",
+            "ವೇ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರ ಕೀ ಕೃ ತ ಪ್ರ ಕೃ ತಿ ತೀ ಸ ರ ವೇ",
+          "syllables": [
+            "ಸ",
+            "ರ",
+            "ಕೀ",
+            "ಕೃ",
+            "ತ",
+            "ಪ್ರ",
+            "ಕೃ",
+            "ತಿ",
+            "ತೀ",
+            "ಸ",
+            "ರ",
+            "ವೇ"
+          ],
+          "markers": "I I U I I I I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3455545902252197,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "Rain",
+      "seed": 84,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಚುರಕ ಕರಕ ಕರಕ ರುಜ ಕಾ\nನಿರಹನ ಕರಕ ಪ್ರಕೃತಿ ರು ಜೋ\n",
+      "poem_lines": [
+        "ಚುರಕ ಕರಕ ಕರಕ ರುಜ ಕಾ",
+        "ನಿರಹನ ಕರಕ ಪ್ರಕೃತಿ ರು ಜೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಚು ರ ಕ ಕ ರ ಕ ಕ ರ ಕ ರು ಜ ಕಾ",
+          "syllables": [
+            "ಚು",
+            "ರ",
+            "ಕ",
+            "ಕ",
+            "ರ",
+            "ಕ",
+            "ಕ",
+            "ರ",
+            "ಕ",
+            "ರು",
+            "ಜ",
+            "ಕಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನಿ ರ ಹ ನ ಕ ರ ಕ ಪ್ರ ಕೃ ತಿ ರು ಜೋ",
+          "syllables": [
+            "ನಿ",
+            "ರ",
+            "ಹ",
+            "ನ",
+            "ಕ",
+            "ರ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಕೃ",
+            "ತಿ",
+            "ರು",
+            "ಜೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2608935832977295,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Rain",
+      "seed": 91,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ತವವದ ಕೀಸವನ ಕರವಾ\nಸತತ ಬದಕದ ಕರಮಹನಾ\n",
+      "poem_lines": [
+        "ಬ ತವವದ ಕೀಸವನ ಕರವಾ",
+        "ಸತತ ಬದಕದ ಕರಮಹನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ತ ವ ವ ದ ಕೀ ಸ ವ ನ ಕ ರ ವಾ",
+          "syllables": [
+            "ಬ",
+            "ತ",
+            "ವ",
+            "ವ",
+            "ದ",
+            "ಕೀ",
+            "ಸ",
+            "ವ",
+            "ನ",
+            "ಕ",
+            "ರ",
+            "ವಾ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ತ ತ ಬ ದ ಕ ದ ಕ ರ ಮ ಹ ನಾ",
+          "syllables": [
+            "ಸ",
+            "ತ",
+            "ತ",
+            "ಬ",
+            "ದ",
+            "ಕ",
+            "ದ",
+            "ಕ",
+            "ರ",
+            "ಮ",
+            "ಹ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1344027519226074,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Rain",
+      "seed": 98,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಶುರುಕ ಹನಕ ಹನಕ ಪ್ರಕ ಬೇ\nಸರಿಕ ಶುರುಕ ಹನಕ ಪ್ರಕ ಬೇ\n",
+      "poem_lines": [
+        "ಶುರುಕ ಹನಕ ಹನಕ ಪ್ರಕ ಬೇ",
+        "ಸರಿಕ ಶುರುಕ ಹನಕ ಪ್ರಕ ಬೇ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಶು ರು ಕ ಹ ನ ಕ ಹ ನ ಕ ಪ್ರ ಕ ಬೇ",
+          "syllables": [
+            "ಶು",
+            "ರು",
+            "ಕ",
+            "ಹ",
+            "ನ",
+            "ಕ",
+            "ಹ",
+            "ನ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಕ",
+            "ಬೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರಿ ಕ ಶು ರು ಕ ಹ ನ ಕ ಪ್ರ ಕ ಬೇ",
+          "syllables": [
+            "ಸ",
+            "ರಿ",
+            "ಕ",
+            "ಶು",
+            "ರು",
+            "ಕ",
+            "ಹ",
+            "ನ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಕ",
+            "ಬೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1745524406433105,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 105,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬರಿಯೆ ಕರಹ ಪ್ರವ ವಸ್ತು ಪ್ರವೀ\nಸಿನಕ ಕರ ಹನಕ ಪ್ರೀ ಪ್ರವ ಈ\n",
+      "poem_lines": [
+        "ಬರಿಯೆ ಕರಹ ಪ್ರವ ವಸ್ತು ಪ್ರವೀ",
+        "ಸಿನಕ ಕರ ಹನಕ ಪ್ರೀ ಪ್ರವ ಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ರಿ ಯೆ ಕ ರ ಹ ಪ್ರ ವ ವ ಸ್ತು ಪ್ರ ವೀ",
+          "syllables": [
+            "ಬ",
+            "ರಿ",
+            "ಯೆ",
+            "ಕ",
+            "ರ",
+            "ಹ",
+            "ಪ್ರ",
+            "ವ",
+            "ವ",
+            "ಸ್ತು",
+            "ಪ್ರ",
+            "ವೀ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ನ ಕ ಕ ರ ಹ ನ ಕ ಪ್ರೀ ಪ್ರ ವ ಈ",
+          "syllables": [
+            "ಸಿ",
+            "ನ",
+            "ಕ",
+            "ಕ",
+            "ರ",
+            "ಹ",
+            "ನ",
+            "ಕ",
+            "ಪ್ರೀ",
+            "ಪ್ರ",
+            "ವ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.088507890701294,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Rain",
+      "seed": 112,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚು ನು ನು ನು ನು ನು ನು ನು ನು ನು ಬೇ\nಕ ಇ ನು ನು ನು ನು ನು ನು ನು ನು ನನಾ\n",
+      "poem_lines": [
+        "ಬ ಚು ನು ನು ನು ನು ನು ನು ನು ನು ನು ಬೇ",
+        "ಕ ಇ ನು ನು ನು ನು ನು ನು ನು ನು ನನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚು ನು ನು ನು ನು ನು ನು ನು ನು ನು ಬೇ",
+          "syllables": [
+            "ಬ",
+            "ಚು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ಬೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಇ ನು ನು ನು ನು ನು ನು ನು ನು ನ ನಾ",
+          "syllables": [
+            "ಕ",
+            "ಇ",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನು",
+            "ನ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.9624271392822266,
+      "tokens_generated": 44,
+      "backtracks": 0,
+      "mask_computations": 42
+    },
+    {
+      "topic": "Rain",
+      "seed": 119,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬರಿಯೆ ಬರಿಯೆ ಹರಹ ಹರ ಏ\nಜನ್ ನಿರ ಪ್ರಕೃತಿ ಪ್ರವ ವಸ್ತು ೀ ಪ್ರಏ\n",
+      "poem_lines": [
+        "ಬರಿಯೆ ಬರಿಯೆ ಹರಹ ಹರ ಏ",
+        "ಜನ್ ನಿರ ಪ್ರಕೃತಿ ಪ್ರವ ವಸ್ತು ೀ ಪ್ರಏ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ರಿ ಯೆ ಬ ರಿ ಯೆ ಹ ರ ಹ ಹ ರ ಏ",
+          "syllables": [
+            "ಬ",
+            "ರಿ",
+            "ಯೆ",
+            "ಬ",
+            "ರಿ",
+            "ಯೆ",
+            "ಹ",
+            "ರ",
+            "ಹ",
+            "ಹ",
+            "ರ",
+            "ಏ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಜನ್ ನಿ ರ ಪ್ರ ಕೃ ತಿ ಪ್ರ ವ ವ ಸ್ತು ಪ್ರ ಏ",
+          "syllables": [
+            "ಜನ್",
+            "ನಿ",
+            "ರ",
+            "ಪ್ರ",
+            "ಕೃ",
+            "ತಿ",
+            "ಪ್ರ",
+            "ವ",
+            "ವ",
+            "ಸ್ತು",
+            "ಪ್ರ",
+            "ಏ"
+          ],
+          "markers": "U I I I I I I I U I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.1990654468536377,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Rain",
+      "seed": 126,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಚುಂಡಕ ಪ್ರಪರಿಕ್ಷದ ಕಡೆಗೆ ನೀ\nಸರಕ ಕಛಿರಿಗ ಸಏತ ಬ ನೀ\n",
+      "poem_lines": [
+        "ಚುಂಡಕ ಪ್ರಪರಿಕ್ಷದ ಕಡೆಗೆ ನೀ",
+        "ಸರಕ ಕಛಿರಿಗ ಸಏತ ಬ ನೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಚುಂ ಡ ಕ ಪ್ರ ಪ ರಿ ಕ್ಷ ದ ಕ ಡೆ ಗೆ ನೀ",
+          "syllables": [
+            "ಚುಂ",
+            "ಡ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಪ",
+            "ರಿ",
+            "ಕ್ಷ",
+            "ದ",
+            "ಕ",
+            "ಡೆ",
+            "ಗೆ",
+            "ನೀ"
+          ],
+          "markers": "U I I I I U I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರ ಕ ಕ ಛಿ ರಿ ಗ ಸ ಏ ತ ಬ ನೀ",
+          "syllables": [
+            "ಸ",
+            "ರ",
+            "ಕ",
+            "ಕ",
+            "ಛಿ",
+            "ರಿ",
+            "ಗ",
+            "ಸ",
+            "ಏ",
+            "ತ",
+            "ಬ",
+            "ನೀ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.1692097187042236,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 133,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕರು ಕರಗಳೆ ುತ್ತದೆ ಕರಲು ಈ\nಸಿನಕ ಸನ್ ಪ್ರಭು ನಿರಹ ಪ್ರಭು ಆ\n",
+      "poem_lines": [
+        "ಕರು ಕರಗಳೆ ುತ್ತದೆ ಕರಲು ಈ",
+        "ಸಿನಕ ಸನ್ ಪ್ರಭು ನಿರಹ ಪ್ರಭು ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ರು ಕ ರ ಗ ಳೆ ತ್ತ ದೆ ಕ ರ ಲು ಈ",
+          "syllables": [
+            "ಕ",
+            "ರು",
+            "ಕ",
+            "ರ",
+            "ಗ",
+            "ಳೆ",
+            "ತ್ತ",
+            "ದೆ",
+            "ಕ",
+            "ರ",
+            "ಲು",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ನ ಕ ಸನ್ ಪ್ರ ಭು ನಿ ರ ಹ ಪ್ರ ಭು ಆ",
+          "syllables": [
+            "ಸಿ",
+            "ನ",
+            "ಕ",
+            "ಸನ್",
+            "ಪ್ರ",
+            "ಭು",
+            "ನಿ",
+            "ರ",
+            "ಹ",
+            "ಪ್ರ",
+            "ಭು",
+            "ಆ"
+          ],
+          "markers": "I I I U I I I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.2017714977264404,
+      "tokens_generated": 29,
+      "backtracks": 0,
+      "mask_computations": 27
+    },
+    {
+      "topic": "Rain",
+      "seed": 140,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬಳಸುವ ರಗಳೆ: ನರ ಹನರಾ\nನಯಗಳು ಬಲದ ಹನಗತ ರಾ\n",
+      "poem_lines": [
+        "ಬಳಸುವ ರಗಳೆ: ನರ ಹನರಾ",
+        "ನಯಗಳು ಬಲದ ಹನಗತ ರಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಳ ಸು ವ ರ ಗ ಳೆ ನ ರ ಹ ನ ರಾ",
+          "syllables": [
+            "ಬ",
+            "ಳ",
+            "ಸು",
+            "ವ",
+            "ರ",
+            "ಗ",
+            "ಳೆ",
+            "ನ",
+            "ರ",
+            "ಹ",
+            "ನ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ಯ ಗ ಳು ಬ ಲ ದ ಹ ನ ಗ ತ ರಾ",
+          "syllables": [
+            "ನ",
+            "ಯ",
+            "ಗ",
+            "ಳು",
+            "ಬ",
+            "ಲ",
+            "ದ",
+            "ಹ",
+            "ನ",
+            "ಗ",
+            "ತ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1221098899841309,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Rain",
+      "seed": 147,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ತ ಹ ತ ಹ ತ ಹ ತ ಹ ತ ಹ ಸಾ\nಸ ಹ ಹ ತ ಹ ತ ಹ ತ ಹ ತ ಹ ಸಾ\n",
+      "poem_lines": [
+        "ಬ ತ ಹ ತ ಹ ತ ಹ ತ ಹ ತ ಹ ಸಾ",
+        "ಸ ಹ ಹ ತ ಹ ತ ಹ ತ ಹ ತ ಹ ಸಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ತ ಹ ತ ಹ ತ ಹ ತ ಹ ತ ಹ ಸಾ",
+          "syllables": [
+            "ಬ",
+            "ತ",
+            "ಹ",
+            "ತ",
+            "ಹ",
+            "ತ",
+            "ಹ",
+            "ತ",
+            "ಹ",
+            "ತ",
+            "ಹ",
+            "ಸಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಹ ಹ ತ ಹ ತ ಹ ತ ಹ ತ ಹ ಸಾ",
+          "syllables": [
+            "ಸ",
+            "ಹ",
+            "ಹ",
+            "ತ",
+            "ಹ",
+            "ತ",
+            "ಹ",
+            "ತ",
+            "ಹ",
+            "ತ",
+            "ಹ",
+            "ಸಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.084362268447876,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Rain",
+      "seed": 154,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮಳೆ ನರಿತ ನ್ನು ುತ ಸ್ಮರಣೆ ುರವೇ\nಸಿನಕ ಅವು ಕರಹಸರ ತ ಮೋ\n",
+      "poem_lines": [
+        "ಮಳೆ ನರಿತ ನ್ನು ುತ ಸ್ಮರಣೆ ುರವೇ",
+        "ಸಿನಕ ಅವು ಕರಹಸರ ತ ಮೋ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ಳೆ ನ ರಿ ತ ನ್ನು ತ ಸ್ಮ ರ ಣೆ ರ ವೇ",
+          "syllables": [
+            "ಮ",
+            "ಳೆ",
+            "ನ",
+            "ರಿ",
+            "ತ",
+            "ನ್ನು",
+            "ತ",
+            "ಸ್ಮ",
+            "ರ",
+            "ಣೆ",
+            "ರ",
+            "ವೇ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ನ ಕ ಅ ವು ಕ ರ ಹ ಸ ರ ತ ಮೋ",
+          "syllables": [
+            "ಸಿ",
+            "ನ",
+            "ಕ",
+            "ಅ",
+            "ವು",
+            "ಕ",
+            "ರ",
+            "ಹ",
+            "ಸ",
+            "ರ",
+            "ತ",
+            "ಮೋ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.304351568222046,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "Rain",
+      "seed": 161,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಗಳು ಅರಿಸುವಾಗ ತ ಮೋ\nಸಿನಕೇನಿನ ತೀಸವ ರಂಗಿ ಪ್ರಏ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಗಳು ಅರಿಸುವಾಗ ತ ಮೋ",
+        "ಸಿನಕೇನಿನ ತೀಸವ ರಂಗಿ ಪ್ರಏ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಗ ಳು ಅ ರಿ ಸು ವಾ ಗ ತ ಮೋ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗ",
+            "ಳು",
+            "ಅ",
+            "ರಿ",
+            "ಸು",
+            "ವಾ",
+            "ಗ",
+            "ತ",
+            "ಮೋ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸಿ ನ ಕೇ ನಿ ನ ತೀ ಸ ವ ರಂ ಗಿ ಪ್ರ ಏ",
+          "syllables": [
+            "ಸಿ",
+            "ನ",
+            "ಕೇ",
+            "ನಿ",
+            "ನ",
+            "ತೀ",
+            "ಸ",
+            "ವ",
+            "ರಂ",
+            "ಗಿ",
+            "ಪ್ರ",
+            "ಏ"
+          ],
+          "markers": "I I U I I U I I U I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1732237339019775,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 168,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಗರು ಪ್ರೀಣಿಯರ ಪ್ರಿಯಏ\nಚುಲಕ ಪ್ರಿಯ ಪ್ರಿಯ ಪ್ರಿಯ ಪ್ರಿಯ ಆ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಗರು ಪ್ರೀಣಿಯರ ಪ್ರಿಯಏ",
+        "ಚುಲಕ ಪ್ರಿಯ ಪ್ರಿಯ ಪ್ರಿಯ ಪ್ರಿಯ ಆ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಗ ರು ಪ್ರೀ ಣಿ ಯ ರ ಪ್ರಿ ಯ ಏ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗ",
+            "ರು",
+            "ಪ್ರೀ",
+            "ಣಿ",
+            "ಯ",
+            "ರ",
+            "ಪ್ರಿ",
+            "ಯ",
+            "ಏ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಚು ಲ ಕ ಪ್ರಿ ಯ ಪ್ರಿ ಯ ಪ್ರಿ ಯ ಪ್ರಿ ಯ ಆ",
+          "syllables": [
+            "ಚು",
+            "ಲ",
+            "ಕ",
+            "ಪ್ರಿ",
+            "ಯ",
+            "ಪ್ರಿ",
+            "ಯ",
+            "ಪ್ರಿ",
+            "ಯ",
+            "ಪ್ರಿ",
+            "ಯ",
+            "ಆ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1773273944854736,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 175,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬರಹನರ ವಂಶ ಪ್ರವೃತ ಸಏ\nಸರಜಹರನ ಕವಿರಾದ ಕಮಾ\n",
+      "poem_lines": [
+        "ಬರಹನರ ವಂಶ ಪ್ರವೃತ ಸಏ",
+        "ಸರಜಹರನ ಕವಿರಾದ ಕಮಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ರ ಹ ನ ರ ವಂ ಶ ಪ್ರ ವೃ ತ ಸ ಏ",
+          "syllables": [
+            "ಬ",
+            "ರ",
+            "ಹ",
+            "ನ",
+            "ರ",
+            "ವಂ",
+            "ಶ",
+            "ಪ್ರ",
+            "ವೃ",
+            "ತ",
+            "ಸ",
+            "ಏ"
+          ],
+          "markers": "I I I I I U I I I I I U",
+          "valid": true,
+          "partition": "III(III) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರ ಜ ಹ ರ ನ ಕ ವಿ ರಾ ದ ಕ ಮಾ",
+          "syllables": [
+            "ಸ",
+            "ರ",
+            "ಜ",
+            "ಹ",
+            "ರ",
+            "ನ",
+            "ಕ",
+            "ವಿ",
+            "ರಾ",
+            "ದ",
+            "ಕ",
+            "ಮಾ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1275017261505127,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Rain",
+      "seed": 182,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚುತ ಕರಬಕರು ಅರಿತ ಏ\nಧುನವಯರ ಹನಕರು ಬಕ ಏ\n",
+      "poem_lines": [
+        "ಬ ಚುತ ಕರಬಕರು ಅರಿತ ಏ",
+        "ಧುನವಯರ ಹನಕರು ಬಕ ಏ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚು ತ ಕ ರ ಬ ಕ ರು ಅ ರಿ ತ ಏ",
+          "syllables": [
+            "ಬ",
+            "ಚು",
+            "ತ",
+            "ಕ",
+            "ರ",
+            "ಬ",
+            "ಕ",
+            "ರು",
+            "ಅ",
+            "ರಿ",
+            "ತ",
+            "ಏ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಧು ನ ವ ಯ ರ ಹ ನ ಕ ರು ಬ ಕ ಏ",
+          "syllables": [
+            "ಧು",
+            "ನ",
+            "ವ",
+            "ಯ",
+            "ರ",
+            "ಹ",
+            "ನ",
+            "ಕ",
+            "ರು",
+            "ಬ",
+            "ಕ",
+            "ಏ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1686537265777588,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 189,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬರಿಯೆ ಹಗವ ಪ್ರವೃತವ್ಯರು ಈ\nನಹರ ವಹರಲದ ಪ್ರಭರ ಏ\n",
+      "poem_lines": [
+        "ಬರಿಯೆ ಹಗವ ಪ್ರವೃತವ್ಯರು ಈ",
+        "ನಹರ ವಹರಲದ ಪ್ರಭರ ಏ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ರಿ ಯೆ ಹ ಗ ವ ಪ್ರ ವೃ ತ ವ್ಯ ರು ಈ",
+          "syllables": [
+            "ಬ",
+            "ರಿ",
+            "ಯೆ",
+            "ಹ",
+            "ಗ",
+            "ವ",
+            "ಪ್ರ",
+            "ವೃ",
+            "ತ",
+            "ವ್ಯ",
+            "ರು",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I U I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + IIU(IIU) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ನ ಹ ರ ವ ಹ ರ ಲ ದ ಪ್ರ ಭ ರ ಏ",
+          "syllables": [
+            "ನ",
+            "ಹ",
+            "ರ",
+            "ವ",
+            "ಹ",
+            "ರ",
+            "ಲ",
+            "ದ",
+            "ಪ್ರ",
+            "ಭ",
+            "ರ",
+            "ಏ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1662638187408447,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 196,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮತಲಕರ ಕವಿರು ಕ್ಷಮಿಸಿ ರಾ\nಸಹನಗರ ಬರಿಕ ಪ್ರಕೃತಿ ರಾ\n",
+      "poem_lines": [
+        "ಮತಲಕರ ಕವಿರು ಕ್ಷಮಿಸಿ ರಾ",
+        "ಸಹನಗರ ಬರಿಕ ಪ್ರಕೃತಿ ರಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ತ ಲ ಕ ರ ಕ ವಿ ರು ಕ್ಷ ಮಿ ಸಿ ರಾ",
+          "syllables": [
+            "ಮ",
+            "ತ",
+            "ಲ",
+            "ಕ",
+            "ರ",
+            "ಕ",
+            "ವಿ",
+            "ರು",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ಹ ನ ಗ ರ ಬ ರಿ ಕ ಪ್ರ ಕೃ ತಿ ರಾ",
+          "syllables": [
+            "ಸ",
+            "ಹ",
+            "ನ",
+            "ಗ",
+            "ರ",
+            "ಬ",
+            "ರಿ",
+            "ಕ",
+            "ಪ್ರ",
+            "ಕೃ",
+            "ತಿ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1696593761444092,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 203,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಬ ಚುರುಕ ಕವಿ ಕವಲಕರು ಈ\nಪ್ರಯಲ ಕರಕ ಕರಕರು ಪ್ರಈ\n",
+      "poem_lines": [
+        "ಬ ಚುರುಕ ಕವಿ ಕವಲಕರು ಈ",
+        "ಪ್ರಯಲ ಕರಕ ಕರಕರು ಪ್ರಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಬ ಚು ರು ಕ ಕ ವಿ ಕ ವ ಲ ಕ ರು ಈ",
+          "syllables": [
+            "ಬ",
+            "ಚು",
+            "ರು",
+            "ಕ",
+            "ಕ",
+            "ವಿ",
+            "ಕ",
+            "ವ",
+            "ಲ",
+            "ಕ",
+            "ರು",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಪ್ರ ಯ ಲ ಕ ರ ಕ ಕ ರ ಕ ರು ಪ್ರ ಈ",
+          "syllables": [
+            "ಪ್ರ",
+            "ಯ",
+            "ಲ",
+            "ಕ",
+            "ರ",
+            "ಕ",
+            "ಕ",
+            "ರ",
+            "ಕ",
+            "ರು",
+            "ಪ್ರ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1243724822998047,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    },
+    {
+      "topic": "Rain",
+      "seed": 210,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಕಾ\nಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಕಾ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಕಾ",
+        "ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಮಿಸಿಪಡಿ ಕ್ಷಕಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಕಾ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಕಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಮಿ ಸಿ ಪ ಡಿ ಕ್ಷ ಕಾ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಪ",
+            "ಡಿ",
+            "ಕ್ಷ",
+            "ಕಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2583210468292236,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Rain",
+      "seed": 217,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮ್ರುತ ಕೀರಿ ಪ್ರವೃತ್ತಿ ಕ್ಷಮಿಸಿಗ ಈ\nಸರಸಮಹನ ಕರನ ಕಥ ನಾ\n",
+      "poem_lines": [
+        "ಮ್ರುತ ಕೀರಿ ಪ್ರವೃತ್ತಿ ಕ್ಷಮಿಸಿಗ ಈ",
+        "ಸರಸಮಹನ ಕರನ ಕಥ ನಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ್ರು ತ ಕೀ ರಿ ಪ್ರ ವೃ ತ್ತಿ ಕ್ಷ ಮಿ ಸಿ ಗ ಈ",
+          "syllables": [
+            "ಮ್ರು",
+            "ತ",
+            "ಕೀ",
+            "ರಿ",
+            "ಪ್ರ",
+            "ವೃ",
+            "ತ್ತಿ",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗ",
+            "ಈ"
+          ],
+          "markers": "I I U I I U I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + IIU(IIU) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರ ಸ ಮ ಹ ನ ಕ ರ ನ ಕ ಥ ನಾ",
+          "syllables": [
+            "ಸ",
+            "ರ",
+            "ಸ",
+            "ಮ",
+            "ಹ",
+            "ನ",
+            "ಕ",
+            "ರ",
+            "ನ",
+            "ಕ",
+            "ಥ",
+            "ನಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3507237434387207,
+      "tokens_generated": 32,
+      "backtracks": 0,
+      "mask_computations": 30
+    },
+    {
+      "topic": "Rain",
+      "seed": 224,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಮತಲ ಕರಗಳು ಹರಹದ ಈ\nತಯಿನ ಕರಗಳು ತಯಿನ ಕಏ\n",
+      "poem_lines": [
+        "ಮತಲ ಕರಗಳು ಹರಹದ ಈ",
+        "ತಯಿನ ಕರಗಳು ತಯಿನ ಕಏ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಮ ತ ಲ ಕ ರ ಗ ಳು ಹ ರ ಹ ದ ಈ",
+          "syllables": [
+            "ಮ",
+            "ತ",
+            "ಲ",
+            "ಕ",
+            "ರ",
+            "ಗ",
+            "ಳು",
+            "ಹ",
+            "ರ",
+            "ಹ",
+            "ದ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ತ ಯಿ ನ ಕ ರ ಗ ಳು ತ ಯಿ ನ ಕ ಏ",
+          "syllables": [
+            "ತ",
+            "ಯಿ",
+            "ನ",
+            "ಕ",
+            "ರ",
+            "ಗ",
+            "ಳು",
+            "ತ",
+            "ಯಿ",
+            "ನ",
+            "ಕ",
+            "ಏ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 0.9958515167236328,
+      "tokens_generated": 24,
+      "backtracks": 0,
+      "mask_computations": 22
+    },
+    {
+      "topic": "Rain",
+      "seed": 231,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿ ರಗಳೆ ುರಗಿಸಿರರು ಈ\nಕ್ಷಮಿಸಿ ರಗಳೆ ುರಗಿಸಿರರು ಈ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿ ರಗಳೆ ುರಗಿಸಿರರು ಈ",
+        "ಕ್ಷಮಿಸಿ ರಗಳೆ ುರಗಿಸಿರರು ಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ರ ಗ ಳೆ ರ ಗಿ ಸಿ ರ ರು ಈ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ರ",
+            "ಗ",
+            "ಳೆ",
+            "ರ",
+            "ಗಿ",
+            "ಸಿ",
+            "ರ",
+            "ರು",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ರ ಗ ಳೆ ರ ಗಿ ಸಿ ರ ರು ಈ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ರ",
+            "ಗ",
+            "ಳೆ",
+            "ರ",
+            "ಗಿ",
+            "ಸಿ",
+            "ರ",
+            "ರು",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2479732036590576,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Rain",
+      "seed": 238,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕಿನಗೆ ಕರಸಿನ ಕಥೆ ಕ್ಷಮ ರಾ\nಕಿನಗೆ ಕರಸಿನ ಕಥೆ ಕ್ಷಮ ರಾ\n",
+      "poem_lines": [
+        "ಕಿನಗೆ ಕರಸಿನ ಕಥೆ ಕ್ಷಮ ರಾ",
+        "ಕಿನಗೆ ಕರಸಿನ ಕಥೆ ಕ್ಷಮ ರಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕಿ ನ ಗೆ ಕ ರ ಸಿ ನ ಕ ಥೆ ಕ್ಷ ಮ ರಾ",
+          "syllables": [
+            "ಕಿ",
+            "ನ",
+            "ಗೆ",
+            "ಕ",
+            "ರ",
+            "ಸಿ",
+            "ನ",
+            "ಕ",
+            "ಥೆ",
+            "ಕ್ಷ",
+            "ಮ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕಿ ನ ಗೆ ಕ ರ ಸಿ ನ ಕ ಥೆ ಕ್ಷ ಮ ರಾ",
+          "syllables": [
+            "ಕಿ",
+            "ನ",
+            "ಗೆ",
+            "ಕ",
+            "ರ",
+            "ಸಿ",
+            "ನ",
+            "ಕ",
+            "ಥೆ",
+            "ಕ್ಷ",
+            "ಮ",
+            "ರಾ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.2571406364440918,
+      "tokens_generated": 30,
+      "backtracks": 0,
+      "mask_computations": 28
+    },
+    {
+      "topic": "Rain",
+      "seed": 245,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ತಯಲದ ಹರಗಳು ಕ್ಷಮಿಸಿ ಈ\nಸರಿಯಾದ ಕಲೆ ತರಲಿ ಕ್ಷಮಮಾ\n",
+      "poem_lines": [
+        "ತಯಲದ ಹರಗಳು ಕ್ಷಮಿಸಿ ಈ",
+        "ಸರಿಯಾದ ಕಲೆ ತರಲಿ ಕ್ಷಮಮಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ತ ಯ ಲ ದ ಹ ರ ಗ ಳು ಕ್ಷ ಮಿ ಸಿ ಈ",
+          "syllables": [
+            "ತ",
+            "ಯ",
+            "ಲ",
+            "ದ",
+            "ಹ",
+            "ರ",
+            "ಗ",
+            "ಳು",
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರಿ ಯಾ ದ ಕ ಲೆ ತ ರ ಲಿ ಕ್ಷ ಮ ಮಾ",
+          "syllables": [
+            "ಸ",
+            "ರಿ",
+            "ಯಾ",
+            "ದ",
+            "ಕ",
+            "ಲೆ",
+            "ತ",
+            "ರ",
+            "ಲಿ",
+            "ಕ್ಷ",
+            "ಮ",
+            "ಮಾ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.087843656539917,
+      "tokens_generated": 26,
+      "backtracks": 0,
+      "mask_computations": 24
+    },
+    {
+      "topic": "Rain",
+      "seed": 252,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ತಯೊ ಏರಿಯೆ ಅಸರಿ ುತ್ತದೆ ಕು ಈ\nಗವಿಗೀಗ ಅರಿಯೆ ಅಯೆ ಬರಿ ಈ\n",
+      "poem_lines": [
+        "ತಯೊ ಏರಿಯೆ ಅಸರಿ ುತ್ತದೆ ಕು ಈ",
+        "ಗವಿಗೀಗ ಅರಿಯೆ ಅಯೆ ಬರಿ ಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ತ ಯೊ ಏ ರಿ ಯೆ ಅ ಸ ರಿ ತ್ತ ದೆ ಕು ಈ",
+          "syllables": [
+            "ತ",
+            "ಯೊ",
+            "ಏ",
+            "ರಿ",
+            "ಯೆ",
+            "ಅ",
+            "ಸ",
+            "ರಿ",
+            "ತ್ತ",
+            "ದೆ",
+            "ಕು",
+            "ಈ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಗ ವಿ ಗೀ ಗ ಅ ರಿ ಯೆ ಅ ಯೆ ಬ ರಿ ಈ",
+          "syllables": [
+            "ಗ",
+            "ವಿ",
+            "ಗೀ",
+            "ಗ",
+            "ಅ",
+            "ರಿ",
+            "ಯೆ",
+            "ಅ",
+            "ಯೆ",
+            "ಬ",
+            "ರಿ",
+            "ಈ"
+          ],
+          "markers": "I I U I I I I I I I I U",
+          "valid": true,
+          "partition": "IIU(IIU) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.3127191066741943,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "Rain",
+      "seed": 259,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಶುರು ಹಯೆನೆ ುತ್ತದೆ ುತ್ತದೆ ುತ್ತದೆ ನೀ\nಸರ ಹರ ಕರಹ ತರು ತರು ಹೀ\n",
+      "poem_lines": [
+        "ಶುರು ಹಯೆನೆ ುತ್ತದೆ ುತ್ತದೆ ುತ್ತದೆ ನೀ",
+        "ಸರ ಹರ ಕರಹ ತರು ತರು ಹೀ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಶು ರು ಹ ಯೆ ನೆ ತ್ತ ದೆ ತ್ತ ದೆ ತ್ತ ದೆ ನೀ",
+          "syllables": [
+            "ಶು",
+            "ರು",
+            "ಹ",
+            "ಯೆ",
+            "ನೆ",
+            "ತ್ತ",
+            "ದೆ",
+            "ತ್ತ",
+            "ದೆ",
+            "ತ್ತ",
+            "ದೆ",
+            "ನೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸ ರ ಹ ರ ಕ ರ ಹ ತ ರು ತ ರು ಹೀ",
+          "syllables": [
+            "ಸ",
+            "ರ",
+            "ಹ",
+            "ರ",
+            "ಕ",
+            "ರ",
+            "ಹ",
+            "ತ",
+            "ರು",
+            "ತ",
+            "ರು",
+            "ಹೀ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": true,
+      "elapsed": 1.1737401485443115,
+      "tokens_generated": 28,
+      "backtracks": 0,
+      "mask_computations": 26
+    },
+    {
+      "topic": "Rain",
+      "seed": 266,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕರನ ಕವಿರಾದ ನ ಪ್ರವೃಪ್೨ಕ ನೀ\nಕ ಹರಗುವ ಕೃಷಿ ಕರಹಲ ಈ\n",
+      "poem_lines": [
+        "ಕರನ ಕವಿರಾದ ನ ಪ್ರವೃಪ್೨ಕ ನೀ",
+        "ಕ ಹರಗುವ ಕೃಷಿ ಕರಹಲ ಈ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ ರ ನ ಕ ವಿ ರಾ ದ ನ ಪ್ರ ವೃಪ್ ಕ ನೀ",
+          "syllables": [
+            "ಕ",
+            "ರ",
+            "ನ",
+            "ಕ",
+            "ವಿ",
+            "ರಾ",
+            "ದ",
+            "ನ",
+            "ಪ್ರ",
+            "ವೃಪ್",
+            "ಕ",
+            "ನೀ"
+          ],
+          "markers": "I I I I I U I I I U I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಕ ಹ ರ ಗು ವ ಕೃ ಷಿ ಕ ರ ಹ ಲ ಈ",
+          "syllables": [
+            "ಕ",
+            "ಹ",
+            "ರ",
+            "ಗು",
+            "ವ",
+            "ಕೃ",
+            "ಷಿ",
+            "ಕ",
+            "ರ",
+            "ಹ",
+            "ಲ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.2857029438018799,
+      "tokens_generated": 31,
+      "backtracks": 0,
+      "mask_computations": 29
+    },
+    {
+      "topic": "Rain",
+      "seed": 273,
+      "method": "hybrid_mask_reject",
+      "generated_text": "ಕ್ಷಮಿಸಿಗತರು ಅರಿವಸವ ಈ\nಸನ್ ಪ್ರಪರಕ ಅತಿ ಸವವ ಅಸಾ\n",
+      "poem_lines": [
+        "ಕ್ಷಮಿಸಿಗತರು ಅರಿವಸವ ಈ",
+        "ಸನ್ ಪ್ರಪರಕ ಅತಿ ಸವವ ಅಸಾ"
+      ],
+      "valid_lines": [
+        {
+          "line": "ಕ್ಷ ಮಿ ಸಿ ಗ ತ ರು ಅ ರಿ ವ ಸ ವ ಈ",
+          "syllables": [
+            "ಕ್ಷ",
+            "ಮಿ",
+            "ಸಿ",
+            "ಗ",
+            "ತ",
+            "ರು",
+            "ಅ",
+            "ರಿ",
+            "ವ",
+            "ಸ",
+            "ವ",
+            "ಈ"
+          ],
+          "markers": "I I I I I I I I I I I U",
+          "valid": true,
+          "partition": "III(III) + III(III) + III(III) + IIU(IIU)",
+          "syllable_count": 12,
+          "guru_ending": true
+        },
+        {
+          "line": "ಸನ್ ಪ್ರ ಪ ರ ಕ ಅ ತಿ ಸ ವ ವ ಅ ಸಾ",
+          "syllables": [
+            "ಸನ್",
+            "ಪ್ರ",
+            "ಪ",
+            "ರ",
+            "ಕ",
+            "ಅ",
+            "ತಿ",
+            "ಸ",
+            "ವ",
+            "ವ",
+            "ಅ",
+            "ಸಾ"
+          ],
+          "markers": "U I I I I I I I I I I U",
+          "valid": false,
+          "partition": "INVALID",
+          "syllable_count": 12,
+          "guru_ending": true
+        }
+      ],
+      "all_valid": false,
+      "elapsed": 1.123229742050171,
+      "tokens_generated": 27,
+      "backtracks": 0,
+      "mask_computations": 25
+    }
+  ]
+}

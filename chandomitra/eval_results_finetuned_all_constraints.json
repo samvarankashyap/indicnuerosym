@@ -1,0 +1,371 @@
+{
+  "config": {
+    "model": "google/gemma-3-1b-it",
+    "adapter": null,
+    "merged_model": "./dwipada_merged_model",
+    "constraints": {
+      "gana": true,
+      "prasa": true,
+      "yati": true
+    },
+    "decoding": "greedy",
+    "top_k_constraint": 25
+  },
+  "summary": {
+    "total": 5,
+    "average_score": 81.0,
+    "perfect_count": 3
+  },
+  "results": [
+    {
+      "prompt": "Topic: పుస్తకం. Bhaavam: జ్ఞానాన్ని ఇచ్చే నేస్తం.",
+      "poem": "సరళమైన వ్రొకరించుట భాష లివి లి\nపొరిబొరి నాల్గు లువొసగెడు నాల్గు",
+      "score": 100.0,
+      "report": "======================================================================\nDWIPADA CHANDASSU ANALYSIS REPORT\n======================================================================\n\n📊 OVERALL MATCH SCORE: 100.0%\n-----------------------------------\n\n--- LINE 1 (పాదము 1) ---\nText: సరళమైన వ్రొకరించుట భాష లివి లి\nAksharalu: స | ర | ళ | మై | న | వ్రొ | క | రిం | చు | ట | భా | ష | లి | వి | లి\nGana Markers: I I I U I I I U I I U I I I I\n\nGana Breakdown (4/4 valid):\n  ✓ Gana 1: సరళమై = IIIU = Naga (నగ) (ఇంద్ర గణము)\n  ✓ Gana 2: నవ్రొకరిం = IIIU = Naga (నగ) (ఇంద్ర గణము)\n  ✓ Gana 3: చుటభాష = IIUI = Sala (సల) (ఇంద్ర గణము)\n  ✓ Gana 4: లివిలి = III = Na (న) (సూర్య గణము)\n\n--- LINE 2 (పాదము 2) ---\nText: పొరిబొరి నాల్గు లువొసగెడు నాల్గు\nAksharalu: పొ | రి | బొ | రి | నా | ల్గు | లు | వొ | స | గె | డు | నా | ల్గు\nGana Markers: I I I I U I I I I I I U I\n\nGana Breakdown (4/4 valid):\n  ✓ Gana 1: పొరిబొరి = IIII = Nala (నల) (ఇంద్ర గణము)\n  ✓ Gana 2: నాల్గులు = UII = Bha (భ) (ఇంద్ర గణము)\n  ✓ Gana 3: వొసగెడు = IIII = Nala (నల) (ఇంద్ర గణము)\n  ✓ Gana 4: నాల్గు = UI = Ha/Gala (హ/గల) (సూర్య గణము)\n\n--- PRASA (ప్రాస) ANALYSIS ---\nLine 1 - 2nd Aksharam: 'ర' (Consonant: ర)\nLine 2 - 2nd Aksharam: 'రి' (Consonant: ర)\nPrasa Status: ✓ MATCH\n\n--- YATI (యతి) ANALYSIS ---\nLine 1: 'స' (1st gana) ↔ 'చ' (3rd gana) - ✓ MATCH (varga_match, 100%)\n    'స' groups: ['జ', 'స', 'ఝ', 'ఛ', 'శ', 'ష', 'చ']\n    Matching group: ['జ', 'స', 'ఝ', 'ఛ', 'శ', 'ష', 'చ']\nLine 2: 'ప' (1st gana) ↔ 'వ' (3rd gana) - ✓ MATCH (varga_match, 100%)\n    'ప' groups: ['బ', 'వ', 'ప', 'భ', 'ఫ']\n    Matching group: ['బ', 'వ', 'ప', 'భ', 'ఫ']\n\n--- SCORE BREAKDOWN ---\n  Gana (weight 40%):\n    Line 1: 100.0%\n    Line 2: 100.0%\n    Average: 100.0%\n  Prasa (weight 35%): 100.0%\n  Yati (weight 25%):\n    Line 1: 100.0%\n    Line 2: 100.0%\n    Average: 100.0%\n\n======================================================================\nVALIDATION SUMMARY\n======================================================================\nGana Sequence Line 1: ✓ Valid\nGana Sequence Line 2: ✓ Valid\nPrasa Match: ✓ Yes\nYati Line 1: ✓ Match\nYati Line 2: ✓ Match\n\nOVERALL: ✓ VALID DWIPADA (100.0% match)\n======================================================================",
+      "is_valid": true,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 100.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "pada1_ganas": [
+        {
+          "name": "Naga (నగ)",
+          "pattern": "IIIU",
+          "aksharalu": "సరళమై",
+          "valid": true
+        },
+        {
+          "name": "Naga (నగ)",
+          "pattern": "IIIU",
+          "aksharalu": "నవ్రొకరిం",
+          "valid": true
+        },
+        {
+          "name": "Sala (సల)",
+          "pattern": "IIUI",
+          "aksharalu": "చుటభాష",
+          "valid": true
+        },
+        {
+          "name": "Na (న)",
+          "pattern": "III",
+          "aksharalu": "లివిలి",
+          "valid": true
+        }
+      ],
+      "pada1_valid": true,
+      "pada2_ganas": [
+        {
+          "name": "Nala (నల)",
+          "pattern": "IIII",
+          "aksharalu": "పొరిబొరి",
+          "valid": true
+        },
+        {
+          "name": "Bha (భ)",
+          "pattern": "UII",
+          "aksharalu": "నాల్గులు",
+          "valid": true
+        },
+        {
+          "name": "Nala (నల)",
+          "pattern": "IIII",
+          "aksharalu": "వొసగెడు",
+          "valid": true
+        },
+        {
+          "name": "Ha/Gala (హ/గల)",
+          "pattern": "UI",
+          "aksharalu": "నాల్గు",
+          "valid": true
+        }
+      ],
+      "pada2_valid": true
+    },
+    {
+      "prompt": "Topic: ప్రకృతి. Bhaavam: ప్రకృతి అందాలు.",
+      "poem": "ద్విపద ప్రహస్తు ంధ్రాదిమణియు లి\nనర కుంటు బీదయవుశి ఉపాలకుగి",
+      "score": 52.5,
+      "report": "======================================================================\nDWIPADA CHANDASSU ANALYSIS REPORT\n======================================================================\n\n📊 OVERALL MATCH SCORE: 52.5%\n-----------------------------------\n\n--- LINE 1 (పాదము 1) ---\nText: ద్విపద ప్రహస్తు ంధ్రాదిమణియు లి\nAksharalu: ద్వి | ప | ద | ప్ర | హ | స్తు | ం | ధ్రా | ది | మ | ణి | యు | లి\nGana Markers: I I I I U I U U I I I I I\n\nGana Breakdown (4/4 valid):\n  ✓ Gana 1: ద్విపదప్ర = IIII = Nala (నల) (ఇంద్ర గణము)\n  ✓ Gana 2: హస్తుం = UIU = Ra (ర) (ఇంద్ర గణము)\n  ✓ Gana 3: ధ్రాదిమ = UII = Bha (భ) (ఇంద్ర గణము)\n  ✓ Gana 4: ణియులి = III = Na (న) (సూర్య గణము)\n\n--- LINE 2 (పాదము 2) ---\nText: నర కుంటు బీదయవుశి ఉపాలకుగి\nAksharalu: న | ర | కుం | టు | బీ | ద | య | వు | శి | ఉ | పా | ల | కు | గి\nGana Markers: I I U I U I I I I I U I I I\n\nGana Breakdown (4/4 valid):\n  ✓ Gana 1: నరకుంటు = IIUI = Sala (సల) (ఇంద్ర గణము)\n  ✓ Gana 2: బీదయ = UII = Bha (భ) (ఇంద్ర గణము)\n  ✓ Gana 3: వుశిఉపా = IIIU = Naga (నగ) (ఇంద్ర గణము)\n  ✓ Gana 4: లకుగి = III = Na (న) (సూర్య గణము)\n\n--- PRASA (ప్రాస) ANALYSIS ---\nLine 1 - 2nd Aksharam: 'ప' (Consonant: ప)\nLine 2 - 2nd Aksharam: 'ర' (Consonant: ర)\nPrasa Status: ✗ NO MATCH\n\n  📋 Mismatch Details:\n    Line 1: 'ప' → consonant 'ప' (ప-వర్గము (Labial))\n    Line 2: 'ర' → consonant 'ర' (య-వర్గము (Approximant))\n    Why: Consonants 'ప' (ప-వర్గము (Labial)) and 'ర' (య-వర్గము (Approximant)) are from different vargas\n    💡 Suggestion: Line 2 needs 2nd syllable with 'ప' consonant (e.g., ప, పా, పి, పీ, పు...)\n\n--- YATI (యతి) ANALYSIS ---\nLine 1: 'ద' (1st gana) ↔ 'ధ' (3rd gana) - ✓ MATCH (varga_match, 100%)\n    'ద' groups: ['త', 'ధ', 'థ', 'ద']\n    Matching group: ['త', 'ధ', 'థ', 'ద']\nLine 2: 'న' (1st gana) ↔ 'వ' (3rd gana) - ✗ NO MATCH\n    'న' groups: ['న', 'ణ']\n\n--- SCORE BREAKDOWN ---\n  Gana (weight 40%):\n    Line 1: 100.0%\n    Line 2: 100.0%\n    Average: 100.0%\n  Prasa (weight 35%): 0.0%\n  Yati (weight 25%):\n    Line 1: 100.0%\n    Line 2: 0.0%\n    Average: 50.0%\n\n======================================================================\nVALIDATION SUMMARY\n======================================================================\nGana Sequence Line 1: ✓ Valid\nGana Sequence Line 2: ✓ Valid\nPrasa Match: ✗ No\nYati Line 1: ✓ Match\nYati Line 2: ✗ No Match\n\nOVERALL: ✗ INVALID DWIPADA (52.5% match)\n======================================================================",
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 0.0,
+        "yati_average": 50.0
+      },
+      "pada1_ganas": [
+        {
+          "name": "Nala (నల)",
+          "pattern": "IIII",
+          "aksharalu": "ద్విపదప్ర",
+          "valid": true
+        },
+        {
+          "name": "Ra (ర)",
+          "pattern": "UIU",
+          "aksharalu": "హస్తుం",
+          "valid": true
+        },
+        {
+          "name": "Bha (భ)",
+          "pattern": "UII",
+          "aksharalu": "ధ్రాదిమ",
+          "valid": true
+        },
+        {
+          "name": "Na (న)",
+          "pattern": "III",
+          "aksharalu": "ణియులి",
+          "valid": true
+        }
+      ],
+      "pada1_valid": true,
+      "pada2_ganas": [
+        {
+          "name": "Sala (సల)",
+          "pattern": "IIUI",
+          "aksharalu": "నరకుంటు",
+          "valid": true
+        },
+        {
+          "name": "Bha (భ)",
+          "pattern": "UII",
+          "aksharalu": "బీదయ",
+          "valid": true
+        },
+        {
+          "name": "Naga (నగ)",
+          "pattern": "IIIU",
+          "aksharalu": "వుశిఉపా",
+          "valid": true
+        },
+        {
+          "name": "Na (న)",
+          "pattern": "III",
+          "aksharalu": "లకుగి",
+          "valid": true
+        }
+      ],
+      "pada2_valid": true
+    },
+    {
+      "prompt": "Topic: తల్లి. Bhaavam: తల్లి ప్రేమ గొప్పది.",
+      "poem": "సరళమైన వ్రొకరించుట భాష లివి లి\nపరుషమైన వ్రొ తరువాత నలువురు",
+      "score": 100.0,
+      "report": "======================================================================\nDWIPADA CHANDASSU ANALYSIS REPORT\n======================================================================\n\n📊 OVERALL MATCH SCORE: 100.0%\n-----------------------------------\n\n--- LINE 1 (పాదము 1) ---\nText: సరళమైన వ్రొకరించుట భాష లివి లి\nAksharalu: స | ర | ళ | మై | న | వ్రొ | క | రిం | చు | ట | భా | ష | లి | వి | లి\nGana Markers: I I I U I I I U I I U I I I I\n\nGana Breakdown (4/4 valid):\n  ✓ Gana 1: సరళమై = IIIU = Naga (నగ) (ఇంద్ర గణము)\n  ✓ Gana 2: నవ్రొకరిం = IIIU = Naga (నగ) (ఇంద్ర గణము)\n  ✓ Gana 3: చుటభాష = IIUI = Sala (సల) (ఇంద్ర గణము)\n  ✓ Gana 4: లివిలి = III = Na (న) (సూర్య గణము)\n\n--- LINE 2 (పాదము 2) ---\nText: పరుషమైన వ్రొ తరువాత నలువురు\nAksharalu: ప | రు | ష | మై | న | వ్రొ | త | రు | వా | త | న | లు | వు | రు\nGana Markers: I I I U I I I I U I I I I I\n\nGana Breakdown (4/4 valid):\n  ✓ Gana 1: పరుషమై = IIIU = Naga (నగ) (ఇంద్ర గణము)\n  ✓ Gana 2: నవ్రొతరు = IIII = Nala (నల) (ఇంద్ర గణము)\n  ✓ Gana 3: వాతన = UII = Bha (భ) (ఇంద్ర గణము)\n  ✓ Gana 4: లువురు = III = Na (న) (సూర్య గణము)\n\n--- PRASA (ప్రాస) ANALYSIS ---\nLine 1 - 2nd Aksharam: 'ర' (Consonant: ర)\nLine 2 - 2nd Aksharam: 'రు' (Consonant: ర)\nPrasa Status: ✓ MATCH\n\n--- YATI (యతి) ANALYSIS ---\nLine 1: 'స' (1st gana) ↔ 'చ' (3rd gana) - ✓ MATCH (varga_match, 100%)\n    'స' groups: ['జ', 'స', 'ఝ', 'ఛ', 'శ', 'ష', 'చ']\n    Matching group: ['జ', 'స', 'ఝ', 'ఛ', 'శ', 'ష', 'చ']\nLine 2: 'ప' (1st gana) ↔ 'వ' (3rd gana) - ✓ MATCH (varga_match, 100%)\n    'ప' groups: ['బ', 'వ', 'ప', 'భ', 'ఫ']\n    Matching group: ['బ', 'వ', 'ప', 'భ', 'ఫ']\n\n--- SCORE BREAKDOWN ---\n  Gana (weight 40%):\n    Line 1: 100.0%\n    Line 2: 100.0%\n    Average: 100.0%\n  Prasa (weight 35%): 100.0%\n  Yati (weight 25%):\n    Line 1: 100.0%\n    Line 2: 100.0%\n    Average: 100.0%\n\n======================================================================\nVALIDATION SUMMARY\n======================================================================\nGana Sequence Line 1: ✓ Valid\nGana Sequence Line 2: ✓ Valid\nPrasa Match: ✓ Yes\nYati Line 1: ✓ Match\nYati Line 2: ✓ Match\n\nOVERALL: ✓ VALID DWIPADA (100.0% match)\n======================================================================",
+      "is_valid": true,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 100.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "pada1_ganas": [
+        {
+          "name": "Naga (నగ)",
+          "pattern": "IIIU",
+          "aksharalu": "సరళమై",
+          "valid": true
+        },
+        {
+          "name": "Naga (నగ)",
+          "pattern": "IIIU",
+          "aksharalu": "నవ్రొకరిం",
+          "valid": true
+        },
+        {
+          "name": "Sala (సల)",
+          "pattern": "IIUI",
+          "aksharalu": "చుటభాష",
+          "valid": true
+        },
+        {
+          "name": "Na (న)",
+          "pattern": "III",
+          "aksharalu": "లివిలి",
+          "valid": true
+        }
+      ],
+      "pada1_valid": true,
+      "pada2_ganas": [
+        {
+          "name": "Naga (నగ)",
+          "pattern": "IIIU",
+          "aksharalu": "పరుషమై",
+          "valid": true
+        },
+        {
+          "name": "Nala (నల)",
+          "pattern": "IIII",
+          "aksharalu": "నవ్రొతరు",
+          "valid": true
+        },
+        {
+          "name": "Bha (భ)",
+          "pattern": "UII",
+          "aksharalu": "వాతన",
+          "valid": true
+        },
+        {
+          "name": "Na (న)",
+          "pattern": "III",
+          "aksharalu": "లువురు",
+          "valid": true
+        }
+      ],
+      "pada2_valid": true
+    },
+    {
+      "prompt": "Topic: విద్య. Bhaavam: విద్య వల్ల జ్ఞానం.",
+      "poem": "పదములు మూడు తప్పక నొసగ లిడు\nపదములు రెండు తప్పక నొసగ లిడు",
+      "score": 100.0,
+      "report": "======================================================================\nDWIPADA CHANDASSU ANALYSIS REPORT\n======================================================================\n\n📊 OVERALL MATCH SCORE: 100.0%\n-----------------------------------\n\n--- LINE 1 (పాదము 1) ---\nText: పదములు మూడు తప్పక నొసగ లిడు\nAksharalu: ప | ద | ము | లు | మూ | డు | త | ప్ప | క | నొ | స | గ | లి | డు\nGana Markers: I I I I U I U I I I I I I I\n\nGana Breakdown (4/4 valid):\n  ✓ Gana 1: పదములు = IIII = Nala (నల) (ఇంద్ర గణము)\n  ✓ Gana 2: మూడుత = UIU = Ra (ర) (ఇంద్ర గణము)\n  ✓ Gana 3: ప్పకనొస = IIII = Nala (నల) (ఇంద్ర గణము)\n  ✓ Gana 4: గలిడు = III = Na (న) (సూర్య గణము)\n\n--- LINE 2 (పాదము 2) ---\nText: పదములు రెండు తప్పక నొసగ లిడు\nAksharalu: ప | ద | ము | లు | రెం | డు | త | ప్ప | క | నొ | స | గ | లి | డు\nGana Markers: I I I I U I U I I I I I I I\n\nGana Breakdown (4/4 valid):\n  ✓ Gana 1: పదములు = IIII = Nala (నల) (ఇంద్ర గణము)\n  ✓ Gana 2: రెండుత = UIU = Ra (ర) (ఇంద్ర గణము)\n  ✓ Gana 3: ప్పకనొస = IIII = Nala (నల) (ఇంద్ర గణము)\n  ✓ Gana 4: గలిడు = III = Na (న) (సూర్య గణము)\n\n--- PRASA (ప్రాస) ANALYSIS ---\nLine 1 - 2nd Aksharam: 'ద' (Consonant: ద)\nLine 2 - 2nd Aksharam: 'ద' (Consonant: ద)\nPrasa Status: ✓ MATCH\n\n--- YATI (యతి) ANALYSIS ---\nLine 1: 'ప' (1st gana) ↔ 'ప' (3rd gana) - ✓ MATCH (exact, 100%)\nLine 2: 'ప' (1st gana) ↔ 'ప' (3rd gana) - ✓ MATCH (exact, 100%)\n\n--- SCORE BREAKDOWN ---\n  Gana (weight 40%):\n    Line 1: 100.0%\n    Line 2: 100.0%\n    Average: 100.0%\n  Prasa (weight 35%): 100.0%\n  Yati (weight 25%):\n    Line 1: 100.0%\n    Line 2: 100.0%\n    Average: 100.0%\n\n======================================================================\nVALIDATION SUMMARY\n======================================================================\nGana Sequence Line 1: ✓ Valid\nGana Sequence Line 2: ✓ Valid\nPrasa Match: ✓ Yes\nYati Line 1: ✓ Match\nYati Line 2: ✓ Match\n\nOVERALL: ✓ VALID DWIPADA (100.0% match)\n======================================================================",
+      "is_valid": true,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 100.0,
+        "yati_line1": 100.0,
+        "yati_line2": 100.0,
+        "yati_average": 100.0
+      },
+      "pada1_ganas": [
+        {
+          "name": "Nala (నల)",
+          "pattern": "IIII",
+          "aksharalu": "పదములు",
+          "valid": true
+        },
+        {
+          "name": "Ra (ర)",
+          "pattern": "UIU",
+          "aksharalu": "మూడుత",
+          "valid": true
+        },
+        {
+          "name": "Nala (నల)",
+          "pattern": "IIII",
+          "aksharalu": "ప్పకనొస",
+          "valid": true
+        },
+        {
+          "name": "Na (న)",
+          "pattern": "III",
+          "aksharalu": "గలిడు",
+          "valid": true
+        }
+      ],
+      "pada1_valid": true,
+      "pada2_ganas": [
+        {
+          "name": "Nala (నల)",
+          "pattern": "IIII",
+          "aksharalu": "పదములు",
+          "valid": true
+        },
+        {
+          "name": "Ra (ర)",
+          "pattern": "UIU",
+          "aksharalu": "రెండుత",
+          "valid": true
+        },
+        {
+          "name": "Nala (నల)",
+          "pattern": "IIII",
+          "aksharalu": "ప్పకనొస",
+          "valid": true
+        },
+        {
+          "name": "Na (న)",
+          "pattern": "III",
+          "aksharalu": "గలిడు",
+          "valid": true
+        }
+      ],
+      "pada2_valid": true
+    },
+    {
+      "prompt": "Topic: నది. Bhaavam: నది ప్రవాహం అందమైనది.",
+      "poem": "సరళమైన వ్రొకరించుట భాష లివి లి\nనది క్కడ మార్ైనచు నెలగంల్యంగు",
+      "score": 52.5,
+      "report": "======================================================================\nDWIPADA CHANDASSU ANALYSIS REPORT\n======================================================================\n\n📊 OVERALL MATCH SCORE: 52.5%\n-----------------------------------\n\n--- LINE 1 (పాదము 1) ---\nText: సరళమైన వ్రొకరించుట భాష లివి లి\nAksharalu: స | ర | ళ | మై | న | వ్రొ | క | రిం | చు | ట | భా | ష | లి | వి | లి\nGana Markers: I I I U I I I U I I U I I I I\n\nGana Breakdown (4/4 valid):\n  ✓ Gana 1: సరళమై = IIIU = Naga (నగ) (ఇంద్ర గణము)\n  ✓ Gana 2: నవ్రొకరిం = IIIU = Naga (నగ) (ఇంద్ర గణము)\n  ✓ Gana 3: చుటభాష = IIUI = Sala (సల) (ఇంద్ర గణము)\n  ✓ Gana 4: లివిలి = III = Na (న) (సూర్య గణము)\n\n--- LINE 2 (పాదము 2) ---\nText: నది క్కడ మార్ైనచు నెలగంల్యంగు\nAksharalu: న | ది | క్క | డ | మా | ర్ై | న | చు | నె | ల | గం | ల్యం | గు\nGana Markers: I I I I U U I I I I U U I\n\nGana Breakdown (4/4 valid):\n  ✓ Gana 1: నదిక్కడ = IIII = Nala (నల) (ఇంద్ర గణము)\n  ✓ Gana 2: మార్ైన = UUI = Ta (త) (ఇంద్ర గణము)\n  ✓ Gana 3: చునెలగం = IIIU = Naga (నగ) (ఇంద్ర గణము)\n  ✓ Gana 4: ల్యంగు = UI = Ha/Gala (హ/గల) (సూర్య గణము)\n\n--- PRASA (ప్రాస) ANALYSIS ---\nLine 1 - 2nd Aksharam: 'ర' (Consonant: ర)\nLine 2 - 2nd Aksharam: 'ది' (Consonant: ద)\nPrasa Status: ✗ NO MATCH\n\n  📋 Mismatch Details:\n    Line 1: 'ర' → consonant 'ర' (య-వర్గము (Approximant))\n    Line 2: 'ది' → consonant 'ద' (త-వర్గము (Dental))\n    Why: Consonants 'ర' (య-వర్గము (Approximant)) and 'ద' (త-వర్గము (Dental)) are from different vargas\n    💡 Suggestion: Line 2 needs 2nd syllable with 'ర' consonant (e.g., ర, రా, రి, రీ, రు...)\n\n--- YATI (యతి) ANALYSIS ---\nLine 1: 'స' (1st gana) ↔ 'చ' (3rd gana) - ✓ MATCH (varga_match, 100%)\n    'స' groups: ['జ', 'స', 'ఝ', 'ఛ', 'శ', 'ష', 'చ']\n    Matching group: ['జ', 'స', 'ఝ', 'ఛ', 'శ', 'ష', 'చ']\nLine 2: 'న' (1st gana) ↔ 'చ' (3rd gana) - ✗ NO MATCH\n    'న' groups: ['న', 'ణ']\n\n--- SCORE BREAKDOWN ---\n  Gana (weight 40%):\n    Line 1: 100.0%\n    Line 2: 100.0%\n    Average: 100.0%\n  Prasa (weight 35%): 0.0%\n  Yati (weight 25%):\n    Line 1: 100.0%\n    Line 2: 0.0%\n    Average: 50.0%\n\n======================================================================\nVALIDATION SUMMARY\n======================================================================\nGana Sequence Line 1: ✓ Valid\nGana Sequence Line 2: ✓ Valid\nPrasa Match: ✗ No\nYati Line 1: ✓ Match\nYati Line 2: ✗ No Match\n\nOVERALL: ✗ INVALID DWIPADA (52.5% match)\n======================================================================",
+      "is_valid": false,
+      "breakdown": {
+        "gana_line1": 100.0,
+        "gana_line2": 100.0,
+        "gana_average": 100.0,
+        "prasa": 0.0,
+        "yati_line1": 100.0,
+        "yati_line2": 0.0,
+        "yati_average": 50.0
+      },
+      "pada1_ganas": [
+        {
+          "name": "Naga (నగ)",
+          "pattern": "IIIU",
+          "aksharalu": "సరళమై",
+          "valid": true
+        },
+        {
+          "name": "Naga (నగ)",
+          "pattern": "IIIU",
+          "aksharalu": "నవ్రొకరిం",
+          "valid": true
+        },
+        {
+          "name": "Sala (సల)",
+          "pattern": "IIUI",
+          "aksharalu": "చుటభాష",
+          "valid": true
+        },
+        {
+          "name": "Na (న)",
+          "pattern": "III",
+          "aksharalu": "లివిలి",
+          "valid": true
+        }
+      ],
+      "pada1_valid": true,
+      "pada2_ganas": [
+        {
+          "name": "Nala (నల)",
+          "pattern": "IIII",
+          "aksharalu": "నదిక్కడ",
+          "valid": true
+        },
+        {
+          "name": "Ta (త)",
+          "pattern": "UUI",
+          "aksharalu": "మార్ైన",
+          "valid": true
+        },
+        {
+          "name": "Naga (నగ)",
+          "pattern": "IIIU",
+          "aksharalu": "చునెలగం",
+          "valid": true
+        },
+        {
+          "name": "Ha/Gala (హ/గల)",
+          "pattern": "UI",
+          "aksharalu": "ల్యంగు",
+          "valid": true
+        }
+      ],
+      "pada2_valid": true
+    }
+  ]
+}
