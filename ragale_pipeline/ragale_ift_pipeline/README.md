@@ -31,15 +31,34 @@ Each poem is assigned to 3 profiles, expanding the dataset ~3x.
 
 ## Training Configuration
 
+(Defaults match `ragale_gemma3_finetune.py` and the paper's
+`tab:training-config`.)
+
 | Parameter | Default |
 |-----------|---------|
-| Model | google/gemma-3-1b-it |
-| LoRA rank | 16 |
-| LoRA alpha | 32 |
-| Epochs | 4 |
-| Learning rate | 1e-4 |
+| Model | `google/gemma-3-1b-it` |
+| LoRA rank *r* | **32** |
+| LoRA α | **64** |
+| LoRA dropout | 0.05 |
+| Target modules | all linear (`q,k,v,o,gate,up,down`) |
+| Optimizer | AdamW (fused) |
+| Learning rate | **5e-5** |
+| LR schedule | cosine |
+| Warmup ratio | 0.06 |
+| Weight decay | 0.01 |
+| Per-device batch | **2** |
+| Grad accum steps | 8 |
+| Effective batch | 16 |
 | Max seq length | 512 |
-| Batch size | 1 (grad accum 8) |
+| Epochs | **6** |
+| Precision | bf16 |
+| Hardware | RTX 5050 8 GB |
+| Seed | 42 |
+
+The Telugu Dvipada counterpart of this trainer
+(`../../train_models/finetune_dwipada.py`) uses different defaults
+(rank 16, lr 2e-4, 8 epochs) — see the paper's Section 6.1 "Training
+Setup" for the rationale.
 
 ## Output Directories
 

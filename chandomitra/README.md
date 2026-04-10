@@ -128,11 +128,24 @@ chandomitra/
 ├── dwipada_merged_model/               # Pre-trained merged model (Gemma 3-1B)
 ├── generate_dwipada.py                 # Standalone interactive generation script
 ├── benchmark_chandomitra.py            # Benchmarking script (20 poems)
+├── benchmark_chandomitra_n102.py       # n=102 benchmark used as the paper's external baseline (3 prompts × 34 seeds)
+├── benchmark_chandomitra_n102_gemma3-1b-base.json    # n=102 results, base model
+├── benchmark_chandomitra_n102_gemma3-1b-merged.json  # n=102 results, merged model
 ├── eval_prompts.txt                    # Evaluation prompts (6 topics)
 ├── eval_results*.json                  # Various evaluation results
+├── chandomitra.pdf                     # Original Chandomitra paper (Jagadeeshan et al. 2026, arXiv:2506.00815)
 ├── dwipada_augmented_dataset.json      # Master dataset with chandassu analysis
 └── pyproject.toml                      # Package metadata
 ```
+
+> **Citation note.** This folder is our port of the constrained-decoding
+> algorithm from Jagadeeshan et al. 2026 ("Chandomitra: Towards Generating
+> Structured Sanskrit Poetry from Natural Language Inputs", arXiv:2506.00815)
+> to the Telugu Dvipada rule set. The original Chandomitra targets Sanskrit
+> Anuṣṭubh (99.86% on its native task); our port replaces the fixed-length
+> per-pāda regex with a 432-pattern prefix trie and adds *prāsa* and *yati*
+> checks. Our paper benchmarks the port as the "adapted Chandomitra"
+> external baseline (1.0% / 13.7% poem accuracy on the n=102 runs above).
 
 **Data directories** (created during pipeline execution):
 

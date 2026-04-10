@@ -43,11 +43,20 @@ python ragale_inference_scripts/generate_masking_only.py --seeds 5 --topic "Bubb
 python ragale_inference_scripts/generate_masking_backtrack.py --seeds 5 --topic "Moon"
 ```
 
-### Approach 4: Hybrid (`generate_hybrid.py`)
+### Approach 4: Hybrid Mask + Accept Preference (`generate_hybrid.py`)
 
-**How:** Logit masking first, then from the surviving tokens take top-100 candidates and run NFA rejection sampling on each. Prefer "accept candidates" (tokens that reach valid line completion). Falls back to backtracking only if no valid candidate in top-100.
+**How:** All three approaches share the same per-step NFA
+alive-predicate filter via `BuildGanaMask`. Hybrid additionally runs
+a *second* NFA pass over the top-100 surviving candidates that adds
+a `has_accept()` check and weighted-samples preferentially from
+candidates that would complete a valid line. Backtracking is
+retained as a rare fallback.
 
-**Constraint enforcement:** Local (masking) + per-token verification (rejection) + global (forced newlines). Best accuracy.
+**Constraint enforcement:** Same NFA alive-predicate filter as the
+other two strategies, plus a top-100 *accept-state* re-ranking pass.
+The "rejection" terminology in the paper's earlier drafts referred
+to this second `has_accept` pass — not to the underlying alive
+filter, which all three strategies share.
 
 ```bash
 python ragale_inference_scripts/generate_hybrid.py --seeds 5 --topic "Rain"

@@ -43,8 +43,14 @@ dataset_validation_scripts/
 | 2 | `level2_sanity_checks.py` | Field completeness, length ratio (telugu/poem) | stdlib only |
 | 3 | `level3_semantic_similarity.py` | Semantic similarity (LaBSE, mSBERT-mpnet, L3Cube-IndicSBERT) | `sentence-transformers`, `numpy` |
 | 4 | `level4_lexical_diversity.py` | TTR, exact/near duplicates, Telugu token coverage | `transformers` |
+| **5** | (in `../llm_as_judge/`) | **LLM-as-Judge evaluation via Gemini 3 Pro on Vertex AI Batch API.** Lives in a separate folder; see [`../llm_as_judge/README.md`](../llm_as_judge/README.md). |
 | — | `word_ttr.py` | Word-level TTR analysis per source | stdlib only |
 | — | `report.py` | Consolidate all levels into a report | stdlib only |
+
+> **Note on Level 5.** The paper describes a five-level validation
+> pipeline (`tab:validation`). Levels 1–4 are the four scripts in
+> this folder; Level 5 is the LLM-as-Judge pass that runs through
+> the Vertex AI Batch API and lives in `../llm_as_judge/`.
 
 ## Usage
 

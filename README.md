@@ -132,6 +132,23 @@ Directories excluded from version control (see `.gitignore`):
 - `logs/` — TensorBoard logs
 - `venv/` — Python virtual environment
 
+### Other top-level folders not shown above
+
+Several research folders post-date the structure tree above. Each has its own README:
+
+| Folder | What's inside |
+| --- | --- |
+| `chandomitra/` | Adapted Chandomitra (Jagadeeshan et al. 2026) port to Telugu Dvipada — used as the external baseline in the paper. See `chandomitra/README.md`. |
+| `domino/` | The three FST+NFA constrained-decoding benchmark scripts for Dvipada (`benchmark_masking_only.py`, `benchmark_masking_backtrack.py`, `benchmark_hybrid.py`) plus per-cell result JSONs. See `domino/README.md`. |
+| `train_models/` | LoRA fine-tuning scripts for Gemma 3 1B IT and Gemma 4B on Dvipada. Produces the `gemma3-1b-merged` model benchmarked in `domino/`. See `train_models/README.md`. |
+| `ragale_pipeline/` | Kannada *utsaha ragale* counterpart of the Dvipada pipeline (analyser + FST/NFA engine + IFT + benchmarks). See `ragale_pipeline/README.md`. |
+| `poetry_analysis/` | Stand-alone POS-tagging + ablation pipeline (numbered `1.pos_tagger.py` → `5infer_analysis.py`). See `poetry_analysis/README.md`. |
+| `dataset_validation_scripts/` | Standalone multi-level dataset validation pipeline (Levels 1–4). See `dataset_validation_scripts/README.md`. |
+| `nfa_for_dwipada/` | The streaming FST + parallel NFA pipeline that the Dvipada constrained decoders consume. See `nfa_for_dwipada/README.md`. |
+| `kannada2telugu/` | Bidirectional character-level Kannada–Telugu transliteration utility. See `kannada2telugu/README.md`. |
+
+The corpus referenced throughout the paper is the **27,881-couplet** `dwipada_master_dataset.json` produced by the validation pipeline; the older **29,343-record** `dwipada_augmented_dataset.json` predates the final purity filter. See `datasets/README.md` for the relationship between the two.
+
 ---
 
 ## Installation
